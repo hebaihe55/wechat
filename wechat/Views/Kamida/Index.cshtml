@@ -1,17 +1,129 @@
 ﻿@{
     Layout = null;
 }
-
 <!DOCTYPE html>
-
-<html>
+<html lang="zh-cn">
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>卡米达</title>
+    <script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+ 
+    <script src="~/js/bootstrap.min.js"></script>
+    <!-- Bootstrap -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/style.css" rel="stylesheet">
+   
+  
 </head>
 <body>
-    <div>
-    
+    <div id="kamida" class="text-center">
+        <div class="kamidacontainer">
+            <div class="pic pull-left"><div class="imgup"><img src="~/img/kamida/upimg.jpg" class="img-responsive" id="upimg" /></div></div>
+            <div class="btn pull-right"><img src="~/img/kamida/btn1.png" id="btn1" /></div>
+            <div class="btn pull-right"><img src="~/img/kamida/btn2.png"  id="btn2" /></div>
+            <div class="btn pull-right"><a>活动规则</a></div>
+        </div>
     </div>
+    @Html.Hidden("appid")
+    @Html.Hidden("timestamp")
+    @Html.Hidden("noncestr")
+    @Html.Hidden("signature")
+    @Html.Hidden("openid")
+    @Html.Hidden("mediaId")
+
+
+
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js "></script>
+    <script>
+        wx.config({
+            debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+            appId: $("#appid").val(), // 必填，公众号的唯一标识
+            timestamp: $("#timestamp").val(), // 必填，生成签名的时间戳
+            nonceStr: $("#noncestr").val(), // 必填，生成签名的随机串
+            signature: $("#signature").val(),// 必填，签名，见附录1
+            jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'chooseImage', 'uploadImage'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+        });
+        wx.ready(function () {
+            
+            // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
+
+            wx.onMenuShareTimeline({
+                title: '', // 分享标题
+                link: '', // 分享链接
+                imgUrl: '', // 分享图标
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+
+            wx.onMenuShareAppMessage({
+                title: '', // 分享标题
+                desc: '', // 分享描述
+                link: '', // 分享链接
+                imgUrl: '', // 分享图标
+                type: '', // 分享类型,music、video或link，不填默认为link
+                dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+
+
+        });
+
+        $("#btn1").click(function () {
+
+
+            wx.chooseImage({
+                count: 1, // 默认9
+                sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+                sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+                success: function (res) {
+                    var localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
+
+                    $("#upimg").attr("src", localIds[0]);
+
+                    wx.uploadImage({
+                        localId: localIds[0], // 需要上传的图片的本地ID，由chooseImage接口获得
+                        isShowProgressTips: 1, // 默认为1，显示进度提示
+                        success: function (res) {
+                            alert(res.serverId);
+                            $("#mediaId").val(res.serverId); // 返回图片的服务器端ID
+                        }
+                    });
+                }
+            });
+
+        
+
+       
+
+
+
+        });
+        $("#btn2").click(function () {
+            if ($("#mediaId").val() == "")
+            {
+                alert("请上传收银条！");
+                return;
+            }
+            $.post("/Kamida/add", { openid: $("#openid").val(), mediaId: $("#mediaId").val() } ,function(data)
+            {
+                alert(data);
+            }
+            )
+        });
+
+
+    </script>
 </body>
 </html>

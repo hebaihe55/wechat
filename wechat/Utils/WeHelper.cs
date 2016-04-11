@@ -4,21 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LitJson;
-
+using System.Net;
+using System.Web;
+using System.IO;
 
 namespace wechat.Utils
 {
     public class WeHelper
     {
+        //基本票据
         private static string access_token;
         private static int expires_in;
 
-
+        //js票据
         private static string ticket;
         private static int texpires_in;
-        
 
-
+        //用户信息票据
+        private static string caccess_token;
+        private static int cexpires_in;
+        public static string code { get; set; }
+        public static string openid { get; set; }
+        public static string MEDIA_ID { get; set; }
         public static string appid { get; set; }
         public static string secret { get; set; }
         public static string noncestr { get; set; }
@@ -35,7 +42,7 @@ namespace wechat.Utils
         {
             get
             {
-                if (access_token != "" && (expires_in + 7000) < Utils.ConvertDateTimeInt(DateTime.Now))
+                if (!string.IsNullOrEmpty( access_token) && (expires_in + 7000) > Utils.ConvertDateTimeInt(DateTime.Now))
                 {
                     return access_token;
                 }
@@ -61,7 +68,7 @@ namespace wechat.Utils
         {
             get
             {
-                if (ticket != "" && (texpires_in + 7000) < Utils.ConvertDateTimeInt(DateTime.Now))
+                if (!string.IsNullOrEmpty(ticket) && (texpires_in + 7000) > Utils.ConvertDateTimeInt(DateTime.Now))
                 {
                     return ticket;
                 }
@@ -83,6 +90,49 @@ namespace wechat.Utils
             
         }
 
+        public static string Caccess_token
+        {
+            get
+            {
+                if (!string.IsNullOrEmpty(caccess_token) && (cexpires_in + 7000) > Utils.ConvertDateTimeInt(DateTime.Now))
+                {
+                    return caccess_token;
+                }
+
+                string strJson = getcticket();
+
+                if (strJson.IndexOf("access_token") > 0)
+                {
+                    JsonData jd = LitJson.JsonMapper.ToObject(strJson);
+
+                    caccess_token = jd["access_token"].ToString();
+                    cexpires_in = Utils.ConvertDateTimeInt(DateTime.Now);
+                    openid= jd["openid"].ToString();
+                    return caccess_token;
+                }
+
+                return "";
+            }
+
+           
+        }
+
+        /// <summary>
+        /// 得到页面票据
+        /// </summary>
+        /// <returns></returns>
+        private static string getcticket()
+        {
+            string url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid="+ appid + "&secret="+ secret + "&code="+code+"&grant_type=authorization_code";
+
+            return HttpService.Get(url);
+        }
+
+        public static string GetUserInfo()
+        {
+            string url = "https://api.weixin.qq.com/sns/userinfo?access_token="+ Caccess_token + "&openid="+openid+"&lang=zh_CN";
+            return HttpService.Get(url);
+        }
 
         /// <summary>
         /// jsticket票据
@@ -106,6 +156,52 @@ namespace wechat.Utils
             string url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=" + appid + "&secret=" + secret;
 
             return HttpService.Get(url);
+        }
+
+
+        /// <summary>  
+        /// 下载保存多媒体文件,返回多媒体保存路径  
+        /// </summary>  
+        /// <param name="ACCESS_TOKEN"></param>  
+        /// <param name="MEDIA_ID"></param>  
+        /// <returns></returns>  
+        public static string GetMultimedia()
+        {
+            string file = string.Empty;
+            string content = string.Empty;
+            string strpath = string.Empty;
+            string savepath = string.Empty;
+            string stUrl = "http://file.api.weixin.qq.com/cgi-bin/media/get?access_token=" + Access_token + "&media_id=" + MEDIA_ID;
+
+            HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create(stUrl);
+
+            req.Method = "GET";
+            using (WebResponse wr = req.GetResponse())
+            {
+                HttpWebResponse myResponse = (HttpWebResponse)req.GetResponse();
+
+                strpath = myResponse.ResponseUri.ToString();
+             
+                WebClient mywebclient = new WebClient();
+                savepath = HttpContext.Current.Request.PhysicalApplicationPath+ "UpImg\\"  ;
+                string imgpath =  MEDIA_ID + ".jpg";
+
+                try
+                {
+                    if (!Directory.Exists(savepath))//如果日志目录不存在就创建
+                    {
+                        Directory.CreateDirectory(savepath);
+                    }
+                    mywebclient.DownloadFile(strpath, savepath + imgpath);
+                    file = imgpath;
+                }
+                catch (Exception ex)
+                {
+                    savepath = ex.ToString();
+                }
+
+            }
+            return file;
         }
     }
 
