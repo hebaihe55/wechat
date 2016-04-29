@@ -109,6 +109,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="img\kamida\banner1.jpg" />
+    <Content Include="img\kamida\er1.jpg" />
+    <Content Include="img\kamida\er2.jpg" />
+    <Content Include="img\kamida\er3.jpg" />
+    <Content Include="img\kamida\logo.jpg" />
     <Content Include="img\kamida\ok.jpg" />
     <Content Include="img\kamida\rule.jpg" />
     <Content Include="img\kamida\bg.jpg" />
@@ -116,9 +120,13 @@
     <Content Include="img\kamida\btn1.png" />
     <Content Include="img\kamida\btn2.png" />
     <Content Include="img\kamida\upimg.jpg" />
+    <Content Include="img\kamida\ercode.jpg" />
+    <Content Include="img\kamida\err.jpg" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\npm.js" />
+    <None Include="Properties\PublishProfiles\mvcDeloy.pubxml" />
+    <None Include="Properties\PublishProfiles\mvcftp.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -127,12 +135,16 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminKamidaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KamidaController.cs" />
+    <Compile Include="Controllers\WechatController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -142,12 +154,12 @@
     <Compile Include="Utils\Log.cs" />
     <Compile Include="Utils\Utils.cs" />
     <Compile Include="Utils\WeHelper.cs" />
+    <Compile Include="Utils\WxPayData.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
     <Content Include="Views\Kamida\Index.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Kamida\Rule.cshtml" />
     <Content Include="Views\Kamida\Ok.cshtml" />
     <Content Include="css\bootstrap-theme.css.map" />
@@ -158,6 +170,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Properties\PublishProfiles\mvc.pubxml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Kamida\Err.cshtml" />
+    <Content Include="Views\Kamida\Ercode.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\AdminKamida\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -10,6 +10,18 @@ using System.IO;
 
 namespace wechat.Utils
 {
+    public class item
+    {
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string PicUrl { get; set; }
+        public string Url { get; set; }
+    }
+
+    public class Articles
+    {
+        public item[] item { get; set; }
+    }
     public class WeHelper
     {
         //基本票据
@@ -94,10 +106,7 @@ namespace wechat.Utils
         {
             get
             {
-                if (!string.IsNullOrEmpty(caccess_token) && (cexpires_in + 7000) > Utils.ConvertDateTimeInt(DateTime.Now))
-                {
-                    return caccess_token;
-                }
+               
 
                 string strJson = getcticket();
 
@@ -125,13 +134,18 @@ namespace wechat.Utils
         {
             string url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid="+ appid + "&secret="+ secret + "&code="+code+"&grant_type=authorization_code";
 
-            return HttpService.Get(url);
+            string result= HttpService.Get(url);
+
+            Log.Info("getcticket", result);
+            return result;
         }
 
         public static string GetUserInfo()
         {
             string url = "https://api.weixin.qq.com/sns/userinfo?access_token="+ Caccess_token + "&openid="+openid+"&lang=zh_CN";
-            return HttpService.Get(url);
+            string result = HttpService.Get(url);
+            Log.Info("GetUserInfo", result);
+            return result;
         }
 
         /// <summary>
@@ -142,7 +156,9 @@ namespace wechat.Utils
         {
             string url = "https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token="+Access_token+"&type=jsapi";
 
-            return HttpService.Get(url);
+            string result = HttpService.Get(url);
+            Log.Info("getticket", result);
+            return result;
         }
 
 
@@ -155,7 +171,9 @@ namespace wechat.Utils
         {
             string url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=" + appid + "&secret=" + secret;
 
-            return HttpService.Get(url);
+            string result = HttpService.Get(url);
+            Log.Info("client_credential", result);
+            return result;
         }
 
 
