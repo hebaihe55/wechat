@@ -101,6 +101,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Xinghe1\css\style.css" />
+    <Content Include="Content\Xinghe1\images\bg.jpg" />
+    <Content Include="Content\Xinghe1\images\change.png" />
+    <Content Include="Content\Xinghe1\images\default.png" />
+    <Content Include="Content\Xinghe1\images\inputbg.png" />
+    <Content Include="Content\Xinghe1\images\subbtn.png" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />

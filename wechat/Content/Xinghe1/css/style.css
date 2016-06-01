@@ -1,0 +1,32 @@
+*{padding:0;margin:0}
+.wrap{width:100%;height: 1206px}
+.indexbox{background: url("../images/bg.jpg") no-repeat;background-size: 100%;width:750px;height:1206px;border:1px solid #fff;}
+.indexbox form{width: 575px;margin: 0 auto;}
+.indexbox form input[name=text]{border:none;margin: 10px 0;font-size:26px;text-align: center;background: url("../images/inputbg.png") no-repeat;width: 536px;height: 66px;}
+.indexbox form .text{width: 500px;height: auto;margin-top:262px;}
+.indexbox form .radio{width:30px;height:auto;margin-top: 488px}
+.indexbox form .radio input{margin:2px 0;}
+.indexbox form input[type="radio"]{
+margin-top: 20px;
+}
+.indexbox form input[type="radio"]{
+    display: none;
+}
+.indexbox form input[type="radio"]+label{
+    display: inline;
+    width: 35px;
+    height:35px;
+    background: url("../images/default.png") no-repeat;
+    float: left;
+    margin-top:16px;
+
+}
+.indexbox form input[type="radio"]:checked+label{
+    display: inline;
+    width: 35px;
+    height:35px;
+    background: url("../images/change.png") no-repeat;
+    float: left;
+    margin-top:16px;
+}
+  
