@@ -160,6 +160,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KamidaController.cs" />
     <Compile Include="Controllers\WechatController.cs" />
+    <Compile Include="Controllers\Xinghe1Controller.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -193,6 +194,7 @@
     <Content Include="Views\GuiTian\Ok.cshtml" />
     <Content Include="Views\GuiTian\Err.cshtml" />
     <Content Include="Views\Admin\Home\Index.cshtml" />
+    <Content Include="Views\Xinghe1\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
