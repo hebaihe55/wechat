@@ -1,0 +1,178 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>问卷活动</title>
+    <script src="~/js/bootstrap.min.js"></script>
+    <!-- Bootstrap -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/StyleGuiTian.css" rel="stylesheet">
+</head>
+<body>
+    <header class="container-fluid guitian">
+        <img src="~/img/guitian/head.jpg" class="img-responsive" /> 
+    </header>
+    <form action="/GuiTian/Add" method="post">
+        
+        <div class="container-fluid" style="background-color:#f7f7df;">
+            <label for="q1">1.山田养蜂场是创建于___年的（世界最大级的）日本No.1蜂产品制造企业。</label>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="q1" id="q11"
+                           value="9"> 1948年
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="q1" id="q12"
+                           value="2">
+                    1958年
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="q1" id="q13"
+                           value="3">
+                    1968年
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="q1" id="q13"
+                           value="3">
+                    1978年
+                </label>
+            </div>
+
+            <label for="q2">2.山田养蜂场的蜂蜜会经过___项全面检查，品质有保障，可以放心食用。</label>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="q2" id="q21"
+                           value="1"> 64项目
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="q2" id="q22"
+                           value="2">
+                    164项目
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="q2" id="q23"
+                           value="3">
+                    264项目
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="q2" id="q24"
+                           value="9">
+                    364项目
+                </label>
+            </div>
+
+
+
+            <label for="q3">3.女王蜂和工蜂刚孵化的时候外观完全没有差别。但是由于女王蜂能吃到特别的食物—蜂王浆，其体型会比工蜂1.5倍，而且比普通工蜂的寿命长___倍</label>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="q3" id="q31"
+                           value="1"> 5-10倍
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="q3" id="q32"
+                           value="2">
+                    10-20倍
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="q3" id="q33"
+                           value="3">
+                    20-30倍
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="q3" id="q34"
+                           value="9">
+                    30-40倍
+                </label>
+            </div>
+
+
+            <label for="q4">4.___产的蜂胶品质优良，具有抗酸化以及提高免疫力的功效。</label>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="q4" id="q41"
+                           value="1"> 新西兰
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="q4" id="q42"
+                           value="2">
+                    澳大利亚
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="q4" id="q43"
+                           value="3">
+                    中国
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="q4" id="q44"
+                           value="9">
+                    巴西
+                </label>
+            </div>
+
+
+            <label for="q5">5.山田养蜂场的蜡笔，使用由蜜蜂造出的___等天然原料制造，小朋友不小心放入口中也完全没有危险，安全放心。</label>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="q5" id="q51"
+                           value="1"> 蜂蜜
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="q5" id="q54"
+                           value="9">
+                    蜂蜡
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="q5" id="q52"
+                           value="2">
+                    蜂胶
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="q5" id="q53"
+                           value="3">
+                    蜂王浆
+                </label>
+            </div>
+            @Html.Hidden("openid")
+            <div class="container-fluid text-center">
+                <button type="submit" style="margin:0; padding:0; border:0; width:300px;height:49px; margin-bottom:50px;">    <img src="~/img/guitian/btn1.png" /></button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

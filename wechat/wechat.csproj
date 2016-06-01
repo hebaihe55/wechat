@@ -106,8 +106,17 @@
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\style.css" />
+    <Content Include="css\StyleGuiTian.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="img\guitian\btn.png" />
+    <Content Include="img\guitian\按钮3.png" />
+    <Content Include="img\guitian\ok.jpg" />
+    <Content Include="img\guitian\btn34.png" />
+    <Content Include="img\guitian\答错了.jpg" />
+    <Content Include="img\guitian\err.jpg" />
+    <Content Include="img\guitian\答题纸.jpg" />
+    <Content Include="img\guitian\head.jpg" />
     <Content Include="img\kamida\banner1.jpg" />
     <Content Include="img\kamida\er1.jpg" />
     <Content Include="img\kamida\er2.jpg" />
@@ -122,9 +131,12 @@
     <Content Include="img\kamida\upimg.jpg" />
     <Content Include="img\kamida\ercode.jpg" />
     <Content Include="img\kamida\err.jpg" />
+    <Content Include="img\guitian\btn1.png" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\npm.js" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <None Include="Properties\PublishProfiles\mvcDeloy.pubxml" />
     <None Include="Properties\PublishProfiles\mvcftp.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -141,7 +153,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Controllers\AdminKamidaController.cs" />
+    <Compile Include="Controllers\GuiTianController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KamidaController.cs" />
     <Compile Include="Controllers\WechatController.cs" />
@@ -174,6 +189,10 @@
     <Content Include="Views\Kamida\Ercode.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\AdminKamida\Index.cshtml" />
+    <Content Include="Views\GuiTian\Index.cshtml" />
+    <Content Include="Views\GuiTian\Ok.cshtml" />
+    <Content Include="Views\GuiTian\Err.cshtml" />
+    <Content Include="Views\Admin\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -183,6 +202,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
