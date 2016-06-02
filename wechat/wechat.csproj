@@ -107,6 +107,7 @@
     <Content Include="Content\Xinghe1\images\default.png" />
     <Content Include="Content\Xinghe1\images\inputbg.png" />
     <Content Include="Content\Xinghe1\images\subbtn.png" />
+    <Content Include="Content\Xinghe1\images\thanks.jpg" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
@@ -201,6 +202,7 @@
     <Content Include="Views\GuiTian\Err.cshtml" />
     <Content Include="Views\Admin\Home\Index.cshtml" />
     <Content Include="Views\Xinghe1\Index.cshtml" />
+    <Content Include="Views\Xinghe1\Thanks.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
