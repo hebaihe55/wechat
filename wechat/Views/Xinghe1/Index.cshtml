@@ -21,6 +21,19 @@
         function checkform() {
                 var user = $(".user").val();
                 var tel = $(".tel").val();
+                var radioarr = $("form input[type=radio]");
+                var flag=false
+                var n = 0;
+                for (var i = 0; i < radioarr.length; i++) {
+                    if (radioarr[i].checked == true) {
+                        flag = true;
+                        break;
+                    }
+                }
+                if (!flag) {
+                    alert("请选择您的答案");
+                    return false;
+                }
                 if (user == null || user == "") {
                     alert("请输入您的姓名");
                     return false;
@@ -48,7 +61,7 @@
 
             <form method="post" action="" onsubmit="return checkform()">
                 <div class="radio">
-                    <input type="radio" value="A.三,两" checked="checked" name="ra" id="radio-1" /><label for="radio-1"></label><br>
+                    <input type="radio" value="A.三,两" name="ra" id="radio-1" /><label for="radio-1"></label><br>
                     <input type="radio" value="B.五,三" name="ra" id="radio-2" /><label for="radio-2"></label><br>
                     <input type="radio" value="C.六,两" name="ra" id="radio-3" /><label for="radio-3"></label><br>
         
@@ -58,6 +71,7 @@
                     <input type="text" placeholder="请 输 入 您 的 手 机" name="text" class="tel" value="">
                     <input type="submit"  style="width: 360px;height: 82px;margin:5% 0 0 18%;background:url(/Content/Xinghe1/images/subbtn.png) no-repeat">
                 </div>
+
             </form>
         </div>
     </div>
