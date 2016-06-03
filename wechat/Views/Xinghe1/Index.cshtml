@@ -46,17 +46,18 @@
     <div class="wrap">
         <div class="indexbox">
 
-            <form method="post" action="" onsubmit="return checkform()">
+            <form method="post" action="/xinghe1/Add" onsubmit="return checkform()">
                 <div class="radio">
-                    <input type="radio" value="A.三,两。" checked="checked" name="ra" id="radio-1" /><label for="radio-1"></label><br>
-                    <input type="radio" value="B.五,三。" name="ra" id="radio-2" /><label for="radio-2"></label><br>
-                    <input type="radio" value="C.六,两。" name="ra" id="radio-3" /><label for="radio-3"></label><br>
+                    <input type="radio" value="A.三,两。" checked="checked" name="answer" id="radio-1" /><label for="radio-1"></label><br>
+                    <input type="radio" value="B.五,三。" name="answer" id="radio-2" /><label for="radio-2"></label><br>
+                    <input type="radio" value="C.六,两。" name="answer" id="radio-3" /><label for="radio-3"></label><br>
         
                 </div>
                 <div class="text">
-                    <input type="text" placeholder="请 输 入 您 的 姓 名" name="text" class="user" value=""><br>
-                    <input type="text" placeholder="请 输 入 您 的 手 机" name="text" class="tel" value="">
-                    <input type="submit"  style="width: 360px;height: 82px;margin:5% 0 0 18%;background:url(/Content/Xinghe1/images/subbtn.png) no-repeat">
+                    <input type="text" placeholder="请 输 入 您 的 姓 名" name="name" class="user" value=""><br>
+                    <input type="text" placeholder="请 输 入 您 的 手 机" name="mobile" class="tel" value="">
+                    @Html.Hidden("openid")
+                    <input type="submit"  style="width: 360px;height: 82px;margin:5% 0 0 18%;background:url(/Content/Xinghe1/images/subbtn.png) no-repeat" value="" />
                 </div>
             </form>
         </div>

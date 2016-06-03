@@ -2,7 +2,9 @@
 .wrap{width:100%;height: 1206px}
 .indexbox{background: url("../images/bg.jpg") no-repeat;background-size: 100%;width:750px;height:1206px;border:1px solid #fff;}
 .indexbox form{width: 575px;margin: 0 auto;}
-.indexbox form input[name=text]{border:none;margin: 10px 0;font-size:26px;text-align: center;background: url("../images/inputbg.png") no-repeat;width: 536px;height: 66px;}
+.indexbox form input[name=name]{border:none;margin: 10px 0;font-size:26px;text-align: center;background: url("../images/inputbg.png") no-repeat;width: 536px;height: 66px;}
+.indexbox form input[name=mobile]{border:none;margin: 10px 0;font-size:26px;text-align: center;background: url("../images/inputbg.png") no-repeat;width: 536px;height: 66px;}
+
 .indexbox form .text{width: 500px;height: auto;margin-top:140px;}
 .indexbox form .radio{width:30px;height:auto;margin-top:624px}
 .indexbox form .radio input{margin:2px 0;}
