@@ -1,6 +1,7 @@
 *{padding:0;margin:0}
 .wrap{width:100%;height: 1206px}
 .indexbox{background: url("../images/bg.jpg") no-repeat;background-size: 100%;width:750px;height:1206px;border:1px solid #fff;}
+.thankbox{background: url("../images/thanks.jpg") no-repeat;background-size:100%;width:750px;height:1206px;border:1px solid #fff;}
 .indexbox form{width: 575px;margin: 0 auto;}
 .indexbox form input[name=name]{border:none;margin: 10px 0;font-size:26px;text-align: center;background: url("../images/inputbg.png") no-repeat;width: 536px;height: 66px;}
 .indexbox form input[name=mobile]{border:none;margin: 10px 0;font-size:26px;text-align: center;background: url("../images/inputbg.png") no-repeat;width: 536px;height: 66px;}
