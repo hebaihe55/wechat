@@ -44,7 +44,38 @@ namespace wechat.Models
 
     }
 
-    public class ActiveUpImg
+    public class Question
+    {
+
+
+
+
+
+        public int id { get; set; }
+
+        [StringLength(50)]
+        public string    openid { get; set; }
+        [StringLength(50)]
+        public string  name { get; set; }
+        [StringLength(50)]
+        public string  mobile { get; set; }
+        [StringLength(500)]
+        public string  addr { get; set; }
+        [StringLength(500)]
+        public string answer { get; set; }
+        [StringLength(500)]
+        public string  actname { get; set; }
+        
+        public DateTime  cctime { get; set; }
+       
+
+    }
+
+
+
+
+
+        public class ActiveUpImg
     {
      public int ActiveUpImgId { get; set; }
       
@@ -79,6 +110,7 @@ namespace wechat.Models
         public DbSet<WechatUser> WechatUsers { get; set; }
         public DbSet<ActiveUpImg> ActiveUpImgs { get; set; }
         public DbSet<QuestionGuiTian> QuestionGuiTians { get; set; }
+        public DbSet<Question> Question { get; set; }
         
     }
 }
