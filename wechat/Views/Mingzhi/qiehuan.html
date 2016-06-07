@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>切换</title>
+    <meta name="viewport" content="width=750, user-scalable=no, target-densitydpi=device-dpi" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no">
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" href="/Content/Mingzhi1/css/style.css">
+    <script>
+        $(function(){
+//            var blw=$(".potobg ul li").width();
+//            var liArr = $(".potobg ul").children("li");
+//            var mysw = $(".poto").width();
+//            var mus = parseInt(mysw/blw);
+//            var length = liArr.length-mus;
+//            var i=0
+//            $(".right").click(function(){
+//                i++
+//                //点击i加1
+//
+//                if(i<length){
+//                   // alert(123);
+//                    $(".potobg").css("left",-(blw*i));
+//                    //子元素集合向左移动，距离为子元素的宽度乘以i。
+//                }else{
+//                    //alert(555);
+//                    i=length;
+//                    $(".potobg").css("left",-(blw*length));
+//                    //超出可移动范围后点击不再移动。最后几个隐藏的元素显示时i数值固定位已经移走的子元素数量。
+//                }
+//            });
+//            $(".left").click(function(){
+//                i--
+//                //点击i减1
+//                if(i>=0){
+//                    $(".potobg").css("left",-(blw*i));
+//                    //子元素集合向右移动，距离为子元素的宽度乘以i。
+//                }else{
+//                    i=0;
+//                    $(".potobg").css("left",0);
+//                    //超出可移动范围后点击不再移动。最前几个子元素被显示时i为0。
+//                }
+//            });
+//            var bgarr=["gaoxiao.html","qhhunli.html","qhqiaokili.html","qhzhengming.html"];
+//            var i=-1;
+//            $(".right").on("click",function(){
+//                i++;
+//                if(i<bgarr.length){
+//                    $(".qhwrap").a({
+//                        "background":"url("+ bgarr[i]+")",
+//                    });
+//                }else{
+//                    i=bgarr.length-1;
+//
+//                }
+//            });
+//            $(".left").on("click",function(){
+//                    i--
+//                    if(i>=0){
+//                        $(".qhwrap").css({
+//                            "background":"url("+ bgarr[i]+")",
+//                        });
+//                    }else{
+//                        i=0;
+//                    }
+//            });
+
+        })
+    </script>
+</head>
+<body>
+    <div class="qhwrap">
+        <form class="form" action="" method="post">
+            <div class="potowrap">
+                <div class="poto">
+
+                </div>
+
+                <textarea rows="4" cols="33" placeholder="请输入你想对他说的话"  class="text"></textarea>
+            </div>
+            <a href="qhzhengming.html" class="left"></a>
+            <a href="gaoxiao.html" class="right"></a>
+            <input type="submit" value="上传照片">
+        </form>
+
+    </div>
+</body>
+</html>

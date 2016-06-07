@@ -22,7 +22,7 @@
                 var user = $(".user").val();
                 var tel = $(".tel").val();
                 var radioarr = $("form input[type=radio]");
-                var flag=false
+                var flag = false;
                 var n = 0;
                 for (var i = 0; i < radioarr.length; i++) {
                     if (radioarr[i].checked == true) {
@@ -61,7 +61,7 @@
 
             <form method="post" action="/xinghe1/Add" onsubmit="return checkform()">
                 <div class="radio">
-                    <input type="radio" value="A.三,两" checked="checked" name="ra" id="radio-1" /><label for="radio-1"></label><br>
+                    <input type="radio" value="A.三,两" name="ra" id="radio-1" /><label for="radio-1"></label><br>
                     <input type="radio" value="B.五,三" name="ra" id="radio-2" /><label for="radio-2"></label><br>
                     <input type="radio" value="C.六,两" name="ra" id="radio-3" /><label for="radio-3"></label><br>
         

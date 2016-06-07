@@ -101,6 +101,46 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Mingzhi1\css\style.css" />
+    <Content Include="Content\Mingzhi1\image\aiqingshowbg.png" />
+    <Content Include="Content\Mingzhi1\image\aishow.png" />
+    <Content Include="Content\Mingzhi1\image\aqkuang.png" />
+    <Content Include="Content\Mingzhi1\image\aqnextbg.jpg" />
+    <Content Include="Content\Mingzhi1\image\bigsubbtn.png" />
+    <Content Include="Content\Mingzhi1\image\btnleft.png" />
+    <Content Include="Content\Mingzhi1\image\chakan.png" />
+    <Content Include="Content\Mingzhi1\image\fengmian.jpg" />
+    <Content Include="Content\Mingzhi1\image\fengxiang.png" />
+    <Content Include="Content\Mingzhi1\image\gaoxiaobg.jpg" />
+    <Content Include="Content\Mingzhi1\image\gaoxiaoshow.png" />
+    <Content Include="Content\Mingzhi1\image\giftbg.jpg" />
+    <Content Include="Content\Mingzhi1\image\gongxibtn.png" />
+    <Content Include="Content\Mingzhi1\image\indexbg.jpg" />
+    <Content Include="Content\Mingzhi1\image\ipad.jpg" />
+    <Content Include="Content\Mingzhi1\image\Leftqkl.png" />
+    <Content Include="Content\Mingzhi1\image\Leftschl.png" />
+    <Content Include="Content\Mingzhi1\image\qhaiqing.jpg" />
+    <Content Include="Content\Mingzhi1\image\qhborderaiqing.png" />
+    <Content Include="Content\Mingzhi1\image\qhbordergaoxiao.png" />
+    <Content Include="Content\Mingzhi1\image\qhborderhunli.png" />
+    <Content Include="Content\Mingzhi1\image\qhborderqkl.png" />
+    <Content Include="Content\Mingzhi1\image\qhgaoxiao.jpg" />
+    <Content Include="Content\Mingzhi1\image\qhhunli.jpg" />
+    <Content Include="Content\Mingzhi1\image\qhqiaokeli.jpg" />
+    <Content Include="Content\Mingzhi1\image\qhzhengming.jpg" />
+    <Content Include="Content\Mingzhi1\image\qhzmbg.jpg" />
+    <Content Include="Content\Mingzhi1\image\qhzmkuang.png" />
+    <Content Include="Content\Mingzhi1\image\qiaokelilihe.jpg" />
+    <Content Include="Content\Mingzhi1\image\rightbtn.png" />
+    <Content Include="Content\Mingzhi1\image\Rightqkl.png" />
+    <Content Include="Content\Mingzhi1\image\Rightschl.png" />
+    <Content Include="Content\Mingzhi1\image\scqiaokelibg.jpg" />
+    <Content Include="Content\Mingzhi1\image\sczmbg.jpg" />
+    <Content Include="Content\Mingzhi1\image\smallsubbtn.png" />
+    <Content Include="Content\Mingzhi1\image\startbtn.gif" />
+    <Content Include="Content\Mingzhi1\image\subhunlibg.jpg" />
+    <Content Include="Content\Mingzhi1\image\submit.png" />
+    <Content Include="Content\Mingzhi1\image\youhuiquan.jpg" />
     <Content Include="Content\Xinghe1\css\style.css" />
     <Content Include="Content\Xinghe1\images\bg.jpg" />
     <Content Include="Content\Xinghe1\images\change.png" />
@@ -152,6 +192,19 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Views\Mingzhi\aiqingnext.html" />
+    <Content Include="Views\Mingzhi\fengmian.html" />
+    <Content Include="Views\Mingzhi\Gaoiaonext.html" />
+    <Content Include="Views\Mingzhi\gaoxiao.html" />
+    <Content Include="Views\Mingzhi\gifts.html" />
+    <Content Include="Views\Mingzhi\hunlinext.html" />
+    <Content Include="Views\Mingzhi\index.html" />
+    <Content Include="Views\Mingzhi\qhhunli.html" />
+    <Content Include="Views\Mingzhi\qhqiaokeli.html" />
+    <Content Include="Views\Mingzhi\qhzhengming.html" />
+    <Content Include="Views\Mingzhi\qiehuan.html" />
+    <Content Include="Views\Mingzhi\qklnext.html" />
+    <Content Include="Views\Mingzhi\zhengmingnext.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

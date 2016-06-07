@@ -1,0 +1,77 @@
+*{padding:0;margin:0;}
+a{text-decoration: none;color: black;}
+a:hover{text-decoration: none;color: black;}
+.indexwrap{width: 750px;background: url("../image/indexbg.jpg") no-repeat;background-size: 100%;height:2856px;border: 1px solid;}
+.indexwrap .start{display:block;background:url("../image/startbtn.gif") no-repeat;width: 407px;height: 112px;margin:2237px auto 0 auto; }
+/*切换*/
+.qhwrap{width: 750px;height: 1206px;background:url("../image/qhaiqing.jpg") no-repeat;border: 1px solid;}
+.qhwrap form{width: 750px;height:272px;margin-top: 60px}
+.qhwrap form input[type=submit]{border:none;display:block;width: 603px;height: 103px;background: url("../image/bigsubbtn.png") no-repeat;margin:230px auto 0 auto;}
+.qhwrap .text{background: url("../image/qhborderaiqing.png") no-repeat;width:393px;height:196px;padding: 65px 0 0 225px;font-size: 32px;border: none;}
+.left{position: absolute;top:517px;left: 0px;width: 66px;height: 66px;background: url("../image/btnleft.png") no-repeat;}
+.right{position: absolute;top:517px;left: 680px;width: 66px;height: 66px;background: url("../image/rightbtn.png") no-repeat;}
+/*搞笑*/
+.gaoxiaowrap{width: 750px;height: 1206px;background: url("../image/qhgaoxiao.jpg") no-repeat;border: 1px solid;}
+.gaoxiaowrap form{width: 750px;height: auto;margin-top: 50px}
+.gaoxiaowrap form input[type=submit]{border:none;display:block;width: 603px;height: 103px;background: url("../image/bigsubbtn.png") no-repeat;margin: 300px auto 0 auto;}
+
+.gaoxiaowrap .text{background: url("../image/qhbordergaoxiao.png") no-repeat;width:443px;height:167px;padding: 65px 0 0 225px;font-size: 32px;border: none;}
+.gaoxiaoshowwrap .daoxiaoshow{position:absolute;width: 750px;height: 807px;background: url("../image/gaoxiaoshow.png") no-repeat;z-index: 2}
+.gaoxiaoshowwrap{width: 750px;height: 1206px;background: url("../image/gaoxiaobg.jpg") no-repeat;}
+.gaoxiaoshowwrap form{width: 750px;height: auto;}
+.gaoxiaowrap form input[type=submit]{border:none;display:block;width: 603px;height: 103px;background: url("../image/bigsubbtn.png") no-repeat;margin: 300px auto 0 auto;}
+.gaoxiaoshowwrap{width: 750px;height: 1206px;background: url("../image/gaoxiaobg.jpg") no-repeat;}
+.gaoxiaoshowwrap .text{background: url("../image/qhbordergaoxiao.png") no-repeat;width:443px;height:155px;padding: 65px 0 0 225px;font-size: 32px;border: none;}
+.gongxibtn{z-index:2;position: absolute;width: 275px;height: 292px;left:32%;top:888px;background: url("../image/gongxibtn.png") no-repeat;border: none}
+.gaoxiaowrap .phto{width: 500px;height: 480px;position: absolute;z-index: 1;left: 19%;top:210px;}
+/*礼品*/
+.giftwrap{width: 750px;height: 1206px;background:url("../image/giftbg.jpg") no-repeat;border: 1px solid;}
+.giftwrap .likes{width:96%;height:278px;margin: 210px auto 0 auto;}
+.giftwrap .likes .gift{width: 30%;height:278px;display: inline-block;margin: 0 5px 0 10px;background: greenyellow;}
+.giftwrap .likes .gift .txt{width: 70%;margin: 20px auto 0 auto;}
+.giftwrap .likes .gift .txt input[type=checkbox]{display: none;}
+.giftwrap .likes .gift .txt input[type=checkbox]+label{color:white;font-size:25px;display: block;width:100%;height: 30px;background: pink;border: 1px solid white;border-radius: 30px;text-align: center;line-height: 30px;}
+.giftwrap .likes .gift .txt input[type=checkbox]:checked+label{color:white;font-size:25px;display: block;width:100%;height: 30px;background:red;border: 1px solid white;border-radius: 30px;text-align: center;line-height: 30px;}
+.giftwrap .userinfo{width: 90%;height:auto;margin: 90px auto 0 auto;}
+.giftwrap .userinfo input[type=text]{border: 5px solid red;height: 70px;font-size: 25px;color:grey;width:85%;display:block;margin:10px auto 0 auto;border-radius: 30px;text-indent: 15px;}
+.giftwrap .userinfo input[type=submit]{display: block;width:257px;height: 71px;background:url("../image/submit.png") no-repeat; border:none;margin: 50px auto 0 auto;}
+.giftwrap .fenxiang{width:248px;height: 73px;margin: 110px 50px 0 100px;float: left;background: url("../image/fengxiang.png") no-repeat}
+.giftwrap .chakan{width:248px;height: 73px;margin-top:110px;float: left;background: url("../image/chakan.png") no-repeat}
+/*爱情上传后的页面*/
+.aiqingnext .aqshow{position:absolute;width: 750px;height: 807px;background: url("../image/aishow.png") no-repeat;z-index: 2}
+.aiqingnext form{width: 750px;height: auto;margin-top: 50px;}
+.aiqingnext form input[type=submit]{border:none;display:block;width: 603px;height: 103px;background: url("../image/bigsubbtn.png") no-repeat;margin: 300px auto 0 auto;}
+.aiqingnext{border:1px solid;width: 750px;height: 1206px;background: url("../image/aqnextbg.jpg") no-repeat;}
+.aiqingnext .text{background: url("../image/aqkuang.png") no-repeat;width:443px;height:200px;padding: 65px 0 0 225px;font-size: 32px;border: none;}
+.gongxibtn{z-index:2;position: absolute;width: 275px;height: 292px;left:32%;top:888px;background: url("../image/gongxibtn.png") no-repeat;border: none}
+.aiqingnext .phto{width:100%;height:551px;background:url("../image/aiqingshowbg.png") no-repeat;}
+/*婚礼切换*/
+.hlwrap{width: 750px;height: 1206px;background: url("../image/qhhunli.jpg") no-repeat;border: 1px solid;}
+.hlwrap form{width: 750px;height: auto;margin-top: 50px}
+.hlwrap form input[type=submit]{display:inline-block;border:none;width: 370px;height:63px;background: url("../image/smallsubbtn.png") no-repeat;background-size:100%;margin: 190px 0px 0 0px;}
+.hlwrap .text{background: url("../image/qhborderhunli.png") no-repeat;width:443px;height:167px;padding: 65px 0 0 225px;font-size: 32px;border: none;}
+.hlnextwrap{border:1px solid;width: 750px;height: 1206px;background: url("../image/subhunlibg.jpg") no-repeat;}
+.hlnextwrap .text{background: url("../image/qhborderhunli.png") no-repeat;width:443px;height:167px;padding: 65px 0 0 225px;font-size: 32px;border: none;}
+.Leftschl{float: left;width: 328px;height: 415px;border: none;margin:44px 0 0 20px;background: url("../image/Rightschl.png") no-repeat;}
+.Rightschl{float: left;width: 328px;height: 415px;border: none;margin-top: 44px;background: url("../image/Leftschl.png") no-repeat;}
+/*巧克力切换*/
+.qklwrap{width: 750px;height: 1206px;background: url("../image/qhqiaokeli.jpg") no-repeat;border: 1px solid;}
+.qklwrap form{width: 750px;height: auto;margin-top: 50px}
+.qklwrap .text{background: url("../image/qhborderqkl.png") no-repeat;width:420px;height:176px;padding:97px 0 0 210px;font-size: 32px;border: none;}
+.scbtn1,.scbtn2{width:231px;height: 63px;background: url("../image/smallsubbtn.png") no-repeat;margin: 200px 0 0 102px;border: none;}
+.qklnextwrap{border:1px solid;width: 750px;height: 1206px;background: url("../image/scqiaokelibg.jpg") no-repeat;}
+.qklnextwrap .text{background: url("../image/qhborderqkl.png") no-repeat;width:420px;height:176px;padding:97px 0 0 210px;font-size: 32px;border: none;}
+.qklnextwrap .Leftscqkl{position:absolute;width:467px;height: 507px;background: url("../image/Leftqkl.png") no-repeat;top:286px}
+.qklnextwrap .Rightscqkl{position:absolute;width:467px;height: 507px;background: url("../image/Rightqkl.png") no-repeat;top:286px;left: 292px;}
+/*证明切换*/
+.qhzmwsrap{width: 750px;height: 1206px;background: url("../image/qhzhengming.jpg") no-repeat;border: 1px solid;}
+.qhzmwsrap form{width: 750px;height: auto;margin-top: 700px}
+.qhzmwsrap .scbtn1{border:none;width: 231px;height: 63px;position: absolute;top:258px;left:23px;background: url("../image/smallsubbtn.png") no-repeat;}
+.qhzmwsrap .scbtn2{border:none;width: 231px;height: 63px;position: absolute;top:258px;left: 295px;background: url("../image/smallsubbtn.png") no-repeat;}
+.qhzmwsrap .text{background: url("../image/qhzmkuang.png") no-repeat;width:627px;height:289px;padding:24px 0 0 130px;font-size: 32px;border: none;}
+.zmnextwsrap{width: 750px;height: 1206px;background: url("../image/sczmbg.jpg") no-repeat;border: 1px solid;}
+.zmnextwsrap .text{background: url("../image/qhzmkuang.png") no-repeat;width:627px;height:289px;padding:24px 0 0 130px;font-size: 32px;border: none;}
+.zmnextwsrap .leftkuang{width: 278px;height: 407px;border: 1px solid rosybrown;margin: 300px 0 20px 89px;float: left;background:palegoldenrod;border-radius: 15px;}
+.zmnextwsrap .rightkuang{width:278px;height: 407px;border: 1px solid rosybrown;margin: 300px 0 20px 15px;float: left;background:palegoldenrod;border-radius: 15px;}
+.fm{width: 900px;height:500px;background: url("../image/fengmian.jpg") no-repeat;border: 1px solid;background-size: 100%}
+
