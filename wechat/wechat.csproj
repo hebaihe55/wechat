@@ -106,11 +106,13 @@
     <Content Include="Content\Mingzhi1\image\aishow.png" />
     <Content Include="Content\Mingzhi1\image\aqkuang.png" />
     <Content Include="Content\Mingzhi1\image\aqnextbg.jpg" />
+    <Content Include="Content\Mingzhi1\image\aqnextbg.png" />
     <Content Include="Content\Mingzhi1\image\bigsubbtn.png" />
     <Content Include="Content\Mingzhi1\image\btnleft.png" />
     <Content Include="Content\Mingzhi1\image\chakan.png" />
     <Content Include="Content\Mingzhi1\image\fengmian.jpg" />
     <Content Include="Content\Mingzhi1\image\fengxiang.png" />
+    <Content Include="Content\Mingzhi1\image\gaoguainextbg.png" />
     <Content Include="Content\Mingzhi1\image\gaoxiaobg.jpg" />
     <Content Include="Content\Mingzhi1\image\gaoxiaoshow.png" />
     <Content Include="Content\Mingzhi1\image\giftbg.jpg" />
@@ -135,10 +137,13 @@
     <Content Include="Content\Mingzhi1\image\Rightqkl.png" />
     <Content Include="Content\Mingzhi1\image\Rightschl.png" />
     <Content Include="Content\Mingzhi1\image\scqiaokelibg.jpg" />
+    <Content Include="Content\Mingzhi1\image\scqiaokelibg.png" />
     <Content Include="Content\Mingzhi1\image\sczmbg.jpg" />
+    <Content Include="Content\Mingzhi1\image\sczmbg.png" />
     <Content Include="Content\Mingzhi1\image\smallsubbtn.png" />
     <Content Include="Content\Mingzhi1\image\startbtn.gif" />
     <Content Include="Content\Mingzhi1\image\subhunlibg.jpg" />
+    <Content Include="Content\Mingzhi1\image\subhunlibg.png" />
     <Content Include="Content\Mingzhi1\image\submit.png" />
     <Content Include="Content\Mingzhi1\image\youhuiquan.jpg" />
     <Content Include="Content\Xinghe1\css\style.css" />
@@ -182,6 +187,7 @@
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\npm.js" />
+    <Content Include="Content\Mingzhi1\image\subhunlibg.jpg.bak" />
     <None Include="Properties\PublishProfiles\mvcDeloy.pubxml" />
     <None Include="Properties\PublishProfiles\mvcftp.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
