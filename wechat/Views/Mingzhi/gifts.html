@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>礼品</title>
+    <meta name="viewport" content="width=750, user-scalable=no, target-densitydpi=device-dpi" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no">
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" href="/Content/Mingzhi1/css/style.css">
+    <script>
+
+            function checkinfo(){
+                var user = $(".user").val();
+                var tel = $(".tel").val();
+                var checkboxarr = $("form input[type=checkbox]");
+                var flag = false;
+                for (var i = 0; i < checkboxarr.length; i++) {
+                    if (checkboxarr[i].checked == true) {
+                        flag = true;
+                        break;
+                    }
+                }
+                if (!flag) {
+                    alert("请选择您喜欢的礼物");
+                    return false;
+                }
+                if (user == null || user == "") {
+                    alert("请输入您的姓名");
+                    return false;
+                } else if (user.length> 10) {
+                    alert("长度必须小于10位");
+                    return false;
+                }
+                var reg=/^1[3|4|5|7|8]\d{9}$/;
+                if (!(reg.test(tel))) {
+                    alert("手机号码有误，请重填");
+                    return false;
+                }
+                return true;
+            }
+
+    </script>
+</head>
+<body>
+    <div class="giftwrap">
+        <form action="" method="post" onsubmit="return checkinfo()">
+        <div class="likes">
+            <div class="gift"><img src="image/ipad.jpg"/><div class="txt"><input type="checkbox" value="我喜欢" id="like1"><label for="like1">我喜欢</label></div> </div>
+            <div class="gift"><img src="image/qiaokelilihe.jpg"/><div class="txt"><input type="checkbox" value="我喜欢" id="like2"><label for="like2">我喜欢</label></div></div>
+            <div class="gift"><img src="image/youhuiquan.jpg"/><div class="txt"><input type="checkbox" value="我喜欢" id="like3"><label for="like3">我喜欢</label></div></div>
+        </div>
+        <div class="userinfo">
+            <input type="text" placeholder="请输入姓名：" class="user"/><br/>
+            <input type="text" placeholder="请输入手机号：" class="tel"/>
+            <input type="submit" value="确认提交"/>
+        </div>
+        </form>
+        <button class="fenxiang"></button>
+        <button class="chakan"></button>
+    </div>
+</body>
+</html>
