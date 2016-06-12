@@ -140,6 +140,19 @@ namespace wechat.Utils
             return result;
         }
 
+
+        public static string GetOpenidBycode()
+        {
+            string url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=" + appid + "&secret=" + secret + "&code=" + code + "&grant_type=authorization_code";
+
+            string result = HttpService.Get(url);
+
+            Log.Info("getcticket", result);
+            return result;
+        }
+
+
+
         public static string GetUserInfo()
         {
             string url = "https://api.weixin.qq.com/sns/userinfo?access_token="+ Caccess_token + "&openid="+openid+"&lang=zh_CN";

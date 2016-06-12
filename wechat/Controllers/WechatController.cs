@@ -21,6 +21,7 @@ namespace wechat.Controllers
             if (echostr == "")
             {
                 return "success";
+
             }
             return echostr;
         }
