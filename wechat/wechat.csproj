@@ -115,9 +115,7 @@
     <Content Include="Content\Mingzhi1\image\gaoguainextbg.png" />
     <Content Include="Content\Mingzhi1\image\gaoxiaobg.jpg" />
     <Content Include="Content\Mingzhi1\image\gaoxiaoshow.png" />
-    <Content Include="Content\Mingzhi1\image\giftbg.jpg" />
     <Content Include="Content\Mingzhi1\image\gongxibtn.png" />
-    <Content Include="Content\Mingzhi1\image\indexbg.jpg" />
     <Content Include="Content\Mingzhi1\image\ipad.jpg" />
     <Content Include="Content\Mingzhi1\image\Leftqkl.png" />
     <Content Include="Content\Mingzhi1\image\Leftschl.png" />
@@ -146,6 +144,8 @@
     <Content Include="Content\Mingzhi1\image\subhunlibg.png" />
     <Content Include="Content\Mingzhi1\image\submit.png" />
     <Content Include="Content\Mingzhi1\image\youhuiquan.jpg" />
+    <Content Include="Content\Mingzhi1\image\indexbg.jpg" />
+    <Content Include="Content\Mingzhi1\image\giftbg.jpg" />
     <Content Include="Content\Xinghe1\css\style.css" />
     <Content Include="Content\Xinghe1\images\bg.jpg" />
     <Content Include="Content\Xinghe1\images\change.png" />
