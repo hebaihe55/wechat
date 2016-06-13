@@ -221,6 +221,7 @@
     <Compile Include="Controllers\GuiTianController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KamidaController.cs" />
+    <Compile Include="Controllers\Meiji1Controller.cs" />
     <Compile Include="Controllers\WechatController.cs" />
     <Compile Include="Controllers\Xinghe1Controller.cs" />
     <Compile Include="Global.asax.cs">
@@ -258,6 +259,19 @@
     <Content Include="Views\Admin\Home\Index.cshtml" />
     <Content Include="Views\Xinghe1\Index.cshtml" />
     <Content Include="Views\Xinghe1\Thanks.cshtml" />
+    <Content Include="Views\Meiji1\Index.cshtml" />
+    <Content Include="Views\Meiji1\aiqingnext.cshtml" />
+    <Content Include="Views\Meiji1\fengmian.cshtml" />
+    <Content Include="Views\Meiji1\Gaoiaonext.cshtml" />
+    <Content Include="Views\Meiji1\gaoxiao.cshtml" />
+    <Content Include="Views\Meiji1\gifts.cshtml" />
+    <Content Include="Views\Meiji1\hunlinext.cshtml" />
+    <Content Include="Views\Meiji1\qhhunli.cshtml" />
+    <Content Include="Views\Meiji1\qhqiaokeli.cshtml" />
+    <Content Include="Views\Meiji1\qhzhengming.cshtml" />
+    <Content Include="Views\Meiji1\qiehuan.cshtml" />
+    <Content Include="Views\Meiji1\qklnext.cshtml" />
+    <Content Include="Views\Meiji1\zhengmingnext.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
