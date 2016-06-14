@@ -21,14 +21,14 @@ namespace wechat.Controllers
                 {
                     string strjson = Utils.WeHelper.GetOpenidBycode();
 
-                //string strjson = "{\"openid\":\"oQOyyv - MdUWSgP8_Smoh2S_6 - 1I0\",\"nickname\":\"白鹤\",\"sex\":1,\"language\":\"zh_CN\",\"city\":\"长宁\",\"province\":\"上海\",\"country\":\"中国\",\"headimgurl\":\"http://wx.qlogo.cn/mmopen/78EkX665csCmkBmDBDSYTDCmZdvlMDqCX7wYTLcHeeKNeLicSS5ic2fDAYpeTqicaqhF8Iw9Rp9d6hegynMHC7tPMWLRnqMvNicn/0\",\"privilege\":[]}";
-                Utils.Log.Info("userin", strjson);
-                LitJson.JsonData jd = LitJson.JsonMapper.ToObject(strjson);
+                    //string strjson = "{\"openid\":\"oQOyyv - MdUWSgP8_Smoh2S_6 - 1I0\",\"nickname\":\"白鹤\",\"sex\":1,\"language\":\"zh_CN\",\"city\":\"长宁\",\"province\":\"上海\",\"country\":\"中国\",\"headimgurl\":\"http://wx.qlogo.cn/mmopen/78EkX665csCmkBmDBDSYTDCmZdvlMDqCX7wYTLcHeeKNeLicSS5ic2fDAYpeTqicaqhF8Iw9Rp9d6hegynMHC7tPMWLRnqMvNicn/0\",\"privilege\":[]}";
+                    Utils.Log.Info("userin", strjson);
+                    LitJson.JsonData jd = LitJson.JsonMapper.ToObject(strjson);
 
-              string openid=  jd["openid"].ToString();
+                    string openid = jd["openid"].ToString();
 
 
-                
+
                     var wu = db.Question.SingleOrDefault(w => w.openid.Equals(openid));
 
                     if (wu == null)
@@ -36,7 +36,7 @@ namespace wechat.Controllers
 
 
                         ViewBag.openid = openid;
-                      
+
                     }
                     else
                     {
@@ -50,7 +50,7 @@ namespace wechat.Controllers
 
                     Utils.Log.Error("userAdd", ex.Message);
 
-                  
+
                 }
             }
             else
@@ -58,7 +58,7 @@ namespace wechat.Controllers
                 Response.Redirect("https://open.weixin.qq.com/connect/oauth2/authorize?appid=" + Utils.WeHelper.appid + "&redirect_uri=http://mvc.cjoy.cn/Xinghe1/index&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect");
             }
 
-        
+            //ViewBag.openid = "aaaaaaaaaa";
             return View();
         }
 

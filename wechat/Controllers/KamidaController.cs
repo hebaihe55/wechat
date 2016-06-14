@@ -16,6 +16,8 @@ namespace wechat.Controllers
         {
             Utils.WeHelper.appid = "wxa25b827fd42bdf7f";
             Utils.WeHelper.secret = "00639e0733e2c80d822ccd6a3cbdac51";
+
+
             if (!string.IsNullOrWhiteSpace(code))
             {
                 Utils.WeHelper.code = code;

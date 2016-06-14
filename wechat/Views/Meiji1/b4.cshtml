@@ -6,7 +6,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>切换婚礼</title>
+    <title>切换巧克力</title>
     <meta name="viewport" content="width=750, user-scalable=no, target-densitydpi=device-dpi" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -14,28 +14,25 @@
     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
     <link rel="stylesheet" href="/Content/Mingzhi1/css/style.css">
     <script>
-
         function checkform(){
             var text=$(".text").val();
             if(text==null||text==""){
                 alert("请输入要说的话");
                 return false;
             }
-
-
         }
     </script>
 </head>
 <body>
-    <div class="hlwrap">
+    <div class="qklwrap">
         <form class="form" action="" method="post" onsubmit="return checkform()">
             <textarea rows="4" cols="33" placeholder="请输入你想对他说的话" class="text" onkeyup="this.value=this.value.substr(0,30)"></textarea>
-            <button class="scbtn1"></button>
-            <button class="scbtn2"></button>
+            <button class="scbtn1" />
+            <button class="scbtn2" />
         </form>
 
-        <a href="gaoxiao.html" class="left"></a>
-        <a href="qhqiaokeli.html" class="right"></a>
+        <a href="/meiji1/b3" class="left"></a>
+        <a href="/meiji1/b0" class="right"></a>
         <span class="shuoming">在这里上传照片</span>
     </div>
 </body>

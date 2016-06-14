@@ -115,7 +115,9 @@
     <Content Include="Content\Mingzhi1\image\gaoguainextbg.png" />
     <Content Include="Content\Mingzhi1\image\gaoxiaobg.jpg" />
     <Content Include="Content\Mingzhi1\image\gaoxiaoshow.png" />
+    <Content Include="Content\Mingzhi1\image\giftbg.jpg" />
     <Content Include="Content\Mingzhi1\image\gongxibtn.png" />
+    <Content Include="Content\Mingzhi1\image\indexbg.jpg" />
     <Content Include="Content\Mingzhi1\image\ipad.jpg" />
     <Content Include="Content\Mingzhi1\image\Leftqkl.png" />
     <Content Include="Content\Mingzhi1\image\Leftschl.png" />
@@ -144,8 +146,6 @@
     <Content Include="Content\Mingzhi1\image\subhunlibg.png" />
     <Content Include="Content\Mingzhi1\image\submit.png" />
     <Content Include="Content\Mingzhi1\image\youhuiquan.jpg" />
-    <Content Include="Content\Mingzhi1\image\indexbg.jpg" />
-    <Content Include="Content\Mingzhi1\image\giftbg.jpg" />
     <Content Include="Content\Xinghe1\css\style.css" />
     <Content Include="Content\Xinghe1\images\bg.jpg" />
     <Content Include="Content\Xinghe1\images\change.png" />
@@ -327,22 +327,22 @@
     <Content Include="Views\Xinghe1\Index.cshtml" />
     <Content Include="Views\Xinghe1\Thanks.cshtml" />
     <Content Include="Views\Meiji1\Index.cshtml" />
-    <Content Include="Views\Meiji1\aiqingnext.cshtml" />
-    <Content Include="Views\Meiji1\fengmian.cshtml" />
-    <Content Include="Views\Meiji1\Gaoiaonext.cshtml" />
-    <Content Include="Views\Meiji1\gaoxiao.cshtml" />
+    <Content Include="Views\Meiji1\bn0.cshtml" />
+    <Content Include="Views\Meiji1\bn1.cshtml" />
+    <Content Include="Views\Meiji1\b1.cshtml" />
     <Content Include="Views\Meiji1\gifts.cshtml" />
-    <Content Include="Views\Meiji1\hunlinext.cshtml" />
-    <Content Include="Views\Meiji1\qhhunli.cshtml" />
-    <Content Include="Views\Meiji1\qhqiaokeli.cshtml" />
-    <Content Include="Views\Meiji1\qhzhengming.cshtml" />
-    <Content Include="Views\Meiji1\qiehuan.cshtml" />
-    <Content Include="Views\Meiji1\qklnext.cshtml" />
-    <Content Include="Views\Meiji1\zhengmingnext.cshtml" />
-    <Content Include="Views\Yamaha1\t1.cshtml" />
+    <Content Include="Views\Meiji1\bn2.cshtml" />
+    <Content Include="Views\Meiji1\b2.cshtml" />
+    <Content Include="Views\Meiji1\b4.cshtml" />
+    <Content Include="Views\Meiji1\b3.cshtml" />
+    <Content Include="Views\Meiji1\b0.cshtml" />
+    <Content Include="Views\Meiji1\bn4.cshtml" />
+    <Content Include="Views\Meiji1\bn3.cshtml" />
     <Content Include="Views\Yamaha1\index.cshtml" />
     <Content Include="Views\Yamaha1\rule.cshtml" />
     <Content Include="Views\Yamaha1\subinfo.cshtml" />
+    <Content Include="Views\Yamaha1\t1.cshtml" />
+    <Content Include="Views\Yamaha1\t10.cshtml" />
     <Content Include="Views\Yamaha1\t2.cshtml" />
     <Content Include="Views\Yamaha1\t3.cshtml" />
     <Content Include="Views\Yamaha1\t4.cshtml" />
@@ -351,9 +351,8 @@
     <Content Include="Views\Yamaha1\t7.cshtml" />
     <Content Include="Views\Yamaha1\t8.cshtml" />
     <Content Include="Views\Yamaha1\t9.cshtml" />
-    <Content Include="Views\Yamaha1\t10.cshtml" />
-    <Content Include="Views\Yamaha1\timu.cshtml" />
     <Content Include="Views\Yamaha1\thank.cshtml" />
+    <Content Include="Views\Yamaha1\timu.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
