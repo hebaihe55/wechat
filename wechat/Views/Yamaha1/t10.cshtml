@@ -15,7 +15,25 @@
     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
     <script src="~/Content/yamaha/js/main.js"></script>
     <script>
-        $(function(){
+        $(function () {
+            var q1img = "<img src='/Content/yamaha/image/Q1.png' class='q1'>"
+            var q2img = "<img src='/Content/yamaha/image/Q2.png' class='q1'>"
+            var q3img = "<img src='/Content/yamaha/image/Q3.png' class='q1'>"
+            var cookiedata = checkCookie();
+            if (cookiedata.indexOf(',') != -1) {
+                var arr3 = cookiedata.split(",");
+                arr3leng = arr3.length;
+                if (arr3leng == 3) {
+                    $(".t1wrap").append(q1img);
+                } else if (arr3leng == 2) {
+                    $(".t1wrap").append(q2img);
+                } else if (arr3leng == 1) {
+                    $(".t1wrap").append(q3img);
+                } else {
+                    return;
+                }
+            }
+
             $("form .nextbtn").on("click",function(){
                 var checkval=$("form input[type=radio]:checked").val();
                 if(checkval==null||checkval==""){
@@ -47,7 +65,7 @@
 </head>
 <body>
     <div class="t10wrap">
-        <video src="~/Content/yamaha/vedio/t1video.mp4" controls="controls" class="video">
+        <video src="~/Content/yamaha/vedio/t1video.mp4" controls="controls" class="video" width="100%" height="100%" controls poster="~/Content/yamaha/image/videobg.jpg">
             Your browser does not support the video tag.
         </video>
         <p class="title">Clavinova是谁拥有的第一台雅马哈电钢琴?</p>

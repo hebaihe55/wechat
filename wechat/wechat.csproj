@@ -159,6 +159,9 @@
     <Content Include="Content\yamaha\image\indexbg.jpg" />
     <Content Include="Content\yamaha\image\inputbg.png" />
     <Content Include="Content\yamaha\image\nextbtn.png" />
+    <Content Include="Content\yamaha\image\Q1.png" />
+    <Content Include="Content\yamaha\image\Q2.png" />
+    <Content Include="Content\yamaha\image\Q3.png" />
     <Content Include="Content\yamaha\image\rulebg.jpg" />
     <Content Include="Content\yamaha\image\start.png" />
     <Content Include="Content\yamaha\image\subbtn.png" />
@@ -196,6 +199,7 @@
     <Content Include="Content\yamaha\image\t9c.png" />
     <Content Include="Content\yamaha\image\thank.gif" />
     <Content Include="Content\yamaha\image\timubg.jpg" />
+    <Content Include="Content\yamaha\image\videobg.jpg" />
     <Content Include="Content\yamaha\js\jquery.min.js" />
     <Content Include="Content\yamaha\js\main.js" />
     <Content Include="Content\yamaha\vedio\t1video.mp4" />
