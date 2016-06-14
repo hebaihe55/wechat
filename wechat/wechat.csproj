@@ -260,18 +260,17 @@
     <Content Include="Views\Xinghe1\Index.cshtml" />
     <Content Include="Views\Xinghe1\Thanks.cshtml" />
     <Content Include="Views\Meiji1\Index.cshtml" />
-    <Content Include="Views\Meiji1\aiqingnext.cshtml" />
-    <Content Include="Views\Meiji1\fengmian.cshtml" />
-    <Content Include="Views\Meiji1\Gaoiaonext.cshtml" />
-    <Content Include="Views\Meiji1\gaoxiao.cshtml" />
+    <Content Include="Views\Meiji1\bn0.cshtml" />
+    <Content Include="Views\Meiji1\bn1.cshtml" />
+    <Content Include="Views\Meiji1\b1.cshtml" />
     <Content Include="Views\Meiji1\gifts.cshtml" />
-    <Content Include="Views\Meiji1\hunlinext.cshtml" />
-    <Content Include="Views\Meiji1\qhhunli.cshtml" />
-    <Content Include="Views\Meiji1\qhqiaokeli.cshtml" />
-    <Content Include="Views\Meiji1\qhzhengming.cshtml" />
-    <Content Include="Views\Meiji1\qiehuan.cshtml" />
-    <Content Include="Views\Meiji1\qklnext.cshtml" />
-    <Content Include="Views\Meiji1\zhengmingnext.cshtml" />
+    <Content Include="Views\Meiji1\bn2.cshtml" />
+    <Content Include="Views\Meiji1\b2.cshtml" />
+    <Content Include="Views\Meiji1\b4.cshtml" />
+    <Content Include="Views\Meiji1\b3.cshtml" />
+    <Content Include="Views\Meiji1\b0.cshtml" />
+    <Content Include="Views\Meiji1\bn4.cshtml" />
+    <Content Include="Views\Meiji1\bn3.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

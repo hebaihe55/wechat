@@ -72,7 +72,27 @@ namespace wechat.Models
     }
 
 
+    public class ImgActive
+    {
+      public int  id { get; set; }
+        [StringLength(50)]
+        public string openid { get; set; }
+        public int? backNo { get; set; }
+        public int? imgNo { get; set; }
+        [StringLength(50)]
+        public string img1 { get; set; }
+        [StringLength(50)]
+        public string img2 { get; set; }
+        [StringLength(50)]
+        public string name { get; set; }
+        [StringLength(50)]
+        public string mobile { get; set; }
+        [StringLength(50)]
+        public string gift { get; set; }
+        public DateTime ctime { get; set; }
 
+
+    }
 
 
         public class ActiveUpImg
@@ -111,6 +131,6 @@ namespace wechat.Models
         public DbSet<ActiveUpImg> ActiveUpImgs { get; set; }
         public DbSet<QuestionGuiTian> QuestionGuiTians { get; set; }
         public DbSet<Question> Question { get; set; }
-        
+        public DbSet<ImgActive> ImgActives        { get; set; }
     }
 }
