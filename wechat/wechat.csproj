@@ -156,6 +156,7 @@
     <Content Include="Content\yamaha\css\style.css" />
     <Content Include="Content\yamaha\image\alltimubg.jpg" />
     <Content Include="Content\yamaha\image\gamerulebtn.png" />
+    <Content Include="Content\yamaha\image\indexbg.gif" />
     <Content Include="Content\yamaha\image\indexbg.jpg" />
     <Content Include="Content\yamaha\image\inputbg.png" />
     <Content Include="Content\yamaha\image\nextbtn.png" />
