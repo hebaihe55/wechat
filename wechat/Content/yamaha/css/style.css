@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /* CSS Document */
 *{padding:0;margin:0;}
 a{text-decoration:none;color:#000;}
@@ -38,9 +38,9 @@ form .nextbtn{display:block;position: absolute;width: 403px;height: 161px;backgr
 .t2wrap form .t2b{display: block;width: 176px;height: 154px;background: url("../image/t2b.png") no-repeat;top:700px;left: 293px;}
 .t2wrap form .t2c{display: block;width: 176px;height: 154px;background: url("../image/t2c.png") no-repeat;top:700px;left: 500px;}
 /*t3*/
-.t3wrap form .t3a{display: block;width: 176px;height: 154px;background: url("../image/t3a.png") no-repeat;top:700px;left: 81px;}
-.t3wrap form .t3b{display: block;width: 176px;height: 154px;background: url("../image/t3b.png") no-repeat;top:700px;left: 293px;}
-.t3wrap form .t3c{display: block;width: 176px;height: 154px;background: url("../image/t3c.png") no-repeat;top:700px;left: 500px;}
+.t3wrap form .t3a{display: block;width: 188px;height: 223px;background: url("../image/t3a.png") no-repeat;top:700px;left: 81px;}
+.t3wrap form .t3b{display: block;width: 188px;height: 223px;background: url("../image/t3b.png") no-repeat;top:700px;left: 293px;}
+.t3wrap form .t3c{display: block;width: 188px;height: 223px;background: url("../image/t3c.png") no-repeat;top:700px;left: 500px;}
 /*t5*/
 .t5wrap form .t5a{display: block;width: 188px;height:223px;background: url("../image/t5a.png") no-repeat;top:700px;left: 81px;}
 .t5wrap form .t5b{display: block;width: 188px;height: 223px;background: url("../image/t5b.png") no-repeat;top:700px;left: 293px;}
