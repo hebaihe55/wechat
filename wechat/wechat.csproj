@@ -173,6 +173,9 @@
     <Content Include="Content\yamaha\image\t2a.png" />
     <Content Include="Content\yamaha\image\t2b.png" />
     <Content Include="Content\yamaha\image\t2c.png" />
+    <Content Include="Content\yamaha\image\t3a.png" />
+    <Content Include="Content\yamaha\image\t3b.png" />
+    <Content Include="Content\yamaha\image\t3c.png" />
     <Content Include="Content\yamaha\image\t4a.png" />
     <Content Include="Content\yamaha\image\t4b.png" />
     <Content Include="Content\yamaha\image\t4c.png" />
