@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>题目问答</title>
+    <meta name="viewport" content="width=750, user-scalable=no, target-densitydpi=device-dpi" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $(function(){
+            $("form .nextbtn").on("click",function(){
+                var checkval=$("form input[type=radio]:checked").val();
+                if(checkval==null||checkval==""){
+                    alert("请选择您的答案");
+                    return;
+                }else{
+                    //alert(checkval);
+                    setCookie("cookiet10",checkval,365);
+                    setCookie("cookiet4",checkval,365);
+                    var cookiedata=checkCookie();
+                    if(cookiedata.indexOf(",")!=-1){
+                        var arr3=cookiedata.split(",");
+
+                        if(arr3.length>0){
+                            console.log(arr3);
+                            var arrti1=arr3.shift();
+                            // alert(arr3);
+                            setCookie("arr3key",arr3,365);
+                            location.href=arr3[0]+".html";
+                        }
+                    }else{
+                        alert("您已答完所有题目");
+                        location.href="subinfo.html";
+                    }
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<div class="t10wrap">
+    <video src="video/t1video.mp4" controls="controls" class="video">
+        Your browser does not support the video tag.
+    </video>
+    <p class="title">Clavinova是谁拥有的第一台雅马哈电钢琴?</p>
+    <form>
+        <input type="radio" id="t10a" value="A" name="t10"><label for="t10a" class="t10a"></label>
+        <input type="radio" id="t10b" value="B" name="t10"><label for="t10b" class="t10b"></label>
+        <input type="radio" id="t10c" value="C" name="t10"><label for="t10c" class="t10c"></label>
+        <input type="button" class="nextbtn">
+    </form>
+</div>
+</body>
+</html>

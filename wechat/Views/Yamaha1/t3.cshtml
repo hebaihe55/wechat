@@ -1,0 +1,62 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>题目问答</title>
+    <meta name="viewport" content="width=750, user-scalable=no, target-densitydpi=device-dpi" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no">
+    <link href="~/Content/yamaha/css/style.css" rel="stylesheet" type="text/css" />
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script src="~/Content/yamaha/js/main.js"></script>
+    <script>
+        $(function(){
+
+            $("form .nextbtn").on("click",function(){
+                var checkval=$("form input[type=radio]:checked").val();
+                if(checkval==null||checkval==""){
+                    alert("请选择您的答案");
+                    return;
+                }else{
+                    //alert(checkval);
+                    setCookie("cookiet3",checkval,365);
+                    var cookiedata=checkCookie();
+                    if(cookiedata.indexOf(",")!=-1){
+                        var arr3=cookiedata.split(",");
+
+                        if(arr3.length>0){
+                            console.log(arr3);
+                            var arrti1=arr3.shift();
+                            // alert(arr3);
+                            setCookie("arr3key",arr3,365);
+                            location.href = "/Yamaha1/" + arr3[0];
+                        }
+                    }else{
+                        alert("您已答完所有题目");
+                        location.href = "/Yamaha1/subinfo";
+                    }
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="t3wrap">
+        <video src="~/Content/yamaha/vedio/t1video.mp4" controls="controls" class="video">
+            Your browser does not support the video tag.
+        </video>
+        <p class="title">Always around, always with you是哪个电子钢琴品牌的slogan?</p>
+        <form>
+            <input type="radio" id="t3a" value="A" name="t3"><label for="t3a" class="t3a"></label>
+            <input type="radio" id="t3b" value="B" name="t3"><label for="t3b" class="t3b"></label>
+            <input type="radio" id="t3c" value="C" name="t3"><label for="t3c" class="t3c"></label>
+            <input type="button" class="nextbtn">
+        </form>
+    </div>
+</body>
+</html>

@@ -153,6 +153,49 @@
     <Content Include="Content\Xinghe1\images\inputbg.png" />
     <Content Include="Content\Xinghe1\images\subbtn.png" />
     <Content Include="Content\Xinghe1\images\thanks.jpg" />
+    <Content Include="Content\yamaha\css\style.css" />
+    <Content Include="Content\yamaha\image\alltimubg.jpg" />
+    <Content Include="Content\yamaha\image\gamerulebtn.png" />
+    <Content Include="Content\yamaha\image\indexbg.jpg" />
+    <Content Include="Content\yamaha\image\inputbg.png" />
+    <Content Include="Content\yamaha\image\nextbtn.png" />
+    <Content Include="Content\yamaha\image\rulebg.jpg" />
+    <Content Include="Content\yamaha\image\start.png" />
+    <Content Include="Content\yamaha\image\subbtn.png" />
+    <Content Include="Content\yamaha\image\subinfobg.jpg" />
+    <Content Include="Content\yamaha\image\subinfobtn.png" />
+    <Content Include="Content\yamaha\image\t10a.png" />
+    <Content Include="Content\yamaha\image\t10b.png" />
+    <Content Include="Content\yamaha\image\t10c.png" />
+    <Content Include="Content\yamaha\image\t1a.png" />
+    <Content Include="Content\yamaha\image\t1b.png" />
+    <Content Include="Content\yamaha\image\t1c.png" />
+    <Content Include="Content\yamaha\image\t2a.png" />
+    <Content Include="Content\yamaha\image\t2b.png" />
+    <Content Include="Content\yamaha\image\t2c.png" />
+    <Content Include="Content\yamaha\image\t4a.png" />
+    <Content Include="Content\yamaha\image\t4b.png" />
+    <Content Include="Content\yamaha\image\t4c.png" />
+    <Content Include="Content\yamaha\image\t5a.png" />
+    <Content Include="Content\yamaha\image\t5b.png" />
+    <Content Include="Content\yamaha\image\t5c.png" />
+    <Content Include="Content\yamaha\image\t6a.png" />
+    <Content Include="Content\yamaha\image\t6b.png" />
+    <Content Include="Content\yamaha\image\t6c.png" />
+    <Content Include="Content\yamaha\image\t7a.png" />
+    <Content Include="Content\yamaha\image\t7b.png" />
+    <Content Include="Content\yamaha\image\t7c.png" />
+    <Content Include="Content\yamaha\image\t8a.png" />
+    <Content Include="Content\yamaha\image\t8b.png" />
+    <Content Include="Content\yamaha\image\t8c.png" />
+    <Content Include="Content\yamaha\image\t9a.png" />
+    <Content Include="Content\yamaha\image\t9b.png" />
+    <Content Include="Content\yamaha\image\t9c.png" />
+    <Content Include="Content\yamaha\image\thank.gif" />
+    <Content Include="Content\yamaha\image\timubg.jpg" />
+    <Content Include="Content\yamaha\js\jquery.min.js" />
+    <Content Include="Content\yamaha\js\main.js" />
+    <Content Include="Content\yamaha\vedio\t1video.mp4" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
@@ -211,6 +254,21 @@
     <Content Include="Views\Mingzhi\qiehuan.html" />
     <Content Include="Views\Mingzhi\qklnext.html" />
     <Content Include="Views\Mingzhi\zhengmingnext.html" />
+    <Content Include="Views\yamaha\index.html" />
+    <Content Include="Views\yamaha\rule.html" />
+    <Content Include="Views\yamaha\subinfo.html" />
+    <Content Include="Views\yamaha\t1.html" />
+    <Content Include="Views\yamaha\t10.html" />
+    <Content Include="Views\yamaha\t2.html" />
+    <Content Include="Views\yamaha\t3.html" />
+    <Content Include="Views\yamaha\t4.html" />
+    <Content Include="Views\yamaha\t5.html" />
+    <Content Include="Views\yamaha\t6.html" />
+    <Content Include="Views\yamaha\t7.html" />
+    <Content Include="Views\yamaha\t8.html" />
+    <Content Include="Views\yamaha\t9.html" />
+    <Content Include="Views\yamaha\thank.html" />
+    <Content Include="Views\yamaha\timu.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -224,6 +282,8 @@
     <Compile Include="Controllers\Meiji1Controller.cs" />
     <Compile Include="Controllers\WechatController.cs" />
     <Compile Include="Controllers\Xinghe1Controller.cs" />
+    <Compile Include="Controllers\Yamaha1Controller.cs" />
+    <Compile Include="Controllers\YamahaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -271,6 +331,21 @@
     <Content Include="Views\Meiji1\b0.cshtml" />
     <Content Include="Views\Meiji1\bn4.cshtml" />
     <Content Include="Views\Meiji1\bn3.cshtml" />
+    <Content Include="Views\Yamaha1\index.cshtml" />
+    <Content Include="Views\Yamaha1\rule.cshtml" />
+    <Content Include="Views\Yamaha1\subinfo.cshtml" />
+    <Content Include="Views\Yamaha1\t1.cshtml" />
+    <Content Include="Views\Yamaha1\t10.cshtml" />
+    <Content Include="Views\Yamaha1\t2.cshtml" />
+    <Content Include="Views\Yamaha1\t3.cshtml" />
+    <Content Include="Views\Yamaha1\t4.cshtml" />
+    <Content Include="Views\Yamaha1\t5.cshtml" />
+    <Content Include="Views\Yamaha1\t6.cshtml" />
+    <Content Include="Views\Yamaha1\t7.cshtml" />
+    <Content Include="Views\Yamaha1\t8.cshtml" />
+    <Content Include="Views\Yamaha1\t9.cshtml" />
+    <Content Include="Views\Yamaha1\thank.cshtml" />
+    <Content Include="Views\Yamaha1\timu.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
