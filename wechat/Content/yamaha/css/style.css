@@ -31,6 +31,7 @@ form .nextbtn{display:block;position: absolute;width: 403px;height: 161px;backgr
 .video{width:644px;height:447px;position: absolute;top:115px;left: 51px;}
 .title{font-size: 32px;margin:600px 0 0 70px;width:85%;}
 .q1{position:absolute;top:0;left:300px;}
+.thankwrap .erweima {position:absolute;top:860px;left:428px;}
 /*t1*/
 .t1wrap form .t1a{display: block;width: 236px;height: 186px;background: url("../image/t1a.png") no-repeat;top:670px;left:62px;}
 .t1wrap form .t1b{display: block;width: 236px;height: 186px;background: url("../image/t1b.png") no-repeat;top:670px;left: 280px;}

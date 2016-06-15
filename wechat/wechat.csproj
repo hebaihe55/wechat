@@ -201,6 +201,7 @@
     <Content Include="Content\yamaha\image\thank.gif" />
     <Content Include="Content\yamaha\image\timubg.jpg" />
     <Content Include="Content\yamaha\image\videobg.jpg" />
+    <Content Include="Content\yamaha\image\erweima.png" />
     <Content Include="Content\yamaha\js\jquery.min.js" />
     <Content Include="Content\yamaha\js\main.js" />
     <Content Include="Content\yamaha\vedio\t1video.mp4" />
