@@ -114,3 +114,45 @@ function getArrayItems(arr, num) {
     }
     return return_array;
 }
+var alertdialog1 = function (text) {
+    var clientWidth = $(window).width();
+    var clienHeight = $(window).height();
+    var template = '<div class="alertParent"><div class="text"><span>' + text + '</span></div><input type="button" value="确定" onclick="sure1()" class="surebtn"/></div>';
+    var zhezhao = '<div class="zhezhao"></div>';
+    $("body").append(zhezhao);
+    $("body").append(template);
+   
+    $(".alertParent").css({
+        "top":(clienHeight / 2 - 400) + "px",
+        "left":(clientWidth / 2 - 224) + "px",
+        "z-index": "3",
+    });
+    return;
+    
+}
+var alertdialog2 = function (text) {
+    var clientWidth = $(window).width();
+    var clienHeight = $(window).height();
+    var template = '<div class="alertParent"><div class="text"><span>' + text + '</span></div><input type="button" value="确定" onclick="sure2()" class="surebtn"/></div>';
+    var zhezhao = '<div class="zhezhao"></div>';
+    $("body").append(zhezhao);
+    $("body").append(template);
+
+    $(".alertParent").css({
+        "top": (clienHeight / 2 - 400) + "px",
+        "left": (clientWidth / 2 - 224) + "px",
+        "z-index": "3",
+    });
+    return;
+
+}
+var sure1 = function () {
+    $(".alertParent").hide();
+    $(".zhezhao").hide();
+}
+   
+var sure2 = function () {
+    $(".alertParent").hide();
+    $(".zhezhao").hide();
+    location.href = "/Yamaha1/subinfo";
+}

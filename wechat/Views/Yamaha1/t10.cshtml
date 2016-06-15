@@ -39,8 +39,7 @@
             $("form .nextbtn").on("click",function(){
                 var checkval=$("form input[type=radio]:checked").val();
                 if(checkval==null||checkval==""){
-                    alert("请选择您的答案");
-                    return;
+                    alertdialog1("请选择您的答案");
                 }else{
                     //alert(checkval);
                     setCookie("cookiet10",checkval,365);
@@ -57,8 +56,8 @@
                             location.href = "/Yamaha1/" + arr3[0];
                         }
                     }else{
-                        alert("您已答完所有题目");
-                        location.href = "/Yamaha1/subinfo";
+                        alertdialog2("您已答完所有题目");
+                       
                     }
                 }
             })

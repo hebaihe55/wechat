@@ -16,8 +16,12 @@
             $("form .nextbtn").on("click",function(){
                 var checkval=$("form input[type=radio]:checked").val();
                 if(checkval==null||checkval==""){
-                    alert("请选择您的答案");
-                    return;
+                    alertdialog("请选择您的答案");
+                    $(".surebtn").on("click", function () {
+                        $(".alertParent").hide();
+                        $(".zhezhao").hide();
+                        return;
+                    })
                 }else{
                     //alert(checkval);
                     setCookie("cookiet7",checkval,365);
@@ -34,8 +38,12 @@
                             location.href=arr3[0]+".html";
                         }
                     }else{
-                        alert("您已答完所有题目");
-                        location.href="subinfo.html";
+                        alertdialog("您已答完所有题目");
+                        $(".surebtn").on("click", function () {
+                            $(".alertParent").hide();
+                            $(".zhezhao").hide();
+                            location.href = "/Yamaha1/subinfo";
+                        })
                     }
                 }
             })

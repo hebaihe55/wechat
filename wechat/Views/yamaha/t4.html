@@ -16,8 +16,8 @@
             $("form .nextbtn").on("click",function(){
                 var checkval=$("form input[type=radio]:checked").val();
                 if(checkval==null||checkval==""){
-                    alert("请选择您的答案");
-                    return;
+                    alertdialog1("请选择您的答案");
+                   
                 }else{
 
                     //alert(checkval);
@@ -34,8 +34,8 @@
                             location.href=arr3[0]+".html";
                         }
                     }else{
-                        alert("您已答完所有题目");
-                        location.href="subinfo.html";
+                        alertdialog2("您已答完所有题目");
+                       
                     }
 
                 }
