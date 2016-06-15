@@ -44,9 +44,9 @@ form .nextbtn{display:block;position: absolute;width: 403px;height: 161px;backgr
 .t3wrap form .t3b{display: block;width: 188px;height: 223px;background: url("../image/t3b.png") no-repeat;top:670px;left: 293px;}
 .t3wrap form .t3c{display: block;width: 188px;height: 223px;background: url("../image/t3c.png") no-repeat;top:670px;left: 500px;}
 /*t5*/
-.t5wrap form .t5a{display: block;width: 188px;height:223px;background: url("../image/t5a.png") no-repeat;top:670px;left: 81px;}
-.t5wrap form .t5b{display: block;width: 188px;height: 223px;background: url("../image/t5b.png") no-repeat;top:670px;left: 293px;}
-.t5wrap form .t5c{display: block;width: 188px;height: 223px;background: url("../image/t5c.png") no-repeat;top:670px;left: 500px;}
+.t5wrap form .t5a{display: block;width: 223px;height:223px;background: url("../image/t5a.png") no-repeat;top:670px;left: 62px;}
+.t5wrap form .t5b{display: block;width: 223px;height: 223px;background: url("../image/t5b.png") no-repeat;top:670px;left: 285px;}
+.t5wrap form .t5c{display: block;width: 223px;height: 223px;background: url("../image/t5c.png") no-repeat;top:670px;left: 500px;}
 /*t6*/
 .t6wrap form .t6a{display: block;width: 226px;height: 226px;background: url("../image/t6a.png") no-repeat;top:670px;left: 50px;}
 .t6wrap form .t6b{display: block;width: 226px;height: 226px;background: url("../image/t6b.png") no-repeat;top:670px;left: 265px;}
