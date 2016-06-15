@@ -23,11 +23,11 @@ a:hover{text-decoration:none;color:#000;}
 form{width:81%;height: auto;margin:80px 0 0 70px;border:none}
 form input[type=radio]{position:absolute;display: none;}
 form input[type=radio]+label{display:block;position:absolute;width:auto;height:auto;font-size:20px;}
-form input[type=radio]:checked+label{display:block;background-size:100% 100%;z-index: 2;width: 260px;height:260px;top:670px;margin-left: -39px;position:absolute;}
-form .nextbtn{display:block;position: absolute;width: 403px;height: 161px;background: url("../image/nextbtn.png") no-repeat;top: 945px;left:171px;border: none;outline: none; }
-.t4wrap form .t4a{display: block;width: 176px;height: 154px;background: url("../image/t4a.png") no-repeat;top:725px;left: 81px;}
-.t4wrap form .t4b{display: block;width: 176px;height: 154px;background: url("../image/t4b.png") no-repeat;top:725px;left: 293px;}
-.t4wrap form .t4c{display: block;width: 176px;height: 154px;background: url("../image/t4c.png") no-repeat;top:725px;left: 500px;}
+form input[type=radio]:checked+label{display:block;background-size:100% 100%;z-index: 2;width: 260px;height:260px;margin-left: -39px;position:absolute;}
+form .nextbtn{display:block;position: absolute;width: 403px;height: 161px;background: url("../image/nextbtn.png") no-repeat;top:945px;left:171px;border: none;outline: none; }
+.t4wrap form .t4a{display: block;width: 176px;height: 154px;background: url("../image/t4a.png") no-repeat;top:670px;left: 81px;}
+.t4wrap form .t4b{display: block;width: 176px;height: 154px;background: url("../image/t4b.png") no-repeat;top:670px;left: 293px;}
+.t4wrap form .t4c{display: block;width: 176px;height: 154px;background: url("../image/t4c.png") no-repeat;top:670px;left: 500px;}
 .video{width:644px;height:447px;position: absolute;top:115px;left: 51px;}
 .title{font-size: 32px;margin:600px 0 0 70px;width:85%;}
 .q1{position:absolute;top:0;left:300px;}
@@ -36,9 +36,9 @@ form .nextbtn{display:block;position: absolute;width: 403px;height: 161px;backgr
 .t1wrap form .t1b{display: block;width: 236px;height: 186px;background: url("../image/t1b.png") no-repeat;top:670px;left: 280px;}
 .t1wrap form .t1c{display: block;width: 236px;height: 186px;background: url("../image/t1c.png") no-repeat;top:670px;left: 500px;}
 /*t2*/
-.t2wrap form .t2a{display: block;width: 188px;height: 223px;background: url("../image/t2a.png") no-repeat;top:670px;left: 81px;}
-.t2wrap form .t2b{display: block;width: 188px;height: 223px;background: url("../image/t2b.png") no-repeat;top:670px;left: 293px;}
-.t2wrap form .t2c{display: block;width: 188px;height: 223px;background: url("../image/t2c.png") no-repeat;top:670px;left: 500px;}
+.t2wrap form .t2a{display: block;width: 223px;height: 223px;background: url("../image/t2a.png") no-repeat;top:670px;left: 63px;}
+.t2wrap form .t2b{display: block;width: 223px;height: 223px;background: url("../image/t2b.png") no-repeat;top:670px;left: 280px;}
+.t2wrap form .t2c{display: block;width: 223px;height: 223px;background: url("../image/t2c.png") no-repeat;top:670px;left: 500px;}
 /*t3*/
 .t3wrap form .t3a{display: block;width: 188px;height: 223px;background: url("../image/t3a.png") no-repeat;top:670px;left: 81px;}
 .t3wrap form .t3b{display: block;width: 188px;height: 223px;background: url("../image/t3b.png") no-repeat;top:670px;left: 293px;}
