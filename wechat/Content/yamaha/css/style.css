@@ -28,7 +28,7 @@ form .nextbtn{display:block;position: absolute;width: 403px;height: 161px;backgr
 .t4wrap form .t4a{display: block;width: 176px;height: 154px;background: url("../image/t4a.png") no-repeat;top:670px;left: 81px;}
 .t4wrap form .t4b{display: block;width: 176px;height: 154px;background: url("../image/t4b.png") no-repeat;top:670px;left: 293px;}
 .t4wrap form .t4c{display: block;width: 176px;height: 154px;background: url("../image/t4c.png") no-repeat;top:670px;left: 500px;}
-.video{width:644px;height:447px;position: absolute;top:115px;left: 51px;}
+.video{width:644px;height:447px;position: absolute;top:135px;left: 51px;}
 .title{font-size: 32px;margin:600px 0 0 70px;width:85%;}
 .q1{position:absolute;top:0;left:300px;}
 /*t1*/
