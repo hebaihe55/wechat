@@ -14,7 +14,7 @@ a:hover{text-decoration:none;color:#000;}
 .timuwrap form{width:81%;height:auto;margin:80px 0 0 70px;border:none}
 .timuwrap form .timu label{font-size:26px;}
 .timuwrap form input[type=button]{top:1030px;left:155px;position:absolute;width:403px;height: 161px;background: url("../image/subbtn.png") no-repeat;display: block;border:none;outline:none;}
-.thankwrap{width:750px;height:1206px;background:url(../image/thank.gif) no-repeat;border:1px solid;background-size:100%}
+.thankwrap{width:750px;height:1206px;border:1px solid;}
 .subinfowrap{width:750px;height:1206px;background:url(../image/subinfobg.jpg) no-repeat;border:1px solid;background-size:100%}
 .subinfowrap form input[type=text]{margin-bottom:20px;font-size:30px;background: url("../image/inputbg.png") no-repeat;width:602px;height:83px;text-indent: 50px;color:#ccc;border: none;outline: none;}
 .subinfowrap form{width: 80%;height: 400px;margin:803px auto 0 auto;display: block;}
@@ -31,7 +31,6 @@ form .nextbtn{display:block;position: absolute;width: 403px;height: 161px;backgr
 .video{width:644px;height:447px;position: absolute;top:115px;left: 51px;}
 .title{font-size: 32px;margin:600px 0 0 70px;width:85%;}
 .q1{position:absolute;top:0;left:300px;}
-.thankwrap .erweima {position:absolute;top:860px;left:428px;}
 /*t1*/
 .t1wrap form .t1a{display: block;width: 236px;height: 186px;background: url("../image/t1a.png") no-repeat;top:670px;left:62px;}
 .t1wrap form .t1b{display: block;width: 236px;height: 186px;background: url("../image/t1b.png") no-repeat;top:670px;left: 280px;}
