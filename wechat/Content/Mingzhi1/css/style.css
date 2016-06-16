@@ -24,6 +24,14 @@ a:hover{text-decoration: none;color: black;}
 .gaoxiaoshowwrap .text{outline: none;background: url("../image/qhbordergaoxiao.png") no-repeat;width:443px;height:155px;padding: 65px 0 0 225px;font-size: 32px;border: none;}
 .gongxibtn{z-index:2;position: absolute;width: 275px;height: 292px;left:32%;top:888px;background: url("../image/gongxibtn.png") no-repeat;border: none}
 .gaoxiaowrap .phto{width: 500px;height: 480px;position: absolute;z-index: 1;left: 19%;top:210px;}
+
+.zhezhao{width:750px;height:1206px;position:absolute;z-index:1;top:0;left:0;filter:alpha(opacity=50);opacity: 0.5;-moz-opacity:0.5;background:black;}
+.fximg{position:absolute;top:0;left:367px;z-index:2}
+/**谢谢参与*/
+.thankWrap{width:750px;height:1206px}
+.thankWrap .fenxiang{width:248px;height: 73px;background: url("../image/fengxiang.png") no-repeat;position:absolute;left:110px;top:1039px;}
+.thankWrap .chakan{width:248px;height: 73px;background: url("../image/chakan.png") no-repeat;position:absolute;left:400px;top:1039px;}
+.close{position:absolute;top:78px;left:67px;z-index:2;}
 /*礼品*/
 .giftwrap{width: 750px;height: 1206px;background:url("../image/giftbg.jpg") no-repeat;border: 1px solid;}
 .giftwrap .likes{width:96%;height:278px;margin: 410px auto 0 auto;}
@@ -35,8 +43,7 @@ a:hover{text-decoration: none;color: black;}
 .giftwrap .userinfo{width: 90%;height:auto;margin: 90px auto 0 auto;}
 .giftwrap .userinfo input[type=text]{border: 5px solid red;height: 70px;font-size: 25px;color:grey;width:85%;display:block;margin:10px auto 0 auto;border-radius: 30px;text-indent: 15px;}
 .giftwrap .userinfo input[type=submit]{display: block;width:257px;height: 71px;background:url("../image/submit.png") no-repeat; border:none;margin: 50px auto 0 auto;}
-.giftwrap .fenxiang{width:248px;height: 73px;margin:22px 50px 0 100px;float: left;background: url("../image/fengxiang.png") no-repeat}
-.giftwrap .chakan{width:248px;height: 73px;margin-top:22px;float: left;background: url("../image/chakan.png") no-repeat}
+
 /*爱情上传后的页面*/
 .aiqingnext{position:absolute;top:0;left:0;z-index:2;border:1px solid;width: 750px;height: 1206px;background: url("../image/aqnextbg.png") no-repeat;}
 .aqshow{top:310px;position:absolute;width: 750px;height:545px;background: url("../image/aishow.png") no-repeat;z-index:0;text-align: center; overflow:hidden}

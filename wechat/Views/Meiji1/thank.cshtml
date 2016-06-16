@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>谢谢参与</title>
+    <meta name="viewport" content="width=750, user-scalable=no, target-densitydpi=device-dpi" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no">
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" href="/Content/Mingzhi1/css/style.css">
+    <script>
+        function fenxiang() {
+            var zhezhaodiv = "<div class='zhezhao'></div";
+            var fximg = "<img src='/Content/Mingzhi1/image/fenxiang.gif' class='fximg'/>"
+            var close = "<img src='/Content/Mingzhi1/image/closefx.png' class='close' onclick='closefx()'/>"
+            $("body").append(zhezhaodiv);
+            $("body").append(fximg);
+            $("body").append(close);
+        }
+        function closefx() {
+            $(".zhezhao").hide();
+            $(".fximg").hide();
+            $(".close").hide();
+        }
+    </script>
+</head>
+<body>
+    <div class="thankWrap">
+        <img src="~/Content/Mingzhi1/image/thank.jpg" />
+        <button class="fenxiang" onclick="fenxiang()"></button>
+        <button class="chakan"></button>
+    </div>
+</body>
+</html>

@@ -147,6 +147,9 @@
     <Content Include="Content\Mingzhi1\image\submit.png" />
     <Content Include="Content\Mingzhi1\image\youhuiquan.jpg" />
     <Content Include="Content\Mingzhi1\image\resetphoto.png" />
+    <Content Include="Content\Mingzhi1\image\thank.jpg" />
+    <Content Include="Content\Mingzhi1\image\fenxiang.gif" />
+    <Content Include="Content\Mingzhi1\image\closefx.png" />
     <Content Include="Content\Xinghe1\css\style.css" />
     <Content Include="Content\Xinghe1\images\bg.jpg" />
     <Content Include="Content\Xinghe1\images\change.png" />
@@ -360,6 +363,7 @@
     <Content Include="Views\Meiji1\bs2.cshtml" />
     <Content Include="Views\Meiji1\bs3.cshtml" />
     <Content Include="Views\Meiji1\bs4.cshtml" />
+    <Content Include="Views\Meiji1\thank.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
