@@ -1,6 +1,6 @@
 ﻿@charset "utf-8";
 /* CSS Document */
-*{padding:0;margin:0;}
+*{padding:0;margin:0;font-family:'Palatino Linotype', 'Book Antiqua', Palatino, serif}
 a{text-decoration:none;color:#000;}
 a:hover{text-decoration:none;color:#000;}
 .indexwrap{width:750px;height:1206px;background:url(../image/indexbg.gif) no-repeat;border:1px solid;background-size:100%}
@@ -31,6 +31,36 @@ form .nextbtn{display:block;position: absolute;width: 403px;height: 161px;backgr
 .video{width:644px;height:447px;position: absolute;top:135px;left: 51px;}
 .title{font-size: 32px;margin:600px 0 0 70px;width:85%;}
 .q1{position:absolute;top:0;left:300px;}
+.zhezhao {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    position: absolute;
+    z-index:1;
+    top: 0;
+    left: 0;
+    background:black
+}
+.alertParent {
+    width:448px;
+    height:155px;
+    position: absolute;
+    border:1px solid #eee;
+    background: white;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+}
+.alertParent .surebtn {
+    width:80px;
+    height:30px;
+     margin:55px 0 0 326px;
+}
+.alertParent .text{
+    font-size:1.5em;
+    margin:20px 0 0 20px;
+}
+
 /*t1*/
 .t1wrap form .t1a{display: block;width: 236px;height: 186px;background: url("../image/t1a.png") no-repeat;top:670px;left:62px;}
 .t1wrap form .t1b{display: block;width: 236px;height: 186px;background: url("../image/t1b.png") no-repeat;top:670px;left: 280px;}
@@ -44,7 +74,7 @@ form .nextbtn{display:block;position: absolute;width: 403px;height: 161px;backgr
 .t3wrap form .t3b{display: block;width: 188px;height: 223px;background: url("../image/t3b.png") no-repeat;top:670px;left: 293px;}
 .t3wrap form .t3c{display: block;width: 188px;height: 223px;background: url("../image/t3c.png") no-repeat;top:670px;left: 500px;}
 /*t5*/
-.t5wrap form .t5a{display: block;width: 223px;height:223px;background: url("../image/t5a.png") no-repeat;top:670px;left: 62px;}
+.t5wrap form .t5a{display: block;width: 223px;height:223px;background: url("../image/t5a.png") no-repeat;top:670px;left: 51px;}
 .t5wrap form .t5b{display: block;width: 223px;height: 223px;background: url("../image/t5b.png") no-repeat;top:670px;left: 285px;}
 .t5wrap form .t5c{display: block;width: 223px;height: 223px;background: url("../image/t5c.png") no-repeat;top:670px;left: 500px;}
 /*t6*/
@@ -64,6 +94,6 @@ form .nextbtn{display:block;position: absolute;width: 403px;height: 161px;backgr
 .t9wrap form .t9b{display: block;width: 236px;height: 186px;background: url("../image/t9b.png") no-repeat;top:670px;left: 293px;}
 .t9wrap form .t9c{display: block;width: 236px;height: 186px;background: url("../image/t9c.png") no-repeat;top:670px;left: 500px;}
 /*t10*/
-.t10wrap form .t10a{display: block;width: 188px;height:223px;background: url("../image/t10a.png") no-repeat;top:700px;left: 81px;}
+.t10wrap form .t10a{display: block;width: 188px;height: 223px;background: url("../image/t10a.png") no-repeat;top:700px;left: 81px;}
 .t10wrap form .t10b{display: block;width: 188px;height: 223px;background: url("../image/t10b.png") no-repeat;top:700px;left: 293px;}
 .t10wrap form .t10c{display: block;width: 188px;height: 223px;background: url("../image/t10c.png") no-repeat;top:700px;left: 500px;}
