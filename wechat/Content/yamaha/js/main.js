@@ -1,19 +1,8 @@
 /**
  * Created by cheerlong on 2016/6/13.
  */
-/**
- * 提示信息
- * @type {{chooseTishi: string, completeTishi: string}}
- */
-var str = {
-    chooseTishi: "请选择您的答案",
-    completeTishi: "您已答完所有题目"
-}
-var q1img = "<img src='/Content/yamaha/image/Q1.png' class='q1'>"
-var q2img = "<img src='/Content/yamaha/image/Q2.png' class='q1'>"
-var q3img = "<img src='/Content/yamaha/image/Q3.png' class='q1'>"
-
-function getrandom5() {
+var arr3;
+var getrandom5 = function () {
     $(".form1 div.timu").hide();
     var flag = false;
     var arr = [];
@@ -27,7 +16,7 @@ function getrandom5() {
         //alert(flag)
         continue;
     }
-    //显示5个问题
+
     for (var k = 0; k < arr.length; k++) {
         $(".form1 ." + arr[k]).show();
         //alert($("form ."+arr[k]));
@@ -65,7 +54,6 @@ function getrandom5() {
     checkCookie();
 
 }
-
 function setCookie(c_name, value, expiredays) {
     var exdate = new Date()
     exdate.setDate(exdate.getDate() + expiredays)
@@ -95,60 +83,7 @@ function checkCookie() {
         setCookie('arr3key', arr3, 365);
     }
 }
-
-$(function () {
-
-    var cookiedata = checkCookie();
-
-    if (cookiedata.indexOf(",") == -1) {
-        $("body").append(q3img);
-    } else {
-        var arr3 = cookiedata.split(",");
-        var arr3lenth = arr3.length;
-        if (arr3lenth == 3) {
-            $("body").append(q1img);
-        } else if (arr3lenth == 2) {
-            $("body").append(q2img);
-        } else {
-
-        }
-
-    }
-    /**
-     * 点击下一题处理的事件
-     * 1判断用户有无选择答案
-     * 2判断cookie中数组的个数
-     */
-
-    $("form .nextbtn").on("click", function () {
-
-        var checkval = $("form input[type=radio]:checked").val();
-        if (checkval == null || checkval == "") {
-            alertdialog1();
-            return;
-        } else {
-            //alert(checkval);
-            setCookie("cookiet1", checkval, 365);
-            var cookiedata = checkCookie();
-            if (cookiedata.indexOf(",") != -1) {
-                var arr3 = cookiedata.split(",");
-
-                if (arr3.length > 0) {
-                    console.log(arr3);
-                    var arrti1 = arr3.shift();
-                    // alert(arr3);
-                    setCookie("arr3key", arr3, 365);
-                    location.href = "/Yamaha1/" + arr3[0];
-                }
-            } else {
-                alertdialog2();
-
-            }
-        }
-
-    })
-})
-var getArrayItems = function (arr, num) {
+function getArrayItems(arr, num) {
     //新建一个数组,将传入的数组复制过来,用于运算,而不要直接操作传入的数组;
     var temp_array = new Array();
     for (var index in arr) {
@@ -172,10 +107,10 @@ var getArrayItems = function (arr, num) {
     }
     return return_array;
 }
-var alertdialog1 = function () {
+var alertdialog1 = function (text) {
     var clientWidth = $(window).width();
     var clienHeight = $(window).height();
-    var template = '<div class="alertParent"><div class="text"><span>' + str.chooseTishi + '</span></div><input type="button" value="确定" class="surebtn1"/></div>';
+    var template = '<div class="alertParent"><div class="text"><span>' + text + '</span></div><input type="button" value="确定" onclick="sure1()" class="surebtn"/></div>';
     var zhezhao = '<div class="zhezhao"></div>';
     $("body").append(zhezhao);
     $("body").append(template);
@@ -183,15 +118,15 @@ var alertdialog1 = function () {
     $(".alertParent").css({
         "top": (clienHeight / 2 - 400) + "px",
         "left": (clientWidth / 2 - 224) + "px",
-        "z-index": "3"
+        "z-index": "3",
     });
-
+    return;
 
 }
 var alertdialog2 = function (text) {
     var clientWidth = $(window).width();
     var clienHeight = $(window).height();
-    var template = '<div class="alertParent"><div class="text"><span>' + str.completeTishi + '</span></div><input type="button" value="确定" class="surebtn2"/></div>';
+    var template = '<div class="alertParent"><div class="text"><span>' + text + '</span></div><input type="button" value="确定" onclick="sure2()" class="surebtn"/></div>';
     var zhezhao = '<div class="zhezhao"></div>';
     $("body").append(zhezhao);
     $("body").append(template);
@@ -199,22 +134,18 @@ var alertdialog2 = function (text) {
     $(".alertParent").css({
         "top": (clienHeight / 2 - 400) + "px",
         "left": (clientWidth / 2 - 224) + "px",
-        "z-index": "3"
+        "z-index": "3",
     });
     return;
 
 }
-$("form .surebtn1").on("click", function () {
-    $(".alertParent").hide();
-    $(".zhezhao").hide();
-})
-$("form .surebtn2").on("click", function () {
-    $(".alertParent").hide();
-    $(".zhezhao").hide();
-    location.href = "/Yamaha1/subinfo";
-})
 var sure1 = function () {
     $(".alertParent").hide();
     $(".zhezhao").hide();
 }
 
+var sure2 = function () {
+    $(".alertParent").hide();
+    $(".zhezhao").hide();
+    location.href = "/Yamaha1/subinfo";
+}
