@@ -5,7 +5,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>切换搞笑</title>
+    <title>预览</title>
     <meta name="viewport" content="width=750, user-scalable=no, target-densitydpi=device-dpi" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -16,13 +16,13 @@
 </head>
 <body>
     <div class="gaoxiaoshowwrap">
-        <form class="form" action="" method="post">
-            <textarea rows="4" cols="33" class="text" disabled="disabled"></textarea>
-
+        <form class="form" action="/meiji1/gifts" method="get">
+            <textarea rows="4" cols="33" class="text" disabled="disabled">@ViewBag.title</textarea>
+            <input type="submit" class="gongxibtn" value=""/>
         </form>
 
-        <button class="gongxibtn"></button>
+      
     </div>
-    <div class="gaoguaishow"><img src="image/fengmian.jpg"></div>
+    <div class="gaoguaishow"><img src="@ViewBag.imgname" style="width:750px;height:auto;overflow:hidden" /> </div>
 </body>
 </html>

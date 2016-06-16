@@ -44,7 +44,15 @@ namespace wechat.Models
 
     }
 
-    public class Question
+    public class MeijiImg
+    {
+        public string title { get; set; }
+        public string img1 { get; set; }
+        public string img2 { get; set; }
+    }
+
+
+        public class Question
     {
 
 

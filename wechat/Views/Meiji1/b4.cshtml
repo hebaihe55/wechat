@@ -6,7 +6,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>切换巧克力</title>
+    <title>巧克力</title>
     <meta name="viewport" content="width=750, user-scalable=no, target-densitydpi=device-dpi" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -27,13 +27,154 @@
     <div class="qklwrap">
         <form class="form" action="" method="post" onsubmit="return checkform()">
             <textarea rows="4" cols="33" placeholder="请输入你想对他说的话" class="text" onkeyup="this.value=this.value.substr(0,30)"></textarea>
-            <button class="scbtn1" />
-            <button class="scbtn2" />
+            <input type="button" value="" class="scbtn1" onclick="return checkform1();" />
+            <input type="button" value="" class="scbtn2" onclick="return checkform2();" />
+            @Html.Hidden("appid")
+            @Html.Hidden("timestamp")
+            @Html.Hidden("noncestr")
+            @Html.Hidden("signature")
+            @Html.Hidden("openid")
+            @Html.Hidden("mediaId")
+            <input type="hidden" id="img1" value="" />
+            <input type="hidden" id="img2" value="" />
         </form>
 
         <a href="/meiji1/b3" class="left"></a>
         <a href="/meiji1/b0" class="right"></a>
         <span class="shuoming">在这里上传照片</span>
     </div>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js "></script>
+    <script>
+        wx.config({
+            debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+            appId: $("#appid").val(), // 必填，公众号的唯一标识
+            timestamp: $("#timestamp").val(), // 必填，生成签名的时间戳
+            nonceStr: $("#noncestr").val(), // 必填，生成签名的随机串
+            signature: $("#signature").val(),// 必填，签名，见附录1
+            jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'chooseImage', 'uploadImage', 'hideMenuItems'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+        });
+        wx.ready(function () {
+
+            // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
+
+            wx.onMenuShareTimeline({
+                title: '红包之后，还有……大红包？！马上戳进来，接大红包！', // 分享标题
+                link: 'http://mvc.cjoy.cn/Kamida/ercode', // 分享链接
+                imgUrl: 'http://mvc.cjoy.cn/img/kamida/logo.jpg', // 分享图标
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+
+            wx.onMenuShareAppMessage({
+                title: '红包之后，还有……大红包？！马上戳进来，接大红包！', // 分享标题
+                desc: '888红包等着你哦', // 分享描述
+                link: 'http://mvc.cjoy.cn/Kamida/ercode', // 分享链接
+                imgUrl: 'http://mvc.cjoy.cn/img/kamida/logo.jpg', // 分享图标
+                type: '', // 分享类型,music、video或link，不填默认为link
+                dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+
+            wx.hideMenuItems({
+                menuList: ["menuItem:copyUrl", "menuItem:openWithQQBrowser", "menuItem:openWithSafari", "menuItem:originPage"] // 要隐藏的菜单项，只能隐藏“传播类”和“保护类”按钮，所有menu项见附录3
+            });
+        });
+
+
+
+    </script>
+
+    <script>
+
+        function checkform1(){
+            var text=$(".text").val();
+            if(text==null||text==""){
+                alert("请输入要说的话");
+                return false;
+            }
+
+            wx.chooseImage({
+                count: 1, // 默认9
+                sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+                sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+                success: function (res) {
+                    var localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
+
+
+
+
+
+
+                    wx.uploadImage({
+                        localId: localIds[0], // 需要上传的图片的本地ID，由chooseImage接口获得
+                        isShowProgressTips: 1, // 默认为1，显示进度提示
+                        success: function (res) {
+                            $("#img1").val(res.serverId);
+
+                            if ($("#img2").val() != '')
+                                 {
+
+                            location.href = "/meiji1/bn4/?img1=" + res.serverId + "&title=" + text+ "&img2=" + $("#img2").val();// 返回图片的服务器端ID
+                            }
+                        }
+                    });
+                }
+            });
+
+
+
+
+        }
+
+
+        function checkform2() {
+            var text = $(".text").val();
+            if (text == null || text == "") {
+                alert("请输入要说的话");
+                return false;
+            }
+
+            wx.chooseImage({
+                count: 1, // 默认9
+                sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+                sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+                success: function (res) {
+                    var localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
+
+
+
+
+
+
+                    wx.uploadImage({
+                        localId: localIds[0], // 需要上传的图片的本地ID，由chooseImage接口获得
+                        isShowProgressTips: 1, // 默认为1，显示进度提示
+                        success: function (res) {
+                            $("#img2").val(res.serverId);
+
+                            if ($("#img1").val() != '') {
+
+                                location.href = "/meiji1/bn4/?img2=" + res.serverId + "&title=" + text+ "&img1=" + $("#img1").val();// 返回图片的服务器端ID
+                            }
+                        }
+                    });
+                }
+            });
+
+
+
+
+        }
+
+    </script>
 </body>
 </html>

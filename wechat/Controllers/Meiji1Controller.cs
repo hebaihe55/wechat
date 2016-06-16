@@ -73,6 +73,11 @@ namespace wechat.Controllers
        
         public ActionResult b0()
         {
+           
+            Utils.WeHelper.url = Request.Url.ToString();
+      
+         
+
 
             ViewBag.signature = Utils.WeHelper.signature;
             ViewBag.noncestr = Utils.WeHelper.noncestr;
@@ -81,45 +86,138 @@ namespace wechat.Controllers
 
             return View();
         }
-        public ActionResult bn0()
+
+         
+        public ActionResult bn0(Models.MeijiImg img)
         {
+
+              Utils.WeHelper.MEDIA_ID = img.img1;
+
+
+              ViewBag.imgname ="http://mvc.cjoy.cn/upimg/"+ Utils.WeHelper.GetMultimedia();
+            //ViewBag.imgname = "http://mvc.cjoy.cn/upimg/JpGvViXWaa1Blu61jtAkU9fv_JumT9-XnD2PcE34J1zNuA3UyGA8Nrl2ZkPkPwWq.jpg";
+            ViewBag.title = img.title;
             return View();
         }
         public ActionResult b1()
         {
+
+            Utils.WeHelper.url = Request.Url.ToString();
+
+
+
+
+            ViewBag.signature = Utils.WeHelper.signature;
+            ViewBag.noncestr = Utils.WeHelper.noncestr;
+            ViewBag.timestamp = Utils.WeHelper.timestamp;
+            ViewBag.appid = Utils.WeHelper.appid;
             return View();
         }
-        public ActionResult bn1()
+        public ActionResult bn1(Models.MeijiImg img)
         {
+            Utils.WeHelper.MEDIA_ID = img.img1;
+
+
+            ViewBag.imgname = "http://mvc.cjoy.cn/upimg/" + Utils.WeHelper.GetMultimedia();
+            //ViewBag.imgname = "http://mvc.cjoy.cn/upimg/JpGvViXWaa1Blu61jtAkU9fv_JumT9-XnD2PcE34J1zNuA3UyGA8Nrl2ZkPkPwWq.jpg";
+            ViewBag.title = img.title;
             return View();
         }
 
         public ActionResult b2()
         {
+            Utils.WeHelper.url = Request.Url.ToString();
+
+
+
+
+            ViewBag.signature = Utils.WeHelper.signature;
+            ViewBag.noncestr = Utils.WeHelper.noncestr;
+            ViewBag.timestamp = Utils.WeHelper.timestamp;
+            ViewBag.appid = Utils.WeHelper.appid;
             return View();
         }
 
-        public ActionResult bn2()
+        public ActionResult bn2(Models.MeijiImg img)
         {
+            Utils.WeHelper.MEDIA_ID = img.img1;
+
+
+            ViewBag.img1= "http://mvc.cjoy.cn/upimg/" + Utils.WeHelper.GetMultimedia();
+
+            //ViewBag.imgname = "http://mvc.cjoy.cn/upimg/JpGvViXWaa1Blu61jtAkU9fv_JumT9-XnD2PcE34J1zNuA3UyGA8Nrl2ZkPkPwWq.jpg";
+            Utils.WeHelper.MEDIA_ID = img.img2;
+
+
+            ViewBag.img2 = "http://mvc.cjoy.cn/upimg/" + Utils.WeHelper.GetMultimedia();
+
+
+            ViewBag.title = img.title;
             return View();
         }
 
         public ActionResult b3()
         {
+            Utils.WeHelper.url = Request.Url.ToString();
+
+
+
+
+            ViewBag.signature = Utils.WeHelper.signature;
+            ViewBag.noncestr = Utils.WeHelper.noncestr;
+            ViewBag.timestamp = Utils.WeHelper.timestamp;
+            ViewBag.appid = Utils.WeHelper.appid;
             return View();
         }
 
-        public ActionResult bn3()
+        public ActionResult bn3(Models.MeijiImg img)
         {
+            Utils.WeHelper.MEDIA_ID = img.img1;
+
+
+            ViewBag.img1 = "http://mvc.cjoy.cn/upimg/" + Utils.WeHelper.GetMultimedia();
+
+            //ViewBag.imgname = "http://mvc.cjoy.cn/upimg/JpGvViXWaa1Blu61jtAkU9fv_JumT9-XnD2PcE34J1zNuA3UyGA8Nrl2ZkPkPwWq.jpg";
+            Utils.WeHelper.MEDIA_ID = img.img2;
+
+
+            ViewBag.img2 = "http://mvc.cjoy.cn/upimg/" + Utils.WeHelper.GetMultimedia();
+
+
+            ViewBag.title = img.title;
             return View();
+          
         }
 
         public ActionResult b4()
         {
+            Utils.WeHelper.url = Request.Url.ToString();
+
+
+
+
+            ViewBag.signature = Utils.WeHelper.signature;
+            ViewBag.noncestr = Utils.WeHelper.noncestr;
+            ViewBag.timestamp = Utils.WeHelper.timestamp;
+            ViewBag.appid = Utils.WeHelper.appid;
             return View();
         }
-        public ActionResult bn4()
+        public ActionResult bn4(Models.MeijiImg img)
         {
+            Utils.WeHelper.MEDIA_ID = img.img1;
+
+
+            ViewBag.img1 = "http://mvc.cjoy.cn/upimg/" + Utils.WeHelper.GetMultimedia();
+
+            //ViewBag.imgname = "http://mvc.cjoy.cn/upimg/JpGvViXWaa1Blu61jtAkU9fv_JumT9-XnD2PcE34J1zNuA3UyGA8Nrl2ZkPkPwWq.jpg";
+            Utils.WeHelper.MEDIA_ID = img.img2;
+
+
+            ViewBag.img2 = "http://mvc.cjoy.cn/upimg/" + Utils.WeHelper.GetMultimedia();
+
+
+            ViewBag.title = img.title;
+           
             return View();
         }
        
