@@ -107,6 +107,11 @@ function getArrayItems(arr, num) {
     }
     return return_array;
 }
+var str = {
+    inputname: "请输入您的姓名",
+    leng: "长度必须小于10位",
+    telTish:"手机号码有误，请重填"
+}
 var alertdialog1 = function (text) {
     var clientWidth = $(window).width();
     var clienHeight = $(window).height();
@@ -148,4 +153,22 @@ var sure2 = function () {
     $(".alertParent").hide();
     $(".zhezhao").hide();
     location.href = "/Yamaha1/subinfo";
+}
+//信息提交信息验证
+var checkform= function(){
+    var user = $("form .user").val();
+    var tel = $("form .tel").val();
+    if (user == null || user == "") {
+        alertdialog1(str.inputname);
+        return false;
+    } else if (user.length > 10) {
+        alertdialog1(str.leng);
+        return false;
+    }
+    var reg=/^1[3|4|5|7|8]\d{9}$/;
+    if (!(reg.test(tel))) {
+        alertdialog1(str.telTish);
+        return false;
+    }
+    return true;
 }
