@@ -108,15 +108,21 @@ function getArrayItems(arr, num) {
     return return_array;
 }
 var str = {
+    alertchooseTishi: "请选择您的答案",
+    ansercompleteTish: "您已答完所有题目",
     inputname: "请输入您的姓名",
     leng: "长度必须小于10位",
-    telTish:"手机号码有误，请重填"
+    telTish: "手机号码有误，请重填",
+    alerttemplate1: '<div class="alertParent"><div class="text"><span>' + str.alertchooseTishi + '</span></div><input type="button" value="确定" onclick="sure1()" class="surebtn"/></div>',
+    alerttemplate2: '<div class="alertParent"><div class="text"><span>' + str.ansercompleteTish + '</span></div><input type="button" value="确定" onclick="sure1()" class="surebtn"/></div>',
+    zhezhaotemplate: '<div class="zhezhao"></div>',
+    ruletemplate:"<div class='ruleshow'></div>"
 }
 $(function () {
     $("form .nextbtn").on("click", function () {
         var checkval = $("form input[type=radio]:checked").val();
         if (checkval == null || checkval == "") {
-            alertdialog1("请选择您的答案");
+            alertdialog1(str.alertchooseTishi);
             return;
 
         } else {
@@ -134,10 +140,16 @@ $(function () {
                     location.href = "/Yamaha1/" + arr3[0];
                 }
             } else {
-                alertdialog2("您已答完所有题目");
+                alertdialog2(str.ansercompleteTish);
 
             }
         }
+
+    })
+    //点击规则弹出规则页面
+    $(".rule").on("click", function () {
+        $("body").append(str.zhezhaotemplate);
+        $("body").append(str.ruletemplate);
 
     })
 
@@ -146,10 +158,9 @@ $(function () {
 var alertdialog1 = function (text) {
     var clientWidth = $(window).width();
     var clienHeight = $(window).height();
-    var template = '<div class="alertParent"><div class="text"><span>' + text + '</span></div><input type="button" value="确定" onclick="sure1()" class="surebtn"/></div>';
-    var zhezhao = '<div class="zhezhao"></div>';
-    $("body").append(zhezhao);
-    $("body").append(template);
+   
+    $("body").append(str.zhezhaotemplate);
+    $("body").append(str.alerttemplate);
 
     $(".alertParent").css({
         "top": (clienHeight / 2 - 400) + "px",
@@ -162,10 +173,8 @@ var alertdialog1 = function (text) {
 var alertdialog2 = function (text) {
     var clientWidth = $(window).width();
     var clienHeight = $(window).height();
-    var template = '<div class="alertParent"><div class="text"><span>' + text + '</span></div><input type="button" value="确定" onclick="sure2()" class="surebtn"/></div>';
-    var zhezhao = '<div class="zhezhao"></div>';
-    $("body").append(zhezhao);
-    $("body").append(template);
+    $("body").append(str.zhezhaotemplate);
+    $("body").append(str.alerttemplate);
 
     $(".alertParent").css({
         "top": (clienHeight / 2 - 400) + "px",

@@ -146,6 +146,7 @@
     <Content Include="Content\Mingzhi1\image\subhunlibg.png" />
     <Content Include="Content\Mingzhi1\image\submit.png" />
     <Content Include="Content\Mingzhi1\image\youhuiquan.jpg" />
+    <Content Include="Content\Mingzhi1\image\resetphoto.png" />
     <Content Include="Content\Xinghe1\css\style.css" />
     <Content Include="Content\Xinghe1\images\bg.jpg" />
     <Content Include="Content\Xinghe1\images\change.png" />
@@ -354,6 +355,11 @@
     <Content Include="Views\Yamaha1\t9.cshtml" />
     <Content Include="Views\Yamaha1\thank.cshtml" />
     <Content Include="Views\Yamaha1\timu.cshtml" />
+    <Content Include="Views\Meiji1\bs0.cshtml" />
+    <Content Include="Views\Meiji1\bs1.cshtml" />
+    <Content Include="Views\Meiji1\bs2.cshtml" />
+    <Content Include="Views\Meiji1\bs3.cshtml" />
+    <Content Include="Views\Meiji1\bs4.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

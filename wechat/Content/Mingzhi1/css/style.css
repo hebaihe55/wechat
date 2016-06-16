@@ -72,9 +72,9 @@ a:hover{text-decoration: none;color: black;}
 .qhzmwsrap .scbtn2{border:none;width: 231px;height: 63px;position: absolute;top:304px;left: 295px;background: url("../image/smallsubbtn.png") no-repeat;}
 .qhzmwsrap .text{margin-left:110px;outline: none;background: url("../image/qhzmkuang.png") no-repeat;width:542px;height:144px;padding:24px 0 0 20px;font-size: 32px;border: none;}
 .zmnextwsrap{position:absolute;top:0;left:0;width: 750px;height: 1206px;background: url("../image/sczmbg.png") no-repeat;border: 1px solid;}
-.zmnextwsrap .text{outline: none;background: url("../image/qhzmkuang.png") no-repeat;width:535px;height:125px;padding:24px 0 0 10px;font-size: 32px;border: none;}
+.zmnextwsrap .text{outline: none;background: url("../image/qhzmkuang.png") no-repeat;width:750px;height:298px;padding:24px 0 0 10px;font-size: 32px;border: none;}
 .leftkuang{position:absolute;top:322px;left:101px;width: 278px;height:366px;background:palegoldenrod;border-radius: 15px;}
 .rightkuang{position:absolute;top:322px;left:377px;width: 278px;height:366px;background:palegoldenrod;border-radius: 15px;}
 .fm{width: 900px;height:500px;background: url("../image/fengmian.jpg") no-repeat;border: 1px solid;background-size: 100%}
-.zmnextwsrap form{margin:712px auto 0 auto;width:540px;}
-
+.zmnextwsrap form{margin:712px auto 0 auto;width:750px;}
+.resetphoto{position:absolute;width:230px;height:63px;top:852px;left:50px;z-index:3;}
