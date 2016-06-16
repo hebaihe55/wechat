@@ -15,53 +15,7 @@
     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
     <script src="~/Content/yamaha/js/main.js"></script>
     <script>
-        $(function () {
-            var q1img = "<img src='/Content/yamaha/image/Q1.png' class='q1'>"
-            var q2img = "<img src='/Content/yamaha/image/Q2.png' class='q1'>"
-            var q3img = "<img src='/Content/yamaha/image/Q3.png' class='q1'>"
-            var cookiedata = checkCookie();
-
-            if (cookiedata.indexOf(",") == -1) {
-                $("body").append(q3img);
-            } else {
-                var arr3 = cookiedata.split(",");
-                var arr3lenth = arr3.length;
-                if (arr3lenth == 3) {
-                    $("body").append(q1img);
-                } else if (arr3lenth == 2) {
-                    $("body").append(q2img);
-                } else {
-
-                }
-
-            }
-
-            $("form .nextbtn").on("click",function(){
-                var checkval=$("form input[type=radio]:checked").val();
-                if(checkval==null||checkval==""){
-                    alertdialog1("请选择您的答案");
-                }else{
-                    //alert(checkval);
-                    setCookie("cookiet10",checkval,365);
-                    setCookie("cookiet4",checkval,365);
-                    var cookiedata=checkCookie();
-                    if(cookiedata.indexOf(",")!=-1){
-                        var arr3=cookiedata.split(",");
-
-                        if(arr3.length>0){
-                            console.log(arr3);
-                            var arrti1=arr3.shift();
-                            // alert(arr3);
-                            setCookie("arr3key",arr3,365);
-                            location.href = "/Yamaha1/" + arr3[0];
-                        }
-                    }else{
-                        alertdialog2("您已答完所有题目");
-                       
-                    }
-                }
-            })
-        })
+       
     </script>
 </head>
 <body>
