@@ -31,6 +31,12 @@ namespace wechat.Controllers
                 jd.cctime = DateTime.Now;
                 jd.sourceid = "gh_8e3ff9971691";
 
+                var IA = db.ImgActives.SingleOrDefault(t => t.openid.Equals(jd.openid));
+                if ( IA != null)
+                {
+                    return RedirectToAction("show", new { id = IA.id });
+                }
+
 
                 try
                 {
@@ -332,6 +338,7 @@ namespace wechat.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult addUser(Models.ImgActive img)
         {
             img.openid = Session["openid"].ToString();
