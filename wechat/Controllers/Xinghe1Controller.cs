@@ -29,9 +29,9 @@ namespace wechat.Controllers
 
 
 
-                    var wu = db.Question.SingleOrDefault(w => w.openid.Equals(openid));
+                    var wu = db.Question.Where(w => w.openid.Equals(openid) && w.actname.Equals("兴和问答2"));
 
-                    if (wu == null)
+                    if (wu.Count()==0)
                     {
 
 
@@ -69,7 +69,7 @@ namespace wechat.Controllers
 
             question.addr = "未知";
 
-            question.actname = "兴和问答";
+            question.actname = "兴和问答2";
 
             try
             {
