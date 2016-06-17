@@ -13,8 +13,7 @@ namespace wechat.Models
     {
 
     }
-
-   
+      
 
     public class WechatUser
     {
