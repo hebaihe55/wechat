@@ -54,6 +54,7 @@
 <body>
     <div class="giftwrap">
         <form action="/meiji1/adduser" method="post" onsubmit="return checkinfo()">
+            @Html.AntiForgeryToken()
             <div class="likes">
                 <div class="gift"><img src="/Content/Mingzhi1/image/ipad.jpg" /><div class="txt"><input type="radio" value="我喜欢" id="like1" name="like"><label for="like1">我喜欢</label></div> </div>
                 <div class="gift"><img src="/Content/Mingzhi1/image/qiaokelilihe.jpg" /><div class="txt"><input type="radio" value="我喜欢" id="like2" name="like"><label for="like2">我喜欢</label></div></div>
