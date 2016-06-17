@@ -66,9 +66,11 @@ namespace wechat.Controllers
                     Response.Write("");
                     Response.End();
                     break;
+
             }
         }
 
+    
         private Utils.WxPayData redata = new Utils.WxPayData();
 
         /// <summary>
