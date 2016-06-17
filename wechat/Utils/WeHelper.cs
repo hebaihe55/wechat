@@ -54,10 +54,10 @@ namespace wechat.Utils
         {
             get
             {
-                if (!string.IsNullOrEmpty( access_token) && (expires_in + 7000) > Utils.ConvertDateTimeInt(DateTime.Now))
-                {
-                    return access_token;
-                }
+                //if (!string.IsNullOrEmpty( access_token) && (expires_in + 7000) > Utils.ConvertDateTimeInt(DateTime.Now))
+                //{
+                //    return access_token;
+                //}
 
                 string strJson = client_credential();
 
@@ -80,10 +80,10 @@ namespace wechat.Utils
         {
             get
             {
-                if (!string.IsNullOrEmpty(ticket) && (texpires_in + 7000) > Utils.ConvertDateTimeInt(DateTime.Now))
-                {
-                    return ticket;
-                }
+                //if (!string.IsNullOrEmpty(ticket) && (texpires_in + 7000) > Utils.ConvertDateTimeInt(DateTime.Now))
+                //{
+                //    return ticket;
+                //}
 
                 string strJson = getticket();
 
