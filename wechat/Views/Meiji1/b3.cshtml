@@ -20,8 +20,8 @@
     </script>
 </head>
 <body>
-    <div class="leftkuang"><img src="@ViewBag.img1" style="width:100%;height:auto" /></div>
-    <div class="rightkuang"><img src="@ViewBag.img2" style="width:100%;height:auto" /></div>
+    <div class="leftkuang"><img src="" id="simg1"  style="width:100%;height:auto" /></div>
+    <div class="rightkuang"><img src="" id="simg2"  style="width:100%;height:auto" /></div>
     <div class="qhzmwsrap">
         <form class="form" action="" method="post" onsubmit="return checkform()">
             <textarea rows="4" cols="33" placeholder="请输入你想对他说的话" class="text" onkeyup="this.value=this.value.substr(0,30)"></textarea>
@@ -101,7 +101,7 @@
                 sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
                 success: function (res) {
                     var localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
-
+                    $("#simg1").attr("src", localIds[0]);
                     wx.uploadImage({
                         localId: localIds[0], // 需要上传的图片的本地ID，由chooseImage接口获得
                         isShowProgressTips: 1, // 默认为1，显示进度提示
@@ -133,7 +133,7 @@
                 success: function (res) {
                     var localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
 
-
+                    $("#simg2").attr("src", localIds[0]);
 
 
 

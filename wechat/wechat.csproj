@@ -126,8 +126,11 @@
     <Content Include="Content\Mingzhi1\image\qhborderhunli.png" />
     <Content Include="Content\Mingzhi1\image\qhborderqkl.png" />
     <Content Include="Content\Mingzhi1\image\qhhunli.jpg" />
+    <Content Include="Content\Mingzhi1\image\qhhunli.png" />
     <Content Include="Content\Mingzhi1\image\qhqiaokeli.jpg" />
+    <Content Include="Content\Mingzhi1\image\qhqiaokeli.png" />
     <Content Include="Content\Mingzhi1\image\qhzhengming.jpg" />
+    <Content Include="Content\Mingzhi1\image\qhzhengming.png" />
     <Content Include="Content\Mingzhi1\image\qhzmbg.jpg" />
     <Content Include="Content\Mingzhi1\image\qiaokelilihe.jpg" />
     <Content Include="Content\Mingzhi1\image\rightbtn.png" />
