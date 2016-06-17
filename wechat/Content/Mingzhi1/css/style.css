@@ -46,7 +46,7 @@ a:hover{text-decoration: none;color: black;}
 
 /*爱情上传后的页面*/
 .aiqingnext{position:absolute;top:0;left:0;z-index:2;border:1px solid;width: 750px;height: 1206px;background: url("../image/aqnextbg.png") no-repeat;}
-.aqshow{top:310px;position:absolute;width: 750px;height:545px;background: url("../image/aishow.png") no-repeat;z-index:3;text-align: center; overflow:hidden}
+.aqshow{top:310px;position:absolute;width: 750px;height:545px;background: url("../image/aishow.png") no-repeat;z-index:4;text-align: center; overflow:hidden}
 .aqform{width: 750px;height:auto;margin-top: 60px}
 .aqform .text{background: url("../image/qhborderaiqing.png") no-repeat;width:400px;height:196px;padding: 65px 0 0 225px;font-size: 32px;border: none;outline: none;position:absolute;z-index:3;top:30px;left:50px;}
 .aiqingnext .text{outline: none;background: url("../image/aqkuang.png") no-repeat;width:443px;height:200px;padding: 65px 0 0 225px;font-size: 32px;border: none;}
