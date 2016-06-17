@@ -8,7 +8,7 @@ a:hover{text-decoration: none;color: black;}
 .qhwrap{width: 750px;height: 1206px;background:url("../image/qhaiqing.jpg") no-repeat;border: 1px solid;}
 .qhwrap form{width: 750px;height:auto;margin-top: 60px}
 .qhwrap form input[type=button]{outline:none;border:none;display:block;width: 603px;height: 103px;background: url("../image/bigsubbtn.png") no-repeat;margin:560px auto 0 auto;}
-.qhwrap .text{background: url("../image/qhborderaiqing.png") no-repeat;width:393px;height:196px;padding: 65px 0 0 225px;font-size: 32px;border: none;outline: none;}
+.qhwrap .text{background: url("../image/qhborderaiqing.png") no-repeat;width:393px;height:196px;padding: 65px 0 0 225px;font-size: 32px;border: none;outline: none;position:absolute;z-index:3;top:30px;left:50px;}
 .left{position: absolute;top:517px;left: 0px;width: 66px;height: 66px;background: url("../image/btnleft.png") no-repeat;z-index:3;}
 .right{position: absolute;top:517px;left: 680px;width: 66px;height: 66px;background: url("../image/rightbtn.png") no-repeat;z-index:3;}
 /*搞怪*/
