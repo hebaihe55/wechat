@@ -73,19 +73,19 @@ namespace wechat.Controllers
         public ActionResult b0()
         {
 
-            //Utils.WeHelper.appid = "wx36e10017571c25e2";
-            //Utils.WeHelper.secret = "99203a1e5c88f7aac606f9202b64bdd8";
-           
-            //Utils.WeHelper.timestamp = Utils.Utils.ConvertDateTimeInt(DateTime.Now).ToString();
-            //Utils.WeHelper.noncestr = "meiji" + DateTime.Now.ToString("yyyyMMddhhmmssfff");
+            Utils.WeHelper.appid = "wx36e10017571c25e2";
+            Utils.WeHelper.secret = "99203a1e5c88f7aac606f9202b64bdd8";
+
+            Utils.WeHelper.timestamp = Utils.Utils.ConvertDateTimeInt(DateTime.Now).ToString();
+            Utils.WeHelper.noncestr = "meiji" + DateTime.Now.ToString("yyyyMMddhhmmssfff");
 
 
 
-            //Utils.WeHelper.url = Request.Url.ToString();
-            //ViewBag.signature = Utils.WeHelper.signature;
-            //ViewBag.noncestr = Utils.WeHelper.noncestr;
-            //ViewBag.timestamp = Utils.WeHelper.timestamp;
-            //ViewBag.appid = Utils.WeHelper.appid;
+            Utils.WeHelper.url = Request.Url.ToString();
+            ViewBag.signature = Utils.WeHelper.signature;
+            ViewBag.noncestr = Utils.WeHelper.noncestr;
+            ViewBag.timestamp = Utils.WeHelper.timestamp;
+            ViewBag.appid = Utils.WeHelper.appid;
 
             return View();
         }
@@ -350,7 +350,7 @@ namespace wechat.Controllers
                 Utils.Log.Error("addusera", ex.Message);
                 return View("thank");
             }
-            return View("thank",img.id);
+            return RedirectToAction("thank", img.id);
         }
 
 
@@ -385,7 +385,7 @@ namespace wechat.Controllers
         public ActionResult thank(int id)
         {
 
-            ViewBag.imgtype = id;
+            ViewBag.id = id;
             return View();
         }
        
