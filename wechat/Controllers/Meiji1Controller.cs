@@ -88,8 +88,7 @@ namespace wechat.Controllers
         {
 
               Utils.WeHelper.MEDIA_ID = img.img1;
-
-
+            
               ViewBag.imgname ="http://mvc.cjoy.cn/upimg/"+ Utils.WeHelper.GetMultimedia();
             //ViewBag.imgname = "http://mvc.cjoy.cn/upimg/JpGvViXWaa1Blu61jtAkU9fv_JumT9-XnD2PcE34J1zNuA3UyGA8Nrl2ZkPkPwWq.jpg";
             ViewBag.title = img.title;
@@ -104,10 +103,7 @@ namespace wechat.Controllers
         {
 
             Utils.WeHelper.url = Request.Url.ToString();
-
-
-
-
+            
             ViewBag.signature = Utils.WeHelper.signature;
             ViewBag.noncestr = Utils.WeHelper.noncestr;
             ViewBag.timestamp = Utils.WeHelper.timestamp;
@@ -306,23 +302,23 @@ namespace wechat.Controllers
         {
             if (id == 0)
             {
-                RedirectToAction("bn0", (Models.MeijiImg)Session["img"]);
+            return    RedirectToAction("bn0", (Models.MeijiImg)Session["img"]);
             }
             else if (id == 1)
             {
-                RedirectToAction("bn1", (Models.MeijiImg)Session["img"]);
+                return RedirectToAction("bs1", (Models.MeijiImg)Session["img"]);
             }
             else if (id == 2)
             {
-                RedirectToAction("bn2", (Models.MeijiImg)Session["img"]);
+                return RedirectToAction("bs2", (Models.MeijiImg)Session["img"]);
             }
             else if (id == 3)
             {
-                RedirectToAction("bn3", (Models.MeijiImg)Session["img"]);
+                return RedirectToAction("bs3", (Models.MeijiImg)Session["img"]);
             }
             else if (id == 4)
             {
-                RedirectToAction("bn4", (Models.MeijiImg)Session["img"]);
+                return RedirectToAction("bs4", (Models.MeijiImg)Session["img"]);
             }
             return View();
         }
@@ -330,7 +326,7 @@ namespace wechat.Controllers
         public ActionResult thank()
         {
 
-            ViewBag.imgtype = ((Models.MeijiImg)Session["img"]).imgType;
+            ViewBag.imgtype =((Models.MeijiImg)Session["img"]).imgType;
             return View();
         }
 
