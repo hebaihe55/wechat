@@ -348,9 +348,9 @@ namespace wechat.Controllers
             catch (Exception ex)
             {
                 Utils.Log.Error("addusera", ex.Message);
-                return View("thank");
+                return View("thank", new { id =0 });
             }
-            return RedirectToAction("thank", img.id);
+            return RedirectToAction("thank", new { id = img.id });
         }
 
 
@@ -384,7 +384,20 @@ namespace wechat.Controllers
 
         public ActionResult thank(int id)
         {
+            Utils.WeHelper.url = Request.Url.ToString();
+            Utils.WeHelper.appid = "wx36e10017571c25e2";
+            Utils.WeHelper.secret = "99203a1e5c88f7aac606f9202b64bdd8";
 
+            Utils.WeHelper.timestamp = Utils.Utils.ConvertDateTimeInt(DateTime.Now).ToString();
+            Utils.WeHelper.noncestr = "meiji" + DateTime.Now.ToString("yyyyMMddhhmmssfff");
+
+
+
+
+            ViewBag.signature = Utils.WeHelper.signature;
+            ViewBag.noncestr = Utils.WeHelper.noncestr;
+            ViewBag.timestamp = Utils.WeHelper.timestamp;
+            ViewBag.appid = Utils.WeHelper.appid;
             ViewBag.id = id;
             return View();
         }
