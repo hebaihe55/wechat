@@ -89,6 +89,8 @@ namespace wechat.Models
         public int? backNo { get; set; }
         public int? imgNo { get; set; }
         [StringLength(50)]
+        public string title { get; set; }
+        [StringLength(50)]
         public string img1 { get; set; }
         [StringLength(50)]
         public string img2 { get; set; }

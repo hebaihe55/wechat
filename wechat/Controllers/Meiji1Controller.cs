@@ -331,6 +331,28 @@ namespace wechat.Controllers
             return View();
         }
 
+        public ActionResult addUser(Models.ImgActive img)
+        {
+            img.openid = Session["openid"].ToString();
+            img.img1 = ((Models.MeijiImg)Session["img"]).img1;
+            img.img2 = ((Models.MeijiImg)Session["img"]).img2;
+            img.backNo = ((Models.MeijiImg)Session["img"]).imgType;
+            img.title = ((Models.MeijiImg)Session["img"]).title;
+
+            try
+            {
+                db.ImgActives.Add(img);
+                db.SaveChanges();
+            }
+            catch (Exception )
+            {
+
+                return View("thank");
+            }
+            return View("thank");
+        }
+
+
         public ActionResult show(int id)
         {
             if (id == 0)
