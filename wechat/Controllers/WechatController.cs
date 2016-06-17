@@ -70,8 +70,7 @@ namespace wechat.Controllers
             }
         }
 
-
-
+    
         private Utils.WxPayData redata = new Utils.WxPayData();
 
         /// <summary>
