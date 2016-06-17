@@ -126,7 +126,6 @@
     <Content Include="Content\Mingzhi1\image\qhbordergaoxiao.png" />
     <Content Include="Content\Mingzhi1\image\qhborderhunli.png" />
     <Content Include="Content\Mingzhi1\image\qhborderqkl.png" />
-    <Content Include="Content\Mingzhi1\image\qhgaoxiao.jpg" />
     <Content Include="Content\Mingzhi1\image\qhhunli.jpg" />
     <Content Include="Content\Mingzhi1\image\qhqiaokeli.jpg" />
     <Content Include="Content\Mingzhi1\image\qhzhengming.jpg" />
@@ -151,6 +150,7 @@
     <Content Include="Content\Mingzhi1\image\closefx.png" />
     <Content Include="Content\Mingzhi1\image\zhengming.png" />
     <Content Include="Content\Mingzhi1\image\qhzmkuang.png" />
+    <Content Include="Content\Mingzhi1\image\qhgaoxiao.jpg" />
     <Content Include="Content\Xinghe1\css\style.css" />
     <Content Include="Content\Xinghe1\images\bg.jpg" />
     <Content Include="Content\Xinghe1\images\change.png" />
