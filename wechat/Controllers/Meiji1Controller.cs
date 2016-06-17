@@ -159,22 +159,22 @@ namespace wechat.Controllers
 
         public ActionResult bn2(Models.MeijiImg img)
         {
-            //Utils.WeHelper.MEDIA_ID = img.img1;
+            Utils.WeHelper.MEDIA_ID = img.img1;
 
 
-            //ViewBag.img1= "http://mvc.cjoy.cn/upimg/" + Utils.WeHelper.GetMultimedia();
+            ViewBag.img1= "http://mvc.cjoy.cn/upimg/" + Utils.WeHelper.GetMultimedia();
 
-            ////ViewBag.imgname = "http://mvc.cjoy.cn/upimg/JpGvViXWaa1Blu61jtAkU9fv_JumT9-XnD2PcE34J1zNuA3UyGA8Nrl2ZkPkPwWq.jpg";
-            //Utils.WeHelper.MEDIA_ID = img.img2;
-
-
-            //ViewBag.img2 = "http://mvc.cjoy.cn/upimg/" + Utils.WeHelper.GetMultimedia();
+            //ViewBag.imgname = "http://mvc.cjoy.cn/upimg/JpGvViXWaa1Blu61jtAkU9fv_JumT9-XnD2PcE34J1zNuA3UyGA8Nrl2ZkPkPwWq.jpg";
+            Utils.WeHelper.MEDIA_ID = img.img2;
 
 
-            //ViewBag.title = img.title;
-            //img.imgType = 2;
+            ViewBag.img2 = "http://mvc.cjoy.cn/upimg/" + Utils.WeHelper.GetMultimedia();
 
-            //System.Web.HttpContext.Current.Session["img"] = img;
+
+            ViewBag.title = img.title;
+            img.imgType = 2;
+
+            System.Web.HttpContext.Current.Session["img"] = img;
             return View();
         }
 
