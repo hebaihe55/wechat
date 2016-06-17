@@ -199,15 +199,15 @@ namespace wechat.Controllers
 
         public ActionResult b4()
         {
-            //Utils.WeHelper.url = Request.Url.ToString();
+            Utils.WeHelper.url = Request.Url.ToString();
 
 
 
 
-            //ViewBag.signature = Utils.WeHelper.signature;
-            //ViewBag.noncestr = Utils.WeHelper.noncestr;
-            //ViewBag.timestamp = Utils.WeHelper.timestamp;
-            //ViewBag.appid = Utils.WeHelper.appid;
+            ViewBag.signature = Utils.WeHelper.signature;
+            ViewBag.noncestr = Utils.WeHelper.noncestr;
+            ViewBag.timestamp = Utils.WeHelper.timestamp;
+            ViewBag.appid = Utils.WeHelper.appid;
             return View();
         }
         public ActionResult bn4(Models.MeijiImg img)
