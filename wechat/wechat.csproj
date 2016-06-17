@@ -346,7 +346,6 @@
     <Content Include="Views\Meiji1\b2.cshtml" />
     <Content Include="Views\Meiji1\b4.cshtml" />
     <Content Include="Views\Meiji1\b3.cshtml" />
-    <Content Include="Views\Meiji1\b0.cshtml" />
     <Content Include="Views\Meiji1\bn4.cshtml" />
     <Content Include="Views\Meiji1\bn3.cshtml" />
     <Content Include="Views\Yamaha1\index.cshtml" />
@@ -371,6 +370,7 @@
     <Content Include="Views\Meiji1\bs4.cshtml" />
     <Content Include="Views\Meiji1\thank.cshtml" />
     <Content Include="Views\Meiji1\show.cshtml" />
+    <Content Include="Views\Meiji1\b0.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
