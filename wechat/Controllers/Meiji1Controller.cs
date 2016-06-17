@@ -96,13 +96,14 @@ namespace wechat.Controllers
         {
 
               Utils.WeHelper.MEDIA_ID = img.img1;
-            
-              ViewBag.imgname ="http://mvc.cjoy.cn/upimg/"+ Utils.WeHelper.GetMultimedia();
+
+            string img1= "http://mvc.cjoy.cn/upimg/" + Utils.WeHelper.GetMultimedia();
+            ViewBag.img1 = img1;
             //ViewBag.imgname = "http://mvc.cjoy.cn/upimg/JpGvViXWaa1Blu61jtAkU9fv_JumT9-XnD2PcE34J1zNuA3UyGA8Nrl2ZkPkPwWq.jpg";
             ViewBag.title = img.title;
 
             img.imgType = 0;
-
+            img.img1= img1;
             System.Web.HttpContext.Current.Session["img"] = img;
 
             return View();
@@ -128,10 +129,13 @@ namespace wechat.Controllers
             Utils.WeHelper.MEDIA_ID = img.img1;
 
 
-            ViewBag.imgname = "http://mvc.cjoy.cn/upimg/" + Utils.WeHelper.GetMultimedia();
+            string img1= "http://mvc.cjoy.cn/upimg/" + Utils.WeHelper.GetMultimedia();
+
+            ViewBag.img1 = img1;
             //ViewBag.imgname = "http://mvc.cjoy.cn/upimg/JpGvViXWaa1Blu61jtAkU9fv_JumT9-XnD2PcE34J1zNuA3UyGA8Nrl2ZkPkPwWq.jpg";
             ViewBag.title = img.title;
             img.imgType = 1;
+            img.img1 = img1;
 
             System.Web.HttpContext.Current.Session["img"] = img;
 
@@ -146,10 +150,7 @@ namespace wechat.Controllers
 
             Utils.WeHelper.timestamp = Utils.Utils.ConvertDateTimeInt(DateTime.Now).ToString();
             Utils.WeHelper.noncestr = "meiji" + DateTime.Now.ToString("yyyyMMddhhmmssfff");
-
-
-
-
+            
             ViewBag.signature = Utils.WeHelper.signature;
             ViewBag.noncestr = Utils.WeHelper.noncestr;
             ViewBag.timestamp = Utils.WeHelper.timestamp;
@@ -162,18 +163,20 @@ namespace wechat.Controllers
             Utils.WeHelper.MEDIA_ID = img.img1;
 
 
-            ViewBag.img1= "http://mvc.cjoy.cn/upimg/" + Utils.WeHelper.GetMultimedia();
+            string img1= "http://mvc.cjoy.cn/upimg/" + Utils.WeHelper.GetMultimedia();
+            ViewBag.img1 = img1;
 
             //ViewBag.imgname = "http://mvc.cjoy.cn/upimg/JpGvViXWaa1Blu61jtAkU9fv_JumT9-XnD2PcE34J1zNuA3UyGA8Nrl2ZkPkPwWq.jpg";
             Utils.WeHelper.MEDIA_ID = img.img2;
 
-
-            ViewBag.img2 = "http://mvc.cjoy.cn/upimg/" + Utils.WeHelper.GetMultimedia();
+            string img2= "http://mvc.cjoy.cn/upimg/" + Utils.WeHelper.GetMultimedia();
+            ViewBag.img2 = img2;
 
 
             ViewBag.title = img.title;
             img.imgType = 2;
-
+            img.img1 = img1;
+            img.img2 = img2;
             System.Web.HttpContext.Current.Session["img"] = img;
             return View();
         }
@@ -201,20 +204,22 @@ namespace wechat.Controllers
         {
             Utils.WeHelper.MEDIA_ID = img.img1;
 
+            string img1= "http://mvc.cjoy.cn/upimg/" + Utils.WeHelper.GetMultimedia();
 
-            ViewBag.img1 = "http://mvc.cjoy.cn/upimg/" + Utils.WeHelper.GetMultimedia();
+            ViewBag.img1 = img1;
 
             //ViewBag.imgname = "http://mvc.cjoy.cn/upimg/JpGvViXWaa1Blu61jtAkU9fv_JumT9-XnD2PcE34J1zNuA3UyGA8Nrl2ZkPkPwWq.jpg";
             Utils.WeHelper.MEDIA_ID = img.img2;
 
-
-            ViewBag.img2 = "http://mvc.cjoy.cn/upimg/" + Utils.WeHelper.GetMultimedia();
+            string img2= "http://mvc.cjoy.cn/upimg/" + Utils.WeHelper.GetMultimedia();
+            ViewBag.img2 = img2;
 
 
             ViewBag.title = img.title;
 
             img.imgType = 3;
-
+            img.img1 = img1;
+            img.img2 = img2;
             System.Web.HttpContext.Current.Session["img"] = img;
             return View();
           
@@ -242,19 +247,20 @@ namespace wechat.Controllers
         {
             Utils.WeHelper.MEDIA_ID = img.img1;
 
-
-            ViewBag.img1 = "http://mvc.cjoy.cn/upimg/" + Utils.WeHelper.GetMultimedia();
+            string img1= "http://mvc.cjoy.cn/upimg/" + Utils.WeHelper.GetMultimedia();
+            ViewBag.img1 = img1;
 
             //ViewBag.imgname = "http://mvc.cjoy.cn/upimg/JpGvViXWaa1Blu61jtAkU9fv_JumT9-XnD2PcE34J1zNuA3UyGA8Nrl2ZkPkPwWq.jpg";
             Utils.WeHelper.MEDIA_ID = img.img2;
 
-
-            ViewBag.img2 = "http://mvc.cjoy.cn/upimg/" + Utils.WeHelper.GetMultimedia();
+            string img2= "http://mvc.cjoy.cn/upimg/" + Utils.WeHelper.GetMultimedia();
+            ViewBag.img2 = img2;
 
 
             ViewBag.title = img.title;
             img.imgType = 4;
-
+            img.img1 = img1;
+            img.img2 = img2;
             System.Web.HttpContext.Current.Session["img"] = img;
 
             return View();
@@ -330,7 +336,7 @@ namespace wechat.Controllers
         {
             if (id == 0)
             {
-            return    RedirectToAction("bn0", (Models.MeijiImg)Session["img"]);
+            return    RedirectToAction("bs0", (Models.MeijiImg)Session["img"]);
             }
             else if (id == 1)
             {
