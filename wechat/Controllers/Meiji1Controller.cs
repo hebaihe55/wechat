@@ -17,8 +17,7 @@ namespace wechat.Controllers
             Utils.WeHelper.url = Request.Url.ToString();
             Utils.WeHelper.timestamp = Utils.Utils.ConvertDateTimeInt(DateTime.Now).ToString();
             Utils.WeHelper.noncestr = "meiji" + DateTime.Now.ToString("yyyyMMddhhmmssfff");
-
-           
+                       
             if (!string.IsNullOrWhiteSpace(code))
             {
                 Utils.WeHelper.code = code;
