@@ -362,6 +362,6 @@ namespace wechat.Controllers
             ViewBag.imgtype =((Models.MeijiImg)Session["img"]).imgType;
             return View();
         }
-
+       
     }
 }
