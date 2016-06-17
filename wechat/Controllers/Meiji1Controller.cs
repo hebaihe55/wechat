@@ -75,8 +75,6 @@ namespace wechat.Controllers
         {
            
             Utils.WeHelper.url = Request.Url.ToString();
-      
-         
             ViewBag.signature = Utils.WeHelper.signature;
             ViewBag.noncestr = Utils.WeHelper.noncestr;
             ViewBag.timestamp = Utils.WeHelper.timestamp;
