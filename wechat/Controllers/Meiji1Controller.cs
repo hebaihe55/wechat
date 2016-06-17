@@ -73,7 +73,15 @@ namespace wechat.Controllers
        
         public ActionResult b0()
         {
+
+            Utils.WeHelper.appid = "wx36e10017571c25e2";
+            Utils.WeHelper.secret = "99203a1e5c88f7aac606f9202b64bdd8";
            
+            Utils.WeHelper.timestamp = Utils.Utils.ConvertDateTimeInt(DateTime.Now).ToString();
+            Utils.WeHelper.noncestr = "meiji" + DateTime.Now.ToString("yyyyMMddhhmmssfff");
+
+
+
             Utils.WeHelper.url = Request.Url.ToString();
             ViewBag.signature = Utils.WeHelper.signature;
             ViewBag.noncestr = Utils.WeHelper.noncestr;
@@ -101,6 +109,11 @@ namespace wechat.Controllers
         }
         public ActionResult b1()
         {
+            Utils.WeHelper.appid = "wx36e10017571c25e2";
+            Utils.WeHelper.secret = "99203a1e5c88f7aac606f9202b64bdd8";
+
+            Utils.WeHelper.timestamp = Utils.Utils.ConvertDateTimeInt(DateTime.Now).ToString();
+            Utils.WeHelper.noncestr = "meiji" + DateTime.Now.ToString("yyyyMMddhhmmssfff");
 
             Utils.WeHelper.url = Request.Url.ToString();
             
@@ -128,6 +141,11 @@ namespace wechat.Controllers
         public ActionResult b2()
         {
             Utils.WeHelper.url = Request.Url.ToString();
+            Utils.WeHelper.appid = "wx36e10017571c25e2";
+            Utils.WeHelper.secret = "99203a1e5c88f7aac606f9202b64bdd8";
+
+            Utils.WeHelper.timestamp = Utils.Utils.ConvertDateTimeInt(DateTime.Now).ToString();
+            Utils.WeHelper.noncestr = "meiji" + DateTime.Now.ToString("yyyyMMddhhmmssfff");
 
 
 
@@ -163,6 +181,11 @@ namespace wechat.Controllers
         public ActionResult b3()
         {
             Utils.WeHelper.url = Request.Url.ToString();
+            Utils.WeHelper.appid = "wx36e10017571c25e2";
+            Utils.WeHelper.secret = "99203a1e5c88f7aac606f9202b64bdd8";
+
+            Utils.WeHelper.timestamp = Utils.Utils.ConvertDateTimeInt(DateTime.Now).ToString();
+            Utils.WeHelper.noncestr = "meiji" + DateTime.Now.ToString("yyyyMMddhhmmssfff");
 
 
 
@@ -200,6 +223,11 @@ namespace wechat.Controllers
         public ActionResult b4()
         {
             Utils.WeHelper.url = Request.Url.ToString();
+            Utils.WeHelper.appid = "wx36e10017571c25e2";
+            Utils.WeHelper.secret = "99203a1e5c88f7aac606f9202b64bdd8";
+
+            Utils.WeHelper.timestamp = Utils.Utils.ConvertDateTimeInt(DateTime.Now).ToString();
+            Utils.WeHelper.noncestr = "meiji" + DateTime.Now.ToString("yyyyMMddhhmmssfff");
 
 
 
