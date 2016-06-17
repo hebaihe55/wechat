@@ -350,7 +350,7 @@ namespace wechat.Controllers
                 Utils.Log.Error("addusera", ex.Message);
                 return View("thank");
             }
-            return View("thank",img.id);
+            return RedirectToAction("thank", img.id);
         }
 
 
@@ -385,7 +385,7 @@ namespace wechat.Controllers
         public ActionResult thank(int id)
         {
 
-            ViewBag.imgtype = id;
+            ViewBag.id = id;
             return View();
         }
        
