@@ -85,4 +85,5 @@ a:hover{text-decoration: none;color: black;}
 .fm{width: 900px;height:500px;background: url("../image/fengmian.jpg") no-repeat;border: 1px solid;background-size: 100%}
 .zmnextwsrap form{margin:712px auto 0 auto;width:750px;}
 .resetphoto{position:absolute;width:230px;height:63px;top:852px;left:50px;z-index:3;}
-.zmnextwsrap .zmimg,.qhzmwsrap .zming{width:268px;height:269px;position:absolute;top:726px;left:473px;}
+.zmnextwsrap .zmimg{width:268px;height:269px;position:absolute;top:726px;left:473px;}
+.qhzmwsrap .zmimg{width:268px;height:269px;position:absolute;top:726px;left:473px;}
