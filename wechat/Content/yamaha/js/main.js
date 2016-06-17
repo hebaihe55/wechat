@@ -21,6 +21,9 @@ var getrandom5 = function () {
         $(".form1 ." + arr[k]).show();
         //alert($("form ."+arr[k]));
     }
+    /*
+    获取随机数
+    */
     function getrandom() {
         var ramdom = Math.floor((Math.random() * 10) + 1);
         return ramdom;
@@ -49,7 +52,7 @@ var getrandom5 = function () {
             arr.push("t" + getrandom());
         }
     }
-    arr3 = getArrayItems(arr, 3);
+    arr3 = getArrayItems(arr, 3);//从数组中随机获取3个数重新组成一个数组
     setCookie('arr3key', arr3, 365);
     checkCookie();
 
@@ -108,21 +111,21 @@ function getArrayItems(arr, num) {
     return return_array;
 }
 var str = {
-    alertchooseTishi: "请选择您的答案",
-    ansercompleteTish: "您已答完所有题目",
     inputname: "请输入您的姓名",
     leng: "长度必须小于10位",
     telTish: "手机号码有误，请重填",
-    alerttemplate1: '<div class="alertParent"><div class="text"><span>' + str.alertchooseTishi + '</span></div><input type="button" value="确定" onclick="sure1()" class="surebtn"/></div>',
-    alerttemplate2: '<div class="alertParent"><div class="text"><span>' + str.ansercompleteTish + '</span></div><input type="button" value="确定" onclick="sure1()" class="surebtn"/></div>',
+    alerttemplate1: '<div class="alertParent"><div class="text"><span>请选择您的答案</span></div><input type="button" value="确定" onclick="sure1()" class="surebtn"/></div>',
+    alerttemplate2: '<div class="alertParent"><div class="text"><span>您已答完所有题目</span></div><input type="button" value="确定" onclick="sure2()" class="surebtn"/></div>',
     zhezhaotemplate: '<div class="zhezhao"></div>',
-    ruletemplate:"<div class='ruleshow'></div>"
+    ruletemplate:"<div class='ruleshow'></div>",
+    closebtnimg: "<div class='closebtn'></div>"
+   
 }
 $(function () {
     $("form .nextbtn").on("click", function () {
         var checkval = $("form input[type=radio]:checked").val();
-        if (checkval == null || checkval == "") {
-            alertdialog1(str.alertchooseTishi);
+        if (checkval == null || checkval == ""){
+            alertdialog1();
             return;
 
         } else {
@@ -140,7 +143,7 @@ $(function () {
                     location.href = "/Yamaha1/" + arr3[0];
                 }
             } else {
-                alertdialog2(str.ansercompleteTish);
+                alertdialog2();
 
             }
         }
@@ -150,7 +153,14 @@ $(function () {
     $(".rule").on("click", function () {
         $("body").append(str.zhezhaotemplate);
         $("body").append(str.ruletemplate);
+        // $("body").append(str.closebtnimg);
+        $(".closebtn").show();
 
+    })
+    $(".closebtn").on("click", function () {
+        $(".zhezhao").hide();
+        $(".ruleshow").hide();
+        $(".closebtn").hide();
     })
 
 })
@@ -160,7 +170,7 @@ var alertdialog1 = function (text) {
     var clienHeight = $(window).height();
    
     $("body").append(str.zhezhaotemplate);
-    $("body").append(str.alerttemplate);
+    $("body").append(str.alerttemplate1);
 
     $(".alertParent").css({
         "top": (clienHeight / 2 - 400) + "px",
@@ -174,7 +184,7 @@ var alertdialog2 = function (text) {
     var clientWidth = $(window).width();
     var clienHeight = $(window).height();
     $("body").append(str.zhezhaotemplate);
-    $("body").append(str.alerttemplate);
+    $("body").append(str.alerttemplate2);
 
     $(".alertParent").css({
         "top": (clienHeight / 2 - 400) + "px",
