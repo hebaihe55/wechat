@@ -43,8 +43,8 @@
         <a href="/meiji1/b3" class="right"></a>
         <span class="shuoming">上传的照片将在这里显示</span>
     </div>
-    <div class="hlnextshowleft"><img src="@ViewBag.img1" style="width:337px; height:414px" /> </div>
-    <div class="hlnextshowright"><img src="@ViewBag.img2" style="width:337px; height:414px" /> </div>
+    <div class="hlnextshowleft"><img src="" id="simg1" style="width:337px; height:414px" /> </div>
+    <div class="hlnextshowright"><img src="" id="simg2" style="width:337px; height:414px" /> </div>
     <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js "></script>
     <script>
         wx.config({
@@ -106,7 +106,7 @@
                 success: function (res) {
                     var localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
                     
-
+                    $("#simg1").attr("src", localIds[0]);
 
 
 
@@ -144,11 +144,9 @@
                 success: function (res) {
                     var localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
 
+                    $("#simg2").attr("src", localIds[0]);
 
-
-
-
-
+                    
                     wx.uploadImage({
                         localId: localIds[0], // 需要上传的图片的本地ID，由chooseImage接口获得
                         isShowProgressTips: 1, // 默认为1，显示进度提示
