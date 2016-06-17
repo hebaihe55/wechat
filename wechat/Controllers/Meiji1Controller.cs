@@ -93,6 +93,11 @@ namespace wechat.Controllers
               ViewBag.imgname ="http://mvc.cjoy.cn/upimg/"+ Utils.WeHelper.GetMultimedia();
             //ViewBag.imgname = "http://mvc.cjoy.cn/upimg/JpGvViXWaa1Blu61jtAkU9fv_JumT9-XnD2PcE34J1zNuA3UyGA8Nrl2ZkPkPwWq.jpg";
             ViewBag.title = img.title;
+
+            img.imgType = 0;
+
+            System.Web.HttpContext.Current.Session["img"] = img;
+
             return View();
         }
         public ActionResult b1()
@@ -117,6 +122,10 @@ namespace wechat.Controllers
             ViewBag.imgname = "http://mvc.cjoy.cn/upimg/" + Utils.WeHelper.GetMultimedia();
             //ViewBag.imgname = "http://mvc.cjoy.cn/upimg/JpGvViXWaa1Blu61jtAkU9fv_JumT9-XnD2PcE34J1zNuA3UyGA8Nrl2ZkPkPwWq.jpg";
             ViewBag.title = img.title;
+            img.imgType = 1;
+
+            System.Web.HttpContext.Current.Session["img"] = img;
+
             return View();
         }
 
@@ -149,6 +158,9 @@ namespace wechat.Controllers
 
 
             ViewBag.title = img.title;
+            img.imgType = 2;
+
+            System.Web.HttpContext.Current.Session["img"] = img;
             return View();
         }
 
@@ -181,6 +193,10 @@ namespace wechat.Controllers
 
 
             ViewBag.title = img.title;
+
+            img.imgType = 3;
+
+            System.Web.HttpContext.Current.Session["img"] = img;
             return View();
           
         }
@@ -213,12 +229,72 @@ namespace wechat.Controllers
 
 
             ViewBag.title = img.title;
-           
+            img.imgType = 4;
+
+            System.Web.HttpContext.Current.Session["img"] = img;
+
             return View();
         }
+
+        public ActionResult bs0(Models.MeijiImg img)
+        {
+
+            ViewBag.img1 = img.img1;
+
+
+            ViewBag.img2 = img.img2;
+
+
+            ViewBag.title = img.title;
+            return View();
+        }
+
        
+        public ActionResult bs1(Models.MeijiImg img)
+        {
+            ViewBag.img1 = img.img1;
 
 
+            ViewBag.img2 = img.img2;
+
+
+            ViewBag.title = img.title;
+
+            return View();
+        }
+        public ActionResult bs2(Models.MeijiImg img)
+        {
+            ViewBag.img1 = img.img1;
+
+
+            ViewBag.img2 = img.img2;
+
+
+            ViewBag.title = img.title;
+            return View();
+        }
+        public ActionResult bs3(Models.MeijiImg img)
+        {
+            ViewBag.img1 = img.img1;
+
+
+            ViewBag.img2 = img.img2;
+
+
+            ViewBag.title = img.title;
+            return View();
+        }
+        public ActionResult bs4(Models.MeijiImg img)
+        {
+            ViewBag.img1 = img.img1;
+
+
+            ViewBag.img2 = img.img2;
+
+
+            ViewBag.title = img.title;
+            return View();
+        }
 
 
         public ActionResult gifts()
@@ -226,8 +302,35 @@ namespace wechat.Controllers
             return View();
         }
 
+        public ActionResult show(int id)
+        {
+            if (id == 0)
+            {
+                RedirectToAction("bn0", (Models.MeijiImg)Session["img"]);
+            }
+            else if (id == 1)
+            {
+                RedirectToAction("bn1", (Models.MeijiImg)Session["img"]);
+            }
+            else if (id == 2)
+            {
+                RedirectToAction("bn2", (Models.MeijiImg)Session["img"]);
+            }
+            else if (id == 3)
+            {
+                RedirectToAction("bn3", (Models.MeijiImg)Session["img"]);
+            }
+            else if (id == 4)
+            {
+                RedirectToAction("bn4", (Models.MeijiImg)Session["img"]);
+            }
+            return View();
+        }
+
         public ActionResult thank()
         {
+
+            ViewBag.imgtype = ((Models.MeijiImg)Session["img"]).imgType;
             return View();
         }
 

@@ -49,6 +49,7 @@ namespace wechat.Models
         public string title { get; set; }
         public string img1 { get; set; }
         public string img2 { get; set; }
+        public int imgType { get; set; }
     }
 
 

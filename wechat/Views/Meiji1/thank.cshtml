@@ -28,13 +28,19 @@
             $(".fximg").hide();
             $(".close").hide();
         }
+
+        function onshow() {
+            location.href = "/meiji1/show/@ViewBag.imgtype";
+        }
+
+
     </script>
 </head>
 <body>
     <div class="thankWrap">
         <img src="~/Content/Mingzhi1/image/thank.jpg" />
         <button class="fenxiang" onclick="fenxiang()"></button>
-        <button class="chakan"></button>
+        <button class="chakan" onclick="onshow()"></button>
     </div>
 </body>
 </html>
