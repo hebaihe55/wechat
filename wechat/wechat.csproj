@@ -366,6 +366,7 @@
     <Content Include="Views\Meiji1\bs3.cshtml" />
     <Content Include="Views\Meiji1\bs4.cshtml" />
     <Content Include="Views\Meiji1\thank.cshtml" />
+    <Content Include="Views\Meiji1\show.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
