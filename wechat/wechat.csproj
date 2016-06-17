@@ -155,6 +155,8 @@
     <Content Include="Content\Mingzhi1\image\qhgaoxiao.jpg" />
     <Content Include="Content\Mingzhi1\image\fengmian2.jpg" />
     <Content Include="Content\Mingzhi1\image\fengmian.jpg" />
+    <Content Include="Content\Mingzhi1\image\like1.png" />
+    <Content Include="Content\Mingzhi1\image\like2.png" />
     <Content Include="Content\Xinghe1\css\style.css" />
     <Content Include="Content\Xinghe1\images\bg.jpg" />
     <Content Include="Content\Xinghe1\images\change.png" />
