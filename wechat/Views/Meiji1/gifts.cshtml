@@ -22,6 +22,8 @@
                 for (var i = 0; i < checkboxarr.length; i++) {
                     if (checkboxarr[i].checked == true) {
                         flag = true;
+                        $("#gift").val(i);
+
                         break;
                     }
                 }
@@ -49,15 +51,16 @@
 </head>
 <body>
     <div class="giftwrap">
-        <form action="/meiji1/thank" method="post" onsubmit="return checkinfo()">
+        <form action="/meiji1/adduser" method="post" onsubmit="return checkinfo()">
             <div class="likes">
                 <div class="gift"><img src="/Content/Mingzhi1/image/ipad.jpg" /><div class="txt"><input type="radio" value="我喜欢" id="like1" name="like"><label for="like1">我喜欢</label></div> </div>
                 <div class="gift"><img src="/Content/Mingzhi1/image/qiaokelilihe.jpg" /><div class="txt"><input type="radio" value="我喜欢" id="like2" name="like"><label for="like2">我喜欢</label></div></div>
                 <div class="gift"><img src="/Content/Mingzhi1/image/youhuiquan.jpg" /><div class="txt"><input type="radio" value="我喜欢" id="like3" name="like"><label for="like3">我喜欢</label></div></div>
             </div>
             <div class="userinfo">
-                <input type="text" placeholder="请输入姓名：" class="user" /><br />
-                <input type="text" placeholder="请输入手机号：" class="tel" />
+                <input type="text" placeholder="请输入姓名：" class="user" name="name" /><br />
+                <input type="text" placeholder="请输入手机号：" class="tel" name="mobile" />
+                <input type="hidden" id="gift" name="gift" value="0" />
                 <input type="submit" value="" />
             </div>
         </form>

@@ -331,6 +331,7 @@ namespace wechat.Controllers
             return View();
         }
 
+        [HttpPost]
         public ActionResult addUser(Models.ImgActive img)
         {
             img.openid = Session["openid"].ToString();
@@ -338,50 +339,53 @@ namespace wechat.Controllers
             img.img2 = ((Models.MeijiImg)Session["img"]).img2;
             img.backNo = ((Models.MeijiImg)Session["img"]).imgType;
             img.title = ((Models.MeijiImg)Session["img"]).title;
-
+            img.ctime = DateTime.Now;
             try
             {
                 db.ImgActives.Add(img);
                 db.SaveChanges();
             }
-            catch (Exception )
+            catch (Exception ex)
             {
-
+                Utils.Log.Error("addusera", ex.Message);
                 return View("thank");
             }
-            return View("thank");
+            return View("thank",img.id);
         }
 
 
         public ActionResult show(int id)
         {
-            if (id == 0)
+
+           var img= db.ImgActives.Find(id);
+
+            if (img.backNo == 0)
             {
-            return    RedirectToAction("bs0", (Models.MeijiImg)Session["img"]);
+            return    RedirectToAction("bs0", img);
             }
-            else if (id == 1)
+            else if (img.backNo == 1)
             {
-                return RedirectToAction("bs1", (Models.MeijiImg)Session["img"]);
+                return RedirectToAction("bs1", img);
             }
-            else if (id == 2)
+            else if (img.backNo == 2)
             {
-                return RedirectToAction("bs2", (Models.MeijiImg)Session["img"]);
+                return RedirectToAction("bs2", img);
             }
-            else if (id == 3)
+            else if (img.backNo == 3)
             {
-                return RedirectToAction("bs3", (Models.MeijiImg)Session["img"]);
+                return RedirectToAction("bs3", img);
             }
-            else if (id == 4)
+            else if (img.backNo == 4)
             {
-                return RedirectToAction("bs4", (Models.MeijiImg)Session["img"]);
+                return RedirectToAction("bs4", img);
             }
             return View();
         }
 
-        public ActionResult thank()
+        public ActionResult thank(int id)
         {
 
-            ViewBag.imgtype =((Models.MeijiImg)Session["img"]).imgType;
+            ViewBag.imgtype = id;
             return View();
         }
        
