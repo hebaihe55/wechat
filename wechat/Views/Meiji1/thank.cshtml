@@ -29,9 +29,7 @@
             $(".close").hide();
         }
 
-        function onshow() {
-            location.href = "/meiji1/show/@ViewBag.id";
-        }
+     
 
 
     </script>
@@ -40,7 +38,7 @@
     <div class="thankWrap">
         <img src="~/Content/Mingzhi1/image/thank.jpg" />
         <button class="fenxiang" onclick="fenxiang()"></button>
-        <button class="chakan" onclick="onshow()"></button>
+     <a href="/meiji1/show/@ViewBag.id"><img src="~/Content/Mingzhi1/image/chakan.png" class="chakan" /></a>
         @Html.Hidden("appid")
         @Html.Hidden("timestamp")
         @Html.Hidden("noncestr")

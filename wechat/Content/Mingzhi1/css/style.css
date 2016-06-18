@@ -30,7 +30,7 @@ a:hover{text-decoration: none;color: black;}
 /**谢谢参与*/
 .thankWrap{width:750px;height:1206px}
 .thankWrap .fenxiang{width:248px;height: 73px;background: url("../image/fengxiang.png") no-repeat;position:absolute;left:110px;top:1039px;}
-.thankWrap .chakan{width:248px;height: 73px;background: url("../image/chakan.png") no-repeat;position:absolute;left:400px;top:1039px;}
+.thankWrap .chakan{width:248px;height: 73px;position:absolute;left:400px;top:1039px;}
 .close{position:absolute;top:78px;left:67px;z-index:2;}
 /*礼品*/
 .giftwrap{width: 750px;height: 1206px;background:url("../image/giftbg.jpg") no-repeat;border: 1px solid;}

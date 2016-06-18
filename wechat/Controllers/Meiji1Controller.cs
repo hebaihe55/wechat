@@ -366,6 +366,11 @@ namespace wechat.Controllers
 
            var img= db.ImgActives.Find(id);
 
+            if (img == null)
+            {
+                return RedirectToAction("index");
+            }
+
             if (img.backNo == 0)
             {
             return    RedirectToAction("bs0", img);
