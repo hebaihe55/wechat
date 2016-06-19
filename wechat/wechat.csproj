@@ -157,6 +157,14 @@
     <Content Include="Content\Mingzhi1\image\fengmian.jpg" />
     <Content Include="Content\Mingzhi1\image\like1.png" />
     <Content Include="Content\Mingzhi1\image\like2.png" />
+    <Content Include="Content\Wanjing1\css\style.css" />
+    <Content Include="Content\Wanjing1\img\anniu.jpg" />
+    <Content Include="Content\Wanjing1\img\tou.jpg" />
+    <Content Include="Content\Wanjing1\img\微信封面图.jpg" />
+    <Content Include="Content\Wanjing1\img\thank.jpg" />
+    <Content Include="Content\Wanjing1\img\submit.jpg" />
+    <Content Include="Content\Wanjing1\img\activeend.jpg" />
+    <Content Include="Content\Wanjing1\img\liuliangend.jpg" />
     <Content Include="Content\Xinghe1\css\style.css" />
     <Content Include="Content\Xinghe1\images\bg.jpg" />
     <Content Include="Content\Xinghe1\images\change.png" />
@@ -300,6 +308,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KamidaController.cs" />
     <Compile Include="Controllers\Meiji1Controller.cs" />
+    <Compile Include="Controllers\Wanjing1Controller.cs" />
     <Compile Include="Controllers\WechatController.cs" />
     <Compile Include="Controllers\Xinghe1Controller.cs" />
     <Compile Include="Controllers\Yamaha1Controller.cs" />
@@ -373,6 +382,11 @@
     <Content Include="Views\Meiji1\thank.cshtml" />
     <Content Include="Views\Meiji1\show.cshtml" />
     <Content Include="Views\Meiji1\b0.cshtml" />
+    <Content Include="Views\Wanjing1\index.cshtml" />
+    <Content Include="Views\Wanjing1\tijiao.cshtml" />
+    <Content Include="Views\Wanjing1\thank.cshtml" />
+    <Content Include="Views\Wanjing1\activeend.cshtml" />
+    <Content Include="Views\Wanjing1\liuliangzsend.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -382,6 +396,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Wanjing\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

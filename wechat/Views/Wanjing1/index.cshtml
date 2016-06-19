@@ -1,0 +1,111 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>丸井</title>
+    <link href="~/Content/Wanjing1/css/style.css" type="text/css" rel="stylesheet"/>
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script>
+        function checkform() {
+            var count = 0;
+            var leng=$(".wenda").length;
+            $(".wenda").each(function (index) {
+                var va = $(this).find("input");
+                if (va.is(":checked")) {
+                    count++;
+                }
+
+            })
+            if (count != leng) {
+               
+                alert("请选择答案");
+                return false;
+            }
+           
+           
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="indexwrap">
+        <img src="~/Content/Wanjing1/img/tou.jpg" />
+        <form action="" method="post" onsubmit="checkform()">
+            <div class="wenda">
+                <h3>1、性別</h3><br />
+                <input type="radio" name="name1" value="男" /><label>男</label><br />
+                <input type="radio" name="name1" value="女" /><label>女</label>
+            </div>
+
+            <div class="wenda">
+                <h3>2、年龄</h3><br />
+                <input type="radio" name="name2" value="19岁以下"/><label>19岁以下</label><br />
+                <input type="radio" name="name2" value="20~29" /><label>20~29</label><br />
+                <input type="radio" name="name2" value="30~39" /><label>30~39</label><br />
+                <input type="radio" name="name2" value="20~29" /><label>40~49</label><br />
+                <input type="radio" name="name2" value="20~29" /><label>50~59</label><br />
+                <input type="radio" name="name2" value="20~29" /><label>60~69</label><br />
+                <input type="radio" name="name2" value="70岁以上" /><label>70岁以上</label>
+            </div>
+            <div class="wenda">
+                <h3>3、您是第几次来日本?</h3><br />
+                <input type="radio" name="name3" value="初次" /><label>初次</label><br />
+                <input type="radio" name="name3" value="第二次" /><label>第二次</label><br />
+                <input type="radio" name="name3" value="三次以上" /><label>三次以上</label>
+            </div>
+            <div class="wenda">
+                <h3>4、您是事先决定好在日购物地点的么?</h3><br />
+                <input type="radio" name="name4" value="根据所处地域决定" /><label>根据所处地域决定</label><br />
+                <input type="radio" name="name4" value="根据想去的店铺决定" /><label>根据想去的店铺决定</label><br />
+                <input type="radio" name="name4" value="根据是否有计划购买的商品决定（如：奢侈品等）" /><label>根据是否有计划购买的商品决定（如：奢侈品等）</label><br />
+                <input type="radio" name="name4" value="不做计划" /><label>不做计划</label>
+            </div>
+            <div class="wenda">
+                <h3>5、您本次日本行的形式是?</h3><br />
+                <input type="radio" name="name5" value="自由行" /><label>自由行</label><br />
+                <input type="radio" name="name5" value="团队旅行（事先已经决定好购物地点的跟团游）" /><label>团队旅行（事先已经决定好购物地点的跟团游）</label><br />
+                <input type="radio" name="name5" value="团队旅行（除机票、酒店外均可自由活动）" /><label>团队旅行（除机票、酒店外均可自由活动）</label>
+            </div>
+            <div class="wenda">
+                <h3>6、您是通关过什么方法搜索和关注日本购物信息的？<br />请选择您最常用的方法</h3><br />
+                <input type="radio" name="name6" value="官方微信/微信公众号" /><label>官方微信/微信公众号</label><br />
+                <input type="radio" name="name6" value="官方微博/微博公众号" /><label>官方微博/微博公众号</label><br />
+                <input type="radio" name="name6" value="知名新闻网站（如：腾讯，新浪，搜狐等）" /><label>知名新闻网站（如：腾讯，新浪，搜狐等）</label><br />
+                <input type="radio" name="name6" value="旅行相关网站或APP（马蜂窝、携程旅行、淘在路上等）" /><label>旅行相关网站或APP（马蜂窝、携程旅行、淘在路上等）</label><br />
+                <input type="radio" name="name6" value="购物APP（小红书、波罗蜜等）" /><label>购物APP（小红书、波罗蜜等</label><br />
+                <input type="radio" name="name6" value="Q&A（百度知道、360回答、捜狗問問等）" /><label>Q&A（百度知道、360回答、捜狗問問等）</label><br />
+                <input type="radio" name="name6" value="导游杂志" /><label>导游杂志</label>
+            </div>
+            <div class="wenda">
+                <h3>7、您在日本购物时最重视的细节是?</h3><br />
+                <input type="radio" name="name7" value="支付时是否有优惠（如：银联卡折扣）" /><label>支付时是否有优惠（如：银联卡折扣）</label><br />
+                <input type="radio" name="name7" value="是否可以用电子货币便利支付（如：支付宝）" /><label>是否可以用电子货币便利支付（如：支付宝）</label><br />
+                <input type="radio" name="name7" value="购物环境及服务（如：是否有免费WiFi或中文服务等）" /><label>购物环境及服务（如：是否有免费WiFi或中文服务等）</label><br />
+                <input type="radio" name="name7" value="包括各大品牌在内，店铺商品种类及数量是否充足" /><label>包括各大品牌在内，店铺商品种类及数量是否充足</label><br />
+                <input type="radio" name="name7" value="商品价格" /><label>商品价格</label><br />
+                <input type="radio" name="name7" value="地理位置是否方便移动（如：是否在酒店、车站附近等）" /><label>地理位置是否方便移动（如：是否在酒店、车站附近等）</label><br />
+                <input type="radio" name="name7" value="是否更接近旅游景点（或特定目的地）" /><label>是否更接近旅游景点（或特定目的地）</label>
+            </div>
+            <div class="wenda">
+                <h3>8、您初次听说丸井百货的契机是?</h3><br />
+                <input type="radio" name="sex" value="微信" /><label>微信</label><br />
+                <input type="radio" name="sex" value="微博" /><label>微博</label><br />
+                <input type="radio" name="sex" value="国内亲友的介绍" /><label>国内亲友的介绍</label><br />
+                <input type="radio" name="sex" value="在日亲友的介绍" /><label>在日亲友的介绍</label><br />
+                <input type="radio" name="sex" value="网络搜索" /><label>网络搜索</label><br />
+                <input type="radio" name="sex" value="旅行周刊" /><label>旅行周刊</label><br />
+                <input type="radio" name="sex" value="Japan-i" /><label>Japan-i</label><br />
+                <input type="radio" name="sex" value="导游图" /><label>导游图</label><br />
+                <input type="radio" name="sex" value="偶然路过"/><label>偶然路过</label><br />
+                <input type="radio" name="sex" value="其他" /><label>其他</label>
+            </div>
+            <input type="submit" value="" />
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+﻿* {
+    padding:0;
+    margin:0;
+   
+}
+a{
+    text-decoration:none;
+    color:black;
+}
+a:hover{
+    text-decoration:none;
+    color:black;
+}
+.indexwrap{
+    width:750px;
+    height:2492px;
+    border:1px solid white;
+}
+.indexwrap input[type=submit]{
+    width:303px;
+    height:80px;
+    background:url(../img/anniu.jpg) no-repeat;
+    display:block;
+    margin:0 auto;
+}
+h3{font-size:28px;}
+.wenda{width:750px;height:auto;margin:10px 0  30px 10px;}
+.wenda label{font-size:22px;color:black;}
+
+.indexwrap input[type=radio]{
+    width:25px;height:18px;
+}
+.tijiao{
+    border:1px solid white;
+    width:750px;
+    height:1206px;
+    background:url(../img/submit.jpg) no-repeat;
+}
+.tijiao input[type=submit]{
+    width:303px;
+    height:80px;
+    background:url(../img/anniu.jpg) no-repeat;display:block;margin:30px auto 0 auto;
+    border:none;
+    outline:none;
+}
+.tijiao form{
+    width:750px;
+    height:auto;
+    margin-top:850px;
+}
+.tijiao form input[type=text]{
+    width:565px;
+    height:60px;
+    border:1px solid #808080;
+    margin-left:96px;
+    border-radius:35px;
+    font-size:30px;
+    text-indent:15px;
+
+}
+.thank,.activeend{
+    width:750px;
+    height:1206px;
+    border:1px solid white;
+}
+.liuliangend{
+    width:750px;
+    height:1206px;
+    border:1px solid white;
+}
+
