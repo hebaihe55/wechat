@@ -40,9 +40,13 @@
                     alert("长度必须小于10位");
                     return false;
                 }
-                var reg=/^1[3|4|5|7|8]\d{9}$/;
-                if (!(reg.test(tel))) {
-                    alert("手机号码有误，请重填");
+                //var reg=/^1[3|4|5|7|8]\d{9}$/;
+                //if (!(reg.test(tel))) {
+                //    alert("手机号码有误，请重填");
+                //    return false;
+            //}
+                if (tel == null || tel == "") {
+                    alert("手机号码不得为空");
                     return false;
                 }
                 alert('提交成功！');
