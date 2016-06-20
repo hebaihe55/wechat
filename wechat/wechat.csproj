@@ -163,9 +163,9 @@
     <Content Include="Content\Wanjing1\img\tou.jpg" />
     <Content Include="Content\Wanjing1\img\微信封面图.jpg" />
     <Content Include="Content\Wanjing1\img\thank.jpg" />
-    <Content Include="Content\Wanjing1\img\submit.jpg" />
     <Content Include="Content\Wanjing1\img\activeend.jpg" />
     <Content Include="Content\Wanjing1\img\liuliangend.jpg" />
+    <Content Include="Content\Wanjing1\img\submit.jpg" />
     <Content Include="Content\Xinghe1\css\style.css" />
     <Content Include="Content\Xinghe1\images\bg.jpg" />
     <Content Include="Content\Xinghe1\images\change.png" />
@@ -222,6 +222,9 @@
     <Content Include="Content\yamaha\image\videobg.jpg" />
     <Content Include="Content\yamaha\image\erweima.png" />
     <Content Include="Content\yamaha\image\thank.jpg" />
+    <Content Include="Content\yamaha\image\rulebtn.png" />
+    <Content Include="Content\yamaha\image\closerule.png" />
+    <Content Include="Content\yamaha\image\gamerule.jpg" />
     <Content Include="Content\yamaha\js\jquery.min.js" />
     <Content Include="Content\yamaha\js\main.js" />
     <Content Include="Content\yamaha\vedio\t1video.mp4" />
