@@ -70,5 +70,17 @@ namespace wechat.Controllers
         {
             return View();
         }
+        public ActionResult guaguaka()
+        {
+            return View();
+        }
+        public ActionResult gethongbaosubinfo()
+        {
+            return View();
+        }
+        public ActionResult getawardsubinfo()
+        {
+            return View();
+        }
     }
 }

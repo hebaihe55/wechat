@@ -110,46 +110,58 @@ function getArrayItems(arr, num) {
     }
     return return_array;
 }
+var str = {
+    erroranser: "回答错误",
+    inputname: "请输入您的姓名",
+    leng: "长度必须小于10位",
+    telTish: "手机号码有误，请重填",
+    chooseanser: "请选择您的答案",
+    complete: "您已答完三题",
+    zhezhaotemplate: '<div class="zhezhao"></div>',
+    ruletemplate: "<div class='ruleshow'><img src='/Content/yamaha/image/gamerule.jpg'/></div>",
+    closebtnimg: "<div class='closebtn'></div>"
 
+}
 $(function () {
     $("form .nextbtn").on("click", function () {
         var checkval = $("form input[type=radio]:checked").val();
+       
         if (checkval == null || checkval == ""){
             alertdialog1(str.chooseanser);
             return;
 
         } else {
-            //alert(checkval);
-            setCookie("cookiet1", checkval, 365);
-            var cookiedata = checkCookie();
-            if (cookiedata.indexOf(",") != -1) {
-                var arr3 = cookiedata.split(",");
+            if (checkval == "A") {
+                setCookie("cookiet1", checkval, 365);
+                var cookiedata = checkCookie();
+                if (cookiedata.indexOf(",") != -1) {
+                    var arr3 = cookiedata.split(",");
 
-                if (arr3.length > 0) {
-                    console.log(arr3);
-                    var arrti1 = arr3.shift();
-                    // alert(arr3);
-                    setCookie("arr3key", arr3, 365);
-                    location.href = "/Yamaha1/" + arr3[0];
+                    if (arr3.length > 0) {
+                        console.log(arr3);
+                        var arrti1 = arr3.shift();
+                        // alert(arr3);
+                        setCookie("arr3key", arr3, 365);
+                        location.href = "/Yamaha1/" + arr3[0];
+
+                    }
+                } else {
+                    if (checkval == "A") {
+                        alertdialog2(str.complete);
+                    } else {
+                        alertdialog1(str.erroranser);
+                    }
+
                 }
             } else {
-                alertdialog2(str.complete);
-
+                alertdialog1(str.erroranser);
             }
+          
+            
         }
 
     })
-    var str = {
-        inputname: "请输入您的姓名",
-        leng: "长度必须小于10位",
-        telTish: "手机号码有误，请重填",
-        chooseanser: "请选择您的答案",
-        complete: "您已答完三题",
-        zhezhaotemplate: '<div class="zhezhao"></div>',
-        ruletemplate: "<div class='ruleshow'><img src='/Content/yamaha/image/gamerule.jpg'/></div>",
-        closebtnimg: "<div class='closebtn'></div>"
-
-    }
+    
     //点击规则弹出规则页面
     $(".rule").on("click", function () {
         $("body").append(str.zhezhaotemplate);
@@ -204,7 +216,7 @@ var sure1 = function () {
 var sure2 = function () {
     $(".alertParent").hide();
     $(".zhezhao").hide();
-    location.href = "/Yamaha1/subinfo";
+    location.href = "/Yamaha1/guaguaka";
 }
 //信息提交信息验证
 var checkform= function(){
