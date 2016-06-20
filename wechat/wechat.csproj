@@ -159,6 +159,7 @@
     <Content Include="Content\Mingzhi1\image\like2.png" />
     <Content Include="Content\Wanjing1\css\style.css" />
     <Content Include="Content\Wanjing1\img\anniu.jpg" />
+    <Content Include="Content\Wanjing1\img\buttonbg.png" />
     <Content Include="Content\Wanjing1\img\tou.jpg" />
     <Content Include="Content\Wanjing1\img\微信封面图.jpg" />
     <Content Include="Content\Wanjing1\img\thank.jpg" />
