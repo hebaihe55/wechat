@@ -17,11 +17,12 @@
     <script src="~/Content/yamaha/js/main.js"></script>
     <script>
         var reg = /^1[3|4|5|7|8]\d{9}$/;
+        var user = $("form .user").val();
+        var tel = $("form .tel").val();
+        var address = $("form .address").val();
+        var yzm = $("form .yzm").val();
         function checkform2() {
-            var user = $("form .user").val();
-            var tel = $("form .tel").val();
-            var address = $("form .address").val();
-            var yzm = $("form .yzm").val();
+           
             if (user == null || user == "") {
                 alert("请输入您的姓名");
                 return false;
@@ -67,18 +68,15 @@
             }
         }
         function sendmassage() {
-           
-            var yzmvalue = $(".yzm").val();
-            if (!(reg.test(yzmvalue))) {
-                alert("手机号码有误，请重新输入");
-                return false;
+            if (!(reg.test(tel))) {
+                alert("请输入正确手机号");
             } else {
                 $(".yzmbtn").attr("disabled", "disabled");
+
                 interval = setInterval("postyzm()", 1000);
-                
             }
            
-             
+                
         }
         //获得随机验证码
         function getramdomyzm() {
