@@ -176,6 +176,7 @@
     <Content Include="Content\yamaha\css\style.css" />
     <None Include="Content\yamaha\image\alltimubg.jpg.bak" />
     <Content Include="Content\yamaha\image\closefx.png" />
+    <Content Include="Content\yamaha\image\fenxiang.gif" />
     <Content Include="Content\yamaha\image\gamerulebtn.png" />
     <Content Include="Content\yamaha\image\gethongbaosubinfobg.jpg" />
     <Content Include="Content\yamaha\image\indexbg.gif" />

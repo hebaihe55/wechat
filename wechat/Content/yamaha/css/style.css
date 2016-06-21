@@ -17,6 +17,8 @@ a:hover{text-decoration:none;color:#000;}
 .timuwrap form input[type=button]{top:1030px;left:155px;position:absolute;width:403px;height: 161px;background: url("../image/subbtn.png") no-repeat;display: block;border:none;outline:none;}
 .thankwrap{width:750px;height:1206px;border:1px solid;}
 .thankwrap .gameagan{position:absolute;top:728px;left:210px;border:none;outline:none;}
+.fenxiang{position:absolute;top:0;left:360px;z-index:3;}
+.fenxiangtishi{width:451px;height:151px;position:absolute;top:455px;left:149px;z-index:3;font-size:32px;text-align:center;line-height:151px;background:white;border-radius:10px;}
 .t1wrap,.t2wrap,.t3wrap,.t4wrap,.t5wrap,.t6wrap,.t7wrap,.t8wrap,.t9wrap,.t10wrap{width:750px;height:1206px;background:url(../image/alltimubg.jpg) no-repeat;border:1px solid;background-size:100%}
 form{width:81%;height: auto;margin:80px 0 0 70px;border:none}
 form input[type=radio]{position:absolute;display: none;}
@@ -34,7 +36,7 @@ form .nextbtn{display:block;position: absolute;width: 403px;height: 161px;backgr
 .closebtn{position:absolute;top:63px;left:630px;z-index:3;display:none;}
 .guaguakawrap{width:750px;height:1206px;background:url(../image/guaguakabg.jpg) no-repeat;}
 .guaguakawrap .guaguakong{position:absolute;top:225px;left:110px;}
-.lingjiangbtn{position:absolute;top:482px;left:195px;z-index:3;}
+.lingjiangbtn{position:absolute;top:482px;left:195px;z-index:3;display:none;}
 .gethongbaosubinfowrap{width:750px;height:1206px;background:url(../image/gethongbaosubinfobg.jpg) no-repeat;border:1px solid white;}
 .gethongbaosubinfowrap form input[type=text]{margin-bottom:20px;font-size:30px;background: url("../image/inputbg.png") no-repeat;width:602px;height:83px;text-indent: 50px;color:#ccc;border: none;outline: none;}
 .gethongbaosubinfowrap form{width: 80%;height: 400px;margin:803px auto 0 auto;display: block;}
@@ -46,6 +48,7 @@ form .nextbtn{display:block;position: absolute;width: 403px;height: 161px;backgr
 .getawardsubinfowrap form input[type=submit]{display:block;width: 403px;height:161px;background: url("../image/subinfobtn.png") no-repeat;border: none;outline: none;margin: 0 auto;}
 .getawardsubinfowrap form .yzmwrap{width:100%;height:83px;}
 .getawardsubinfowrap form .yzmwrap .yzmbtn{width:213px;height:83px;vertical-align:middle;border:none;outline:none;}
+
 
 
 .zhezhao {
