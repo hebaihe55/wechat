@@ -192,5 +192,40 @@ namespace wechat.Utils
             }
             return result;
         }
+
+
+        public static string PostJson(string url, string json)
+        {
+            byte[] bytes = Encoding.UTF8.GetBytes(json);
+            //ServicePointManager.ServerCertificateValidationCallback = new System.Net.Security.RemoteCertificateValidationCallback(CheckValidationResult);
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+            request.Method = "POST";
+            request.ContentLength = bytes.Length;
+            request.ContentType = "application/json";
+            using (Stream requestStream = request.GetRequestStream())
+            {
+                requestStream.Write(bytes, 0, bytes.Length);
+            }
+
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+
+            Stream myResponseStream = response.GetResponseStream();
+            StreamReader myStreamReader = new StreamReader(myResponseStream, Encoding.UTF8);
+            string outdata = myStreamReader.ReadToEnd();
+
+            myStreamReader.Close();
+            myResponseStream.Close();
+
+
+
+            //Console.WriteLine(outdata);
+
+
+            return outdata;
+            //Console.ReadKey();
+
+        }
+
+
     }
 }
