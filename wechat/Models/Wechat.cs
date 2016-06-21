@@ -69,7 +69,7 @@ namespace wechat.Models
         public string  mobile { get; set; }
         [StringLength(500)]
         public string  addr { get; set; }
-        [StringLength(500)]
+        [StringLength(4000)]
         public string answer { get; set; }
         [StringLength(500)]
         public string  actname { get; set; }
@@ -139,15 +139,15 @@ namespace wechat.Models
     public class QuestionShanTian
     {
         public int id { get; set; }
-        public string openid { get; set; }
-        public int q1 { get; set; }
-        public int q2 { get; set; }
-        public int q3 { get; set; }
-        public int q4 { get; set; }
-        public int q5 { get; set; }
-        public int q6 { get; set; }
-        public int q7 { get; set; }
-        public int q8 { get; set; }
+      
+        public string  q1 { get; set; }
+        public string q2 { get; set; }
+        public string q3 { get; set; }
+        public string q4 { get; set; }
+        public string q5 { get; set; }
+        public string q6 { get; set; }
+        public string q7 { get; set; }
+        public string q8 { get; set; }
         public DateTime cctime { get; set; }
 
     }
