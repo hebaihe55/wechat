@@ -1,15 +1,14 @@
 /**
  * Created by cheerlong on 2016/6/13.
  */
-var arr3;
-var getrandom5 = function () {
-    $(".form1 div.timu").hide();
+var arr3 = [];
+var getrandom3 = function () {
+   // $(".form1 div.timu").hide();
     var flag = false;
-    var arr = [];
     addramdom();
     checkarrquchong();
     while (flag) {
-        arr = [];
+        arr3 = [];
         addramdom();
         setCookie("arr3key", arr3, 365);
         checkarrquchong();
@@ -17,10 +16,10 @@ var getrandom5 = function () {
         continue;
     }
 
-    for (var k = 0; k < arr.length; k++) {
-        $(".form1 ." + arr[k]).show();
-        //alert($("form ."+arr[k]));
-    }
+    //for (var k = 0; k < arr.length; k++) {
+    //    $(".form1 ." + arr[k]).show();
+    //    //alert($("form ."+arr[k]));
+    //}
     /*
     获取随机数
     */
@@ -32,11 +31,11 @@ var getrandom5 = function () {
     //检测数组中有无重复数据
     function checkarrquchong() {
 
-        var nary = arr.sort();
+        var nary = arr3.sort();
 
-        for (var i = 0; i < arr.length; i++) {
+        for (var i = 0; i < arr3.length; i++) {
 
-            if (arr[i] == arr[i + 1]) {
+            if (arr3[i] == arr3[i + 1]) {
 
                 flag = true;
                 return;
@@ -46,14 +45,14 @@ var getrandom5 = function () {
         flag = false;
 
     }
-    //往数组中随机添加5个数据
+    //往数组中随机添加3个数据
     function addramdom() {
-        for (var i = 0; i < 5; i++) {
-            arr.push("t" + getrandom());
+        for (var i = 0; i < 3; i++) {
+            arr3.push("t" + getrandom());
         }
     }
-    arr3 = getArrayItems(arr, 3);//从数组中随机获取3个数重新组成一个数组
-    setCookie('arr3key', arr3, 365);
+    //arr3 = getArrayItems(arr,3);//从数组中随机获取3个数重新组成一个数组
+    setCookie('arr3key',arr3, 365);
     checkCookie();
 
 }
@@ -119,48 +118,49 @@ var str = {
     complete: "您已答完三题",
     zhezhaotemplate: '<div class="zhezhao"></div>',
     ruletemplate: "<div class='ruleshow'><img src='/Content/yamaha/image/gamerule.jpg'/></div>",
-    closebtnimg: "<div class='closebtn'></div>"
+    closebtnimg: "<div class='closebtn'></div>",
+    gameagin:"邀请朋友来玩,即可再玩一次"
 
 }
 $(function () {
-    $("form .nextbtn").on("click", function () {
-        var checkval = $("form input[type=radio]:checked").val();
+//    $("form .nextbtn").on("click", function () {
+//        var checkval = $("form input[type=radio]:checked").val();
        
-        if (checkval == null || checkval == ""){
-            alertdialog1(str.chooseanser);
-            return;
+//        if (checkval == null || checkval == ""){
+//            alertdialog1(str.chooseanser);
+//            return;
 
-        } else {
-            if (checkval == "A") {
-                setCookie("cookiet1", checkval, 365);
-                var cookiedata = checkCookie();
-                if (cookiedata.indexOf(",") != -1) {
-                    var arr3 = cookiedata.split(",");
+//        } else {
+//            if (checkval == "A") {
+//                setCookie("cookiet1", checkval, 365);
+//                var cookiedata = checkCookie();
+//                if (cookiedata.indexOf(",") != -1) {
+//                    var arr3 = cookiedata.split(",");
 
-                    if (arr3.length > 0) {
-                        console.log(arr3);
-                        var arrti1 = arr3.shift();
-                        // alert(arr3);
-                        setCookie("arr3key", arr3, 365);
-                        location.href = "/Yamaha1/" + arr3[0];
+//                    if (arr3.length > 0) {
+//                        console.log(arr3);
+//                        var arrti1 = arr3.shift();
+//                        // alert(arr3);
+//                        setCookie("arr3key", arr3, 365);
+//                        location.href = "/Yamaha1/" + arr3[0];
 
-                    }
-                } else {
-                    if (checkval == "A") {
-                        alertdialog2(str.complete);
-                    } else {
-                        alertdialog1(str.erroranser);
-                    }
+//                    }
+//                } else {
+//                    if (checkval == "A") {
+//                        alertdialog2(str.complete);
+//                    } else {
+//                        alertdialog1(str.erroranser);
+//                    }
 
-                }
-            } else {
-                alertdialog1(str.erroranser);
-            }
+//                }
+//            } else {
+//                alertdialog1(str.erroranser);
+//            }
           
             
-        }
+//        }
 
-    })
+//    })
     
     //点击规则弹出规则页面
     $(".rule").on("click", function () {
@@ -175,7 +175,10 @@ $(function () {
         $(".ruleshow").hide();
         $(".closebtn").hide();
     })
-
+    $(".gameagan").on("click", function () {
+        alertdialog1(str.gameagin);
+      
+    })
 })
 
 var alertdialog1 = function (text) {
