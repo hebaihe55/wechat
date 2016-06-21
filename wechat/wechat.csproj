@@ -236,6 +236,7 @@
     <Content Include="Content\yamaha\image\smallkuangbg.png" />
     <Content Include="Content\yamaha\js\jquery.min.js" />
     <Content Include="Content\yamaha\js\main.js" />
+    <Content Include="Content\yamaha\js\wScratchPad.js" />
     <Content Include="Content\yamaha\vedio\t1video.mp4" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.min.css" />
