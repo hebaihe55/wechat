@@ -119,48 +119,12 @@ var str = {
     zhezhaotemplate: '<div class="zhezhao"></div>',
     ruletemplate: "<div class='ruleshow'><img src='/Content/yamaha/image/gamerule.jpg'/></div>",
     closebtnimg: "<div class='closebtn'></div>",
-    gameagin:"邀请朋友来玩,即可再玩一次"
+   
+    fenxiang:"<img src='/Content/yamaha/image/fenxiang.gif' class='fenxiang'/>",
+    fenxiangtishi:"<div class='fenxiangtishi'>邀请朋友来玩,即可再玩一次</div>"
 
 }
-$(function () {
-//    $("form .nextbtn").on("click", function () {
-//        var checkval = $("form input[type=radio]:checked").val();
-       
-//        if (checkval == null || checkval == ""){
-//            alertdialog1(str.chooseanser);
-//            return;
-
-//        } else {
-//            if (checkval == "A") {
-//                setCookie("cookiet1", checkval, 365);
-//                var cookiedata = checkCookie();
-//                if (cookiedata.indexOf(",") != -1) {
-//                    var arr3 = cookiedata.split(",");
-
-//                    if (arr3.length > 0) {
-//                        console.log(arr3);
-//                        var arrti1 = arr3.shift();
-//                        // alert(arr3);
-//                        setCookie("arr3key", arr3, 365);
-//                        location.href = "/Yamaha1/" + arr3[0];
-
-//                    }
-//                } else {
-//                    if (checkval == "A") {
-//                        alertdialog2(str.complete);
-//                    } else {
-//                        alertdialog1(str.erroranser);
-//                    }
-
-//                }
-//            } else {
-//                alertdialog1(str.erroranser);
-//            }
-          
-            
-//        }
-
-//    })
+$(function(){
     
     //点击规则弹出规则页面
     $(".rule").on("click", function () {
@@ -175,10 +139,20 @@ $(function () {
         $(".ruleshow").hide();
         $(".closebtn").hide();
     })
+    $(".closebtn2").on("click", function () {
+        $(".zhezhao").hide();
+        $(".fenxiangtishi").hide();
+        $(".closebtn2").hide();
+        $(".fenxiang").hide();
+    })
     $(".gameagan").on("click", function () {
-        alertdialog1(str.gameagin);
+        $("body").append(str.zhezhaotemplate);
+        $("body").append(str.fenxiang);
+        $("body").append(str.fenxiangtishi);
+        $(".closebtn2").show();
       
     })
+
 })
 
 var alertdialog1 = function (text) {

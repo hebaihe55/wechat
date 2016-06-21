@@ -141,7 +141,7 @@
             
      <img src="~/Content/yamaha/image/lingjiangbtn.png" class="lingjiangbtn" />
         </div>
-        <script src="./js/alert.js" type="text/javascript"></script>
+       
         <script type="text/javascript">
 		  
 
@@ -155,11 +155,17 @@
 		            height:230,
 		            color: "#a9a9a7",
 		            scratchMove: function () {
-
-		               
+		                var grade = $("#prize").text();
+		                num++;		                alert(num);		                if (num > 100) {
+                            
+		                    location.href = "/Yamaha1/thank";
+		                }
 		            }
 		        });
+		        //$(".lingjiangbtn").on("click", function () {
+                //    $()
 
+		        //})
 		        
 		    });
 
