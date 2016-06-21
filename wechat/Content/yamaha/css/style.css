@@ -22,14 +22,14 @@ form{width:81%;height: auto;margin:80px 0 0 70px;border:none}
 form input[type=radio]{position:absolute;display: none;}
 form input[type=radio]+label{display:block;position:absolute;width:auto;height:auto;font-size:20px;}
 form input[type=radio]:checked+label{display:block;background-size:100% 100%;z-index: 2;width: 260px;height:260px;margin-left: -39px;position:absolute;}
-form .nextbtn{display:block;position: absolute;width: 403px;height: 161px;background: url("../image/nextbtn.png") no-repeat;top:1015px;left:342px;border: none;outline: none; }
+form .nextbtn{display:block;position: absolute;width: 403px;height: 161px;background: url("../image/nextbtn.png") no-repeat;top:1015px;left:355px;border: none;outline: none; }
 .t4wrap form .t4a{display: block;width: 176px;height: 154px;background: url("../image/t4a.png") no-repeat;top:670px;left: 81px;}
 .t4wrap form .t4b{display: block;width: 176px;height: 154px;background: url("../image/t4b.png") no-repeat;top:670px;left: 293px;}
 .t4wrap form .t4c{display: block;width: 176px;height: 154px;background: url("../image/t4c.png") no-repeat;top:670px;left: 500px;}
 .video{width:644px;height:447px;position: absolute;top:135px;left: 51px;}
 .title{font-size: 32px;margin:600px 0 0 70px;width:85%;}
 .q1{position:absolute;top:0;left:300px;}
-.rule{position:absolute;top:1014px;left:-21px;}
+.rule{position:absolute;top:1014px;left:-29px;}
 .ruleshow {width:750px;height:800px;position:absolute;top:0;left:0;background:white;border:1px solid #eee;z-index:2}
 .closebtn{position:absolute;top:63px;left:630px;z-index:3;display:none;}
 .guaguakawrap{width:750px;height:1206px;background:url(../image/guaguakabg.jpg) no-repeat;}
