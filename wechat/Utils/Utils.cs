@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
+using System.Collections;
 
 namespace wechat.Utils
 {
@@ -48,5 +49,43 @@ namespace wechat.Utils
             str_sha1_out = str_sha1_out.Replace("-", "").ToLower();
             return str_sha1_out;
         }
+
+
+        /// <summary>
+        /// 判断手机网关
+        /// </summary>
+        /// <param name="mobile">手机号</param>
+        /// <returns></returns>
+        public static string ISPCheck(string mobile)
+        {
+            ArrayList YD =new ArrayList() { "139","138","137","136","135","134","159","150","151","158","157","188","187","152","182","147" };
+
+            ArrayList LT = new ArrayList() { "130","131","132","155","156","186","185","145","176" };
+
+            ArrayList DX = new ArrayList() { "133","153","180","189" };
+
+            mobile = mobile.Substring(0, 3);
+
+            if (YD.Contains(mobile))
+            {
+                return "移动";
+            }
+
+            if (LT.Contains(mobile))
+            {
+                return "联通";
+            }
+
+            if (DX.Contains(mobile))
+            {
+                return "电信";
+            }
+
+            return "未知";
+
+        }
+
+
+
     }
 }

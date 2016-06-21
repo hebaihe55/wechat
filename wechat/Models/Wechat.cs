@@ -135,6 +135,25 @@ namespace wechat.Models
 
     }
 
+
+    public class QuestionShanTian
+    {
+        public int id { get; set; }
+        public string openid { get; set; }
+        public int q1 { get; set; }
+        public int q2 { get; set; }
+        public int q3 { get; set; }
+        public int q4 { get; set; }
+        public int q5 { get; set; }
+        public int q6 { get; set; }
+        public int q7 { get; set; }
+        public int q8 { get; set; }
+        public DateTime cctime { get; set; }
+
+    }
+
+
+
     public class WechatDBContext : DbContext
     {
         public DbSet<WechatUser> WechatUsers { get; set; }
@@ -142,5 +161,6 @@ namespace wechat.Models
         public DbSet<QuestionGuiTian> QuestionGuiTians { get; set; }
         public DbSet<Question> Question { get; set; }
         public DbSet<ImgActive> ImgActives        { get; set; }
+        public DbSet<Updata> Updatas { get; set; }
     }
 }

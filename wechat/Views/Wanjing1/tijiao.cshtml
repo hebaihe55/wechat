@@ -23,8 +23,9 @@
 </head>
 <body>
     <div class="tijiao">
-        <form action="" method="post" onsubmit="return checkform()"> 
-            <input type="text" name="tel" id="tel"/>
+        <form action="/wanjing1/adduser" method="post" onsubmit="return checkform()"> 
+            @Html.AntiForgeryToken()
+            <input type="text" name="mobile" id="tel"/>
             <input type="submit" value="" />
         </form>
     </div>
