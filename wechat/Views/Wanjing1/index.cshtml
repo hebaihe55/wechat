@@ -35,7 +35,8 @@
 <body>
     <div class="indexwrap">
         <img src="~/Content/Wanjing1/img/tou.jpg" />
-        <form action="" method="post" onsubmit="checkform()">
+        <form action="/wanjing1/AddQ" method="post" onsubmit="checkform()">
+            @Html.AntiForgeryToken()
             <div class="wenda">
                 <h3>1、性別</h3><br />
                 <input type="radio" name="q1" value="男" /><label>男</label><br />
