@@ -174,7 +174,7 @@
     <Content Include="Content\Xinghe1\images\subbtn.png" />
     <Content Include="Content\Xinghe1\images\thanks.jpg" />
     <Content Include="Content\yamaha\css\style.css" />
-    <Content Include="Content\yamaha\image\alltimubg.jpg" />
+    <None Include="Content\yamaha\image\alltimubg.jpg.bak" />
     <Content Include="Content\yamaha\image\closefx.png" />
     <Content Include="Content\yamaha\image\gamerulebtn.png" />
     <Content Include="Content\yamaha\image\gethongbaosubinfobg.jpg" />
@@ -182,6 +182,7 @@
     <Content Include="Content\yamaha\image\inputbg.png" />
     <Content Include="Content\yamaha\image\nextbtn.png" />
     <Content Include="Content\yamaha\image\Q1.png" />
+    <Content Include="Content\yamaha\image\alltimubg.jpg" />
     <Content Include="Content\yamaha\image\Q2.png" />
     <Content Include="Content\yamaha\image\Q3.png" />
     <Content Include="Content\yamaha\image\start.png" />
@@ -221,10 +222,10 @@
     <Content Include="Content\yamaha\image\timubg.jpg" />
     <Content Include="Content\yamaha\image\videobg.jpg" />
     <Content Include="Content\yamaha\image\erweima.png" />
-    <Content Include="Content\yamaha\image\rulebtn.png" />
+    <None Include="Content\yamaha\image\rulebtn.png.bak" />
     <Content Include="Content\yamaha\image\closerule.png" />
     <Content Include="Content\yamaha\image\gamerule.jpg" />
-    <Content Include="Content\yamaha\image\再玩一次按钮.png" />
+    <Content Include="Content\yamaha\image\gameagan.png" />
     <Content Include="Content\yamaha\image\guaguakabg.jpg" />
     <Content Include="Content\yamaha\image\lingjiangbtn.png" />
     <Content Include="Content\yamaha\image\kongbai.png" />
@@ -234,6 +235,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\yamaha\image\smallkuangbg.png" />
+    <Content Include="Content\yamaha\image\rulebtn.png" />
     <Content Include="Content\yamaha\js\jquery.min.js" />
     <Content Include="Content\yamaha\js\main.js" />
     <Content Include="Content\yamaha\js\wScratchPad.js" />
