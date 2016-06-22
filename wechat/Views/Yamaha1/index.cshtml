@@ -17,18 +17,18 @@
     <script src="~/Content/yamaha/js/main.js"></script>
     <script>
         $(function () {
-            clearCookie("arr3key","",-1);
+            
             getrandom3();
             var cookiedata = checkCookie();
-
             var arr3 = cookiedata.split(",");
+           
             $(".startbtn").on("click", function () {
-                //if (arr3.length > 0) {
+                alert(cookiedata);
+                if (arr3.length > 0) {
                     location.href = "/Yamaha1/" + arr3[0];
-                //} else {
-                  //  alert("您已答完所有题目");
-                   // location.href = "/Yamaha1/thank";
-                //}
+                } else {
+                  
+                }
 
             })
         })
