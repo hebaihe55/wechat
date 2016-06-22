@@ -238,6 +238,7 @@
     </Content>
     <Content Include="Content\yamaha\image\smallkuangbg.png" />
     <Content Include="Content\yamaha\image\rulebtn.png" />
+    <Content Include="Content\yamaha\image\fxbtn.png" />
     <Content Include="Content\yamaha\js\jquery.min.js" />
     <Content Include="Content\yamaha\js\main.js" />
     <Content Include="Content\yamaha\js\wScratchPad.js" />
@@ -408,6 +409,7 @@
     <Content Include="Views\Wanjing1\liuliangzsend.cshtml" />
     <Content Include="Views\Yamaha1\guaguaka.cshtml" />
     <Content Include="Views\Yamaha1\gethongbaosubinfo.cshtml" />
+    <Content Include="Views\Yamaha1\thanknobutton.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

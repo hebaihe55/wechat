@@ -93,5 +93,9 @@ namespace wechat.Controllers
         {
             return View();
         }
+        public ActionResult thanknobutton()
+        {
+            return View();
+        }
     }
 }

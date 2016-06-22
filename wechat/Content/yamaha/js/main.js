@@ -85,6 +85,9 @@ function checkCookie() {
         setCookie('arr3key', arr3, 365);
     }
 }
+function clearCookie(name) {
+    setCookie(name, "", -1);
+}
 function getArrayItems(arr, num) {
     //新建一个数组,将传入的数组复制过来,用于运算,而不要直接操作传入的数组;
     var temp_array = new Array();
@@ -145,7 +148,7 @@ $(function(){
         $(".closebtn2").hide();
         $(".fenxiang").hide();
     })
-    $(".gameagan").on("click", function () {
+    $(".fxbtn").on("click", function () {
         $("body").append(str.zhezhaotemplate);
         $("body").append(str.fenxiang);
         $("body").append(str.fenxiangtishi);
