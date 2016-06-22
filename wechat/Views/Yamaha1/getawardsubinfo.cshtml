@@ -79,13 +79,20 @@
                $(".yzmbtn").val(curCount + "秒内输入验证码");
                InterValObj = window.setInterval(SetRemainTime, 1000); //启动计时器，1秒执行一次  
                //向后台发送处理数据  
+
+
+
+
+
                $.ajax({
                    type: "POST", //用POST方式传输  
                    dataType: "text", //数据格式:JSON  
-                   url: 'yamaha1/addcode', //目标地址  
-                   data: "id=" + tel ,
+                   url: '/yamaha1/addcode', //目标地址  
+                   data: { id: tel } ,
                    error: function (XMLHttpRequest, textStatus, errorThrown) { },
                    success: function (msg) {
+                   
+
                        code = msg;
                    }
                });
