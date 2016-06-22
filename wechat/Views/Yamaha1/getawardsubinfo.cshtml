@@ -54,7 +54,7 @@
         }
 
         var InterValObj; //timer变量，控制时间  
-        var count = 15; //间隔函数，1秒执行  
+        var count = 60; //间隔函数，1秒执行  
         var curCount;//当前剩余秒数  
         var code = ""; //验证码  
         var codeLength = 6;//验证码长度  
@@ -63,7 +63,7 @@
             tel = $("form .tel").val();
           //  var phone = $(".").val();//手机号码  
            if(!(reg.test(tel))) {
-               alertdialog1(str.telTish);
+               alert("请输入正确手机号码！");
             } else {
                //产生验证码  
                for (var i = 0; i < codeLength; i++) {
@@ -82,11 +82,11 @@
                $.ajax({
                    type: "POST", //用POST方式传输  
                    dataType: "text", //数据格式:JSON  
-                   url: 'Login.ashx', //目标地址  
-                   data: "phone=" + tel + "&code=" + code,
+                   url: 'yamaha1/addcode', //目标地址  
+                   data: "id=" + tel ,
                    error: function (XMLHttpRequest, textStatus, errorThrown) { },
                    success: function (msg) {
-
+                       code = msg;
                    }
                });
             }
@@ -161,6 +161,7 @@
             <input type="text" name="address" class="address" placeholder="请输入地址" value=""><br />
             <div class="yzmwrap"><input type="text" class="yzm" name="yzm" value=""/><input type="button" style="background:url(/Content/yamaha/image/yzmbtn.png) no-repeat" class="yzmbtn" onclick="sendmassage()"/></div>
             <input type="submit" value="">
+            <input type="hidden" id="xcode" value="" />
         </form>
     </div>
 </body>
