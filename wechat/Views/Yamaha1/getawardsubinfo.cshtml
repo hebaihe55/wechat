@@ -51,7 +51,7 @@
         }
 
         var InterValObj; //timer变量，控制时间  
-        var count = 10; //间隔函数，1秒执行  
+        var count = 60; //间隔函数，1秒执行  
         var curCount;//当前剩余秒数  
         var code = ""; //验证码  
         var codeLength = 6;//验证码长度  
@@ -79,11 +79,11 @@
                $.ajax({
                    type: "POST", //用POST方式传输  
                    dataType: "text", //数据格式:JSON  
-                   url: 'Login.ashx', //目标地址  
-                   data: "phone=" + tel + "&code=" + code,
+                   url: 'yamaha1/addcode', //目标地址  
+                   data: "id=" + tel ,
                    error: function (XMLHttpRequest, textStatus, errorThrown) { },
                    success: function (msg) {
-
+                       code = msg;
                    }
                });
             }
@@ -158,6 +158,7 @@
             <input type="text" name="address" class="address" placeholder="请输入地址"><br />
             <div class="yzmwrap"><input type="text" class="yzm" name="yzm"/><input type="button" style="background:url(/Content/yamaha/image/yzmbtn.png) no-repeat" class="yzmbtn" onclick="sendmassage()"/></div>
             <input type="submit" value="">
+            <input type="hidden" id="xcode" value="" />
         </form>
     </div>
 </body>

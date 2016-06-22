@@ -62,6 +62,17 @@ namespace wechat.Controllers
         {
             return View();
         }
+
+
+        public string  addcode(string id)
+        {
+            string code = DateTime.Now.ToString("mssfff");
+           string url = HttpUtility.HtmlDecode("http://www.cl10086.com/garden/interface/sendSMS.action?phone=" +id+"&user=vipshanghai&pass=cheerlong,,&content=您的验证码为"+code+"【雅马哈】");
+         string aa=  Utils.HttpService.Get(url);
+            return code;
+
+        }
+
         public ActionResult thank()
         {
             Utils.WeHelper.appid = "wx52d041442fbddbec";
