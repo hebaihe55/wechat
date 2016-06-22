@@ -27,6 +27,7 @@ var getrandom3 = function () {
         var ramdom = Math.floor((Math.random() * 10) + 1);
         return ramdom;
     }
+    //获得cookie随机名
 
     //检测数组中有无重复数据
     function checkarrquchong() {
