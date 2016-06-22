@@ -11,6 +11,7 @@ var getrandom3 = function () {
     checkarrquchong();
     while (flag) {
         arr3 = [];
+
         addramdom();
         setCookie("cookiename", arr3, 365);
         checkarrquchong();
