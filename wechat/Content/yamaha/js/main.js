@@ -10,7 +10,7 @@ var getrandom3 = function () {
     while (flag) {
         arr3 = [];
         addramdom();
-        setCookie("arr3key", arr3, 365);
+        setCookie("arr3key",arr3,365);
         checkarrquchong();
         //alert(flag)
         continue;
@@ -82,7 +82,7 @@ function checkCookie() {
 
     }
     else {
-        setCookie('arr3key', arr3, 365);
+        //setCookie('arr3key', arr3, 365);
     }
 }
 function clearCookie(name) {
