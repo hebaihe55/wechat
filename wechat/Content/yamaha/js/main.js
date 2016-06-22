@@ -2,7 +2,9 @@
  * Created by cheerlong on 2016/6/13.
  */
 var arr3 = [];
+//var cookiename;
 var getrandom3 = function () {
+     //cookiename = getcookierandom();
    // $(".form1 div.timu").hide();
     var flag = false;
     addramdom();
@@ -10,7 +12,7 @@ var getrandom3 = function () {
     while (flag) {
         arr3 = [];
         addramdom();
-        setCookie("arrkey",arr3,365);
+        setCookie("cookiename", arr3, 365);
         checkarrquchong();
         //alert(flag)
         continue;
@@ -27,8 +29,8 @@ var getrandom3 = function () {
         var ramdom = Math.floor((Math.random() * 10) + 1);
         return ramdom;
     }
-    //获得cookie随机名
-
+   
+    
     //检测数组中有无重复数据
     function checkarrquchong() {
 
@@ -53,9 +55,14 @@ var getrandom3 = function () {
         }
     }
     //arr3 = getArrayItems(arr,3);//从数组中随机获取3个数重新组成一个数组
-    setCookie('arrkey', arr3, 365);
+    setCookie("cookiename", arr3, 365);
     checkCookie();
 
+}
+ //获得cookie随机名
+function getcookierandom() {
+    cookiename = "arr" + Math.floor(Math.random() * 2000 + 1);
+    return cookiename;
 }
 function setCookie(c_name, value, expiredays) {
     var exdate = new Date()
@@ -76,18 +83,21 @@ function getCookie(c_name) {
     return "";
 }
 function checkCookie() {
-    var arr3key = getCookie('arrkey');
+    var arr3key = getCookie("cookiename");
     if (arr3key != null && arr3key != "") {
         //alert(arr3key);
         return arr3key;
 
+    } else {
+        setCookie("cookiename", arr3, 365);
     }
-    else {
-        //setCookie('arr3key', arr3, 365);
-    }
+    
 }
-function clearCookie(name) {
-    setCookie(name, "", -1);
+function DelCookie(name) {
+    var exp = new Date();
+    exp.setTime(exp.getTime() + (-1 * 24 * 60 * 60 * 1000));
+    var cval = getCookie(name);
+    document.cookie = name + "=" + cval + "; expires=" + exp.toGMTString();
 }
 function getArrayItems(arr, num) {
     //新建一个数组,将传入的数组复制过来,用于运算,而不要直接操作传入的数组;
