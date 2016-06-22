@@ -69,7 +69,7 @@ namespace wechat.Models
         public string  mobile { get; set; }
         [StringLength(500)]
         public string  addr { get; set; }
-        [StringLength(4000)]
+        [StringLength(2000)]
         public string answer { get; set; }
         [StringLength(500)]
         public string  actname { get; set; }
