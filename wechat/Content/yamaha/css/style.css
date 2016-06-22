@@ -37,6 +37,7 @@ form .nextbtn{display:block;position: absolute;width: 403px;height: 161px;backgr
 .guaguakawrap{width:750px;height:1206px;background:url(../image/guaguakabg.jpg) no-repeat;}
 .guaguakawrap .guaguakong{position:absolute;top:225px;left:110px;}
 .lingjiangbtn{position:absolute;top:482px;left:195px;z-index:3;display:none;}
+
 .gameagan{position:absolute;top:482px;left:195px;z-index:3;display:none;}
 .fxbtn{position:absolute;top:737px;left:195px;z-index:3;}
 .gethongbaosubinfowrap{width:750px;height:1206px;background:url(../image/gethongbaosubinfobg.jpg) no-repeat;border:1px solid white;}
