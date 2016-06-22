@@ -132,9 +132,7 @@
         <div class="main">
             <div class="cover">
                 <img src="~/Content/yamaha/image/guaguakabg.jpg" style="position:absolute;z-index:0;top:0;left:0;">
-                <div id="prize">
-                    一等奖
-                </div>
+                <div id="prize">谢谢参与</div>
                 <div id="scratchpad">
                 </div>
             </div>
@@ -159,7 +157,7 @@
 
 		                num++;
 		               // alert(num);
-		                if (num > 300) {
+		                if (num > 50) {
 		                    var grade = $("#prize").text();
 		                    if (grade == "谢谢参与") {
 		                        location.href = "/Yamaha1/thank";
@@ -173,7 +171,7 @@
 		        });
 		        $(".lingjiangbtn").on("click", function () {
 		            var grade = $("#prize").text();
-		            if (grade == "1.5元红包X2000个") {
+		            if (grade == "5元红包") {
 		                location.href = "/Yamaha1/gethongbaosubinfo";
 		            } else {
 		                location.href = "/Yamaha1/getawardsubinfo";

@@ -64,6 +64,19 @@ namespace wechat.Controllers
         }
         public ActionResult thank()
         {
+            Utils.WeHelper.appid = "wx52d041442fbddbec";
+            Utils.WeHelper.secret = "5041fed711106842c0f84b75f84bacea";
+
+            Utils.WeHelper.timestamp = Utils.Utils.ConvertDateTimeInt(DateTime.Now).ToString();
+            Utils.WeHelper.noncestr = "yamaha" + DateTime.Now.ToString("yyyyMMddhhmmssfff");
+
+
+
+            Utils.WeHelper.url = Request.Url.ToString();
+            ViewBag.signature = Utils.WeHelper.signature;
+            ViewBag.noncestr = Utils.WeHelper.noncestr;
+            ViewBag.timestamp = Utils.WeHelper.timestamp;
+            ViewBag.appid = Utils.WeHelper.appid;
             return View();
         }
         public ActionResult timu()

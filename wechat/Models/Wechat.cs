@@ -51,13 +51,10 @@ namespace wechat.Models
         public int imgType { get; set; }
     }
 
+    
 
-        public class Question
+    public class Question
     {
-
-
-
-
 
         public int id { get; set; }
 
