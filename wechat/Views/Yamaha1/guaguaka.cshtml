@@ -155,8 +155,11 @@
 		            height:230,
 		            color: "#a9a9a7",
 		            scratchMove: function () {
-		               
-		                num++;		               // alert(num);		                if (num > 300) {
+		               
+
+		                num++;
+		               // alert(num);
+		                if (num > 300) {
 		                    var grade = $("#prize").text();
 		                    if (grade == "谢谢参与") {
 		                        location.href = "/Yamaha1/thank";
@@ -164,7 +167,8 @@
 		                        $(".lingjiangbtn").show();
 		                    }
 		                    
-		                }
+		                }
+
 		            }
 		        });
 		        $(".lingjiangbtn").on("click", function () {
