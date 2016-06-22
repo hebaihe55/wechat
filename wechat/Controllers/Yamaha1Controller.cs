@@ -69,9 +69,7 @@ namespace wechat.Controllers
 
             Utils.WeHelper.timestamp = Utils.Utils.ConvertDateTimeInt(DateTime.Now).ToString();
             Utils.WeHelper.noncestr = "yamaha" + DateTime.Now.ToString("yyyyMMddhhmmssfff");
-
-
-
+            
             Utils.WeHelper.url = Request.Url.ToString();
             ViewBag.signature = Utils.WeHelper.signature;
             ViewBag.noncestr = Utils.WeHelper.noncestr;
