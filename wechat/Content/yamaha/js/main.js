@@ -10,7 +10,7 @@ var getrandom3 = function () {
     while (flag) {
         arr3 = [];
         addramdom();
-        setCookie("arr3key",arr3,365);
+        setCookie("arrkey",arr3,365);
         checkarrquchong();
         //alert(flag)
         continue;
@@ -52,7 +52,7 @@ var getrandom3 = function () {
         }
     }
     //arr3 = getArrayItems(arr,3);//从数组中随机获取3个数重新组成一个数组
-    setCookie('arr3key',arr3, 365);
+    setCookie('arrkey', arr3, 365);
     checkCookie();
 
 }
@@ -75,7 +75,7 @@ function getCookie(c_name) {
     return "";
 }
 function checkCookie() {
-    var arr3key = getCookie('arr3key');
+    var arr3key = getCookie('arrkey');
     if (arr3key != null && arr3key != "") {
         //alert(arr3key);
         return arr3key;

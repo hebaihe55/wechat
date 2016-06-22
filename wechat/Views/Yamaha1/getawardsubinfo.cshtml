@@ -54,7 +54,7 @@
         }
 
         var InterValObj; //timer变量，控制时间  
-        var count = 10; //间隔函数，1秒执行  
+        var count = 15; //间隔函数，1秒执行  
         var curCount;//当前剩余秒数  
         var code = ""; //验证码  
         var codeLength = 6;//验证码长度  
@@ -63,7 +63,7 @@
             tel = $("form .tel").val();
           //  var phone = $(".").val();//手机号码  
            if(!(reg.test(tel))) {
-               alert("请输入正确手机号码！");
+               alertdialog1(str.telTish);
             } else {
                //产生验证码  
                for (var i = 0; i < codeLength; i++) {
