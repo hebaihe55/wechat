@@ -132,14 +132,13 @@
         <div class="main">
             <div class="cover">
                 <img src="~/Content/yamaha/image/guaguakabg.jpg" style="position:absolute;z-index:0;top:0;left:0;">
-                <div id="prize">
-                    一等奖
-                </div>
+                <div id="prize">谢谢参与</div>
                 <div id="scratchpad">
                 </div>
             </div>
             
-     <img src="~/Content/yamaha/image/lingjiangbtn.png" class="lingjiangbtn" />
+            <img src="~/Content/yamaha/image/lingjiangbtn.png" class="lingjiangbtn" />
+            <img src="~/Content/yamaha/image/gameagan.png" class="gameagan" />
         </div>
        
         <script type="text/javascript">
@@ -149,6 +148,7 @@
 		    var num = 0;
 		    var goon = true;
 		    var wechat = null;
+		    var interval;
 		    $(function () {
 		        $("#scratchpad").wScratchPad({
 		            width:530,
@@ -156,10 +156,10 @@
 		            color: "#a9a9a7",
 		            scratchMove: function () {
 		               
-		                num++;		               // alert(num);		                if (num > 300) {
+		                num++;		               // alert(num);		                if (num > 200) {
 		                    var grade = $("#prize").text();
 		                    if (grade == "谢谢参与") {
-		                        location.href = "/Yamaha1/thank";
+		                        $(".gameagan").show();
 		                    } else {
 		                        $(".lingjiangbtn").show();
 		                    }
@@ -169,14 +169,18 @@
 		        });
 		        $(".lingjiangbtn").on("click", function () {
 		            var grade = $("#prize").text();
-		            if (grade == "1.5元红包X2000个") {
+		            if (grade == "1.5元红包") {
 		                location.href = "/Yamaha1/gethongbaosubinfo";
 		            } else {
 		                location.href = "/Yamaha1/getawardsubinfo";
 		            }
 
 		        })
-		        
+
+		        $(".gameagan").on("click", function () {
+		                location.href = "/Yamaha1/thank";
+		          
+		        })
 		    });
 
 		
