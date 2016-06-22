@@ -63,11 +63,11 @@ namespace wechat.Controllers
             return View();
         }
 
-
+        [HttpPost]
         public string  addcode(string id)
         {
             string code = DateTime.Now.ToString("mssfff");
-           string url = HttpUtility.HtmlDecode("http://www.cl10086.com/garden/interface/sendSMS.action?phone=" +id+"&user=vipshanghai&pass=cheerlong,,&content=您的验证码为"+code+"【雅马哈】");
+           string url = HttpUtility.UrlDecode("http://www.cl10086.com/garden/interface/sendSMS.action?phone=" +id+"&user=vipshanghai&pass=cheerlong,,&content="+code);
          string aa=  Utils.HttpService.Get(url);
             return code;
 
