@@ -13,6 +13,7 @@ var getrandom3 = function () {
         arr3 = [];
 
         addramdom();
+       
         setCookie("cookiename", arr3, 365);
         checkarrquchong();
         //alert(flag)
@@ -60,28 +61,37 @@ var getrandom3 = function () {
     checkCookie();
 
 }
- //获得cookie随机名
-function getcookierandom() {
-    cookiename = "arr" + Math.floor(Math.random() * 2000 + 1);
-    return cookiename;
+function setCookie(objName, objValue, objHours) {  //添加cookie 
+    var str = objName + "=" + escape(objValue);
+    if (objHours > 0) {                           //为0时不设定过期时间，浏览器关闭时cookie自动消失 
+        var date = new Date();
+        var ms = objHours * 1000;
+        date.setTime(date.getTime() + ms);
+        str += "; expires=" + date.toGMTString();
+    }
+    document.cookie = str;
 }
-function setCookie(c_name, value, expiredays) {
-    var exdate = new Date()
-    exdate.setDate(exdate.getDate() + expiredays)
-    document.cookie = c_name + "=" + escape(value) +
-        ((expiredays == null) ? "" : "; expires=" + exdate.toGMTString())
+//清除cookie
+function clearCookie(objName) {
+    var arrStr = document.cookie.split("; ");
+    for (var i = 0; i < arrStr.length; i++) {
+        var temp = arrStr[i].split("=");
+        var date = new Date();
+        var ms = -100 * 1000; //过期时间为100s以前，
+        date.setTime(date.getTime() + ms);
+        document.cookie = temp[0] + "= ''; expires=" + date.toGMTString();;
+    }
 }
-function getCookie(c_name) {
-    if (document.cookie.length > 0) {
-        c_start = document.cookie.indexOf(c_name + "=")
-        if (c_start != -1) {
-            c_start = c_start + c_name.length + 1
-            c_end = document.cookie.indexOf(";", c_start)
-            if (c_end == -1) c_end = document.cookie.length
-            return unescape(document.cookie.substring(c_start, c_end))
+//根据名字获得cookie值
+function getCookie(objName) {
+    //从cookie变量中获取指定的值          
+    var arrStr = document.cookie.split("; ");
+    for (var i = 0; i < arrStr.length; i++) {
+        var temp = arrStr[i].split("=");
+        if (objName == temp[0]) {
+            return unescape(temp[1]);
         }
     }
-    return "";
 }
 function checkCookie() {
     var arr3key = getCookie("cookiename");
@@ -89,17 +99,42 @@ function checkCookie() {
         //alert(arr3key);
         return arr3key;
 
-    } else {
-        setCookie("cookiename", arr3, 365);
     }
+//function setCookie(c_name, value, expiredays) {
+//    var exdate = new Date()
+//    exdate.setDate(exdate.getDate() + expiredays)
+//    document.cookie = c_name + "=" + escape(value) +
+//        ((expiredays == null) ? "" : "; expires=" + exdate.toGMTString())
+//}
+//function getCookie(c_name) {
+//    if (document.cookie.length > 0) {
+//        c_start = document.cookie.indexOf(c_name + "=")
+//        if (c_start != -1) {
+//            c_start = c_start + c_name.length + 1
+//            c_end = document.cookie.indexOf(";", c_start)
+//            if (c_end == -1) c_end = document.cookie.length
+//            return unescape(document.cookie.substring(c_start, c_end))
+//        }
+//    }
+//    return "";
+//}
+//function checkCookie() {
+//    var arr3key = getCookie("cookiename");
+//    if (arr3key != null && arr3key != "") {
+//        //alert(arr3key);
+//        return arr3key;
+
+//    } else {
+//        setCookie("cookiename", arr3, 365);
+//    }
     
 }
-function DelCookie(name) {
-    var exp = new Date();
-    exp.setTime(exp.getTime() + (-1 * 24 * 60 * 60 * 1000));
-    var cval = getCookie(name);
-    document.cookie = name + "=" + cval + "; expires=" + exp.toGMTString();
-}
+//function DelCookie(name) {
+//    var exp = new Date();
+//    exp.setTime(exp.getTime() + (-1 * 24 * 60 * 60 * 1000));
+//    var cval = getCookie(name);
+//    document.cookie = name + "=" + cval + "; expires=" + exp.toGMTString();
+//}
 function getArrayItems(arr, num) {
     //新建一个数组,将传入的数组复制过来,用于运算,而不要直接操作传入的数组;
     var temp_array = new Array();
