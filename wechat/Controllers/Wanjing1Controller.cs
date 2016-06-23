@@ -18,6 +18,30 @@ namespace wechat.Controllers
             {
                   return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
+            if (DateTime.Now > DateTime.Parse("2016-06-29 23:59:59"))
+            {
+                return RedirectToAction("activeend");
+            }
+            var q1 = db.Question.Where(w =>  w.actname.Equals("丸井活动1"));
+
+            if (q1.Count() >= 300)
+            {
+                return RedirectToAction("liuliangzsend");
+            }
+            var q= db.Question.Where(w => w.openid.Equals(uid) && w.actname.Equals("丸井活动1"));
+
+            if (q.Count() != 0)
+            {
+                return RedirectToAction("thank");
+            }
+
+            if (q.Count() >= 300)
+            {
+                return RedirectToAction("liuliangzsend");
+            }
+
+
             System.Web.HttpContext.Current.Session["openid"] = uid;
             return View();
         }
