@@ -15,7 +15,33 @@ namespace wechat.Utils
     /// </summary>
     public class HttpService
     {
+        public static  string sendLTSms(string url,string indata)
+        {
+          
+        
+            string outdata = "";
 
+            HttpWebRequest myHttpWebRequest = (HttpWebRequest)WebRequest.Create(url);
+            myHttpWebRequest.ContentType = "application/x-www-form-urlencoded";
+            myHttpWebRequest.Method = "POST";
+
+            Stream myRequestStream = myHttpWebRequest.GetRequestStream();
+
+            StreamWriter myStreamWriter = new StreamWriter(myRequestStream, Encoding.UTF8);
+            myStreamWriter.Write(indata);
+            myStreamWriter.Flush();
+            myStreamWriter.Close();
+            myRequestStream.Close();
+
+            HttpWebResponse myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse();
+            Stream myResponseStream = myHttpWebResponse.GetResponseStream();
+            StreamReader myStreamReader = new StreamReader(myResponseStream, Encoding.UTF8);
+            outdata = myStreamReader.ReadToEnd();
+
+            myStreamReader.Close();
+            myResponseStream.Close();
+            return outdata;
+        }
         public static bool CheckValidationResult(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors errors)
         {
             //直接确认，否则打不开    
