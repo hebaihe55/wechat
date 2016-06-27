@@ -16,3 +16,30 @@ a:hover{
     border:1px solid white;
     background:url(../img/indexbg.jpg) no-repeat;
 }
+.indexwrap .rulebtn{
+    position:absolute;
+    top:743px;
+    left:155px;
+}
+.indexwrap .startbtn{
+    position:absolute;
+    top:846px;
+    left:282px;
+}
+.rulewrap{
+    width:750px;
+    height:1206px;
+    border:1px solid white;
+    background:url(../img/rulebg.jpg) no-repeat;
+}
+.rulewrap .rulebtn{
+     position:absolute;
+    top:970px;
+    left:222px;
+}
+.thankwrap{
+    width:750px;
+    height:1206px;
+    border:1px solid white;
+    background:url(../img/thankbg.jpg) no-repeat;
+}

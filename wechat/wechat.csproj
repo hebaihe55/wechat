@@ -176,10 +176,10 @@
     <Content Include="Content\Xinghe1\images\subbtn.png" />
     <Content Include="Content\Xinghe1\images\thanks.jpg" />
     <Content Include="Content\Xinghe2\css\style.css" />
-    <Content Include="Content\Xinghe2\img\按钮-开始游戏.png" />
+    <Content Include="Content\Xinghe2\img\startbtn.png" />
     <Content Include="Content\Xinghe2\img\按钮-提交领取.png" />
     <Content Include="Content\Xinghe2\img\按钮-提交领取灰.png" />
-    <Content Include="Content\Xinghe2\img\按钮-游戏规则.png" />
+    <Content Include="Content\Xinghe2\img\rulebtn.png" />
     <Content Include="Content\Xinghe2\img\游戏-未点开.png" />
     <Content Include="Content\Xinghe2\img\游戏-空格短彩.png" />
     <Content Include="Content\Xinghe2\img\游戏-空格短灰.png" />
@@ -195,8 +195,9 @@
     <Content Include="Content\Xinghe2\img\游戏-邮票5.png" />
     <Content Include="Content\Xinghe2\img\游戏-邮票6.png" />
     <Content Include="Content\Xinghe2\img\游戏-邮票7.png" />
-    <Content Include="Content\Xinghe2\img\游戏规则－背景.jpg" />
+    <Content Include="Content\Xinghe2\img\rulebg.jpg" />
     <Content Include="Content\Xinghe2\img\箭头.gif" />
+    <Content Include="Content\Xinghe2\img\thankbg.jpg" />
     <Content Include="Content\Xinghe2\img\谢谢2-背景.jpg" />
     <Content Include="Content\Xinghe2\img\领取.png" />
     <Content Include="Content\Xinghe2\img\indexbg.jpg" />
@@ -357,6 +358,7 @@
     <Compile Include="Controllers\WanJingListController.cs" />
     <Compile Include="Controllers\WechatController.cs" />
     <Compile Include="Controllers\Xinghe1Controller.cs" />
+    <Compile Include="Controllers\Xinghe2Controller.cs" />
     <Compile Include="Controllers\Yamaha1Controller.cs" />
     <Compile Include="Controllers\YamahaController.cs" />
     <Compile Include="Global.asax.cs">
@@ -440,6 +442,8 @@
     <Content Include="Views\WanJingList\Index.cshtml" />
     <Content Include="Views\Wanjing1\ercode.cshtml" />
     <Content Include="Views\Xinghe2\index.cshtml" />
+    <Content Include="Views\Xinghe2\rule.cshtml" />
+    <Content Include="Views\Xinghe2\thank.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
