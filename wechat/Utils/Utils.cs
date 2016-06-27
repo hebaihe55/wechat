@@ -62,7 +62,7 @@ namespace wechat.Utils
 
             ArrayList LT = new ArrayList() { "130","131","132","155","156","186","185","145","176" };
 
-            ArrayList DX = new ArrayList() { "133","153","180","189" };
+            ArrayList DX = new ArrayList() { "133","153", "181", "180","189" };
 
             mobile = mobile.Substring(0, 3);
 

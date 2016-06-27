@@ -1,0 +1,79 @@
+﻿@model IEnumerable<wechat.Models.Updata>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <p>
+       
+    </p>
+    <table class="table" >
+        <tr>
+            <th>
+                序号
+            </th>
+            <th>
+               微信号
+            </th>
+            <th>
+             活动名
+            </th>
+            <th>
+                手机号
+            </th>
+            <th>
+               流量包
+            </th>
+            <th>
+              网关
+            </th>
+            <th>
+              时间
+            </th>
+           
+        </tr>
+    
+        @{ int i = 1;}
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @i
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.openid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.activeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mobile)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ISP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cctime)
+            </td>
+           
+        </tr>
+        i++;
+    }
+    
+    </table>
+</body>
+</html>
