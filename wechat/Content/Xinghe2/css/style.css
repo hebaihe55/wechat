@@ -1,0 +1,18 @@
+﻿*{
+    padding:0;
+    margin:0;
+}
+a{
+    color:black;
+    text-decoration:none;
+}
+a:hover{
+    color:black;
+    text-decoration:none;
+}
+.indexwrap{
+    width:750px;
+    height:1206px;
+    border:1px solid white;
+    background:url(../img/indexbg.jpg) no-repeat;
+}
