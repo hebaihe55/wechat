@@ -185,7 +185,7 @@
     <Content Include="Content\Xinghe2\img\游戏-空格短灰.png" />
     <Content Include="Content\Xinghe2\img\游戏-空格长彩.png" />
     <Content Include="Content\Xinghe2\img\游戏-空格长灰.png" />
-    <Content Include="Content\Xinghe2\img\游戏-背景.jpg" />
+    <Content Include="Content\Xinghe2\img\gamebg.jpg" />
     <Content Include="Content\Xinghe2\img\游戏-表单彩.png" />
     <Content Include="Content\Xinghe2\img\游戏-表单灰.png" />
     <Content Include="Content\Xinghe2\img\游戏-邮票1.png" />
@@ -445,6 +445,7 @@
     <Content Include="Views\Xinghe2\index.cshtml" />
     <Content Include="Views\Xinghe2\rule.cshtml" />
     <Content Include="Views\Xinghe2\thank.cshtml" />
+    <Content Include="Views\Xinghe2\gameplay.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -33,7 +33,7 @@ form .nextbtn{display:block;position: absolute;width: 403px;height: 161px;backgr
 .q1{position:absolute;top:0;left:300px;}
 .rule{position:absolute;top:1014px;left:-29px;}
 .ruleshow {width:750px;height:800px;position:absolute;top:0;left:0;background:white;border:1px solid #eee;z-index:2}
-.closebtn{position:absolute;top:63px;left:630px;z-index:3;display:none;}
+.closebtn{position:absolute;top:150px;left:630px;z-index:3;display:none;}
 .guaguakawrap{width:750px;height:1206px;background:url(../image/guaguakabg.jpg) no-repeat;}
 .guaguakawrap .guaguakong{position:absolute;top:225px;left:110px;}
 .lingjiangbtn{position:absolute;top:482px;left:195px;z-index:3;display:none;}

@@ -43,3 +43,12 @@ a:hover{
     border:1px solid white;
     background:url(../img/thankbg.jpg) no-repeat;
 }
+.playwrap{
+    width:750px;
+    height:1206px;
+    border:1px solid white;
+    background:url(../img/gamebg.jpg) no-repeat;
+}
+.playwrap .imgwrap{
+
+}

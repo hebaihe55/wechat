@@ -21,5 +21,9 @@ namespace wechat.Controllers
         {
             return View();
         }
+        public ActionResult gameplay()
+        {
+            return View();
+        }
     }
 }
