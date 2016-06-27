@@ -14,7 +14,7 @@ var getrandom3 = function () {
 
         addramdom();
        
-        setCookie("cookiename", arr3,1);
+        setCookie("cookiename", arr3,0);
         checkarrquchong();
         //alert(flag)
         continue;
@@ -57,7 +57,7 @@ var getrandom3 = function () {
         }
     }
     //arr3 = getArrayItems(arr,3);//从数组中随机获取3个数重新组成一个数组
-    setCookie("cookiename", arr3,1);
+    setCookie("cookiename", arr3,0);
     checkCookie();
 
 }
@@ -100,6 +100,7 @@ function checkCookie() {
         return arr3key;
 
     }
+}
 //function setCookie(c_name, value, expiredays) {
 //    var exdate = new Date()
 //    exdate.setDate(exdate.getDate() + expiredays)
@@ -124,11 +125,8 @@ function checkCookie() {
 //        //alert(arr3key);
 //        return arr3key;
 
-//    } else {
-//        setCookie("cookiename", arr3, 365);
-//    }
-    
-}
+//    } 
+//}
 //function DelCookie(name) {
 //    var exp = new Date();
 //    exp.setTime(exp.getTime() + (-1 * 24 * 60 * 60 * 1000));
