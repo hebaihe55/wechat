@@ -7,7 +7,7 @@ a:hover{text-decoration:none;color:#000;}
 .indexwrap .rulebtn{display:block;position:absolute;top:1014px;left:-21px;}
 .indexwrap .startbtn{display:block;position:absolute;top:1014px;left:350px;}
 .rulewrap{width:750px;height:1206px;background:url(../image/gamerule.jpg) no-repeat;border:1px solid;background-size:100%}
-.rulewrap .closerule{display:block;position:absolute;top:60px;left:631px;}
+.rulewrap .closerule{display:block;position:absolute;top:92px;left:664px;}
 .timuwrap{width:750px;height:1206px;background:url(../image/timubg.jpg) no-repeat;border:1px solid;background-size:100%}
 .timuwrap a{display:block;position:absolute;top:1014px;left:145px;}
 .timuwrap .timu{width:98%;height:auto;padding:5px 0 10px 30px;margin:10px 0 0 0;}
