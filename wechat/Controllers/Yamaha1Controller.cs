@@ -64,10 +64,12 @@ namespace wechat.Controllers
         }
 
         [HttpPost]
-        public string  addcode(string id)
+        public string addcode(string id)
         {
             string code = DateTime.Now.ToString("mssfff");
-           string url = HttpUtility.UrlDecode("http://www.cl10086.com/garden/interface/sendSMS.action?phone=" +id+"&user=vipshanghai&pass=cheerlong,,&content="+code);
+
+
+            string url = "http://www.cl10086.com/garden/interface/sendSMS.action?phone=" + id.Trim() + "&user=vipshanghai&pass=cheerlong,,&content="+ HttpUtility.UrlEncode("您的验证码是：" + code +"【雅马哈】",System.Text.Encoding.UTF8);
          string aa=  Utils.HttpService.Get(url);
             return code;
 

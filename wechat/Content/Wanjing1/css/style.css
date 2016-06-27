@@ -1,6 +1,7 @@
 ﻿* {
     padding:0;
     margin:0;
+    border:0;
    
 }
 a{
@@ -61,11 +62,11 @@ h3{font-size:28px;}
 .thank,.activeend{
     width:750px;
     height:1206px;
-    border:1px solid white;
+   
 }
 .liuliangend{
     width:750px;
     height:1206px;
-    border:1px solid white;
+ 
 }
 
