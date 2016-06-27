@@ -23,13 +23,13 @@ namespace wechat.Controllers
             {
                 return RedirectToAction("activeend");
             }
-            var q1 = db.Question.Where(w =>  w.actname.Equals("丸井活动1"));
+            var q1 = db.Updatas.Where(w =>  w.activeName.Equals("丸井活动1"));
 
             if (q1.Count() >= 300)
             {
                 return RedirectToAction("liuliangzsend");
             }
-            var q= db.Question.Where(w => w.openid.Equals(uid) && w.actname.Equals("丸井活动1"));
+            var q= db.Updatas.Where(w => w.openid.Equals(uid) && w.activeName.Equals("丸井活动1"));
 
             if (q.Count() != 0)
             {
@@ -77,8 +77,16 @@ namespace wechat.Controllers
             q.answer = sb.ToString();
 
 
-            db.Question.Add(q);
-            db.SaveChanges();
+            try
+            {
+                db.Question.Add(q);
+                db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+
+                Utils.Log.Error("wangj",ex.Message);
+            }
 
 
 
@@ -123,7 +131,12 @@ namespace wechat.Controllers
             {
                 ud.fee = 0;
             }
+            var q1 = db.Updatas.Where(w => w.activeName.Equals("丸井活动1"));
 
+            if (q1.Count() >= 300)
+            {
+                return RedirectToAction("liuliangzsend");
+            }
             int ii = 0;
             try
             {
@@ -155,14 +168,62 @@ namespace wechat.Controllers
 
         public ActionResult thank()
         {
+            Utils.WeHelper.url = Request.Url.ToString();
+            Utils.WeHelper.appid = "wxd715b812e63477d8";
+            Utils.WeHelper.secret = "2b93c141c4952745e7552fce65365dbf";
+
+            Utils.WeHelper.timestamp = Utils.Utils.ConvertDateTimeInt(DateTime.Now).ToString();
+            Utils.WeHelper.noncestr = "wanjing" + DateTime.Now.ToString("yyyyMMddhhmmssfff");
+
+
+
+
+            ViewBag.signature = Utils.WeHelper.signature;
+            ViewBag.noncestr = Utils.WeHelper.noncestr;
+            ViewBag.timestamp = Utils.WeHelper.timestamp;
+            ViewBag.appid = Utils.WeHelper.appid;
             return View();
         }
         public ActionResult activeend()
         {
+            Utils.WeHelper.url = Request.Url.ToString();
+            Utils.WeHelper.appid = "wxd715b812e63477d8";
+            Utils.WeHelper.secret = "2b93c141c4952745e7552fce65365dbf";
+
+            Utils.WeHelper.timestamp = Utils.Utils.ConvertDateTimeInt(DateTime.Now).ToString();
+            Utils.WeHelper.noncestr = "wanjing" + DateTime.Now.ToString("yyyyMMddhhmmssfff");
+
+
+
+
+            ViewBag.signature = Utils.WeHelper.signature;
+            ViewBag.noncestr = Utils.WeHelper.noncestr;
+            ViewBag.timestamp = Utils.WeHelper.timestamp;
+            ViewBag.appid = Utils.WeHelper.appid;
             return View();
         }
         public ActionResult liuliangzsend()
         {
+            Utils.WeHelper.url = Request.Url.ToString();
+            Utils.WeHelper.appid = "wxd715b812e63477d8";
+            Utils.WeHelper.secret = "2b93c141c4952745e7552fce65365dbf";
+
+            Utils.WeHelper.timestamp = Utils.Utils.ConvertDateTimeInt(DateTime.Now).ToString();
+            Utils.WeHelper.noncestr = "wanjing" + DateTime.Now.ToString("yyyyMMddhhmmssfff");
+
+
+
+
+            ViewBag.signature = Utils.WeHelper.signature;
+            ViewBag.noncestr = Utils.WeHelper.noncestr;
+            ViewBag.timestamp = Utils.WeHelper.timestamp;
+            ViewBag.appid = Utils.WeHelper.appid;
+            return View();
+        }
+
+        public ActionResult ercode()
+        {
+          
             return View();
         }
     }

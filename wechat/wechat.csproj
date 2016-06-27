@@ -102,6 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Mingzhi1\css\style.css" />
+    <Content Include="Content\Mingzhi1\image\300.jpg" />
     <Content Include="Content\Mingzhi1\image\aiqingshowbg.png" />
     <Content Include="Content\Mingzhi1\image\aishow.png" />
     <Content Include="Content\Mingzhi1\image\aqkuang.png" />
@@ -160,6 +161,7 @@
     <Content Include="Content\Wanjing1\css\style.css" />
     <Content Include="Content\Wanjing1\img\anniu.jpg" />
     <Content Include="Content\Wanjing1\img\buttonbg.png" />
+    <Content Include="Content\Wanjing1\img\ercode.jpg" />
     <Content Include="Content\Wanjing1\img\tou.jpg" />
     <Content Include="Content\Wanjing1\img\banner.jpg" />
     <Content Include="Content\Wanjing1\img\thank.jpg" />
@@ -327,6 +329,7 @@
     <Compile Include="Controllers\KamidaController.cs" />
     <Compile Include="Controllers\Meiji1Controller.cs" />
     <Compile Include="Controllers\Wanjing1Controller.cs" />
+    <Compile Include="Controllers\WanJingListController.cs" />
     <Compile Include="Controllers\WechatController.cs" />
     <Compile Include="Controllers\Xinghe1Controller.cs" />
     <Compile Include="Controllers\Yamaha1Controller.cs" />
@@ -409,6 +412,8 @@
     <Content Include="Views\Yamaha1\guaguaka.cshtml" />
     <Content Include="Views\Yamaha1\gethongbaosubinfo.cshtml" />
     <Content Include="Views\Yamaha1\thanknobutton.cshtml" />
+    <Content Include="Views\WanJingList\Index.cshtml" />
+    <Content Include="Views\Wanjing1\ercode.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
