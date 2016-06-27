@@ -14,7 +14,7 @@ var getrandom3 = function () {
 
         addramdom();
        
-        setCookie("cookiename", arr3, 365);
+        setCookie("cookiename", arr3,1);
         checkarrquchong();
         //alert(flag)
         continue;
@@ -57,7 +57,7 @@ var getrandom3 = function () {
         }
     }
     //arr3 = getArrayItems(arr,3);//从数组中随机获取3个数重新组成一个数组
-    setCookie("cookiename", arr3, 365);
+    setCookie("cookiename", arr3,1);
     checkCookie();
 
 }
