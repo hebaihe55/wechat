@@ -15,8 +15,7 @@
     <meta name="description" content="">
     <link href="~/Content/Xinghe2/css/style.css" rel="stylesheet" />
     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-    @*<link href="~/Content/Xinghe2/css/matchgame.css" rel="stylesheet" />
-    <script src="~/Content/Xinghe2/js/htm5game.matchgame.js"></script>*@
+   
     <style>
         .back{width:217px;height:217px;}
         .front{width:217px;height:217px;}
@@ -24,71 +23,98 @@
     <script>
         $(function () {
             $(".back").hide();
-            var yparr = [];
+            var a = [];
             var i = 0;
+            var val = $(".playwrap .val").val();
+            
+            
             $(".card").each(function (index) {
                 $(this).on("click",function() {
                    
-                   
                     i++;
-                    if (i > 4) {
-                        return;
+                    if (i > 9) {
+
                     }
-                    var a = $(this).find(".front").find("img").attr("class");
+                   
+                    var clickdata = $(this).find(".back").find("img").attr("class");
+                    yparr.push(clickdata);
                     $(this).find(".front").hide();
                     $(this).find(".back").show();
-                    var ypdata1 = yparr[0];
-                    var ypdata2 = yparr[1];
-                    var ypdata3 = yparr[2];
-                    var ypdata4 = yparr[3];
-                    if (ypdata1 == ypdata2 == ypdata3 || ypdata1 == ypdata2 == ypdata4 || ypdata2 == ypdata3 == ypdata3) {
-                        alert("恭喜");
-                    }
+                  
+                       
+                        
+                    
+                  
                 })
             })
+            //检测数组中相同数据
+           // var a = ['yp1', 'yp1', 'yp1', 'yp1', 'yp3', 'yp4', 'yp5', 'yp6'];
+            //下句排序如果原数据已排可以去掉
+            a = a.sort(function (x, y) { return x - y; });
+            var d = new Object();
+            function Record(e, p) {
+                this.element = e;
+                this.pos = p;
+            }
+
+            var c = 1, r = new Record(a[0], 0);
+            for (var i = 1; i < a.length; i++) {
+                if (a[i] == r.element) c++;
+                else {
+                    d[c] = (c in d) ? d[c].concat(r) : [r];
+                    if (c >= 3) for (var p = r.pos; p < i; p++) a[p] = 0;
+                    r = new Record(a[i], i);
+                    c = 1;
+                }
+            }
+            for (var k in d) {
+                if (k >= 3) {
+                    alert(k);
+                }
+            }
         });
     </script>
    
 </head>
 <body>
     <div class="playwrap">
-        
+        <input type="hidden" value="1" class="val"/>
         <div id="cards">
             <div class="card">
-                <div class="front"><img src="~/Content/Xinghe2/img/default.png" class="yp1"/></div>
-                <div class="back"><img src="~/Content/Xinghe2/img/yp1.png" /></div>
+                <div class="front"><img src="~/Content/Xinghe2/img/default.png"/></div>
+                <div class="back"><img src="~/Content/Xinghe2/img/yp1.png" class="yp1"/></div>
             </div>
             <div class="card">
-                <div class="front"><img src="~/Content/Xinghe2/img/default.png" class="yp2"/></div>
-                <div class="back"><img src="~/Content/Xinghe2/img/yp2.png" /></div>
+                <div class="front"><img src="~/Content/Xinghe2/img/default.png" /></div>
+                <div class="back"><img src="~/Content/Xinghe2/img/yp1.png" class="yp1" /></div>
             </div>
             <div class="card">
-                <div class="front"><img src="~/Content/Xinghe2/img/default.png" class="yp3"/></div>
-                <div class="back"><img src="~/Content/Xinghe2/img/yp3.png" /></div>
+                <div class="front"><img src="~/Content/Xinghe2/img/default.png"/></div>
+                <div class="back"><img src="~/Content/Xinghe2/img/yp4.png" class="yp1"/></div>
             </div>
             <div class="card">
-                <div class="front"><img src="~/Content/Xinghe2/img/default.png" class="yp4"/></div>
-                <div class="back"><img src="~/Content/Xinghe2/img/yp4.png" /></div>
+                <div class="front"><img src="~/Content/Xinghe2/img/default.png" /></div>
+                <div class="back"><img src="~/Content/Xinghe2/img/yp1.png" class="yp1"/></div>
             </div>
             <div class="card">
-                <div class="front"><img src="~/Content/Xinghe2/img/default.png" class="yp5"/></div>
-                <div class="back"><img src="~/Content/Xinghe2/img/yp5.png" /></div>
+                <div class="front"><img src="~/Content/Xinghe2/img/default.png"/></div>
+                <div class="back"><img src="~/Content/Xinghe2/img/yp5.png" class="yp2"/></div>
             </div>
             <div class="card">
-                <div class="front"><img src="~/Content/Xinghe2/img/default.png" class="yp6"/></div>
-                <div class="back"><img src="~/Content/Xinghe2/img/yp6.png" /></div>
+                <div class="front"><img src="~/Content/Xinghe2/img/default.png" /></div>
+                <div class="back"><img src="~/Content/Xinghe2/img/yp6.png" class="yp3"/></div>
             </div>
             <div class="card">
-                <div class="front"><img src="~/Content/Xinghe2/img/default.png" class="yp7"/></div>
-                <div class="back"><img src="~/Content/Xinghe2/img/yp7.png" /></div>
+                <div class="front"><img src="~/Content/Xinghe2/img/default.png"/></div>
+                <div class="back"><img src="~/Content/Xinghe2/img/yp7.png" class="yp4" /></div>
             </div>
             <div class="card">
-                <div class="front"><img src="~/Content/Xinghe2/img/default.png" class="yp3"/></div>
-                <div class="back"><img src="~/Content/Xinghe2/img/yp3.png" /></div>
+                <div class="front"><img src="~/Content/Xinghe2/img/default.png" /></div>
+                <div class="back"><img src="~/Content/Xinghe2/img/yp3.png" class="yp5" /></div>
             </div>
             <div class="card">
-                <div class="front"><img src="~/Content/Xinghe2/img/default.png" class="yp6"/></div>
-                <div class="back"><img src="~/Content/Xinghe2/img/yp6.png" /></div>
+                <div class="front"><img src="~/Content/Xinghe2/img/default.png" /></div>
+                <div class="back"><img src="~/Content/Xinghe2/img/yp2.png" class="yp6"/></div>
             </div>
         </div>
 
