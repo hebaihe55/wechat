@@ -1,0 +1,67 @@
+
+#cards
+{
+    width: 380px;
+    height: 400px;
+    position: relative;
+	margin:30px auto;
+}
+.card
+{
+    width: 208px;
+    height: 207px;
+    position: absolute;
+}
+.front
+{
+    background:url("../img/default.png")0 no-repeat;
+    z-index: 3;
+}
+.face
+{
+    width: 100%;
+    height: 100%;
+    border-radius:10px;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition:all .3s;
+}
+.back
+{
+    background: #efefef url("../img/default.png") no-repeat;
+    -webkit-transform-rotateY(-180deg);
+    z-index: 2;
+}
+.face:hover
+{
+    -webkit-box-shadow: 0 0 40px #aaa;
+
+}
+/*牌面定位样式*/
+
+
+.card-flipped .front
+{
+    /*保证牌底在牌面下面，z-index值切换为小值*/
+    z-index: 2;
+    -webkit-transform: rotateY(180deg);
+}
+.card-flipped .back
+{
+    /*保证牌底在牌面上面，z-index值切换为大值*/
+    z-index: 3;
+    /*前面牌面已经翻过去，现在返回来*/
+    -webkit-transform: rotateY(0deg);
+}
+/*移除牌*/
+.card-removed
+{
+    opacity: 0;
+}
+.yp1{background:url(../img/yp1.png) no-repeat;}
+.yp2{background:url(../img/yp2.png) no-repeat;}
+.yp3{background:url(../img/yp3.png) no-repeat;}
+.yp4{background:url(../img/yp4.png) no-repeat;}
+.yp5{background:url(../img/yp5.png) no-repeat;}
+.yp6{background:url(../img/yp6.png) no-repeat;}
+.yp7{background:url(../img/yp7.png) no-repeat;}

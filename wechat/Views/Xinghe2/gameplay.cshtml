@@ -14,13 +14,93 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="">
     <link href="~/Content/Xinghe2/css/style.css" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    @*<link href="~/Content/Xinghe2/css/matchgame.css" rel="stylesheet" />
+    <script src="~/Content/Xinghe2/js/htm5game.matchgame.js"></script>*@
+    <style>
+        .back{width:217px;height:217px;}
+        .front{width:217px;height:217px;}
+    </style>
+    <script>
+        $(function () {
+            $(".back").hide();
+            var yparr = [];
+            var i = 0;
+            $(".card").each(function (index) {
+                $(this).on("click",function() {
+                   
+                   
+                    i++;
+                    if (i > 4) {
+                        return;
+                    }
+                    var a = $(this).find(".front").find("img").attr("class");
+                    $(this).find(".front").hide();
+                    $(this).find(".back").show();
+                    var ypdata1 = yparr[0];
+                    var ypdata2 = yparr[1];
+                    var ypdata3 = yparr[2];
+                    var ypdata4 = yparr[3];
+                    if (ypdata1 == ypdata2 == ypdata3 || ypdata1 == ypdata2 == ypdata4 || ypdata2 == ypdata3 == ypdata3) {
+                        alert("恭喜");
+                    }
+                })
+            })
+        });
+    </script>
+   
 </head>
 <body>
     <div class="playwrap">
-        <div class="imgwrap">
-
-
+        
+        <div id="cards">
+            <div class="card">
+                <div class="front"><img src="~/Content/Xinghe2/img/default.png" class="yp1"/></div>
+                <div class="back"><img src="~/Content/Xinghe2/img/yp1.png" /></div>
+            </div>
+            <div class="card">
+                <div class="front"><img src="~/Content/Xinghe2/img/default.png" class="yp2"/></div>
+                <div class="back"><img src="~/Content/Xinghe2/img/yp2.png" /></div>
+            </div>
+            <div class="card">
+                <div class="front"><img src="~/Content/Xinghe2/img/default.png" class="yp3"/></div>
+                <div class="back"><img src="~/Content/Xinghe2/img/yp3.png" /></div>
+            </div>
+            <div class="card">
+                <div class="front"><img src="~/Content/Xinghe2/img/default.png" class="yp4"/></div>
+                <div class="back"><img src="~/Content/Xinghe2/img/yp4.png" /></div>
+            </div>
+            <div class="card">
+                <div class="front"><img src="~/Content/Xinghe2/img/default.png" class="yp5"/></div>
+                <div class="back"><img src="~/Content/Xinghe2/img/yp5.png" /></div>
+            </div>
+            <div class="card">
+                <div class="front"><img src="~/Content/Xinghe2/img/default.png" class="yp6"/></div>
+                <div class="back"><img src="~/Content/Xinghe2/img/yp6.png" /></div>
+            </div>
+            <div class="card">
+                <div class="front"><img src="~/Content/Xinghe2/img/default.png" class="yp7"/></div>
+                <div class="back"><img src="~/Content/Xinghe2/img/yp7.png" /></div>
+            </div>
+            <div class="card">
+                <div class="front"><img src="~/Content/Xinghe2/img/default.png" class="yp3"/></div>
+                <div class="back"><img src="~/Content/Xinghe2/img/yp3.png" /></div>
+            </div>
+            <div class="card">
+                <div class="front"><img src="~/Content/Xinghe2/img/default.png" class="yp6"/></div>
+                <div class="back"><img src="~/Content/Xinghe2/img/yp6.png" /></div>
+            </div>
         </div>
+
+        <div class="showinfo">
+           <form action="" method="post">
+               <input type="text" name="user" class="user"/><br />
+               <input type="text" name="tel" class="tel"/><br />
+               <input type="text" name="reward" class="reward"/><br />
+               <input type="submit" value="" class="submit"/>
+           </form>
+        </div>
+        <img src="~/Content/Xinghe2/img/jiantou.gif" class="jt"/>
     </div>
 </body>
 </html>
