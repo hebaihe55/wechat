@@ -52,7 +52,6 @@ a:hover{
 .playwrap #cards{
     width:700px;
     height:700px;
-    border:1px solid blue;
     margin:120px auto 0 auto;
 }
 .card{
@@ -76,8 +75,10 @@ a:hover{
 .playwrap .jt{
     position:absolute;top:431px;left:320px;z-index:5;
 }
+ .back{width:217px;height:217px;}
+ .front{width:217px;height:217px;}
 .showinfo form .user{background:url(../img/smallinputbg.png) no-repeat white;width:261px;height:50px;border:none;outline:none;margin:10px 0 5px 165px;border-radius:25px;font-size:28px;text-indent:15px;}
 .showinfo form .reward{background:url(../img/smallinputbg.png) no-repeat white;width:261px;height:50px;border:none;outline:none;margin:18px 0 0 224px;border-radius:25px;font-size:28px;text-indent:15px; }
 .showinfo form .tel{background:url(../img/longinputbg.png) no-repeat white;width:414px;height:50px;border:none;outline:none;margin:5px 0 0 191px;border-radius:25px;font-size:28px;text-indent:15px;}
 .showinfo form{width:633px;height:auto;margin:37px auto 0 auto;}
-.showinfo form input[type=submit]{background:url(../img/graysubmitbg.png);width:340px;height:96px;margin:10px auto 0 auto;display:block;border:none;outline:none;}
+.showinfo form input[type=submit]{background:url(../img/submitbg.png);width:340px;height:96px;margin:10px auto 0 auto;display:block;border:none;outline:none;}

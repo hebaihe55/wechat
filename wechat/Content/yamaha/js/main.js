@@ -101,38 +101,7 @@ function checkCookie() {
 
     }
 }
-//function setCookie(c_name, value, expiredays) {
-//    var exdate = new Date()
-//    exdate.setDate(exdate.getDate() + expiredays)
-//    document.cookie = c_name + "=" + escape(value) +
-//        ((expiredays == null) ? "" : "; expires=" + exdate.toGMTString())
-//}
-//function getCookie(c_name) {
-//    if (document.cookie.length > 0) {
-//        c_start = document.cookie.indexOf(c_name + "=")
-//        if (c_start != -1) {
-//            c_start = c_start + c_name.length + 1
-//            c_end = document.cookie.indexOf(";", c_start)
-//            if (c_end == -1) c_end = document.cookie.length
-//            return unescape(document.cookie.substring(c_start, c_end))
-//        }
-//    }
-//    return "";
-//}
-//function checkCookie() {
-//    var arr3key = getCookie("cookiename");
-//    if (arr3key != null && arr3key != "") {
-//        //alert(arr3key);
-//        return arr3key;
 
-//    } 
-//}
-//function DelCookie(name) {
-//    var exp = new Date();
-//    exp.setTime(exp.getTime() + (-1 * 24 * 60 * 60 * 1000));
-//    var cval = getCookie(name);
-//    document.cookie = name + "=" + cval + "; expires=" + exp.toGMTString();
-//}
 function getArrayItems(arr, num) {
     //新建一个数组,将传入的数组复制过来,用于运算,而不要直接操作传入的数组;
     var temp_array = new Array();
@@ -158,7 +127,8 @@ function getArrayItems(arr, num) {
     return return_array;
 }
 var str = {
-    erroranser: "回答错误",
+    erroranser: "再接再励",
+    sureanser:"恭喜全部答对",
     inputname: "请输入您的姓名",
     leng: "长度必须小于10位",
     telTish: "手机号码有误，请重填",
@@ -244,7 +214,18 @@ var sure1 = function () {
 var sure2 = function () {
     $(".alertParent").hide();
     $(".zhezhao").hide();
-    location.href = "/Yamaha1/guaguaka";
+    var errorcookie = getCookie("errorcount");
+    if (errorcookie == 1) {
+       
+        alertdialog1(str.erroranser);
+        setInterval(function () { location.href = "/Yamaha1/thank"; }, 3000);
+        
+    } else if (errorcookie==undefined) {
+        alertdialog1(str.sureanser);
+        setInterval(function () { location.href = "/Yamaha1/guaguaka"; }, 3000);
+       
+    }else{}
+    
 }
 //信息提交信息验证
 var checkform= function(){

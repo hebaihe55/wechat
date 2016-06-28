@@ -36,41 +36,35 @@
 
             }
 
-            $("form .nextbtn").on("click", function () {
+           $("form .nextbtn").on("click", function () {
                 var checkval = $("form input[type=radio]:checked").val();
-
-                if (checkval == null || checkval == "") {
+       
+                if (checkval == null || checkval == ""){
                     alertdialog1(str.chooseanser);
                     return;
 
                 } else {
-                    if (checkval == "C") {
-                       // setCookie("cookiet1", checkval, 365);
-                        var cookiedata = checkCookie();
-                        if (cookiedata.indexOf(",") != -1) {
-                            var arr3 = cookiedata.split(",");
+                    if (checkval != "C") {
+                        setCookie("errorcount", 1, 0);
+                    }
+                        //setCookie("cookiet1", checkval, 365);
+                    var cookiedata = checkCookie();
+                    if (cookiedata.indexOf(",") != -1) {
+                        var arr3 = cookiedata.split(",");
 
-                            if (arr3.length > 0) {
-                                console.log(arr3);
-                                var arrti1 = arr3.shift();
-                                // alert(arr3);
-                                setCookie("cookiename", arr3, 365);
-                                location.href = "/Yamaha1/" + arr3[0];
-
-                            }
-                        } else {
-                            if (checkval == "C") {
-                                alertdialog2(str.complete);
-                            } else {
-                                alertdialog1(str.erroranser);
-                            }
+                        if (arr3.length > 0) {
+                            console.log(arr3);
+                            var arrti1 = arr3.shift();
+                            // alert(arr3);
+                            setCookie("cookiename", arr3, 365);
+                            location.href = "/Yamaha1/" + arr3[0];
 
                         }
                     } else {
-                        alertdialog1(str.erroranser);
+   
+                        alertdialog2(str.complete);
+                           
                     }
-
-
                 }
             })
             
