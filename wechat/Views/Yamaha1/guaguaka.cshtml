@@ -141,7 +141,7 @@
        
         <script type="text/javascript">
 		  
-            $("#prize").text("谢谢参与");
+          
 		    var zjl = false;
 		    var num = 0;
 		    var goon = true;
@@ -155,7 +155,7 @@
 		            color: "#a9a9a7",
 		            scratchMove: function () {
 		               
-
+		                $("#prize").text("雅马哈电子琴");
 		                num++;
 		               // alert(num);
 		                if (num > 60) {
@@ -172,7 +172,7 @@
 		        });
 		        $(".lingjiangbtn").on("click", function () {
 		            var grade = $("#prize").text();
-		            if (grade == "5元红包") {
+		            if (grade == "手机流量包") {
 		                location.href = "/Yamaha1/gethongbaosubinfo";
 		            } else {
 		                location.href = "/Yamaha1/getawardsubinfo";
