@@ -175,32 +175,34 @@
     <Content Include="Content\Xinghe1\images\inputbg.png" />
     <Content Include="Content\Xinghe1\images\subbtn.png" />
     <Content Include="Content\Xinghe1\images\thanks.jpg" />
+    <Content Include="Content\Xinghe2\css\matchgame.css" />
     <Content Include="Content\Xinghe2\css\style.css" />
     <Content Include="Content\Xinghe2\img\startbtn.png" />
     <Content Include="Content\Xinghe2\img\按钮-提交领取.png" />
-    <Content Include="Content\Xinghe2\img\按钮-提交领取灰.png" />
+    <Content Include="Content\Xinghe2\img\graysubmitbg.png" />
     <Content Include="Content\Xinghe2\img\rulebtn.png" />
-    <Content Include="Content\Xinghe2\img\游戏-未点开.png" />
+    <Content Include="Content\Xinghe2\img\default.png" />
     <Content Include="Content\Xinghe2\img\游戏-空格短彩.png" />
-    <Content Include="Content\Xinghe2\img\游戏-空格短灰.png" />
+    <Content Include="Content\Xinghe2\img\smallinputbg.png" />
     <Content Include="Content\Xinghe2\img\游戏-空格长彩.png" />
-    <Content Include="Content\Xinghe2\img\游戏-空格长灰.png" />
+    <Content Include="Content\Xinghe2\img\longinputbg.png" />
     <Content Include="Content\Xinghe2\img\gamebg.jpg" />
-    <Content Include="Content\Xinghe2\img\游戏-表单彩.png" />
-    <Content Include="Content\Xinghe2\img\游戏-表单灰.png" />
-    <Content Include="Content\Xinghe2\img\游戏-邮票1.png" />
-    <Content Include="Content\Xinghe2\img\游戏-邮票2.png" />
-    <Content Include="Content\Xinghe2\img\游戏-邮票3.png" />
-    <Content Include="Content\Xinghe2\img\游戏-邮票4.png" />
-    <Content Include="Content\Xinghe2\img\游戏-邮票5.png" />
-    <Content Include="Content\Xinghe2\img\游戏-邮票6.png" />
-    <Content Include="Content\Xinghe2\img\游戏-邮票7.png" />
+    <Content Include="Content\Xinghe2\img\form-color.png" />
+    <Content Include="Content\Xinghe2\img\form-gray.png" />
+    <Content Include="Content\Xinghe2\img\yp1.png" />
+    <Content Include="Content\Xinghe2\img\yp2.png" />
+    <Content Include="Content\Xinghe2\img\yp3.png" />
+    <Content Include="Content\Xinghe2\img\yp4.png" />
+    <Content Include="Content\Xinghe2\img\yp5.png" />
+    <Content Include="Content\Xinghe2\img\yp6.png" />
+    <Content Include="Content\Xinghe2\img\yp7.png" />
     <Content Include="Content\Xinghe2\img\rulebg.jpg" />
-    <Content Include="Content\Xinghe2\img\箭头.gif" />
+    <Content Include="Content\Xinghe2\img\jiantou.gif" />
     <Content Include="Content\Xinghe2\img\thankbg.jpg" />
     <Content Include="Content\Xinghe2\img\谢谢2-背景.jpg" />
     <Content Include="Content\Xinghe2\img\领取.png" />
     <Content Include="Content\Xinghe2\img\indexbg.jpg" />
+    <Content Include="Content\Xinghe2\js\htm5game.matchgame.js" />
     <Content Include="Content\yamaha\css\style.css" />
     <None Include="Content\yamaha\image\alltimubg.jpg.bak" />
     <Content Include="Content\yamaha\image\indexbg.gif" />
@@ -455,7 +457,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Xinghe2\js\" />
     <Folder Include="Views\Wanjing\" />
   </ItemGroup>
   <PropertyGroup>
