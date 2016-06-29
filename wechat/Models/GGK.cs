@@ -8,20 +8,24 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace wechat.Models
 {
-  public  class Updata
+   public class GGK
     {
         public int id { get; set; }
+
         [StringLength(50)]
         public string openid { get; set; }
         [StringLength(50)]
-        public string activeName { get; set; }
+        public string name { get; set; }
         [StringLength(50)]
         public string mobile { get; set; }
-        public int? fee { get; set; }
+        [StringLength(500)]
+        public string addr { get; set; }
         [StringLength(50)]
-        public string  ISP { get; set; }
+        public string prize { get; set; }
+        [StringLength(500)]
+        public string actname { get; set; }
+        public int? flag { get; set; }
         public DateTime cctime { get; set; }
 
-        
     }
 }

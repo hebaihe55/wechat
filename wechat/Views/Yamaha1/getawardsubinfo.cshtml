@@ -162,10 +162,12 @@
 
 <body>
     <div class="getawardsubinfowrap">
-        <form action="/yamaha1/thank" method="post" onsubmit="return checkform2()">
-            <input type="text" name="user" class="user" placeholder="姓名" value=""><br>
-            <input type="text" name="tel" class="tel" placeholder="手机号码" value=""><br />
-            <input type="text" name="address" class="address" placeholder="请输入地址" value=""><br />
+        <form action="/yamaha1/AddLL" method="post" onsubmit="return checkform2()">
+            @Html.AntiForgeryToken()
+             <input type="text" name="name" class="user" placeholder="姓名" value=""><br>
+            <input type="text" name="mobile" class="tel" placeholder="手机号码" value=""><br />
+            <input type="text" name="addr" class="address" placeholder="请输入地址" value=""><br />
+            <input type="hidden" value="@Session["prize"].ToString()" name="prize" />
             <div class="yzmwrap"><input type="text" class="yzm" name="yzm" value=""/><input type="button" style="background:url(/Content/yamaha/image/yzmbtn.png) no-repeat" class="yzmbtn" onclick="sendmassage()"/></div>
             <input type="submit" value="">
             <input type="hidden" id="xcode" value="" />
