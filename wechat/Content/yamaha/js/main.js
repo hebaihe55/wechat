@@ -98,7 +98,6 @@ function checkCookie() {
     if (arr3key != null && arr3key != "") {
         //alert(arr3key);
         return arr3key;
-
     }
 }
 

@@ -15,6 +15,7 @@
     <meta name="description" content="">
     <link href="~/Content/Xinghe2/css/style.css" rel="stylesheet" />
     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script src="~/Content/Xinghe2/js/main.js"></script>
     <script>
         $(function () {
             $(".back").hide();
@@ -69,7 +70,7 @@
                     num++;
                    
                     if (num == 9) {
-                        a = a.sort(function (x, y) { return x - y; });
+                        a = a.sort(function (x, y) { return x - y; });//对数组进行升序排序
                       
                         var d = new Object();
                         function Record(e, p) {
@@ -96,7 +97,8 @@
 
                                     $(".showinfo form input[type=submit]").css({ "background": "url('/Content/Xinghe2/img/colorsubmit.png')"})
                                     $(".showinfo form input[type=submit]").attr("disabled", false);
-                                    alert("恭喜您获得10-20M流量");
+                                    alertdialog1(str.getliuliang);
+                                    $(".showinfo form .reward").val("二等奖");
 
                                 } else if (k == 4) {
                                     $(".playwrap .showinfo").css({
@@ -104,7 +106,8 @@
                                     })
                                     $(".showinfo form input[type=submit]").css({ "background": "url('/Content/Xinghe2/img/colorsubmit.png')"})
                                     $(".showinfo form input[type=submit]").attr("disabled", false);
-                                    alert("恭喜您获得口乐清漱口水20元抵扣券");
+                                    alertdialog1(str.get20dikouquan);
+                                    $(".showinfo form .reward").val("一等奖");
                                 }
                             }
                         }
@@ -126,7 +129,7 @@
 </head>
 <body>
     <div class="playwrap">
-        <input type="hidden" value="2" class="val"/>
+        <input type="hidden" value="1" class="val"/>
         <div id="cards">
             <div class="card">
                 <div class="front"><img src="~/Content/Xinghe2/img/default.png"/></div>
@@ -167,10 +170,10 @@
         </div>
 
         <div class="showinfo">
-           <form action="" method="post">
-               <input type="text" name="user" class="user" /><br />
-               <input type="text" name="tel" class="tel"/><br />
-               <input type="text" name="reward" class="reward"/><br />
+           <form action="" method="post" onsubmit="return checkform()">
+               <input type="text" name="user" class="user" placeholder="用户名"/><br />
+               <input type="number" name="tel" class="tel" placeholder="电话号码"/><br />
+               <input type="text" name="reward" class="reward" disabled/><br />
                <input type="submit" value="" class="submit" disabled="disabled"/>
            </form>
         </div>

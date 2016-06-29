@@ -175,7 +175,6 @@
     <Content Include="Content\Xinghe1\images\inputbg.png" />
     <Content Include="Content\Xinghe1\images\subbtn.png" />
     <Content Include="Content\Xinghe1\images\thanks.jpg" />
-    <Content Include="Content\Xinghe2\css\matchgame.css" />
     <Content Include="Content\Xinghe2\css\style.css" />
     <Content Include="Content\Xinghe2\img\colorsubmit.png" />
     <Content Include="Content\Xinghe2\img\startbtn.png" />
@@ -200,9 +199,9 @@
     <Content Include="Content\Xinghe2\img\jiantou.gif" />
     <Content Include="Content\Xinghe2\img\thankbg.jpg" />
     <Content Include="Content\Xinghe2\img\thank2.jpg" />
-    <Content Include="Content\Xinghe2\img\领取.png" />
+    <Content Include="Content\Xinghe2\img\lingqu.png" />
     <Content Include="Content\Xinghe2\img\indexbg.jpg" />
-    <Content Include="Content\Xinghe2\js\htm5game.matchgame.js" />
+    <Content Include="Content\Xinghe2\js\main.js" />
     <Content Include="Content\yamaha\css\style.css" />
     <None Include="Content\yamaha\image\alltimubg.jpg.bak" />
     <Content Include="Content\yamaha\image\indexbg.gif" />
