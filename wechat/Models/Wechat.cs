@@ -153,11 +153,15 @@ namespace wechat.Models
 
     public class WechatDBContext : DbContext
     {
+        public WechatDBContext()
+            : base("name=connStr")
+        { }
         public DbSet<WechatUser> WechatUsers { get; set; }
         public DbSet<ActiveUpImg> ActiveUpImgs { get; set; }
         public DbSet<QuestionGuiTian> QuestionGuiTians { get; set; }
         public DbSet<Question> Question { get; set; }
         public DbSet<ImgActive> ImgActives        { get; set; }
         public DbSet<Updata> Updatas { get; set; }
+        public DbSet<GGK> GGKs { get; set; }
     }
 }

@@ -4,9 +4,10 @@ using System.Web;
 using System.Net;
 using System.IO;
 using System.Text;
-using System.Net.Security;    
+using System.Net.Security;
 using System.Security.Authentication;
 using System.Security.Cryptography.X509Certificates;
+using System.Collections.Specialized;
 
 namespace wechat.Utils
 {
@@ -15,32 +16,21 @@ namespace wechat.Utils
     /// </summary>
     public class HttpService
     {
-        public static  string sendLTSms(string url,string indata)
+        public static  string sendLTSms(string url, NameValueCollection PostVars)
         {
-          
-        
-            string outdata = "";
 
-            HttpWebRequest myHttpWebRequest = (HttpWebRequest)WebRequest.Create(url);
-            myHttpWebRequest.ContentType = "application/x-www-form-urlencoded";
-            myHttpWebRequest.Method = "POST";
+            WebClient WebClientObj = new WebClient();
+         
+         
 
-            Stream myRequestStream = myHttpWebRequest.GetRequestStream();
+            
 
-            StreamWriter myStreamWriter = new StreamWriter(myRequestStream, Encoding.UTF8);
-            myStreamWriter.Write(indata);
-            myStreamWriter.Flush();
-            myStreamWriter.Close();
-            myRequestStream.Close();
 
-            HttpWebResponse myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse();
-            Stream myResponseStream = myHttpWebResponse.GetResponseStream();
-            StreamReader myStreamReader = new StreamReader(myResponseStream, Encoding.UTF8);
-            outdata = myStreamReader.ReadToEnd();
+            //WebClientObj.
 
-            myStreamReader.Close();
-            myResponseStream.Close();
-            return outdata;
+            byte[] byRemoteInfo = WebClientObj.UploadValues(url, "POST", PostVars);
+            //下面都没用啦，就上面一句话就可以了,这是获取返回信息
+            return System.Text.Encoding.Default.GetString(byRemoteInfo);
         }
         public static bool CheckValidationResult(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors errors)
         {

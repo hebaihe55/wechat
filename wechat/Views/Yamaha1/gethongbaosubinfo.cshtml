@@ -41,10 +41,12 @@
 
 <body>
     <div class="gethongbaosubinfowrap">
-        <form action="/yamaha1/thank" method="post" onsubmit="return checkform()">
-            <input type="text" name="user" class="user" placeholder="姓名"><br>
-            <input type="text" name="tel" class="tel" placeholder="电话号码">
-            <input type="submit" value="">
+        <form action="/yamaha1/AddLL" method="post" onsubmit="return checkform()">
+            @Html.AntiForgeryToken()
+              <input type="text" name="name" class="user" placeholder="姓名"><br>
+            <input type="text" name="mobile" class="tel" placeholder="电话号码">
+           <input type="hidden" value="@Session["prize"].ToString()" name="prize"/>
+             <input type="submit" value="">
         </form>
     </div>
 </body>

@@ -22,6 +22,23 @@ namespace wechat.Utils
             TimeSpan toNow = new TimeSpan(lTime); return dtStart.Add(toNow);
         }
 
+        private static  Random rd;
+
+
+        /// <summary>
+        /// 获取1-100随机数
+        /// </summary>
+        /// <returns></returns>
+        public static int GetRandom()
+        {
+          
+            if (rd == null)
+            {
+                rd = new Random();
+            }
+
+            return rd.Next(1, 100);
+        }
 
 
         /// <summary>
