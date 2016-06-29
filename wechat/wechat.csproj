@@ -199,7 +199,7 @@
     <Content Include="Content\Xinghe2\img\rulebg.jpg" />
     <Content Include="Content\Xinghe2\img\jiantou.gif" />
     <Content Include="Content\Xinghe2\img\thankbg.jpg" />
-    <Content Include="Content\Xinghe2\img\谢谢2-背景.jpg" />
+    <Content Include="Content\Xinghe2\img\thank2.jpg" />
     <Content Include="Content\Xinghe2\img\领取.png" />
     <Content Include="Content\Xinghe2\img\indexbg.jpg" />
     <Content Include="Content\Xinghe2\js\htm5game.matchgame.js" />
@@ -449,6 +449,7 @@
     <Content Include="Views\Xinghe2\thank.cshtml" />
     <Content Include="Views\Xinghe2\gameplay.cshtml" />
     <Content Include="Views\Xinghe2\getawardliuliang.cshtml" />
+    <Content Include="Views\Xinghe2\thank2.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

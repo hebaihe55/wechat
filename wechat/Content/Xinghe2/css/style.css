@@ -43,6 +43,12 @@ a:hover{
     border:1px solid white;
     background:url(../img/thankbg.jpg) no-repeat;
 }
+.thank2wrap{
+    width:750px;
+    height:1206px;
+    border:1px solid white;
+    background:url(../img/thank2.jpg) no-repeat;
+}
 .playwrap{
     width:750px;
     height:1206px;
@@ -81,4 +87,4 @@ a:hover{
 .showinfo form .reward{background:url(../img/smallinputbg.png) no-repeat white;width:261px;height:50px;border:none;outline:none;margin:18px 0 0 224px;border-radius:25px;font-size:28px;text-indent:15px; }
 .showinfo form .tel{background:url(../img/longinputbg.png) no-repeat white;width:414px;height:50px;border:none;outline:none;margin:5px 0 0 191px;border-radius:25px;font-size:28px;text-indent:15px;}
 .showinfo form{width:633px;height:auto;margin:37px auto 0 auto;}
-.showinfo form input[type=submit]{background:url(../img/submitbg.png);width:340px;height:96px;margin:10px auto 0 auto;display:block;border:none;outline:none;}
+.showinfo form input[type=submit]{background:url(../img/graysubmitbg.png) no-repeat;width:340px;height:96px;margin:10px auto 0 auto;display:block;border:none;outline:none;}
