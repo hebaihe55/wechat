@@ -205,6 +205,36 @@ var alertdialog2 = function (text) {
     return;
 
 }
+var alertdialog3 = function (text) {
+    var clientWidth = $(window).width();
+    var clienHeight = $(window).height();
+    var alerttemplate1 = '<div class="alertParent"><div class="text"><span>' + text + '</span></div><input type="button" value="确定" onclick="sure3()" class="surebtn"/></div>'
+    $("body").append(str.zhezhaotemplate);
+    $("body").append(alerttemplate1);
+
+    $(".alertParent").css({
+        "top": (clienHeight / 2 - 400) + "px",
+        "left": (clientWidth / 2 - 224) + "px",
+        "z-index": "3",
+    });
+    return;
+
+}
+var alertdialog4 = function (text) {
+    var clientWidth = $(window).width();
+    var clienHeight = $(window).height();
+    var alerttemplate1 = '<div class="alertParent"><div class="text"><span>' + text + '</span></div><input type="button" value="确定" onclick="sure4()" class="surebtn"/></div>'
+    $("body").append(str.zhezhaotemplate);
+    $("body").append(alerttemplate1);
+
+    $(".alertParent").css({
+        "top": (clienHeight / 2 - 400) + "px",
+        "left": (clientWidth / 2 - 224) + "px",
+        "z-index": "3",
+    });
+    return;
+
+}
 var sure1 = function () {
     $(".alertParent").hide();
     $(".zhezhao").hide();
@@ -216,16 +246,25 @@ var sure2 = function () {
     var errorcookie = getCookie("errorcount");
     if (errorcookie == 1) {
        
-        alertdialog1(str.erroranser);
-        setInterval(function () { location.href = "/Yamaha1/thank"; }, 3000);
+        alertdialog3(str.erroranser);
+       
         
     } else if (errorcookie==undefined) {
-        alertdialog1(str.sureanser);
-        setInterval(function () { location.href = "/Yamaha1/guaguaka"; }, 3000);
-       
+        alertdialog4(str.sureanser);
     }else{}
     
 }
+var sure3 = function () {
+    $(".alertParent").hide();
+    $(".zhezhao").hide();
+    location.href = "/Yamaha1/thank";
+}
+var sure4 = function () {
+    $(".alertParent").hide();
+    $(".zhezhao").hide();
+    location.href = "/Yamaha1/guaguaka";
+}
+
 //信息提交信息验证
 var checkform= function(){
     var user = $("form .user").val();
