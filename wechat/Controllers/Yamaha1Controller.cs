@@ -11,17 +11,80 @@ namespace wechat.Controllers
     {
         private wechat.Models.WechatDBContext db = new Models.WechatDBContext();
         // GET: Yamaha1
-        public ActionResult Index()
+        public ActionResult Index(string code)
         {
-            HttpCookie hc = Request.Cookies["wechat"];
+            Utils.WeHelper.appid = "wx52d041442fbddbec";
+            Utils.WeHelper.secret = "5041fed711106842c0f84b75f84bacea";
+            Utils.WeHelper.url = Request.Url.ToString();
+            Utils.WeHelper.timestamp = Utils.Utils.ConvertDateTimeInt(DateTime.Now).ToString();
+            Utils.WeHelper.noncestr = "yamaha" + DateTime.Now.ToString("yyyyMMddhhmmssfff");
 
-            if (hc == null)
+            if (!string.IsNullOrWhiteSpace(code))
             {
-                hc = new HttpCookie("wechat");
-                hc.Value = DateTime.Now.ToString("yyyyMMddHHmmssfff");
-                hc.Expires = DateTime.Now.AddDays(365);
-                Response.AppendCookie(hc);
+                Utils.WeHelper.code = code;
+
+                string strjson = Utils.WeHelper.GetUserInfo();
+
+                if (strjson.IndexOf("errcode") > 0)
+                {
+                    Response.Redirect("https://open.weixin.qq.com/connect/oauth2/authorize?appid=" + Utils.WeHelper.appid + "&redirect_uri=http://test.cjoy.cn/yamaha1/index&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect");
+                }
+
+
+                //string strjson = "{\"openid\":\"oQOyyv - MdUWSgP8_Smoh2S_6 - 1I0\",\"nickname\":\"白鹤\",\"sex\":1,\"language\":\"zh_CN\",\"city\":\"长宁\",\"province\":\"上海\",\"country\":\"中国\",\"headimgurl\":\"http://wx.qlogo.cn/mmopen/78EkX665csCmkBmDBDSYTDCmZdvlMDqCX7wYTLcHeeKNeLicSS5ic2fDAYpeTqicaqhF8Iw9Rp9d6hegynMHC7tPMWLRnqMvNicn/0\",\"privilege\":[]}";
+                Utils.Log.Info("userin", strjson);
+                Models.WechatUser jd = LitJson.JsonMapper.ToObject<Models.WechatUser>(strjson);
+
+                jd.cctime = DateTime.Now;
+                jd.sourceid = "gh_971744a1b413";
+
+               string jons= Utils.WeHelper.GetUserInfo(jd.openid);
+
+                Utils.Log.Info("jons", jons);
+
+                LitJson.JsonData jd1 = LitJson.JsonMapper.ToObject(jons);
+
+                if (jd1["subscribe"].ToString() != "1")
+                {
+                    return RedirectToAction("thanknobutton");
+
+                }
+
+
+
+
+                try
+                {
+                    var wu = db.WechatUsers.SingleOrDefault(w => w.openid == jd.openid);
+
+                    if (wu == null)
+                    {
+                        db.WechatUsers.Add(jd);
+
+                        db.SaveChanges();
+
+                        System.Web.HttpContext.Current.Session["openid"] = jd.openid;
+                    }
+                    else
+                    {
+                        System.Web.HttpContext.Current.Session["openid"] = wu.openid;
+                    }
+
+
+                }
+                catch (Exception ex)
+                {
+
+                    Utils.Log.Error("userAdd", ex.Message);
+                }
             }
+            else
+            {
+                Response.Redirect("https://open.weixin.qq.com/connect/oauth2/authorize?appid=" + Utils.WeHelper.appid + "&redirect_uri=http://test.cjoy.cn/yamaha1/index&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect");
+            }
+            //AppID(应用ID)wxa25b827fd42bdf7f
+            //AppSecret(应用密钥)00639e0733e2c80d822ccd6a3cbdac51
+
             return View();
         }
 
@@ -118,15 +181,15 @@ namespace wechat.Controllers
         {
             int i = Utils.Utils.GetRandom();
             string prize = "";
-            if (i > 99)
+            if (i > 1000)
             {
                 prize = "雅马哈电子琴";
             }
-            else if (i > 95 && i <= 99)
+            else if (i > 950 && i <= 990)
             {
                 prize = "马克西姆签名专辑";
             }
-            else if (i > 90 && i <= 95)
+            else if (i > 900 && i <= 950)
             {
                 prize = "雅马哈耳机";
             }
@@ -162,13 +225,27 @@ namespace wechat.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult AddLL(Models.GGK ggk)
         {
-            HttpCookie hc = Request.Cookies["wechat"];
+           
             ggk.actname = "雅马哈看视频赢大奖";
             ggk.flag = 0;
-            ggk.openid = hc.Value;
+            ggk.openid = Session["openid"].ToString();
             ggk.cctime = DateTime.Now;
 
-            
+            HttpCookie hc = Request.Cookies["cookiename"];
+
+            Models.Question Q = new Models.Question();
+
+            Q.actname = ggk.actname;
+            Q.openid = ggk.openid;
+            Q.name = ggk.name;
+            Q.mobile = ggk.mobile;
+            Q.addr = ggk.addr;
+            Q.cctime = ggk.cctime;
+            Q.answer = hc.Value;
+
+
+
+
 
 
 
@@ -206,6 +283,10 @@ namespace wechat.Controllers
                 db.GGKs.Add(ggk);
                 int i = db.SaveChanges();
 
+                db.Question.Add(Q);
+
+                db.SaveChanges();
+
                 if (ggk.prize == "手机流量包")
                 {
 
@@ -238,7 +319,7 @@ namespace wechat.Controllers
 
 
 
-            return View("thank");
+            return RedirectToAction("thank");
         }
         
     }
