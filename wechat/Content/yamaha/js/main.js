@@ -126,7 +126,7 @@ function getArrayItems(arr, num) {
     return return_array;
 }
 var str = {
-    erroranser: "答题错误,请再接再励,邀请朋友来玩,即可再玩一次",
+    erroranser: "答题错误,再接再厉，分享朋友即可再玩一次",
     sureanser:"恭喜全部答对",
     inputname: "请输入您的姓名",
     leng: "长度必须小于10位",
