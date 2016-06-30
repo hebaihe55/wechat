@@ -1,0 +1,16 @@
+﻿*{
+    padding:0;
+    margin:0;
+}
+.subinfowrap{
+    width:750px;
+    height:1206px;
+    border:1px solid white;
+    background:url(../img/subinfo.jpg) no-repeat;
+}
+.thankWrap{
+    width:750px;
+    height:1206px;
+    border:1px solid white;
+    background:url(../img/thank.jpg) no-repeat;
+}
