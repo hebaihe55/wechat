@@ -50,7 +50,7 @@ form .nextbtn{display:block;position: absolute;width: 403px;height: 161px;backgr
 .getawardsubinfowrap form input[type=submit]{display:block;width: 403px;height:161px;background: url("../image/subinfobtn.png") no-repeat;border: none;outline: none;margin: 0 auto;}
 .getawardsubinfowrap form .yzmwrap{width:100%;height:83px;}
 .getawardsubinfowrap form .yzmwrap .yzmbtn{width:213px;height:83px;vertical-align:middle;border:none;outline:none;}
-
+.guanzhuwrap{width:750px;height:1206px;border:1px solid white;}
 
 
 .zhezhao {
