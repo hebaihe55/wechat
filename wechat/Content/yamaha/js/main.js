@@ -238,20 +238,22 @@ var alertdialog4 = function (text) {
 var sure1 = function () {
     $(".alertParent").hide();
     $(".zhezhao").hide();
+    alertdialog3(str.erroranser);
 }
 
 var sure2 = function () {
     $(".alertParent").hide();
     $(".zhezhao").hide();
-    var errorcookie = getCookie("errorcount");
-    if (errorcookie == 1) {
+    //var errorcookie = getCookie("errorcount");
+    //if (errorcookie == 1) {
        
-        alertdialog3(str.erroranser);
+    //    alertdialog3(str.erroranser);
        
         
-    } else if (errorcookie==undefined) {
-        alertdialog4(str.sureanser);
-    }else{}
+    //} else if (errorcookie==undefined) {
+    //    alertdialog4(str.sureanser);
+    //}else{}
+    alertdialog4(str.sureanser);
     
 }
 var sure3 = function () {
