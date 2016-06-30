@@ -152,7 +152,10 @@ namespace wechat.Utils
         }
 
 
-
+        /// <summary>
+        /// 拉取用户信息
+        /// </summary>
+        /// <returns></returns>
         public static string GetUserInfo()
         {
             string url = "https://api.weixin.qq.com/sns/userinfo?access_token="+ Caccess_token + "&openid="+openid+"&lang=zh_CN";
@@ -160,6 +163,23 @@ namespace wechat.Utils
             Log.Info("GetUserInfo", result);
             return result;
         }
+
+        /// <summary>
+        /// 拉取用户信息
+        /// </summary>
+        /// <returns></returns>
+        public static string GetUserInfo(string openid)
+        {
+            string url = "https://api.weixin.qq.com/cgi-bin/user/info?access_token=" + Access_token + "&openid=" + openid + "&lang=zh_CN";
+                        
+
+
+            string result = HttpService.Get(url);
+            Log.Info("GetUserInfo", result);
+            return result;
+        }
+
+
 
         /// <summary>
         /// jsticket票据
