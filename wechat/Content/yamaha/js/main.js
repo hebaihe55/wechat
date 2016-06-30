@@ -126,7 +126,7 @@ function getArrayItems(arr, num) {
     return return_array;
 }
 var str = {
-    erroranser: "请再接再励,邀请朋友来玩,即可再玩一次",
+    erroranser: "答题错误,请再接再励,邀请朋友来玩,即可再玩一次",
     sureanser:"恭喜全部答对",
     inputname: "请输入您的姓名",
     leng: "长度必须小于10位",
@@ -238,7 +238,7 @@ var alertdialog4 = function (text) {
 var sure1 = function () {
     $(".alertParent").hide();
     $(".zhezhao").hide();
-    alertdialog3(str.erroranser);
+   
 }
 
 var sure2 = function () {

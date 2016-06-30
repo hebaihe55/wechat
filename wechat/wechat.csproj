@@ -158,6 +158,10 @@
     <Content Include="Content\Mingzhi1\image\fengmian.jpg" />
     <Content Include="Content\Mingzhi1\image\like1.png" />
     <Content Include="Content\Mingzhi1\image\like2.png" />
+    <Content Include="Content\sanyueyishidang\css\style.css" />
+    <Content Include="Content\sanyueyishidang\img\submitbtn.jpg" />
+    <Content Include="Content\sanyueyishidang\img\subinfo.jpg" />
+    <Content Include="Content\sanyueyishidang\img\thank.jpg" />
     <Content Include="Content\Wanjing1\css\style.css" />
     <Content Include="Content\Wanjing1\img\anniu.jpg" />
     <Content Include="Content\Wanjing1\img\buttonbg.png" />
@@ -356,6 +360,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KamidaController.cs" />
     <Compile Include="Controllers\Meiji1Controller.cs" />
+    <Compile Include="Controllers\SanyueyishidangController.cs" />
     <Compile Include="Controllers\Wanjing1Controller.cs" />
     <Compile Include="Controllers\WanJingListController.cs" />
     <Compile Include="Controllers\WechatController.cs" />
@@ -450,6 +455,8 @@
     <Content Include="Views\Xinghe2\gameplay.cshtml" />
     <Content Include="Views\Xinghe2\getawardliuliang.cshtml" />
     <Content Include="Views\Xinghe2\thank2.cshtml" />
+    <Content Include="Views\Sanyueyishidan\subinfo.cshtml" />
+    <Content Include="Views\Sanyueyishidan\thank.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
