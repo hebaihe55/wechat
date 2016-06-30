@@ -221,6 +221,10 @@ namespace wechat.Controllers
         {
             return View();
         }
+        public ActionResult guanzhu()
+        {
+            return View();
+        }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult AddLL(Models.GGK ggk)
