@@ -11,8 +11,11 @@ namespace wechat.Controllers
     {
         private wechat.Models.WechatDBContext db = new Models.WechatDBContext();
         // GET: Yamaha1
-        public ActionResult Index(string code)
+
+
+        public ActionResult Login(string code)
         {
+
             Utils.WeHelper.appid = "wx52d041442fbddbec";
             Utils.WeHelper.secret = "5041fed711106842c0f84b75f84bacea";
             Utils.WeHelper.url = Request.Url.ToString();
@@ -27,7 +30,7 @@ namespace wechat.Controllers
 
                 if (strjson.IndexOf("errcode") > 0)
                 {
-                    Response.Redirect("https://open.weixin.qq.com/connect/oauth2/authorize?appid=" + Utils.WeHelper.appid + "&redirect_uri=http://test.cjoy.cn/yamaha1/index&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect");
+                    Response.Redirect("https://open.weixin.qq.com/connect/oauth2/authorize?appid=" + Utils.WeHelper.appid + "&redirect_uri=http://test.cjoy.cn/yamaha1/Login&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect");
                 }
 
 
@@ -38,7 +41,7 @@ namespace wechat.Controllers
                 jd.cctime = DateTime.Now;
                 jd.sourceid = "gh_971744a1b413";
 
-               string jons= Utils.WeHelper.GetUserInfo(jd.openid);
+                string jons = Utils.WeHelper.GetUserInfo(jd.openid);
 
                 Utils.Log.Info("jons", jons);
 
@@ -46,7 +49,7 @@ namespace wechat.Controllers
 
                 if (jd1["subscribe"].ToString() != "1")
                 {
-                    return RedirectToAction("thanknobutton");
+                    return RedirectToAction("guanzhu");
 
                 }
 
@@ -80,11 +83,24 @@ namespace wechat.Controllers
             }
             else
             {
-                Response.Redirect("https://open.weixin.qq.com/connect/oauth2/authorize?appid=" + Utils.WeHelper.appid + "&redirect_uri=http://test.cjoy.cn/yamaha1/index&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect");
+                Response.Redirect("https://open.weixin.qq.com/connect/oauth2/authorize?appid=" + Utils.WeHelper.appid + "&redirect_uri=http://test.cjoy.cn/yamaha1/Login&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect");
             }
             //AppID(应用ID)wxa25b827fd42bdf7f
             //AppSecret(应用密钥)00639e0733e2c80d822ccd6a3cbdac51
 
+            return RedirectToAction("index");
+
+        }
+
+
+
+
+
+
+
+        public ActionResult Index()
+        {
+           
             return View();
         }
 
