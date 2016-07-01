@@ -158,6 +158,7 @@
     <Content Include="Content\Mingzhi1\image\fengmian.jpg" />
     <Content Include="Content\Mingzhi1\image\like1.png" />
     <Content Include="Content\Mingzhi1\image\like2.png" />
+    <Content Include="Content\Mingzhi1\mingzhi1.js" />
     <Content Include="Content\Sanyueyishidangblue\css\style.css" />
     <Content Include="Content\Sanyueyishidangblue\img\inputbg.png" />
     <Content Include="Content\Sanyueyishidangblue\img\submitbtn.png" />
