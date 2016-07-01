@@ -456,8 +456,8 @@
     <Content Include="Views\Xinghe2\gameplay.cshtml" />
     <Content Include="Views\Xinghe2\getawardliuliang.cshtml" />
     <Content Include="Views\Xinghe2\thank2.cshtml" />
-    <Content Include="Views\Sanyueyishidan\subinfo.cshtml" />
-    <Content Include="Views\Sanyueyishidan\thank.cshtml" />
+    <Content Include="Views\Sanyueyishidang\subinfo.cshtml" />
+    <Content Include="Views\Sanyueyishidang\thank.cshtml" />
     <Content Include="Views\Yamaha1\guanzhu.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
