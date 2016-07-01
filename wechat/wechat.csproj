@@ -158,9 +158,15 @@
     <Content Include="Content\Mingzhi1\image\fengmian.jpg" />
     <Content Include="Content\Mingzhi1\image\like1.png" />
     <Content Include="Content\Mingzhi1\image\like2.png" />
+    <Content Include="Content\Sanyueyishidangblue\css\style.css" />
+    <Content Include="Content\Sanyueyishidangblue\img\inputbg.png" />
+    <Content Include="Content\Sanyueyishidangblue\img\submitbtn.png" />
+    <Content Include="Content\Sanyueyishidangblue\img\thankbg.jpg" />
+    <Content Include="Content\Sanyueyishidangblue\img\subinfobg.jpg" />
     <Content Include="Content\sanyueyishidang\css\style.css" />
+    <Content Include="Content\sanyueyishidang\img\inputbg.png" />
+    <Content Include="Content\sanyueyishidang\img\subinfobg.jpg" />
     <Content Include="Content\sanyueyishidang\img\submitbtn.jpg" />
-    <Content Include="Content\sanyueyishidang\img\subinfo.jpg" />
     <Content Include="Content\sanyueyishidang\img\thank.jpg" />
     <Content Include="Content\Wanjing1\css\style.css" />
     <Content Include="Content\Wanjing1\img\anniu.jpg" />
@@ -361,6 +367,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KamidaController.cs" />
     <Compile Include="Controllers\Meiji1Controller.cs" />
+    <Compile Include="Controllers\SanyueyishidangblueController.cs" />
     <Compile Include="Controllers\SanyueyishidangController.cs" />
     <Compile Include="Controllers\Wanjing1Controller.cs" />
     <Compile Include="Controllers\WanJingListController.cs" />
@@ -459,6 +466,8 @@
     <Content Include="Views\Sanyueyishidang\subinfo.cshtml" />
     <Content Include="Views\Sanyueyishidang\thank.cshtml" />
     <Content Include="Views\Yamaha1\guanzhu.cshtml" />
+    <Content Include="Views\Sanyueyishidangblue\subinfo.cshtml" />
+    <Content Include="Views\Sanyueyishidangblue\thank.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -468,7 +477,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Wanjing\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

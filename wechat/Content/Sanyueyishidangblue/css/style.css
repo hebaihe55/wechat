@@ -23,15 +23,15 @@
    
 }
 .subinfowrap form input[type=text]{
-    width:574px;
+    width:568px;
     height:79px;
-    outline:none;
     border:none;
+    outline:none;
     text-indent:15px;
     font-size:30px;
     color:black;
-    margin:10px 0 0 18px;
+    margin:10px 0 0 30px;
     background:url(../img/inputbg.png) no-repeat;
     
 }
-.subinfowrap form .submit{width:561px;height:86px;background:url(../img/submitbtn.jpg) no-repeat;margin:32px auto 0 19px;}
+.subinfowrap form .submit{width:575px;height:104px;background:url(../img/submitbtn.png) no-repeat;margin:32px auto 0 19px;border:none;outline:none;}
