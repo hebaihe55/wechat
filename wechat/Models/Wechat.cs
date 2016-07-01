@@ -163,5 +163,7 @@ namespace wechat.Models
         public DbSet<ImgActive> ImgActives        { get; set; }
         public DbSet<Updata> Updatas { get; set; }
         public DbSet<GGK> GGKs { get; set; }
+        public DbSet<WechatShare> WechatShares { get; set; }
+        
     }
 }
