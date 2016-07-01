@@ -17,7 +17,7 @@ namespace wechat.Controllers
         // GET: WanJingList
         public ActionResult Index()
         {
-            return View(db.Updatas.Where(w=>w.activeName.Equals("丸井活动1")).ToList());
+            return View(db.GGKs.Where(w=>w.actname.Contains("暑假大抽奖")).ToList());
         }
         
         protected override void Dispose(bool disposing)
