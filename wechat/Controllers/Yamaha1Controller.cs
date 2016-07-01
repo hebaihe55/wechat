@@ -52,10 +52,6 @@ namespace wechat.Controllers
                     return RedirectToAction("guanzhu");
 
                 }
-
-
-
-
                 try
                 {
                     var wu = db.WechatUsers.SingleOrDefault(w => w.openid == jd.openid);
@@ -140,6 +136,7 @@ namespace wechat.Controllers
         {
             return View();
         }
+
         public ActionResult t8()
         {
             return View();
@@ -199,19 +196,81 @@ namespace wechat.Controllers
             string prize = "";
             if (i > 1000)
             {
-                prize = "雅马哈电子琴";
+                var jj = db.GGKs.Where(w => w.prize.Equals("雅马哈电子琴"));
+
+
+                if (jj.Count() < 3)
+                {
+                    prize = "雅马哈电子琴";
+                }
+                else
+                {
+                    prize = "谢谢参与";
+                }
+                
             }
             else if (i > 950 && i <= 990)
             {
-                prize = "马克西姆签名专辑";
+
+                var jj = db.GGKs.Where(w => w.prize.Equals("马克西姆签名专辑"));
+
+
+                if (jj.Count() < 10)
+                {
+                    prize = "马克西姆签名专辑";
+                }
+                else
+                {
+                    prize = "谢谢参与";
+                }
+
+
+               
             }
             else if (i > 900 && i <= 950)
             {
-                prize = "雅马哈耳机";
+
+
+               var jj = db.GGKs.Where(w => w.prize.Equals("雅马哈耳机"));
+              
+
+                if (jj.Count() < 50)
+                {
+                    prize = "雅马哈耳机";
+                }
+                else
+                {
+                    prize = "谢谢参与";
+                }
+                
             }
             else if (i > 5 && i <= 90)
             {
-                prize = "手机流量包";
+
+                //活动为2000份，每天发放142份
+                var jj = db.GGKs.Where(w => w.prize.Equals("手机流量包") );
+                var ii = db.GGKs.Where(w => w.prize.Equals("手机流量包") && w.cctime.Day.Equals(DateTime.Now.Day));
+
+                if (jj.Count() < 2000 && ii.Count() < 142)
+                {
+                    string openid = Session["openid"].ToString();
+
+                    //参加过为谢谢参与
+                    if (db.GGKs.Where(w => w.prize.Equals("手机流量包") && w.openid.Equals(openid)).Count() != 0)
+                    {
+                        prize = "谢谢参与";
+                    }
+                    else
+                    {
+                        prize = "手机流量包";
+                    }
+                }
+                else
+                {
+                    prize = "谢谢参与";
+                }
+
+
             }
             else
             {
@@ -283,7 +342,7 @@ namespace wechat.Controllers
 
             if (ud.ISP == "移动")
             {
-                ud.fee = 10;
+                ud.fee = 30;
             }
             else if (ud.ISP == "联通")
             {
@@ -291,7 +350,7 @@ namespace wechat.Controllers
             }
             else if (ud.ISP == "电信")
             {
-                ud.fee = 10;
+                ud.fee = 30;
             }
             else
             {
