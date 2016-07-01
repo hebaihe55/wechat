@@ -13,18 +13,19 @@
     <meta name="format-detection" content="telephone=no">
     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
     <link rel="stylesheet" href="/Content/Mingzhi1/css/style.css">
-
+    <script src="~/Content/Mingzhi1/mingzhi1.js"></script>
 </head>
 <body>
     <div class="qklnextwrap">
+        
+    </div>
+    <div class="qklnextformwrap">
         <form class="form" action="/meiji1/gifts" method="get">
             <textarea rows="4" cols="33" placeholder="" class="text">@ViewBag.title</textarea>
-            <input type="submit" class="gongxibtn" value=""/>
-         </form>
-
-      
+            <input type="submit" class="gongxibtn" value="" />
+        </form>
     </div>
-    <div class="Leftscqkl"><img src="@ViewBag.img1" style="width:100%;height:auto" class="dragme"/></div>
+    <div class="Leftscqkl"><img src="~/Content/Mingzhi1/image/300.jpg" style="width:100%;height:auto" class="dragme"/></div>
     <div class="Rightscqkl"><img src="@ViewBag.img2" style="width:100%;height:auto" class="dragme"/></div>
     <div class="resetphoto"><a href="/meiji1/b4"><img src="~/Content/Mingzhi1/image/resetphoto.png" alt="重新上传" /></a></div>
 </body>
