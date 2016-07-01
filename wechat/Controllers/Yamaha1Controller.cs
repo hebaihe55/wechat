@@ -91,13 +91,51 @@ namespace wechat.Controllers
 
 
 
+        [HttpPost]
+        public void shared()
+        {
+            Models.WechatShare we = new Models.WechatShare();
+            we.openid = Session["openid"].ToString();
 
+            we.shareType = "分享";
+            we.actName = "雅马哈看视频赢大奖";
+            we.cctime = DateTime.Now;
+
+
+            try
+            {
+                db.WechatShares.Add(we);
+                db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+
+
+
+                Utils.Log.Error("shared", ex.Message);
+            }
+
+        }
 
 
         public ActionResult Index()
         {
-           
-            return View();
+         
+            string openid= Session["openid"].ToString();
+
+         int i =  db.WechatShares.Where(w => w.openid.Equals(openid) && w.shareType.Equals("分享")).Count();
+            int j = db.WechatShares.Where(w => w.openid.Equals(openid) && w.shareType.Equals("参加")).Count();
+
+            if (i + 1 > j)
+            {
+
+
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("thank");
+            }
         }
 
         public ActionResult rule()
@@ -173,6 +211,27 @@ namespace wechat.Controllers
 
         public ActionResult thank()
         {
+            Models.WechatShare we = new Models.WechatShare();
+            we.openid = Session["openid"].ToString();
+
+            we.shareType = "参加";
+            we.actName = "雅马哈看视频赢大奖";
+            we.cctime = DateTime.Now;
+
+
+            try
+            {
+                db.WechatShares.Add(we);
+                db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+
+
+
+                Utils.Log.Error("shared", ex.Message);
+            }
+
             Utils.WeHelper.appid = "wx52d041442fbddbec";
             Utils.WeHelper.secret = "5041fed711106842c0f84b75f84bacea";
 
@@ -244,7 +303,7 @@ namespace wechat.Controllers
                 }
                 
             }
-            else if (i > 5 && i <= 90)
+            else if (i > 50 && i <= 90)
             {
 
                 //活动为2000份，每天发放142份
