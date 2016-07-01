@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace wechat.Controllers
 {
-    public class SanyueyishidangController : Controller
+    public class SanyueyishidangblueController : Controller
     {
-        // GET: Sanyueyishidang
+        // GET: Sanyueyishidangblue
         public ActionResult subinfo()
         {
             return View();

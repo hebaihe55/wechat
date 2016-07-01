@@ -1,0 +1,49 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>提交信息</title>
+    <meta name="viewport" content="width=750, user-scalable=no, target-densitydpi=device-dpi" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <link href="~/Content/sanyueyishidangblue/css/style.css" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script>
+        var checkform = function () {
+            var user = $("form .user").val();
+            var tel = $("form .tel").val();
+            if (user == null || user == "") {
+                //alertdialog1(str.inputname);
+                alert("请输入用户名");
+                return false;
+            } else if (user.length > 10) {
+                // alertdialog1(str.leng);
+                alert("请输入正确号码");
+                return false;
+            }
+            var reg = /^1[3|4|5|7|8]\d{9}$/;
+            if (!(reg.test(tel))) {
+                alertdialog1(str.telTish);
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="subinfowrap">
+        <form method="post" action="" onsubmit="return checkform()">
+            <input type="text" placeholder="姓名" class="user"/>
+            <input type="text" placeholder="手机号码" class="tel" />
+            <input type="submit" value="" class="submit"/>
+        </form>
+    </div>
+</body>
+</html>
