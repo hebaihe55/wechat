@@ -14,7 +14,7 @@ a:hover{text-decoration: none;color: black;}
 /*搞怪*/
 .gaoxiaowrap{width: 750px;height: 1206px;background: url("../image/qhgaoxiao.jpg") no-repeat;border: 1px solid;}
 .gaoxiaowrap form{width: 750px;height: auto;margin-top: 50px}
-.gaoxiaowrap form input[type=button]{border:none;display:block;width: 603px;height: 103px;background: url("../image/bigsubbtn.png") no-repeat;margin: 300px auto 0 auto;}
+.gaoxiaowrap form input[type=button]{border:none;display:block;width: 603px;height: 103px;background: url("../image/bigsubbtn.png") no-repeat;margin: 700px auto 0 auto;}
 .gaoxiaowrap .shuoming{display: block;width:460px;height: 30px;text-align: center;position: absolute;top:600px;left:20%;font-size: 32px;color: white;}
 .gaoxiaowrap .text{outline: none;background: url("../image/qhbordergaoxiao.png") no-repeat;width:443px;height:167px;padding: 65px 0 0 225px;font-size: 32px;border: none;}
 .gaoguaishow{position:absolute;width: 750px;height:606px;z-index:0;top:372px;overflow:hidden}
