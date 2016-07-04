@@ -159,6 +159,20 @@
     <Content Include="Content\Mingzhi1\image\like1.png" />
     <Content Include="Content\Mingzhi1\image\like2.png" />
     <Content Include="Content\Mingzhi1\mingzhi1.js" />
+    <Content Include="Content\Qilingpijiu\css\style.css" />
+    <Content Include="Content\Qilingpijiu\img\hblingwangbg.jpg" />
+    <Content Include="Content\Qilingpijiu\img\qilingbtn.png" />
+    <Content Include="Content\Qilingpijiu\img\close.png" />
+    <Content Include="Content\Qilingpijiu\img\gamerulebg.jpg" />
+    <Content Include="Content\Qilingpijiu\img\thankbg.jpg" />
+    <Content Include="Content\Qilingpijiu\img\fengmian.jpg" />
+    <Content Include="Content\Qilingpijiu\img\submitbg.png" />
+    <Content Include="Content\Qilingpijiu\img\hbfafangbg.jpg" />
+    <Content Include="Content\Qilingpijiu\img\inputbg.png" />
+    <Content Include="Content\Qilingpijiu\img\shangchuanbtn.png" />
+    <Content Include="Content\Qilingpijiu\img\shangchuanbg.png" />
+    <Content Include="Content\Qilingpijiu\img\tijiaobtn.png" />
+    <Content Include="Content\Qilingpijiu\js\main.js" />
     <Content Include="Content\Sanyueyishidangblue\css\style.css" />
     <Content Include="Content\Sanyueyishidangblue\img\inputbg.png" />
     <Content Include="Content\Sanyueyishidangblue\img\submitbtn.png" />
@@ -370,6 +384,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KamidaController.cs" />
     <Compile Include="Controllers\Meiji1Controller.cs" />
+    <Compile Include="Controllers\Qilingpijiu1Controller.cs" />
     <Compile Include="Controllers\SanyueyishidangblueController.cs" />
     <Compile Include="Controllers\SanyueyishidangController.cs" />
     <Compile Include="Controllers\Wanjing1Controller.cs" />
@@ -474,6 +489,11 @@
     <Content Include="Views\Sanyueyishidangblue\thank.cshtml" />
     <Content Include="Views\Home\s1.cshtml" />
     <Content Include="Views\Home\s2.cshtml" />
+    <Content Include="Views\Qilingpijiu1\hongbaolingwan.cshtml" />
+    <Content Include="Views\Qilingpijiu1\gamerule.cshtml" />
+    <Content Include="Views\Qilingpijiu1\thank.cshtml" />
+    <Content Include="Views\Qilingpijiu1\submitinfo.cshtml" />
+    <Content Include="Views\Qilingpijiu1\shangchuan.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
