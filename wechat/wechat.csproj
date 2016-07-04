@@ -314,6 +314,8 @@
     <Content Include="img\kamida\ercode.jpg" />
     <Content Include="img\kamida\err.jpg" />
     <Content Include="img\guitian\btn1.png" />
+    <Content Include="img\s1.jpg" />
+    <Content Include="img\s2.jpg" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\npm.js" />
@@ -470,6 +472,8 @@
     <Content Include="Views\Yamaha1\guanzhu.cshtml" />
     <Content Include="Views\Sanyueyishidangblue\subinfo.cshtml" />
     <Content Include="Views\Sanyueyishidangblue\thank.cshtml" />
+    <Content Include="Views\Home\s1.cshtml" />
+    <Content Include="Views\Home\s2.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

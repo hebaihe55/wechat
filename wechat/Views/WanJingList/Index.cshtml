@@ -1,4 +1,4 @@
-﻿@model IEnumerable<wechat.Models.Updata>
+﻿@model IEnumerable<wechat.Models.GGK>
 
 @{
     Layout = null;
@@ -33,11 +33,9 @@
                 手机号
             </th>
             <th>
-               流量包
+               姓名
             </th>
-            <th>
-              网关
-            </th>
+          
             <th>
               时间
             </th>
@@ -55,17 +53,15 @@
                 @Html.DisplayFor(modelItem => item.openid)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.activeName)
+                @Html.DisplayFor(modelItem => item.actname) 
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.mobile)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.fee)
+                @Html.DisplayFor(modelItem => item.name)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ISP)
-            </td>
+           
             <td>
                 @Html.DisplayFor(modelItem => item.cctime)
             </td>
