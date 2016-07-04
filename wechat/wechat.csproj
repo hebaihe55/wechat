@@ -162,8 +162,8 @@
     <Content Include="Content\Sanyueyishidangblue\css\style.css" />
     <Content Include="Content\Sanyueyishidangblue\img\inputbg.png" />
     <Content Include="Content\Sanyueyishidangblue\img\submitbtn.png" />
-    <Content Include="Content\Sanyueyishidangblue\img\thankbg.jpg" />
     <Content Include="Content\Sanyueyishidangblue\img\subinfobg.jpg" />
+    <Content Include="Content\Sanyueyishidangblue\img\thankbg.jpg" />
     <Content Include="Content\sanyueyishidang\css\style.css" />
     <Content Include="Content\sanyueyishidang\img\inputbg.png" />
     <Content Include="Content\sanyueyishidang\img\subinfobg.jpg" />
@@ -316,6 +316,7 @@
     <Content Include="img\guitian\btn1.png" />
     <Content Include="img\s1.jpg" />
     <Content Include="img\s2.jpg" />
+    <Content Include="img\a1.jpg" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\npm.js" />
