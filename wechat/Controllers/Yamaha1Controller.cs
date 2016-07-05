@@ -286,14 +286,15 @@ namespace wechat.Controllers
 
                
             }
-            else if (i > 900 && i <= 950)
+            else if (i > 80 && i <= 90)
             {
 
 
                var jj = db.GGKs.Where(w => w.prize.Equals("雅马哈耳机"));
-              
 
-                if (jj.Count() < 50)
+                var ii = db.GGKs.Where(w => w.prize.Equals("雅马哈耳机") && w.cctime.Day.Equals(DateTime.Now.Day));
+
+                if (jj.Count() < 50 && ii.Count()<3)
                 {
                     prize = "雅马哈耳机";
                 }
@@ -303,7 +304,7 @@ namespace wechat.Controllers
                 }
                 
             }
-            else if (i > 50 && i <= 90)
+            else if (i > 5 && i <= 80)
             {
 
                 //活动为2000份，每天发放142份

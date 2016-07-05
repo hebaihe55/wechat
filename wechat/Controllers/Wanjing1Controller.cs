@@ -19,13 +19,13 @@ namespace wechat.Controllers
                   return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            if (DateTime.Now > DateTime.Parse("2016-06-29 23:59:59"))
+            if (DateTime.Now > DateTime.Parse("2016-07-10 23:59:59"))
             {
                 return RedirectToAction("activeend");
             }
             var q1 = db.Updatas.Where(w =>  w.activeName.Equals("丸井活动1"));
 
-            if (q1.Count() >= 300)
+            if (q1.Count() >= 200)
             {
                 return RedirectToAction("liuliangzsend");
             }
@@ -36,7 +36,7 @@ namespace wechat.Controllers
                 return RedirectToAction("thank");
             }
 
-            if (q.Count() >= 300)
+            if (q.Count() >= 200)
             {
                 return RedirectToAction("liuliangzsend");
             }
@@ -133,7 +133,7 @@ namespace wechat.Controllers
             }
             var q1 = db.Updatas.Where(w => w.activeName.Equals("丸井活动1"));
 
-            if (q1.Count() >= 300)
+            if (q1.Count() >= 200)
             {
                 return RedirectToAction("liuliangzsend");
             }
