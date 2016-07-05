@@ -1,0 +1,140 @@
+﻿* {
+    padding:0;margin:0;
+    outline:none;
+}
+a{
+    text-decoration:none;
+    color:black;
+}
+a:hover{
+    text-decoration:none;
+    color:black;
+}
+.zhezhao {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    position: absolute;
+    z-index:1;
+    top: 0;
+    left: 0;
+    background:black
+}
+.alertParent {
+    width:448px;
+    height:155px;
+    position: absolute;
+    border:1px solid #eee;
+    background: white;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+}
+.alertParent .surebtn {
+    width:80px;
+    height:30px;
+     margin:20px 0 0 326px;
+}
+.alertParent .text{
+    font-size:1.5em;
+    margin:20px 0 0 20px;
+}
+
+.hblingwangwrap{
+    width:750px;
+    height:1206px;
+    border:1px solid white;
+    background:url(../img/hblingwangbg.jpg) no-repeat;
+}
+.hblingwangwrap .lingwangbtn{
+    position:absolute;
+    width:349px;
+    height:221px;
+    top:867px;
+    left:30%;
+}
+.gamerule{
+    width:750px;
+    height:1206px;
+    border:1px solid white;
+    background:url(../img/gamerulebg.jpg) no-repeat;
+}
+.gamerule .closebtn{
+     position:absolute;
+    top:1116px;
+    left:43%;
+}
+.thankwrap{
+    width:750px;
+    height:1206px;
+    border:1px solid white;
+    background:url(../img/thankbg.jpg) no-repeat;
+}
+.subinfowrap{
+    width:750px;
+    height:1206px;
+    border:1px solid white;
+    background:url(../img/hbfafangbg.jpg) no-repeat;
+}
+.subinfowrap form{
+    width:592px;
+    height:auto;
+    position:absolute;
+    top:720px;
+    left:30px;
+}
+.subinfowrap form input[type=text]{
+    width:592px;
+    height:91px;
+    border:none;
+    background:url(../img/inputbg.png) no-repeat;
+    border:none;
+    border-radius:30px;
+    margin:8px 0 10px 50px;
+    font-size:30px;
+    text-indent:35px;
+}
+.subinfowrap form input[type=submit]{
+    width:346px;
+    height:192px;
+    background:url(../img/submitbg.png) no-repeat;
+    margin:10px auto 0 180px;
+    border:none;
+
+}
+.shangchuanwrap{
+    position:absolute;
+    top:0;
+    left:0;
+    width:750px;
+    height:1206px;
+    border:1px solid white;
+    background:url(../img/shangchuanbg.png) no-repeat;
+    z-index:2;
+    pointer-events:none;
+}
+.showxiaopiao{
+    position:absolute;
+    width:500px;
+    height:478px;
+    border:1px solid white;
+    top:262px;
+    left:123px;
+    z-index:0;
+}
+.shangchuanbtn{
+    position:absolute;
+    top:900px;
+    left:53px;
+    z-index:2;
+}
+.tijiaobtn{
+     position:absolute;
+    top:900px;
+    left:383px;
+     z-index:2;
+}
+.dragme{
+    position:relative;z-index:0;width:auto;height:auto;
+}
+
