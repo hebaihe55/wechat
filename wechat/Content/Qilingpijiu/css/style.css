@@ -59,11 +59,27 @@ a:hover{
     border:1px solid white;
     background:url(../img/gamerulebg.jpg) no-repeat;
 }
-.gamerule .closebtn{
+ .ruleclose{
+     width:60px;
+     height:60px;
+     border:none;
+     outline:none;
      position:absolute;
     top:1116px;
     left:43%;
+    
+    z-index:1;
+    background:url(../img/close.png) no-repeat;
 }
+.ruleshow {
+    position:absolute;
+    width:750px;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:1;
+}
+
 .thankwrap{
     width:750px;
     height:1206px;
@@ -121,6 +137,7 @@ a:hover{
     top:262px;
     left:123px;
     z-index:0;
+    background:black;
 }
 .shangchuanbtn{
     position:absolute;

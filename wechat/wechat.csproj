@@ -491,7 +491,6 @@
     <Content Include="Views\Home\s1.cshtml" />
     <Content Include="Views\Home\s2.cshtml" />
     <Content Include="Views\Qilingpijiu1\hongbaolingwan.cshtml" />
-    <Content Include="Views\Qilingpijiu1\gamerule.cshtml" />
     <Content Include="Views\Qilingpijiu1\thank.cshtml" />
     <Content Include="Views\Qilingpijiu1\submitinfo.cshtml" />
     <Content Include="Views\Qilingpijiu1\shangchuan.cshtml" />

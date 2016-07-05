@@ -15,14 +15,23 @@
     <link href="~/Content/Qilingpijiu/css/style.css" rel="stylesheet" type="text/css" />
     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
     <script src="~/Content/Qilingpijiu/js/main.js"></script>
+    <script>
+        $(function () {
+            document.getElementsByClassName("dragme")[0].addEventListener('touchend', function () {
+                sdrag = false;
+            });
+            document.getElementsByClassName("dragme")[0].addEventListener('touchstart', selectmouse);
+            document.getElementsByClassName("dragme")[0].addEventListener('touchmove', movemouse);
 
+        });
+    </script>
    
 </head>
 <body>
     <div class="shangchuanwrap">
     
     </div>
-    <div class="showxiaopiao"><img src="~/Content/Qilingpijiu/img/fengmian.jpg" class="dragme" style="width:100%;height:auto"/></div>
+    <div class="showxiaopiao"><img src="" class="dragme" style="width:100%;height:auto"/></div>
     <img src="~/Content/Qilingpijiu/img/shangchuanbtn.png" class="shangchuanbtn"/>
     <img src="~/Content/Qilingpijiu/img/tijiaobtn.png" class="tijiaobtn" />
 </body>
