@@ -288,7 +288,7 @@ namespace wechat.Controllers
             }
             else if (i > 80 && i <= 90)
             {
-
+            
 
                var jj = db.GGKs.Where(w => w.prize.Equals("雅马哈耳机"));
 
