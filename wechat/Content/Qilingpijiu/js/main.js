@@ -1,13 +1,6 @@
 ﻿var isdrag = false;
 var tx, x, ty, y;
-$(function () {
-    document.getElementsByClassName("dragme")[0].addEventListener('touchend', function () {
-        sdrag = false;
-    });
-    document.getElementsByClassName("dragme")[0].addEventListener('touchstart', selectmouse);
-    document.getElementsByClassName("dragme")[0].addEventListener('touchmove', movemouse);
 
-});
 function movemouse(e) {
 
     if (isdrag) {
@@ -55,8 +48,8 @@ var str = {
     inputname:"请输入支付宝账号",
     telTish: "手机号码有误",
     zhezhaotemplate: '<div class="zhezhao"></div>',
-    ruletemplate: "<div class='ruleshow'><img src='/Content/yamaha/image/gamerule.jpg'/></div>",
     closebtnimg: "<div class='closebtn'></div>",
+    ruletemplate: "<div class='ruleshow'><img src='/Content/Qilingpijiu/img/gamerulebg.jpg'/></div>",
 }
 var alertdialog1 = function (text) {
     var clientWidth = $(window).width();
@@ -91,3 +84,15 @@ var sure1 = function () {
     $(".alertParent").hide();
     $(".zhezhao").hide();
 }
+$(function () {
+    $(".lingwangbtn").on("click", function () {
+        $("body").append(str.zhezhaotemplate);
+        $("body").append(str.ruletemplate);
+        $(".ruleclose").show();
+    })
+    $(".ruleclose").on("click", function () {
+        $(".ruleshow").hide();
+        $(".ruleclose").hide();
+        $(".zhezhao").hide();
+    })
+})

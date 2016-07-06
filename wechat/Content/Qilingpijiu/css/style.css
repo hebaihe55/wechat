@@ -46,12 +46,16 @@ a:hover{
     border:1px solid white;
     background:url(../img/hblingwangbg.jpg) no-repeat;
 }
-.hblingwangwrap .lingwangbtn{
+.lingwangbtn{
     position:absolute;
-    width:349px;
-    height:221px;
-    top:867px;
-    left:30%;
+    width:200px;
+    height:40px;
+    top:1104px;
+    left:38%;
+    z-index:2;
+    font-size:40px;
+    text-align:center;
+
 }
 .gamerule{
     width:750px;
@@ -59,11 +63,25 @@ a:hover{
     border:1px solid white;
     background:url(../img/gamerulebg.jpg) no-repeat;
 }
-.gamerule .closebtn{
+ .ruleclose{
+     border:none;
+     outline:none;
      position:absolute;
     top:1116px;
     left:43%;
+    display:none;
+    z-index:3;
+    
 }
+.ruleshow {
+    position:absolute;
+    width:750px;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:2;
+}
+
 .thankwrap{
     width:750px;
     height:1206px;
@@ -121,6 +139,7 @@ a:hover{
     top:262px;
     left:123px;
     z-index:0;
+    background:black;
 }
 .shangchuanbtn{
     position:absolute;
