@@ -4,11 +4,11 @@
     telTish: "手机号码有误，请重填",
     zhezhaotemplate: '<div class="zhezhao"></div>',
     closebtnimg: "<div class='closebtn'></div>",
-
     fenxiang: "<img src='/Content/yamaha/image/fenxiang.gif' class='fenxiang'/>",
     fenxiangtishi: "<div class='fenxiangtishi'>邀请朋友来玩,即可再玩一次</div>",
     getliuliang: "恭喜您获得10-20M流量",
-    get20dikouquan: "恭喜您获得口乐清漱口水20元抵扣券"
+    get20dikouquan: "恭喜您获得口乐清漱口水20元抵扣券",
+    getwangteli:"万特力.护 护肘（5个）",
 }
 var alertdialog1 = function (text) {
     var clientWidth = $(window).width();

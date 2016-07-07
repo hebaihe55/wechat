@@ -4,8 +4,7 @@
 var arr3 = [];
 //var cookiename;
 var getrandom3 = function () {
-     //cookiename = getcookierandom();
-   // $(".form1 div.timu").hide();
+    
     var flag = false;
     addramdom();
     checkarrquchong();
@@ -20,10 +19,7 @@ var getrandom3 = function () {
         continue;
     }
 
-    //for (var k = 0; k < arr.length; k++) {
-    //    $(".form1 ." + arr[k]).show();
-    //    //alert($("form ."+arr[k]));
-    //}
+    
     /*
     获取随机数
     */
@@ -244,15 +240,7 @@ var sure1 = function () {
 var sure2 = function () {
     $(".alertParent").hide();
     $(".zhezhao").hide();
-    //var errorcookie = getCookie("errorcount");
-    //if (errorcookie == 1) {
-       
-    //    alertdialog3(str.erroranser);
-       
-        
-    //} else if (errorcookie==undefined) {
-    //    alertdialog4(str.sureanser);
-    //}else{}
+   
     alertdialog4(str.sureanser);
     
 }

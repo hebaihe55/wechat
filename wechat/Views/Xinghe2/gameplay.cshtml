@@ -51,7 +51,28 @@
                     "src": "/Content/Xinghe2/img/yp2.png",
                     "class": "1"
                 });
-            } else {
+            } else if(val==3) {
+                $("#yp1").attr({
+                    "src": "/Content/Xinghe2/img/yp2.png",
+                    "class": "1"
+                });
+                $("#yp2").attr({
+                    "src": "/Content/Xinghe2/img/yp2.png",
+                    "class": "1"
+                });
+                $("#yp3").attr({
+                    "src": "/Content/Xinghe2/img/yp2.png",
+                    "class": "1"
+                });
+                $("#yp4").attr({
+                    "src": "/Content/Xinghe2/img/yp2.png",
+                    "class": "1"
+                });
+                $("#yp5").attr({
+                    "src": "/Content/Xinghe2/img/yp2.png",
+                    "class": "1"
+                });
+            } else if (val == 0) {
 
             }
             var flag = true;
@@ -88,7 +109,16 @@
                         }
                         for (var k in d) {
                             if (k >= 3) {
-                                if (k == 4) {
+                                if (k == 5) {
+                                    $(".playwrap .showinfo").css({
+                                        "background": "url('/Content/Xinghe2/img/form-color.png')"
+                                    })
+
+                                    $(".showinfo form input[type=submit]").css({ "background": "url('/Content/Xinghe2/img/colorsubmit.png')" })
+                                    $(".showinfo form input[type=submit]").attr("disabled", false);
+                                    alertdialog1(str.getwangteli);
+                                    $(".showinfo form .reward").val("一等奖");
+                                }else if (k == 4) {
                                     $(".playwrap .showinfo").css({
                                         "background": "url('/Content/Xinghe2/img/form-color.png')"
                                     })
@@ -105,7 +135,7 @@
                                     $(".showinfo form input[type=submit]").css({ "background": "url('/Content/Xinghe2/img/colorsubmit.png')"})
                                     $(".showinfo form input[type=submit]").attr("disabled", false);
                                     alertdialog1(str.get20dikouquan);
-                                    $(".showinfo form .reward").val("一等奖");
+                                    $(".showinfo form .reward").val("三等奖");
                                 }
                             }
                         }
@@ -127,7 +157,7 @@
 </head>
 <body>
     <div class="playwrap">
-        <input type="hidden" value="1" class="val"/>
+        <input type="hidden" value="3" class="val"/>
         <div id="cards">
             <div class="card">
                 <div class="front"><img src="~/Content/Xinghe2/img/default.png"/></div>
