@@ -113,10 +113,11 @@ namespace wechat.Models
         public string imgUrl { get; set; }
         
         public DateTime cctime { get; set; }
+        [StringLength(50)]
+        public string WechatUserId { get; set; }
 
-        public int WechatUserId { get; set; }
+        public DateTime cdate { get; set; }
 
-        public virtual WechatUser WechatUser { get; set; }
     }
 
     public class QuestionGuiTian

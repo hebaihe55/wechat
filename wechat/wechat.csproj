@@ -380,7 +380,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\AdminKamidaController.cs" />
     <Compile Include="Controllers\GGWController.cs" />
     <Compile Include="Controllers\GuiTianController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -427,7 +426,6 @@
     <Content Include="Views\Kamida\Err.cshtml" />
     <Content Include="Views\Kamida\Ercode.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\AdminKamida\Index.cshtml" />
     <Content Include="Views\GuiTian\Index.cshtml" />
     <Content Include="Views\GuiTian\Ok.cshtml" />
     <Content Include="Views\GuiTian\Err.cshtml" />
@@ -494,7 +492,7 @@
     <Content Include="Views\Qilingpijiu1\hongbaolingwan.cshtml" />
     <Content Include="Views\Qilingpijiu1\thank.cshtml" />
     <Content Include="Views\Qilingpijiu1\submitinfo.cshtml" />
-    <Content Include="Views\Qilingpijiu1\shangchuan.cshtml" />
+    <Content Include="Views\Qilingpijiu1\index.cshtml" />
     <Content Include="Views\GGW\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

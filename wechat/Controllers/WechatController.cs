@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Web;
 using System.Web.Mvc;
-
+using System.Xml.Linq;
 
 namespace wechat.Controllers
 {
@@ -38,13 +38,11 @@ namespace wechat.Controllers
 
             Utils.Log.Info("apire", xmlStr);
 
-            Utils.WxPayData wpd = new Utils.WxPayData();
 
-            wpd.FromXml(xmlStr);
+            XElement root = XElement.Parse(xmlStr);
 
 
-            DoWithReceive(wpd);
-
+            DoWithReceive(root);
 
 
 
@@ -52,68 +50,24 @@ namespace wechat.Controllers
 
         }
 
-        private void DoWithReceive(Utils.WxPayData WPD)
+        private string  DoWithReceive(XElement root)
         {
-            switch (WPD.GetValue("MsgType").ToString())
+            if (root.Element("ToUserName").Equals("gh_27b3dec618b6"))
             {
-                case "event":
-                    DowithEvent(WPD);
-                    break;
-                case "text":
-                    DowithText(WPD);
-                    break;
-                default:
-                    Response.Write("");
-                    Response.End();
-                    break;
+                if (root.Element("Event").Equals("subscribe"))
+                {
 
+                    return "";
+                }
             }
+
+            return "";
         }
 
     
-        private Utils.WxPayData redata = new Utils.WxPayData();
+   
 
-        /// <summary>
-        /// 处理事件
-        /// </summary>
-        /// <param name="WPD"></param>
-        private void DowithEvent(Utils.WxPayData WPD)
-        {
-            if (WPD.GetValue("ToUserName").ToString() == "gh_8e3ff9971691")
-            {
-                if (WPD.GetValue("Event").ToString() == "subscribe")
-                {
-                    string rexml = string.Format("<xml><ToUserName><![CDATA[{0}]]></ToUserName><FromUserName><![CDATA[{1}]]></FromUserName><CreateTime>20140814</CreateTime><MsgType><![CDATA[news]]></MsgType><ArticleCount>1</ArticleCount><Articles><item><Title><![CDATA[明治巧克力拍照赢大奖!]]></Title> <Description><![CDATA[点击进入详情页面]]></Description><PicUrl><![CDATA[http://mvc.cjoy.cn/Content/Mingzhi1/image/fengmian1.jpg]]></PicUrl><Url><![CDATA[http://mvc.cjoy.cn/meiji1/index]]></Url></item></Articles></xml>", WPD.GetValue("FromUserName").ToString(), WPD.GetValue("ToUserName").ToString());
-                    Response.Write(rexml);
-                    Response.End();
-                }
-                else
-                {
-                    Response.Write("");
-                    Response.End();
-                }
-            }
-        }
-        //处理文本
-        private void DowithText(Utils.WxPayData WPD)
-        {
-            if (WPD.GetValue("ToUserName").ToString() == "gh_8e3ff9971691")
-            {
-
-                if (WPD.GetValue("Content").ToString() == "分享")
-                {
-                    string rexml = string.Format("<xml><ToUserName><![CDATA[{0}]]></ToUserName><FromUserName><![CDATA[{1}]]></FromUserName><CreateTime>20140814</CreateTime><MsgType><![CDATA[news]]></MsgType><ArticleCount>1</ArticleCount><Articles><item><Title><![CDATA[明治巧克力拍照赢大奖!]]></Title> <Description><![CDATA[点击进入详情页面]]></Description><PicUrl><![CDATA[http://mvc.cjoy.cn/Content/Mingzhi1/image/fengmian1.jpg]]></PicUrl><Url><![CDATA[http://mvc.cjoy.cn/meiji1/index]]></Url></item></Articles></xml>", WPD.GetValue("FromUserName").ToString(), WPD.GetValue("ToUserName").ToString());
-                    Response.Write(rexml);
-                    Response.End();
-                }
-                else
-                {
-                    Response.Write("");
-                    Response.End();
-                }
-            }
-
-        }
+   
 
     }
 }
