@@ -1,0 +1,41 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>青春Bar到</title>
+    <meta name="viewport" content="width=750, user-scalable=no, target-densitydpi=device-dpi" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no">
+    <link href="~/Content/Qilingpijiu/css/style.css" rel="stylesheet" type="text/css" />
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script src="~/Content/Qilingpijiu/js/main.js"></script>
+    <script>
+        $(function () {
+            document.getElementsByClassName("dragme")[0].addEventListener('touchend', function () {
+                sdrag = false;
+            });
+            document.getElementsByClassName("dragme")[0].addEventListener('touchstart', selectmouse);
+            document.getElementsByClassName("dragme")[0].addEventListener('touchmove', movemouse);
+
+        });
+    </script>
+   
+</head>
+<body>
+    <div class="shangchuanwrap">
+    
+    </div>
+    <div class="showxiaopiao"><img src="" class="dragme" style="width:100%;height:auto"/></div>
+    <img src="~/Content/Qilingpijiu/img/shangchuanbtn.png" class="shangchuanbtn"/>
+    <img src="~/Content/Qilingpijiu/img/tijiaobtn.png" class="tijiaobtn" />
+    <div class="lingwangbtn"></div>
+    <img src="~/Content/Qilingpijiu/img/close.png" class="ruleclose" />
+
+</body>
+</html>
