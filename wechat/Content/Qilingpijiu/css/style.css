@@ -47,11 +47,12 @@ a:hover{
     background:url(../img/hblingwangbg.jpg) no-repeat;
 }
 .lingwangbtn{
+    width:270px;
+    height:132px;
     position:absolute;
-    width:200px;
-    height:40px;
-    top:1104px;
-    left:38%;
+   background:url(../img/qilingbtn.png) 100% 100% no-repeat;
+    top:1067px;
+    left:32%;
     z-index:2;
     font-size:40px;
     text-align:center;
