@@ -18,9 +18,10 @@
 </head>
 <body>
     <div class="subinfowrap">
-        <form action="/Qilingpijiu1/thank" method="post" onsubmit="return checkform()">
-            <input type="text" class="user" placeholder="支付宝账号"/>
-            <input type="text" class="tel" placeholder="手机号码"/>
+        <form action="/Qilingpijiu1/addGGK" method="post" onsubmit="return checkform()">
+            @Html.AntiForgeryToken()
+              <input type="text" class="user" name="name" placeholder="支付宝账号"/>
+            <input type="text" class="tel" name="mobile" placeholder="手机号码"/>
             <input type="submit" class="submit" value=""/>
         </form>
     </div>

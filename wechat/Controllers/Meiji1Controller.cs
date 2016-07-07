@@ -347,6 +347,14 @@ namespace wechat.Controllers
             img.backNo = ((Models.MeijiImg)Session["img"]).imgType;
             img.title = ((Models.MeijiImg)Session["img"]).title;
             img.ctime = DateTime.Now;
+
+            int i = db.ImgActives.Where(w => w.openid.Equals(img.openid)).Count();
+
+            if (i != 0)
+            {
+                return View("thank", new { id = 0 });
+            }
+
             try
             {
                 db.ImgActives.Add(img);
