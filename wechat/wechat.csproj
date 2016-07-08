@@ -219,6 +219,7 @@
     <Content Include="Content\Xinghe1\images\thanks.jpg" />
     <Content Include="Content\Xinghe2\css\style.css" />
     <Content Include="Content\Xinghe2\img\colorsubmit.png" />
+    <Content Include="Content\Xinghe2\img\rulebg.jpg" />
     <Content Include="Content\Xinghe2\img\startbtn.png" />
     <Content Include="Content\Xinghe2\img\graysubmitbg.png" />
     <Content Include="Content\Xinghe2\img\rulebtn.png" />
@@ -237,7 +238,6 @@
     <Content Include="Content\Xinghe2\img\yp5.png" />
     <Content Include="Content\Xinghe2\img\yp6.png" />
     <Content Include="Content\Xinghe2\img\yp7.png" />
-    <Content Include="Content\Xinghe2\img\rulebg.jpg" />
     <Content Include="Content\Xinghe2\img\jiantou.gif" />
     <Content Include="Content\Xinghe2\img\thankbg.jpg" />
     <Content Include="Content\Xinghe2\img\thank2.jpg" />
