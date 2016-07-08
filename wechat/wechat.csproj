@@ -224,6 +224,7 @@
     <Content Include="Content\Xinghe2\img\graysubmitbg.png" />
     <Content Include="Content\Xinghe2\img\rulebtn.png" />
     <Content Include="Content\Xinghe2\img\default.png" />
+    <Content Include="Content\Xinghe2\img\thank3.jpg" />
     <Content Include="Content\Xinghe2\img\游戏-空格短彩.png" />
     <Content Include="Content\Xinghe2\img\smallinputbg.png" />
     <Content Include="Content\Xinghe2\img\游戏-空格长彩.png" />
@@ -243,6 +244,7 @@
     <Content Include="Content\Xinghe2\img\thank2.jpg" />
     <Content Include="Content\Xinghe2\img\lingqu.png" />
     <Content Include="Content\Xinghe2\img\indexbg.jpg" />
+    <Content Include="Content\Xinghe2\img\thank4.jpg" />
     <Content Include="Content\Xinghe2\js\main.js" />
     <Content Include="Content\yamaha\css\style.css" />
     <None Include="Content\yamaha\image\alltimubg.jpg.bak" />
@@ -515,6 +517,7 @@
     <Content Include="Views\Qilingpijiu1\index.cshtml" />
     <Content Include="Views\Login\index.cshtml" />
     <Content Include="Views\Xinghe2\thank3.cshtml" />
+    <Content Include="Views\Xinghe2\thank4.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
