@@ -120,6 +120,7 @@
                                     $(".showinfo form input[type=submit]").attr("disabled", false);
                                     alertdialog1(str.getwangteli);
                                     $(".showinfo form .reward").val("一等奖");
+                                    $("#prize").val("一等奖");
                                 }else if (k == 4) {
                                     $(".playwrap .showinfo").css({
                                         "background": "url('/Content/Xinghe2/img/form-color.png')"
@@ -129,6 +130,7 @@
                                     $(".showinfo form input[type=submit]").attr("disabled", false);
                                     alertdialog1(str.get20dikouquan);
                                     $(".showinfo form .reward").val("二等奖");
+                                    $("#prize").val("二等奖");
 
                                 } else if (k == 3) {
                                     $(".playwrap .showinfo").css({
@@ -138,6 +140,7 @@
                                     $(".showinfo form input[type=submit]").attr("disabled", false);
                                     alertdialog1(str.getliuliang);
                                     $(".showinfo form .reward").val("三等奖");
+                                    $("#prize").val("三等奖");
                                 }
                             } else {
                                 alertdialog1(str.xiexiecangyu);
@@ -204,11 +207,12 @@
         </div>
 
         <div class="showinfo">
-           <form action="/xinghe2/thank" method="post" onsubmit="return checkform()">
+           <form action="/xinghe2/add" method="post" onsubmit="return checkform()">
               @Html.AntiForgeryToken()
                 <input type="text" name="name" class="user" placeholder="用户名"/><br />
                <input type="number" name="mobile" class="tel" placeholder="电话号码"/><br />
-               <input type="text" name="prize" class="reward" disabled/><br />
+               <input type="text" name="reward" class="reward" disabled/><br />
+               <input type="hidden" name="prize" id="prize" value="" /><br />
                <input type="submit" value="" class="submit" disabled="disabled"/>
            </form>
         </div>
