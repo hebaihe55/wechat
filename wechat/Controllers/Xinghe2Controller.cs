@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace wechat.Controllers
 {
-    public class Xinghe2Controller : Controller
+    public class Xinghe2Controller : BaseController
     {
         // GET: Xinghe2
         public ActionResult Index()
