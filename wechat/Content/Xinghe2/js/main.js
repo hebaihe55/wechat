@@ -9,7 +9,8 @@
     getliuliang: "恭喜您获得10-20M流量",
     get20dikouquan: "恭喜您获得口乐清漱口水20元抵扣券",
     getwangteli: "万特力.护 护肘",
-    xiexiecangyu:"谢谢参与"
+    xiexiecangyu: "谢谢参与"
+
 }
 var alertdialog1 = function (text) {
     var clientWidth = $(window).width();
