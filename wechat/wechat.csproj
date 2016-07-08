@@ -494,6 +494,7 @@
     <Content Include="Views\Qilingpijiu1\submitinfo.cshtml" />
     <Content Include="Views\GGW\Index.cshtml" />
     <Content Include="Views\Qilingpijiu1\index.cshtml" />
+    <Content Include="Views\Xinghe2\thank3.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

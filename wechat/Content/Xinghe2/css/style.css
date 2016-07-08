@@ -49,6 +49,12 @@ a:hover{
     border:1px solid white;
     background:url(../img/thank2.jpg) no-repeat;
 }
+.thank3wrap{
+     width:750px;
+    height:1206px;
+    border:1px solid white;
+    background:url(../img/thank3.jpg) no-repeat;
+}
 .getaward{
      width:750px;
     height:1206px;

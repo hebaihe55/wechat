@@ -8,7 +8,8 @@
     fenxiangtishi: "<div class='fenxiangtishi'>邀请朋友来玩,即可再玩一次</div>",
     getliuliang: "恭喜您获得10-20M流量",
     get20dikouquan: "恭喜您获得口乐清漱口水20元抵扣券",
-    getwangteli:"万特力.护 护肘（5个）",
+    getwangteli: "万特力.护 护肘（5个）",
+    xiexiecangyu:"谢谢参与"
 }
 var alertdialog1 = function (text) {
     var clientWidth = $(window).width();

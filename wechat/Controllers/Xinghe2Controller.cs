@@ -25,6 +25,10 @@ namespace wechat.Controllers
         {
             return View();
         }
+        public ActionResult thank3()
+        {
+            return View();
+        }
         public ActionResult getawardliuliang()
         {
             return View();
