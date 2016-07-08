@@ -243,6 +243,7 @@
     <Content Include="Content\Xinghe2\img\thank2.jpg" />
     <Content Include="Content\Xinghe2\img\lingqu.png" />
     <Content Include="Content\Xinghe2\img\indexbg.jpg" />
+    <Content Include="Content\Xinghe2\img\thank4.jpg" />
     <Content Include="Content\Xinghe2\js\main.js" />
     <Content Include="Content\yamaha\css\style.css" />
     <None Include="Content\yamaha\image\alltimubg.jpg.bak" />
@@ -515,6 +516,7 @@
     <Content Include="Views\Qilingpijiu1\index.cshtml" />
     <Content Include="Views\Login\index.cshtml" />
     <Content Include="Views\Xinghe2\thank3.cshtml" />
+    <Content Include="Views\Xinghe2\thank4.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
