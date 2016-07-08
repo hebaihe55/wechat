@@ -157,7 +157,7 @@
 </head>
 <body>
     <div class="playwrap">
-        <input type="hidden" value="2" class="val"/>
+        <input type="hidden" value="@ViewBag.pirze" class="val"/>
         <div id="cards">
 
             <div class="card">
@@ -201,7 +201,8 @@
 
         <div class="showinfo">
            <form action="/xinghe2/thank" method="post" onsubmit="return checkform()">
-               <input type="text" name="name" class="user" placeholder="用户名"/><br />
+              @Html.AntiForgeryToken()
+                <input type="text" name="name" class="user" placeholder="用户名"/><br />
                <input type="number" name="mobile" class="tel" placeholder="电话号码"/><br />
                <input type="text" name="prize" class="reward" disabled/><br />
                <input type="submit" value="" class="submit" disabled="disabled"/>
