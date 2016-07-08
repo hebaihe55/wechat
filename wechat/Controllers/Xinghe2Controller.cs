@@ -120,7 +120,6 @@ namespace wechat.Controllers
                         Utils.HttpService.PostJson(url, JsonStr);
                     }
 
-
                     return RedirectToAction("thank");
                 }
                 else
