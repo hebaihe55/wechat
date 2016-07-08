@@ -255,17 +255,9 @@ namespace wechat.Controllers
             string prize = "";
             if (i > 1000)
             {
-                var jj = db.GGKs.Where(w => w.prize.Equals("雅马哈电子琴"));
-
-
-                if (jj.Count() < 3)
-                {
-                    prize = "雅马哈电子琴";
-                }
-                else
-                {
+                
                     prize = "谢谢参与";
-                }
+                
                 
             }
             else if (i > 950 && i <= 990)

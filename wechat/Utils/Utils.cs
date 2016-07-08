@@ -75,11 +75,11 @@ namespace wechat.Utils
         /// <returns></returns>
         public static string ISPCheck(string mobile)
         {
-            ArrayList YD =new ArrayList() { "139","138","137","136","135","134","159","150","151","158","157","188","187","152","182","147" };
+            ArrayList YD =new ArrayList() { "139","138","137","136","135","134","159","150","151","158","157","188","187","183","152","182","147","178" };
 
             ArrayList LT = new ArrayList() { "130","131","132","155","156","186","185","145","176" };
 
-            ArrayList DX = new ArrayList() { "133","153", "181", "180","189" };
+            ArrayList DX = new ArrayList() { "133","153", "181", "180","189","177" };
 
             mobile = mobile.Substring(0, 3);
 
