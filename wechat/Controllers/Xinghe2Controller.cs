@@ -26,7 +26,7 @@ namespace wechat.Controllers
         {
             return View();
         }
-
+    
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult add(Models.GGK ggk)
@@ -34,12 +34,13 @@ namespace wechat.Controllers
             ggk.actname = "兴和集邮票活动";
             ggk.cctime = DateTime.Now;
             ggk.openid = Session["openid"].ToString();
+         
 
             if (ggk.prize == "一等奖")
             {
                 db.GGKs.Add(ggk);
                 db.SaveChanges();
-                return RedirectToAction("thank");
+                return RedirectToAction("thank3");
             }
             else if (ggk.prize == "二等奖")
             {
@@ -83,8 +84,9 @@ namespace wechat.Controllers
 
                 db.GGKs.Add(ggk);
              int   ii= db.SaveChanges();
-
-                if (ii == 1)
+                db.Updatas.Add(ud);
+                int jj = db.SaveChanges();
+                if (jj == 1)
                 {
                     string url = "http://3g.qqwa.cn/api/SendMDataPakage_LZY.aspx?t=addorder&timestamp=" + Utils.Utils.ConvertDateTimeInt(DateTime.Now).ToString();
 
@@ -95,7 +97,7 @@ namespace wechat.Controllers
                 }
 
 
-                return RedirectToAction("thank2");
+                return RedirectToAction("thank");
             }
             else
             {
@@ -131,6 +133,16 @@ namespace wechat.Controllers
 
 
             return View();
+        }
+
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
         }
     }
 }
