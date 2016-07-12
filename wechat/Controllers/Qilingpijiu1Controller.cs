@@ -43,7 +43,7 @@ namespace wechat.Controllers
 
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        
         public int add(Models.ImgActive au)
         {
             Utils.WeHelper.appid = "wxf6eae6d355bd7d37";
