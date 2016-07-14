@@ -518,6 +518,7 @@
     <Content Include="Views\Login\index.cshtml" />
     <Content Include="Views\Xinghe2\thank3.cshtml" />
     <Content Include="Views\Xinghe2\thank4.cshtml" />
+    <Content Include="Views\Yamaha1\gameover.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
