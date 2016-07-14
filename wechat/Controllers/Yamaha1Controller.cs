@@ -16,6 +16,13 @@ namespace wechat.Controllers
         public ActionResult Login(string code)
         {
 
+            if(DateTime.Now> DateTime.Parse("2016-07-14 18:00:00"))
+            {
+
+                return View("gameover");
+            }
+
+
             Utils.WeHelper.appid = "wx52d041442fbddbec";
             Utils.WeHelper.secret = "5041fed711106842c0f84b75f84bacea";
             Utils.WeHelper.url = Request.Url.ToString();
@@ -260,7 +267,7 @@ namespace wechat.Controllers
                 
                 
             }
-            else if (i > 950 && i <= 990)
+            else if (i > 50 && i <= 80)
             {
 
                 var jj = db.GGKs.Where(w => w.prize.Equals("马克西姆签名专辑"));
@@ -278,7 +285,7 @@ namespace wechat.Controllers
 
                
             }
-            else if (i > 80 && i <= 90)
+            else if (i > 20 && i <= 50)
             {
             
 
@@ -296,7 +303,7 @@ namespace wechat.Controllers
                 }
                 
             }
-            else if (i > 5 && i <= 80)
+            else if (i > 5 && i <= 20)
             {
 
                 //活动为2000份，每天发放142份
