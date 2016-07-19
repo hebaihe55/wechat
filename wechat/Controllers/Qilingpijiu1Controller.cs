@@ -56,7 +56,7 @@ namespace wechat.Controllers
 
 
             au.img1 = Utils.WeHelper.GetMultimedia();
-
+            au.img2 = "麒麟啤酒青春bar到";
             au.ctime = DateTime.Now;
 
             

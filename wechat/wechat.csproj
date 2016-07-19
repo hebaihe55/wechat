@@ -294,6 +294,7 @@
     <Content Include="Content\yamaha\image\t9b.png" />
     <Content Include="Content\yamaha\image\t9c.png" />
     <Content Include="Content\yamaha\image\timubg.jpg" />
+    <Content Include="Content\yamaha\image\TV222.jpg" />
     <Content Include="Content\yamaha\image\videobg.jpg" />
     <Content Include="Content\yamaha\image\erweima.png" />
     <Content Include="Content\yamaha\image\closerule.png" />
@@ -519,6 +520,7 @@
     <Content Include="Views\Xinghe2\thank3.cshtml" />
     <Content Include="Views\Xinghe2\thank4.cshtml" />
     <Content Include="Views\Yamaha1\gameover.cshtml" />
+    <Content Include="Views\Yamaha1\pcer.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

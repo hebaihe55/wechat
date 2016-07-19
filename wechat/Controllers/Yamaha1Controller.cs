@@ -16,7 +16,7 @@ namespace wechat.Controllers
         public ActionResult Login(string code)
         {
 
-            if(DateTime.Now> DateTime.Parse("2016-07-14 18:00:00"))
+            if(DateTime.Now> DateTime.Parse("2016-07-30 23:59:59"))
             {
 
                 return View("gameover");
@@ -54,11 +54,11 @@ namespace wechat.Controllers
 
                 LitJson.JsonData jd1 = LitJson.JsonMapper.ToObject(jons);
 
-                if (jd1["subscribe"].ToString() != "1")
-                {
-                    return RedirectToAction("guanzhu");
+                //if (jd1["subscribe"].ToString() != "1")
+                //{
+                //    return RedirectToAction("guanzhu");
 
-                }
+                //}
                 try
                 {
                     var wu = db.WechatUsers.SingleOrDefault(w => w.openid == jd.openid);
@@ -359,6 +359,12 @@ namespace wechat.Controllers
         {
             return View();
         }
+        public ActionResult pcer()
+        {
+            return View();
+        }
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult AddLL(Models.GGK ggk)

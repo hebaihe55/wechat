@@ -15,7 +15,7 @@ namespace wechat.Controllers
 
             string openid = Session["openid"].ToString();
 
-          
+
 
             return View();
         }
@@ -112,12 +112,18 @@ namespace wechat.Controllers
                     {
                         try
                         {
-                            string url = "http://3g.qqwa.cn/api/SendMDataPakage_LZY.aspx?t=addorder&timestamp=" + Utils.Utils.ConvertDateTimeInt(DateTime.Now).ToString();
 
-                            String JsonStr = "{\"signature\":\"wanjing1\",\"token\":\"xinghe\",\"outid\":\"ql12354\",\"mobile\":\"" + ud.mobile + "\",\"amount\":" + ud.fee + "}";
+                            int ic = db.GGKs.Where(w => w.actname.Equals("兴和集邮票活动")).Count();
+
+                            if (ic <= 9000)
+                            {
+                                string url = "http://3g.qqwa.cn/api/SendMDataPakage_LZY.aspx?t=addorder&timestamp=" + Utils.Utils.ConvertDateTimeInt(DateTime.Now).ToString();
+
+                                String JsonStr = "{\"signature\":\"wanjing1\",\"token\":\"xinghe\",\"outid\":\"ql12354\",\"mobile\":\"" + ud.mobile + "\",\"amount\":" + ud.fee + "}";
 
 
-                            Utils.HttpService.PostJson(url, JsonStr);
+                                Utils.HttpService.PostJson(url, JsonStr);
+                            }
                         }
                         catch (Exception ex)
                         {
