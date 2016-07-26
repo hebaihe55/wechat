@@ -23,8 +23,8 @@ namespace wechat.Controllers
             }
 
 
-            Utils.WeHelper.appid = "wx52d041442fbddbec";
-            Utils.WeHelper.secret = "5041fed711106842c0f84b75f84bacea";
+            Utils.WeHelper.appid = "wx87aec6d6fe608463";
+            Utils.WeHelper.secret = "dfbf0fee1bb377c10f29141f63a9861a";
             Utils.WeHelper.url = Request.Url.ToString();
             Utils.WeHelper.timestamp = Utils.Utils.ConvertDateTimeInt(DateTime.Now).ToString();
             Utils.WeHelper.noncestr = "yamaha" + DateTime.Now.ToString("yyyyMMddhhmmssfff");

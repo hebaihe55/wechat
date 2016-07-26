@@ -106,24 +106,28 @@ namespace wechat.Controllers
 
                         Utils.Log.Error("xinghe2", ex.StackTrace);
                     }
-                    db.Updatas.Add(ud);
+                    int ic = db.GGKs.Where(w => w.actname.Equals("兴和集邮票活动")).Count();
+
+                    if (ic >= 9000)
+                    {
+                        return RedirectToAction("thank");
+                    }
+
+                        db.Updatas.Add(ud);
                     int jj = db.SaveChanges();
                     if (jj == 1)
                     {
                         try
                         {
 
-                            int ic = db.GGKs.Where(w => w.actname.Equals("兴和集邮票活动")).Count();
-
-                            if (ic <= 9000)
-                            {
+                         
                                 string url = "http://3g.qqwa.cn/api/SendMDataPakage_LZY.aspx?t=addorder&timestamp=" + Utils.Utils.ConvertDateTimeInt(DateTime.Now).ToString();
 
                                 String JsonStr = "{\"signature\":\"wanjing1\",\"token\":\"xinghe\",\"outid\":\"ql12354\",\"mobile\":\"" + ud.mobile + "\",\"amount\":" + ud.fee + "}";
 
 
                                 Utils.HttpService.PostJson(url, JsonStr);
-                            }
+                            
                         }
                         catch (Exception ex)
                         {
@@ -162,10 +166,11 @@ namespace wechat.Controllers
 
             int i = Utils.Utils.GetRandom();
 
-            if (i > 30)
+            if (i > 0)
             {
-                ViewBag.pirze = 3;
+                ViewBag.pirze = 0;
             }
+           
 
 
             return View();

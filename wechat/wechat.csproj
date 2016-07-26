@@ -400,6 +400,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminQLController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\GGWController.cs" />
     <Compile Include="Controllers\GuiTianController.cs" />
@@ -521,6 +522,11 @@
     <Content Include="Views\Xinghe2\thank4.cshtml" />
     <Content Include="Views\Yamaha1\gameover.cshtml" />
     <Content Include="Views\Yamaha1\pcer.cshtml" />
+    <Content Include="Views\AdminQL\Create.cshtml" />
+    <Content Include="Views\AdminQL\Delete.cshtml" />
+    <Content Include="Views\AdminQL\Details.cshtml" />
+    <Content Include="Views\AdminQL\Edit.cshtml" />
+    <Content Include="Views\AdminQL\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

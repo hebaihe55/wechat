@@ -1,0 +1,92 @@
+﻿@model IEnumerable<wechat.Models.GGK>
+
+@{
+    Layout = null;
+    int i = 1;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+  
+    <table class="table">
+        <tr>
+            <th>
+               #
+            </th>
+            <th>
+                微信号
+            </th>
+            <th>
+               支付宝账号
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mobile)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.addr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.prize)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.actname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.flag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cctime)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+               @i
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.openid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mobile)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.addr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prize)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.actname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.flag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cctime)
+            </td>
+            <td>
+               |
+                @Html.ActionLink("图片", "Details", new { id=item.openid }) |
+               
+            </td>
+        </tr>
+        i++;
+    }
+    
+    </table>
+</body>
+</html>
