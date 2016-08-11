@@ -267,7 +267,7 @@ namespace wechat.Controllers
                 
                 
             }
-            else if (i > 50 && i <= 80)
+            else if (i > 500 && i <= 800)
             {
 
                 var jj = db.GGKs.Where(w => w.prize.Equals("马克西姆签名专辑"));
@@ -285,7 +285,7 @@ namespace wechat.Controllers
 
                
             }
-            else if (i > 20 && i <= 50)
+            else if (i > 200 && i <= 500)
             {
             
 
@@ -303,7 +303,7 @@ namespace wechat.Controllers
                 }
                 
             }
-            else if (i > 5 && i <= 20)
+            else if (i > 1 && i <= 99)
             {
 
                 //活动为2000份，每天发放142份
