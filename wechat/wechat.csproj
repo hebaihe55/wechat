@@ -455,8 +455,8 @@
     <Content Include="Views\GuiTian\Ok.cshtml" />
     <Content Include="Views\GuiTian\Err.cshtml" />
     <Content Include="Views\Admin\Home\Index.cshtml" />
-    <Content Include="Views\Xinghe1\Index.cshtml" />
-    <Content Include="Views\Xinghe1\Thanks.cshtml" />
+    <Content Include="Views\Yamaha1\Xinghe1\Index.cshtml" />
+    <Content Include="Views\Yamaha1\Xinghe1\Thanks.cshtml" />
     <Content Include="Views\Meiji1\Index.cshtml" />
     <Content Include="Views\Meiji1\bn0.cshtml" />
     <Content Include="Views\Meiji1\bn1.cshtml" />
