@@ -81,7 +81,7 @@
             $(".card").each(function (index) {
                
                 $(this).on("click",function() {
-                    var cli = $(this).attr("class");//获取类名
+                    var cli = $(this).attr("class");
                     var cli2 = cli.split(" ");
                     if (cli2[1] != undefined) {
                         return;
