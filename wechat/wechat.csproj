@@ -177,6 +177,7 @@
     <Content Include="Content\Mingzhi1\image\like2.png" />
     <Content Include="Content\Mingzhi1\mingzhi1.js" />
     <Content Include="Content\Qilingpijiu\css\style.css" />
+    <Content Include="Content\Qilingpijiu\img\aa.jpg" />
     <Content Include="Content\Qilingpijiu\img\hblingwangbg.jpg" />
     <Content Include="Content\Qilingpijiu\img\qilingbtn.png" />
     <Content Include="Content\Qilingpijiu\img\close.png" />
@@ -417,6 +418,7 @@
     <Compile Include="Controllers\Xinghe1Controller.cs" />
     <Compile Include="Controllers\Xinghe2Controller.cs" />
     <Compile Include="Controllers\Yamaha1Controller.cs" />
+    <Compile Include="Controllers\Yamaha3Controller.cs" />
     <Compile Include="Controllers\YamahaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -527,6 +529,8 @@
     <Content Include="Views\AdminQL\Details.cshtml" />
     <Content Include="Views\AdminQL\Edit.cshtml" />
     <Content Include="Views\AdminQL\Index.cshtml" />
+    <Content Include="Views\Qilingpijiu1\er.cshtml" />
+    <Content Include="Views\Yamaha3\index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

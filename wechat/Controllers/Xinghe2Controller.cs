@@ -14,7 +14,7 @@ namespace wechat.Controllers
         {
 
             string openid = Session["openid"].ToString();
-            int ic = db.GGKs.Where(w => w.actname.Equals("兴和集邮票活动") && w.openid.Equals("openid") ).Count();
+            int ic = db.GGKs.Where(w => w.actname.Equals("兴和集邮票活动")  ).Count();
 
             if (ic >0)
             {
@@ -115,7 +115,7 @@ namespace wechat.Controllers
                     }
                     int ic = db.GGKs.Where(w => w.actname.Equals("兴和集邮票活动")).Count();
 
-                    if (ic >= 27000)
+                    if (ic >= 32000)
                     {
                         return RedirectToAction("thank");
                     }
@@ -165,7 +165,7 @@ namespace wechat.Controllers
 
             int ij = db.GGKs.Where(w => w.openid.Equals(openid) && w.actname.Equals("兴和集邮票活动")).Count();
 
-            if (ij >= 27000)
+            if (ij >= 32000)
             {
                 return RedirectToAction("thank4");
             }
