@@ -177,6 +177,7 @@
     <Content Include="Content\Mingzhi1\image\like2.png" />
     <Content Include="Content\Mingzhi1\mingzhi1.js" />
     <Content Include="Content\Qilingpijiu\css\style.css" />
+    <Content Include="Content\Qilingpijiu\img\aa.jpg" />
     <Content Include="Content\Qilingpijiu\img\hblingwangbg.jpg" />
     <Content Include="Content\Qilingpijiu\img\qilingbtn.png" />
     <Content Include="Content\Qilingpijiu\img\close.png" />
@@ -294,6 +295,7 @@
     <Content Include="Content\yamaha\image\t9b.png" />
     <Content Include="Content\yamaha\image\t9c.png" />
     <Content Include="Content\yamaha\image\timubg.jpg" />
+    <Content Include="Content\yamaha\image\TV222.jpg" />
     <Content Include="Content\yamaha\image\videobg.jpg" />
     <Content Include="Content\yamaha\image\erweima.png" />
     <Content Include="Content\yamaha\image\closerule.png" />
@@ -399,6 +401,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminQLController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\GGWController.cs" />
     <Compile Include="Controllers\GuiTianController.cs" />
@@ -415,6 +418,7 @@
     <Compile Include="Controllers\Xinghe1Controller.cs" />
     <Compile Include="Controllers\Xinghe2Controller.cs" />
     <Compile Include="Controllers\Yamaha1Controller.cs" />
+    <Compile Include="Controllers\Yamaha3Controller.cs" />
     <Compile Include="Controllers\YamahaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -451,8 +455,8 @@
     <Content Include="Views\GuiTian\Ok.cshtml" />
     <Content Include="Views\GuiTian\Err.cshtml" />
     <Content Include="Views\Admin\Home\Index.cshtml" />
-    <Content Include="Views\Xinghe1\Index.cshtml" />
-    <Content Include="Views\Xinghe1\Thanks.cshtml" />
+    <Content Include="Views\Yamaha1\Xinghe1\Index.cshtml" />
+    <Content Include="Views\Yamaha1\Xinghe1\Thanks.cshtml" />
     <Content Include="Views\Meiji1\Index.cshtml" />
     <Content Include="Views\Meiji1\bn0.cshtml" />
     <Content Include="Views\Meiji1\bn1.cshtml" />
@@ -519,6 +523,14 @@
     <Content Include="Views\Xinghe2\thank3.cshtml" />
     <Content Include="Views\Xinghe2\thank4.cshtml" />
     <Content Include="Views\Yamaha1\gameover.cshtml" />
+    <Content Include="Views\Yamaha1\pcer.cshtml" />
+    <Content Include="Views\AdminQL\Create.cshtml" />
+    <Content Include="Views\AdminQL\Delete.cshtml" />
+    <Content Include="Views\AdminQL\Details.cshtml" />
+    <Content Include="Views\AdminQL\Edit.cshtml" />
+    <Content Include="Views\AdminQL\Index.cshtml" />
+    <Content Include="Views\Qilingpijiu1\er.cshtml" />
+    <Content Include="Views\Yamaha3\index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

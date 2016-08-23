@@ -14,13 +14,15 @@ namespace wechat.Controllers
         {
 
             string openid = Session["openid"].ToString();
+            int ic = db.GGKs.Where(w => w.actname.Equals("兴和集邮票活动")  ).Count();
 
-            int ij = db.GGKs.Where(w => w.openid.Equals(openid) && w.actname.Equals("兴和集邮票活动")).Count();
-
-            if (ij >= 1)
+            if (ic >0)
             {
-                return RedirectToAction("thank4");
+                return RedirectToAction("thank");
             }
+          
+
+
 
             return View();
         }
@@ -111,18 +113,36 @@ namespace wechat.Controllers
 
                         Utils.Log.Error("xinghe2", ex.StackTrace);
                     }
-                    db.Updatas.Add(ud);
-                    int jj = db.SaveChanges();
-                    if (jj == 1)
+                    int ic = db.GGKs.Where(w => w.actname.Equals("兴和集邮票活动")).Count();
+
+                    if (ic >= 32000)
                     {
-                        string url = "http://3g.qqwa.cn/api/SendMDataPakage_LZY.aspx?t=addorder&timestamp=" + Utils.Utils.ConvertDateTimeInt(DateTime.Now).ToString();
-
-                        String JsonStr = "{\"signature\":\"wanjing1\",\"token\":\"xinghe\",\"outid\":\"ql12354\",\"mobile\":\"" + ud.mobile + "\",\"amount\":" + ud.fee + "}";
-
-
-                        Utils.HttpService.PostJson(url, JsonStr);
+                        return RedirectToAction("thank");
                     }
+                    try
+                    {
+                        db.Updatas.Add(ud);
+                        int jj = db.SaveChanges();
+                        if (jj == 1)
+                        {
 
+
+
+                            string url = "http://3g.qqwa.cn/api/SendMDataPakage_LZY.aspx?t=addorder&timestamp=" + Utils.Utils.ConvertDateTimeInt(DateTime.Now).ToString();
+
+                            String JsonStr = "{\"signature\":\"wanjing1\",\"token\":\"xinghe\",\"outid\":\"ql12354\",\"mobile\":\"" + ud.mobile + "\",\"amount\":" + ud.fee + "}";
+
+
+                            Utils.HttpService.PostJson(url, JsonStr);
+
+
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+                        Utils.Log.Error("xinghe2liuliang", ex.StackTrace);
+                    }
                     return RedirectToAction("thank");
                 }
                 else
@@ -145,7 +165,7 @@ namespace wechat.Controllers
 
             int ij = db.GGKs.Where(w => w.openid.Equals(openid) && w.actname.Equals("兴和集邮票活动")).Count();
 
-            if (ij >= 1)
+            if (ij >= 32000)
             {
                 return RedirectToAction("thank4");
             }
@@ -153,10 +173,11 @@ namespace wechat.Controllers
 
             int i = Utils.Utils.GetRandom();
 
-            if (i > 30)
+            if (i > 0)
             {
                 ViewBag.pirze = 3;
             }
+
 
 
             return View();

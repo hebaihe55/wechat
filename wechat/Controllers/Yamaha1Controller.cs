@@ -16,15 +16,15 @@ namespace wechat.Controllers
         public ActionResult Login(string code)
         {
 
-            if(DateTime.Now> DateTime.Parse("2016-07-14 18:00:00"))
+            if(DateTime.Now> DateTime.Parse("2016-07-30 23:59:59"))
             {
 
                 return View("gameover");
             }
 
 
-            Utils.WeHelper.appid = "wx52d041442fbddbec";
-            Utils.WeHelper.secret = "5041fed711106842c0f84b75f84bacea";
+            Utils.WeHelper.appid = "wx87aec6d6fe608463";
+            Utils.WeHelper.secret = "dfbf0fee1bb377c10f29141f63a9861a";
             Utils.WeHelper.url = Request.Url.ToString();
             Utils.WeHelper.timestamp = Utils.Utils.ConvertDateTimeInt(DateTime.Now).ToString();
             Utils.WeHelper.noncestr = "yamaha" + DateTime.Now.ToString("yyyyMMddhhmmssfff");
@@ -54,11 +54,11 @@ namespace wechat.Controllers
 
                 LitJson.JsonData jd1 = LitJson.JsonMapper.ToObject(jons);
 
-                if (jd1["subscribe"].ToString() != "1")
-                {
-                    return RedirectToAction("guanzhu");
+                //if (jd1["subscribe"].ToString() != "1")
+                //{
+                //    return RedirectToAction("guanzhu");
 
-                }
+                //}
                 try
                 {
                     var wu = db.WechatUsers.SingleOrDefault(w => w.openid == jd.openid);
@@ -267,7 +267,7 @@ namespace wechat.Controllers
                 
                 
             }
-            else if (i > 50 && i <= 80)
+            else if (i > 500 && i <= 800)
             {
 
                 var jj = db.GGKs.Where(w => w.prize.Equals("马克西姆签名专辑"));
@@ -285,7 +285,7 @@ namespace wechat.Controllers
 
                
             }
-            else if (i > 20 && i <= 50)
+            else if (i > 200 && i <= 500)
             {
             
 
@@ -303,7 +303,7 @@ namespace wechat.Controllers
                 }
                 
             }
-            else if (i > 5 && i <= 20)
+            else if (i > 1 && i <= 99)
             {
 
                 //活动为2000份，每天发放142份
@@ -359,6 +359,12 @@ namespace wechat.Controllers
         {
             return View();
         }
+        public ActionResult pcer()
+        {
+            return View();
+        }
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult AddLL(Models.GGK ggk)

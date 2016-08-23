@@ -17,14 +17,16 @@ namespace wechat.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-
+            int jj = db.GGKs.Where(w => w.actname.Equals("麒麟啤酒青春bar到") && w.openid.Equals(id)).Count();
+            if (jj >0)
+            {
+                return RedirectToAction("thank");
+            }
             int ii = db.GGKs.Where(w => w.actname.Equals("麒麟啤酒青春bar到") && w.cctime.Day.Equals(DateTime.Now.Day)).Count();
             if (ii >= 200)
             {
                 return RedirectToAction("hongbaolingwan");
             }
-
-
             Utils.WeHelper.appid = "wxf6eae6d355bd7d37";
             Utils.WeHelper.secret = "74e796b3733c3bda70924782b046e7fa";
             Utils.WeHelper.url = Request.Url.ToString();
@@ -36,8 +38,7 @@ namespace wechat.Controllers
             ViewBag.timestamp = Utils.WeHelper.timestamp;
             ViewBag.appid = Utils.WeHelper.appid;
             ViewBag.WechatUserId = id;
-            System.Web.HttpContext.Current.Session["openid"] = id;
-      
+            System.Web.HttpContext.Current.Session["openid"] = id; 
             return View();
         }
 
@@ -56,7 +57,7 @@ namespace wechat.Controllers
 
 
             au.img1 = Utils.WeHelper.GetMultimedia();
-
+            au.img2 = "麒麟啤酒青春bar到";
             au.ctime = DateTime.Now;
 
             
@@ -114,6 +115,12 @@ namespace wechat.Controllers
             return View();
         }
         public ActionResult thank()
+        {
+            return View();
+        }
+
+
+        public ActionResult er()
         {
             return View();
         }
