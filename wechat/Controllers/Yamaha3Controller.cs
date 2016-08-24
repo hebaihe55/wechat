@@ -22,13 +22,13 @@ namespace wechat.Controllers
         }
         public ActionResult timu()
         {
-            var yy = db.yamahaTimu.ToList();
-            var ss = (from p in yy orderby Guid.NewGuid() select p).Take(1).SingleOrDefault();
-            ViewBag.t = ss.timu;
-            ViewBag.a = ss.A;
-            ViewBag.b = ss.B;
-            ViewBag.c = ss.C;
-            ViewBag.d = ss.D;
+            //var yy = db.yamahaTimu.ToList();
+            //var ss = (from p in yy orderby Guid.NewGuid() select p).Take(1).SingleOrDefault();
+            //ViewBag.t = ss.timu;
+            //ViewBag.a = ss.A;
+            //ViewBag.b = ss.B;
+            //ViewBag.c = ss.C;
+            //ViewBag.d = ss.D;
             //var num = yy.Count();
             //for (int i = 0; i < num; i--)
             //{

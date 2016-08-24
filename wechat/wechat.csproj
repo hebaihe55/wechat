@@ -268,9 +268,10 @@
     <Content Include="Content\Yamaha3\img\slot5.png" />
     <Content Include="Content\Yamaha3\img\slot6.png" />
     <Content Include="Content\Yamaha3\img\start.png" />
+    <Content Include="Content\Yamaha3\img\timu.png" />
     <Content Include="Content\Yamaha3\img\timubg.png" />
-    <Content Include="Content\Yamaha3\img\再接再厉.png" />
-    <Content Include="Content\Yamaha3\img\挑战成功.png" />
+    <Content Include="Content\Yamaha3\img\zjzl.png" />
+    <Content Include="Content\Yamaha3\img\success.png" />
     <Content Include="Content\Yamaha3\js\jquery.slotmachine.js" />
     <Content Include="Content\Yamaha3\style\main.css" />
     <Content Include="Content\Yamaha3\style\reset.css" />
