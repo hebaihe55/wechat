@@ -18,8 +18,6 @@ namespace wechat.Models
     public class WechatUser
     {
         public int WechatUserId { get; set; }
-
-        
         [Required]
         [StringLength(50)]
         public string openid { get; set; }
@@ -137,8 +135,8 @@ namespace wechat.Models
     public class QuestionShanTian
     {
         public int id { get; set; }
-      
-        public string  q1 { get; set; }
+
+        public string q1 { get; set; }
         public string q2 { get; set; }
         public string q3 { get; set; }
         public string q4 { get; set; }
@@ -147,10 +145,7 @@ namespace wechat.Models
         public string q7 { get; set; }
         public string q8 { get; set; }
         public DateTime cctime { get; set; }
-
     }
-
-
 
     public class WechatDBContext : DbContext
     {
@@ -165,6 +160,6 @@ namespace wechat.Models
         public DbSet<Updata> Updatas { get; set; }
         public DbSet<GGK> GGKs { get; set; }
         public DbSet<WechatShare> WechatShares { get; set; }
-        
+       
     }
 }
