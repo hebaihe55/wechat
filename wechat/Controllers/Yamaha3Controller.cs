@@ -9,7 +9,7 @@ namespace wechat.Controllers
 {
     public class Yamaha3Controller : Controller
     {
-        WechatEntities3 db = new WechatEntities3();
+        WechatEntities4 db = new WechatEntities4();
         // GET: Yamaha3
         public ActionResult zong()
         {
