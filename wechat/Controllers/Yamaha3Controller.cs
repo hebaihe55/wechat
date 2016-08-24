@@ -9,9 +9,18 @@ namespace wechat.Controllers
     public class Yamaha3Controller : Controller
     {
         // GET: Yamaha3
-        public ActionResult Index()
+        public ActionResult zong()
         {
             return View();
         }
+        public ActionResult zhishiindex()
+        {
+            return View();
+        }
+        public ActionResult timu()
+        {
+            return View();
+        }
+
     }
 }
