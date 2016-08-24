@@ -247,6 +247,13 @@
     <Content Include="Content\Xinghe2\img\indexbg.jpg" />
     <Content Include="Content\Xinghe2\img\thank4.jpg" />
     <Content Include="Content\Xinghe2\js\main.js" />
+    <Content Include="Content\Yamaha3\img\0.png" />
+    <Content Include="Content\Yamaha3\img\complete.png" />
+    <Content Include="Content\Yamaha3\img\1.png" />
+    <Content Include="Content\Yamaha3\img\2.png" />
+    <Content Include="Content\Yamaha3\img\3.png" />
+    <Content Include="Content\Yamaha3\img\4.png" />
+    <Content Include="Content\Yamaha3\img\5.png" />
     <Content Include="Content\Yamaha3\img\back.png" />
     <Content Include="Content\Yamaha3\img\checkded.png" />
     <Content Include="Content\Yamaha3\img\choosebg.png" />
@@ -260,6 +267,8 @@
     <Content Include="Content\Yamaha3\img\slot6.png" />
     <Content Include="Content\Yamaha3\img\start.png" />
     <Content Include="Content\Yamaha3\img\timubg.png" />
+    <Content Include="Content\Yamaha3\img\再接再厉.png" />
+    <Content Include="Content\Yamaha3\img\挑战成功.png" />
     <Content Include="Content\Yamaha3\js\jquery.slotmachine.js" />
     <Content Include="Content\Yamaha3\style\main.css" />
     <Content Include="Content\Yamaha3\style\reset.css" />
@@ -551,6 +560,7 @@
     <Content Include="Views\Yamaha3\timu.cshtml" />
     <Content Include="Views\Yamaha3\zong.cshtml" />
     <Content Include="Views\Yamaha3\peiduigame.cshtml" />
+    <Content Include="Views\Yamaha3\complete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

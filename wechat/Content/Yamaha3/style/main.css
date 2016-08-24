@@ -41,8 +41,8 @@ a{
    display:none;
 }
 .timuwrap .choosewrap input[type=radio]+label{
-    font-size:40px;
-    margin: 30px auto 20px auto;
+    font-size:35px;
+    margin:30px auto 20px auto;
     display: block;
     width: 338px;
     height: 91px;
@@ -88,4 +88,8 @@ a{
     text-align: center;
     line-height: 91px;
     font-size: 35px;
+}
+.completewrap{
+    height:1206px;
+    background:url(../img/complete.png) no-repeat;
 }
