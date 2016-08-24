@@ -254,9 +254,18 @@
     <Content Include="Content\Yamaha3\img\choosebg.png" />
     <Content Include="Content\Yamaha3\img\indexbg.png" />
     <Content Include="Content\Yamaha3\img\next.png" />
+    <Content Include="Content\Yamaha3\img\slot1.png" />
+    <Content Include="Content\Yamaha3\img\slot2.png" />
+    <Content Include="Content\Yamaha3\img\slot3.png" />
+    <Content Include="Content\Yamaha3\img\slot4.png" />
+    <Content Include="Content\Yamaha3\img\slot5.png" />
+    <Content Include="Content\Yamaha3\img\slot6.png" />
     <Content Include="Content\Yamaha3\img\start.png" />
     <Content Include="Content\Yamaha3\img\timubg.png" />
+    <Content Include="Content\Yamaha3\js\jquery.slotmachine.js" />
     <Content Include="Content\Yamaha3\style\main.css" />
+    <Content Include="Content\Yamaha3\style\reset.css" />
+    <Content Include="Content\Yamaha3\style\style.css" />
     <Content Include="Content\yamaha\css\style.css" />
     <None Include="Content\yamaha\image\alltimubg.jpg.bak" />
     <Content Include="Content\yamaha\image\indexbg.gif" />
@@ -578,6 +587,7 @@
     <Content Include="Views\Yamaha3\zhishiindex.cshtml" />
     <Content Include="Views\Yamaha3\timu.cshtml" />
     <Content Include="Views\Yamaha3\zong.cshtml" />
+    <Content Include="Views\Yamaha3\peiduigame.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
