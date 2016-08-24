@@ -13,10 +13,10 @@ namespace wechat.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class WechatEntities2 : DbContext
+    public partial class WechatEntities4 : DbContext
     {
-        public WechatEntities2()
-            : base("name=WechatEntities2")
+        public WechatEntities4()
+            : base("name=WechatEntities4")
         {
         }
     
@@ -25,6 +25,7 @@ namespace wechat.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<yamahainfo> yamahainfo { get; set; }
         public virtual DbSet<yamahaTimu> yamahaTimu { get; set; }
     }
 }

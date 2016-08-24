@@ -488,6 +488,9 @@
     <Compile Include="Models\Updata.cs" />
     <Compile Include="Models\Wechat.cs" />
     <Compile Include="Models\WechatShare.cs" />
+    <Compile Include="Models\yamahainfo.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\yamahaTimu.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
