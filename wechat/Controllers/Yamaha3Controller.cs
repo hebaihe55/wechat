@@ -21,6 +21,10 @@ namespace wechat.Controllers
         {
             return View();
         }
+        public ActionResult peiduigame()
+        {
+            return View();
+        }
 
     }
 }
