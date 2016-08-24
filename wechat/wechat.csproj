@@ -588,6 +588,7 @@
     <Content Include="Views\Yamaha3\timu.cshtml" />
     <Content Include="Views\Yamaha3\zong.cshtml" />
     <Content Include="Views\Yamaha3\peiduigame.cshtml" />
+    <Content Include="Views\Yamaha3\complete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

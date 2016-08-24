@@ -22,14 +22,26 @@ namespace wechat.Controllers
         }
         public ActionResult timu()
         {
-            var ss = (from p in db.yamahaTimu orderby Guid.NewGuid() select p).Take(1).SingleOrDefault();
+            var yy = db.yamahaTimu.ToList();
+            var ss = (from p in yy orderby Guid.NewGuid() select p).Take(1).SingleOrDefault();
             ViewBag.t = ss.timu;
             ViewBag.a = ss.A;
             ViewBag.b = ss.B;
             ViewBag.c = ss.C;
             ViewBag.d = ss.D;
-            return View(ss );
+            //var num = yy.Count();
+            //for (int i = 0; i < num; i--)
+            //{
+            //    if (num == 295)
+            //    {
+            //        return RedirectToAction("Index");
+            //    }
+            //}
+            return View();
         }
+        public ActionResult complete() {
 
+            return View();
+        }
     }
 }

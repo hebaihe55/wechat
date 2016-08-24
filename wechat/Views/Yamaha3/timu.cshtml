@@ -14,37 +14,49 @@
     <link rel="stylesheet" href="~/Content/Yamaha3/style/main.css">
     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
     <script>
-       
+      
         function check() {
             var radioarr = $("form input[type=radio]");
             var flag = false
-           
+
             for (var i = 0; i < radioarr.length; i++) {
                 if (radioarr[i].checked == true) {
+
                     flag = true;
+                    if (sessionStorage.pagecount) {
+                        sessionStorage.pagecount = Number(sessionStorage.pagecount) + 1;
+                        if (sessionStorage.pagecount > 4) {
+
+                            window.location.href = "complete";
+                            return false;
+                        }
+                    }
+                    else {
+                        sessionStorage.pagecount = 1;
+                    }
                     break;
                 }
-            }
+            } 
             if (!flag) {
                 alert("请选择您的答案");
                 return false;
             }
+  
             return true;
-          
         }
-      
+
     </script>
 </head>
 <body>
     <div class="timuwrap">
-        <a href="index.html" class="back"> <img src="img/back.png" alt=""></a>
-        <p class="title"><strong>1.神话故事中，处女座的由来是为了纪念谁？</strong></p>
-        <form action="" method="post">
+        <a href="/Yamaha3/zong" class="back"> <img src="~/Content/Yamaha3/img/back.png" alt=""></a>
+        <p class="title"><strong>@ViewBag.id @ViewBag.t</strong></p>
+        <form action="" method="post" onsubmit="return check()">
             <div class="choosewrap">
-                <input type="radio" name="t1" value="A" id="xx1"><label for="xx1">泊瑟芬</label><br>
-                <input type="radio" name="t1" value="B" id="xx2"><label for="xx2">狄蜜特br</label><br>
-                <input type="radio" name="t1" value="C" id="xx3"><label for="xx3">宙斯</label><br>
-                <input type="radio" name="t1" value="D" id="xx4"><label for="xx4">冥王</label><br>
+                <input type="radio" name="t1" value="A" id="xx1"><label for="xx1">@ViewBag.a</label><br>
+                <input type="radio" name="t1" value="B" id="xx2"><label for="xx2">@ViewBag.b</label><br>
+                <input type="radio" name="t1" value="C" id="xx3"><label for="xx3">@ViewBag.c</label><br>
+                <input type="radio" name="t1" value="D" id="xx4"><label for="xx4">@ViewBag.d</label><br>
             </div>
             <input type="submit" value="" class="submit">
         </form>

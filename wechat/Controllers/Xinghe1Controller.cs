@@ -20,15 +20,10 @@ namespace wechat.Controllers
                 try
                 {
                     string strjson = Utils.WeHelper.GetOpenidBycode();
-
                     //string strjson = "{\"openid\":\"oQOyyv - MdUWSgP8_Smoh2S_6 - 1I0\",\"nickname\":\"白鹤\",\"sex\":1,\"language\":\"zh_CN\",\"city\":\"长宁\",\"province\":\"上海\",\"country\":\"中国\",\"headimgurl\":\"http://wx.qlogo.cn/mmopen/78EkX665csCmkBmDBDSYTDCmZdvlMDqCX7wYTLcHeeKNeLicSS5ic2fDAYpeTqicaqhF8Iw9Rp9d6hegynMHC7tPMWLRnqMvNicn/0\",\"privilege\":[]}";
                     Utils.Log.Info("userin", strjson);
                     LitJson.JsonData jd = LitJson.JsonMapper.ToObject(strjson);
-
                     string openid = jd["openid"].ToString();
-
-
-
                     var wu = db.Question.Where(w => w.openid.Equals(openid) && w.actname.Equals("兴和问答4"));
 
                     if (wu.Count()==0)
