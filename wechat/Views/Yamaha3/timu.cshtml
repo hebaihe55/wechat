@@ -20,6 +20,16 @@
             var flag = false
             for (var i = 0; i < radioarr.length; i++) {
                 if (radioarr[i].checked == true) {
+                    if (sessionStorage.pagecount) {
+                        sessionStorage.pagecount = Number(sessionStorage.pagecount) + 1;
+                        if (sessionStorage.pagecount > 4) {
+                            window.location.href = "complete";
+                            return false;
+                        }
+                    }
+                    else {
+                        sessionStorage.pagecount = 1;
+                    }
 
                     flag = true;
                     if (sessionStorage.pagecount) {
@@ -46,7 +56,7 @@
 <body>
     <div class="timuwrap">
         <a href="/Yamaha3/zong" class="back"> <img src="~/Content/Yamaha3/img/back.png" alt=""></a>
-        <p class="title"><strong>@ViewBag.t</strong></p>
+        <p class="title"><strong>@ViewBag.id @ViewBag.t</strong></p>
         <form action="" method="post" onsubmit="return check()">
             <div class="choosewrap">
                 <input type="radio" name="t1" value="A" id="xx1"><label for="xx1">@ViewBag.a</label><br>
