@@ -260,6 +260,11 @@
     <Content Include="Content\Yamaha3\img\checkded.png" />
     <Content Include="Content\Yamaha3\img\choosebg.png" />
     <Content Include="Content\Yamaha3\img\indexbg.png" />
+    <Content Include="Content\Yamaha3\img\jieshao1.png" />
+    <Content Include="Content\Yamaha3\img\jieshao2.png" />
+    <Content Include="Content\Yamaha3\img\jieshao3.png" />
+    <Content Include="Content\Yamaha3\img\jieshao5.png" />
+    <Content Include="Content\Yamaha3\img\jieshao6.png" />
     <Content Include="Content\Yamaha3\img\lhjbg.png" />
     <Content Include="Content\Yamaha3\img\next.png" />
     <Content Include="Content\Yamaha3\img\slot1.png" />
@@ -268,12 +273,12 @@
     <Content Include="Content\Yamaha3\img\slot4.png" />
     <Content Include="Content\Yamaha3\img\slot5.png" />
     <Content Include="Content\Yamaha3\img\slot6.png" />
-    <Content Include="Content\Yamaha3\img\slot7.png" />
     <Content Include="Content\Yamaha3\img\start.png" />
     <Content Include="Content\Yamaha3\img\timu.png" />
     <Content Include="Content\Yamaha3\img\timubg.png" />
     <Content Include="Content\Yamaha3\img\zjzl.png" />
     <Content Include="Content\Yamaha3\img\success.png" />
+    <Content Include="Content\Yamaha3\img\lhjbtn.png" />
     <Content Include="Content\Yamaha3\js\jquery.slotmachine.js" />
     <Content Include="Content\Yamaha3\style\main.css" />
     <Content Include="Content\Yamaha3\style\reset.css" />
@@ -604,6 +609,7 @@
     <Content Include="Views\Yamaha3\zong.cshtml" />
     <Content Include="Views\Yamaha3\peiduigame.cshtml" />
     <Content Include="Views\Yamaha3\complete.cshtml" />
+    <Content Include="Views\Yamaha3\peiduicucess.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

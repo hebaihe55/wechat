@@ -109,7 +109,11 @@ a{
     left:24%;
 }
 .lhjwrap{
+    width:750px;
     height:1206px;
     border:1px solid white;
     background:url(../img/lhjbg.png) no-repeat;
+}
+.sucesswrap{
+    height:1206px;
 }

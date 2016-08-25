@@ -1,14 +1,7 @@
-/*
-  * jQuery Slot Machine v1.0.0
-  * https://github.com/josex2r/jQuery-SlotMachine
-  *
-  * Copyright 2014 Jose Luis Represa
-  * Released under the MIT license
-*/
-/* 代码整理：懒人之家 www.lanrenzhijia.com */
+
+
 (function($) {
 			
-	//Set required styles, filters and masks
 	
 	$(document).ready(function(){
 		
@@ -543,4 +536,4 @@
 	};
 	
 })(jQuery);
-		  /* 代码整理：懒人之家 www.lanrenzhijia.com */
+		
