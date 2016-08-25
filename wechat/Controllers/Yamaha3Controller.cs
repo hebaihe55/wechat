@@ -9,7 +9,7 @@ namespace wechat.Controllers
 {
     public class Yamaha3Controller : Controller
     {
-        WechatEntities3 db = new WechatEntities3();
+        WechatEntities7 db = new WechatEntities7();
         // GET: Yamaha3
         public ActionResult zong()
         {
@@ -18,28 +18,57 @@ namespace wechat.Controllers
         }
         public ActionResult zhishiindex()
         {
-           
             return View();
         }
-        public ActionResult timu(yamahainfo i)
+        public ActionResult timu()
         {
-            var yy = db.yamahaTimu.ToList();
-            var ss = (from p in yy orderby Guid.NewGuid() select p).Take(1).SingleOrDefault();
+            var ss = (from p in db.yamahaTimu orderby Guid.NewGuid() select p).Take(1).SingleOrDefault();
             ViewBag.t = ss.timu;
             ViewBag.a = ss.A;
             ViewBag.b = ss.B;
             ViewBag.c = ss.C;
             ViewBag.d = ss.D;
             ViewBag.e = ss.E;
-            i.openid = "wangli";
-            i.wtime = Convert.ToDateTime(DateTime.Now.ToString("yyyyMMddHHmmssfff"));
-            i.wenti = Request.Form["t1"].ToString();
-            i.daan = Request.Form["t2"];
             return View();
+        }
+        [HttpPost]
+        public ActionResult timu(yamahainfo i)
+        {   
+            if (Request.Form["t1"] != null)
+            {
+                i.openid = "xiaohei";
+                i.wtime = DateTime.Now;
+                i.wenti = Request.Form["wenti"];
+                i.daan = Request.Form["t1"];
+                i.zqdaan = Request.Form["t2"];
+                if (i.daan == i.zqdaan)
+                {
+                    i.shif = "true";
+                }
+                else
+                {
+
+                    i.shif = "false";
+                }
+                db.yamahainfo.Add(i);
+                db.SaveChanges();
+            }
+
+           int ii= db.yamahainfo.Where(w => w.openid.Equals("xiaohei")).Count();
+            if (ii >= 5)
+            {
+                return RedirectToAction("complete");
+            }
+
+
+            return RedirectToAction("timu");
         }
         public ActionResult complete()
         {
+            var scores = (from s in db.yamahainfo where s.shif == "true" && s.openid == "xiaohei" select s).Count();
+            ViewBag.num = scores;
             return View();
         }
+        
     }
 }

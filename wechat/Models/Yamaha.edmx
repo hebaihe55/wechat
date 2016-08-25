@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="WechatModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="WechatModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="yamahainfo">
           <Key>
             <PropertyRef Name="id" />
@@ -13,7 +13,8 @@
           <Property Name="openid" Type="nvarchar" MaxLength="50" />
           <Property Name="wenti" Type="nvarchar" MaxLength="50" />
           <Property Name="daan" Type="nvarchar" MaxLength="50" />
-          <Property Name="shif" Type="int" />
+          <Property Name="zqdaan" Type="nvarchar" MaxLength="50" />
+          <Property Name="shif" Type="nvarchar" MaxLength="50" />
           <Property Name="wtime" Type="datetime" />
         </EntityType>
         <EntityType Name="yamahaTimu">
@@ -28,7 +29,7 @@
           <Property Name="D" Type="nvarchar" MaxLength="50" />
           <Property Name="E" Type="nvarchar" MaxLength="50" />
         </EntityType>
-        <EntityContainer Name="WechatModelStoreContainer">
+        <EntityContainer Name="WechatModel1StoreContainer">
           <EntitySet Name="yamahainfo" EntityType="Self.yamahainfo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="yamahaTimu" EntityType="Self.yamahaTimu" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -36,7 +37,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="WechatModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="WechatModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="yamahainfo">
           <Key>
             <PropertyRef Name="id" />
@@ -45,7 +46,8 @@
           <Property Name="openid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="wenti" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="daan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="shif" Type="Int32" />
+          <Property Name="zqdaan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="shif" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="wtime" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="yamahaTimu">
@@ -60,7 +62,7 @@
           <Property Name="D" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="E" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="WechatEntities6" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="WechatEntities7" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="yamahainfo" EntityType="Self.yamahainfo" />
           <EntitySet Name="yamahaTimu" EntityType="Self.yamahaTimu" />
         </EntityContainer>
@@ -69,21 +71,22 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="WechatModelStoreContainer" CdmEntityContainer="WechatEntities6">
+        <EntityContainerMapping StorageEntityContainer="WechatModel1StoreContainer" CdmEntityContainer="WechatEntities7">
           <EntitySetMapping Name="yamahainfo">
-            <EntityTypeMapping TypeName="WechatModel.yamahainfo">
+            <EntityTypeMapping TypeName="WechatModel1.yamahainfo">
               <MappingFragment StoreEntitySet="yamahainfo">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="openid" ColumnName="openid" />
                 <ScalarProperty Name="wenti" ColumnName="wenti" />
                 <ScalarProperty Name="daan" ColumnName="daan" />
+                <ScalarProperty Name="zqdaan" ColumnName="zqdaan" />
                 <ScalarProperty Name="shif" ColumnName="shif" />
                 <ScalarProperty Name="wtime" ColumnName="wtime" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="yamahaTimu">
-            <EntityTypeMapping TypeName="WechatModel.yamahaTimu">
+            <EntityTypeMapping TypeName="WechatModel1.yamahaTimu">
               <MappingFragment StoreEntitySet="yamahaTimu">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="timu" ColumnName="timu" />

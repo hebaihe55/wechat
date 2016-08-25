@@ -16,7 +16,7 @@ namespace wechat
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "AdminQL", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "yamaha3", action = "zong", id = UrlParameter.Optional }
             );
 
           

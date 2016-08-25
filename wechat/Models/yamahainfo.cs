@@ -18,7 +18,8 @@ namespace wechat.Models
         public string openid { get; set; }
         public string wenti { get; set; }
         public string daan { get; set; }
-        public Nullable<int> shif { get; set; }
+        public string zqdaan { get; set; }
+        public string shif { get; set; }
         public Nullable<System.DateTime> wtime { get; set; }
     }
 }
