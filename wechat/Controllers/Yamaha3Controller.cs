@@ -13,12 +13,10 @@ namespace wechat.Controllers
         // GET: Yamaha3
         public ActionResult zong()
         {
-
             return View();
         }
         public ActionResult zhishiindex()
         {
-           
             return View();
         }
         public ActionResult timu(yamahainfo i)
