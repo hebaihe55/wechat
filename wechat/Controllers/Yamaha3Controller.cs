@@ -32,7 +32,7 @@ namespace wechat.Controllers
         }
         [HttpPost]
         public ActionResult timu(yamahainfo i)
-        {   
+        {
             if (Request.Form["t1"] != null)
             {
                 i.openid = "xiao";
@@ -53,7 +53,7 @@ namespace wechat.Controllers
                 db.SaveChanges();
             }
 
-           int ii= db.yamahainfo.Where(w => w.openid.Equals("xiao")).Count();
+           int ii= db.yamahainfo.Where(w => w.openid.Equals("xiaohei")).Count();
             if (ii >= 5)
             {
                 return RedirectToAction("complete");
@@ -66,13 +66,6 @@ namespace wechat.Controllers
             ViewBag.num = scores;
             return View();
         }
-        public ActionResult peiduigame()
-        {
-            return View();
-        }
-        public ActionResult peiduicucess()
-        {
-            return View();
-        }
+        
     }
 }
