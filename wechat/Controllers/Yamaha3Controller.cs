@@ -66,6 +66,13 @@ namespace wechat.Controllers
             ViewBag.num = scores;
             return View();
         }
-        
+        public ActionResult peiduigame()
+        {
+            return View();
+        }
+        public ActionResult peiduicucess()
+        {
+            return View();
+        }
     }
 }
