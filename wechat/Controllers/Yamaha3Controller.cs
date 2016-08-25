@@ -54,5 +54,9 @@ namespace wechat.Controllers
         {
             return View();
         }
+        public ActionResult peiduicucess()
+        {
+            return View();
+        }
     }
 }
