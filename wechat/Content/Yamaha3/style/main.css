@@ -28,8 +28,10 @@ a{
 .timuwrap .title{
     width:100%;
     margin:150px auto 0 auto;
-    font-size:2.5em;
+    font-size:40px;
     line-height: 60px;
+    color:white;
+    text-align:center;
 
 }
 .timuwrap form{
@@ -44,14 +46,16 @@ a{
     font-size:35px;
     margin:30px auto 20px auto;
     display: block;
-    width: 338px;
-    height: 91px;
-    line-height: 91px;
+    width:564px;
+    height:89px;
+    line-height:89px;
     text-align: center;
-    /*background: url("../img/choosebg.png") no-repeat;*/
+    color:white;
+    background: url("../img/choosebg.png") no-repeat;
 }
 .timuwrap .choosewrap input[type=radio]:checked+label{
     background: url("../img/checkded.png") no-repeat;
+    color:white;
 }
 .timuwrap form .submit{
     display: block;
