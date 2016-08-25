@@ -58,8 +58,6 @@ namespace wechat.Controllers
             {
                 return RedirectToAction("complete");
             }
-
-
             return RedirectToAction("timu");
         }
         public ActionResult complete()
