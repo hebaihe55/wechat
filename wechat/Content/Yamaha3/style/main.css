@@ -76,19 +76,21 @@ a{
     border: 1px solid white;
 }
 .zongwrap .btnwrap{
-    width: 338px;
+    width:564px;
     height: auto;
     margin:320px auto 0 auto;
 }
 .zongwrap .btnwrap a{
     display: block;
     margin:95px auto 0 auto;
-    width:338px;
+    width:564px;
     height: 91px;
     background: url("../img/choosebg.png") no-repeat;
     text-align: center;
     line-height: 91px;
-    font-size: 35px;
+    font-size: 40px;
+    color:white;
+
 }
 .completewrap{
     height:1206px;
