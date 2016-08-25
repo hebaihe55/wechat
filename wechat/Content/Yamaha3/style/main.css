@@ -48,7 +48,7 @@ a{
     height: 91px;
     line-height: 91px;
     text-align: center;
-    background: url("../img/choosebg.png") no-repeat;
+    /*background: url("../img/choosebg.png") no-repeat;*/
 }
 .timuwrap .choosewrap input[type=radio]:checked+label{
     background: url("../img/checkded.png") no-repeat;

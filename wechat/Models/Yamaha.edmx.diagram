@@ -4,9 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="7cbf085d753841eaa8a7651d00c71bc1" Name="Diagram1">
-        <EntityTypeShape EntityType="WechatModel.yamahainfo" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="WechatModel.yamahaTimu" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="2cce3d9f28d24b9da59be7a854c54a09" Name="Diagram1" ZoomLevel="88">
+        <EntityTypeShape EntityType="WechatModel1.yamahainfo" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WechatModel1.yamahaTimu" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

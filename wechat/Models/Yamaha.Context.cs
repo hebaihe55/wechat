@@ -13,10 +13,10 @@ namespace wechat.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class WechatEntities6 : DbContext
+    public partial class WechatEntities7 : DbContext
     {
-        public WechatEntities6()
-            : base("name=WechatEntities6")
+        public WechatEntities7()
+            : base("name=WechatEntities7")
         {
         }
     
