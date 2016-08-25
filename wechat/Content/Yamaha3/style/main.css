@@ -65,10 +65,10 @@ a{
 }
 .completewrap .back{
     display: block;
-    width: 191px;
-    height: 80px;
+    width: 136px;
+    height:66px;
     float: right;
-    margin:20px 10px 0 0;
+    margin:20px 15px 0 0;
 }
 .zongwrap{
     height: 1206px;
@@ -107,4 +107,13 @@ a{
     position:absolute;
     top:500px;
     left:24%;
+}
+.lhjwrap{
+    width:750px;
+    height:1206px;
+    border:1px solid white;
+    background:url(../img/lhjbg.png) no-repeat;
+}
+.sucesswrap{
+    height:1206px;
 }

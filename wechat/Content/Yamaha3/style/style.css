@@ -46,8 +46,8 @@ b {
 	margin: 0 auto 0;
 }
 .content {
-	padding: 30px;
-	width: 900px;
+	padding: 30px 0 0 0px;
+	width: 600px;
 	margin: 0 auto;
 }
 .content.foot {
@@ -169,7 +169,8 @@ p.title {
 	display: inline-block;
 }
 .line {
-	
+	position:absolute;
+    top:580px;
 	width:100%;
 	
 }
@@ -191,72 +192,50 @@ p.title {
 	text-align: center;
 }
 .slotMachineButton {
-	-moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
-	box-shadow:inset 0px 1px 0px 0px #fce2c1;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25) );
-	background:-moz-linear-gradient( center top, #ffc477 5%, #fb9e25 100% );
- filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc477', endColorstr='#fb9e25');
-	background-color:#ffc477;
-	border-radius: 75px;
-	text-indent:0px;
-	border:6px solid #eeb44f;
-	display:inline-block;
-	color:#ffffff;
-	font-size:50px;
-	font-weight:bold;
-	font-style:normal;
-	height:100px;
-	line-height:100px;
-	width:100px;
-	text-decoration:none;
-	text-align:center;
-	text-shadow:1px 1px 0px #cc9f52;
-	margin-left: 50px;
+	position:absolute;
+    top:810px;
+    left:280px;
+    width:193px;
+    height:154px;
 	cursor:pointer;
 }
-.slotMachineButton:hover {
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #ffc477) );
-	background:-moz-linear-gradient( center top, #fb9e25 5%, #ffc477 100% );
- filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='#ffc477');
-	background-color:#fb9e25;
-}
-.slotMachineButton:active {
-	position:relative;
-	top:1px;
-}
+
 .slotMachine {
-	width:100px;
-	height: 100px;
+	width:140px;
+	height:115px;
 	overflow: hidden;
 	display: inline-block;
 	text-align: center;
-	border: 5px solid #000;
-	background-color: #ffffff;
 }
 .noBorder {
 	border:none !important;
 	background: transparent !important;
 }
 .slotMachine .slot {
-	width:100px;
-	height:100px;
+	width:140px;
+	height:115px;
 }
 .slot1 {
 	background-image: url("../img/slot1.png");
+    background-size:100% 100%;
 }
 .slot2 {
 	background-image: url("../img/slot2.png");
+    background-size:100% 100%;
 }
 .slot3 {
 	background-image: url("../img/slot3.png");
+    background-size:100% 100%;
 }
 .slot4 {
 	background-image: url("../img/slot4.png");
+    background-size:100% 100%;
 }
 .slot5 {
 	background-image: url("../img/slot5.png");
+    background-size:100% 100%;
 }
 .slot6 {
 	background-image: url("../img/slot6.png");
+    background-size:100% 100%;
 }

@@ -16,11 +16,9 @@
     <script>
         $(function () {
             var val = $(".showval1").val();
-            //var shownum = $(".showval2").val();
+            var shownum = $(".showval2").val();
             $(".showansernum img").attr("src", "/Content/Yamaha3/img/" + val + ".png");
-        
-            if (val == 0 || val == 1 || val == 2 || val == 3) {
-                
+            if (shownum == 0 || shownum == 1 || shownum == 2 || shownum == 3) {
                 $(".result img").attr("src", "/Content/Yamaha3/img/zjzl.png");
             } else {
                 $(".result img").attr("src", "/Content/Yamaha3/img/success.png");
@@ -34,8 +32,8 @@
         <a href="/Yamaha3/zong" class="back"> <img src="~/Content/Yamaha3/img/back.png" alt=""></a>
         <div class="showansernum"><img src="" /></div>
         <div class="result"><img src="" /></div>
-        <input type="hidden" name="name" value="@ViewBag.num" class="showval1" />
-        @*<input type="hidden" name="name" value="2" class="showval2" />*@
+        <input type="hidden" name="name" value="2" class="showval1" />
+        <input type="hidden" name="name" value="4" class="showval2" />
     </div>
     
 </body>

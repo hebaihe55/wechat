@@ -15,9 +15,12 @@
     <link rel="stylesheet" href="~/Content/Yamaha3/style/reset.css" type="text/css" media="screen" />
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="~/Content/Yamaha3/js/jquery.slotmachine.js"></script>
+    <link rel="stylesheet" href="~/Content/Yamaha3/style/main.css">
 </head>
 <body>
-    <div class="line">
+    <div class="lhjwrap">
+        <div id="slotMachineButton1" class="slotMachineButton"><img src="~/Content/Yamaha3/img/lhjbtn.png" /></div>
+        <div class="line">
         <div class="content" style="text-align: center">
 
             <div style="clear:both;">
@@ -46,52 +49,71 @@
                     <div class="slot slot5"></div>
                     <div class="slot slot6"></div>
                 </div>
-                <div id="slotMachineButton1" class="slotMachineButton">GO!</div>
+                <input type="hidden" name1="" value="1" id="machine1Result1"/>
+                <input type="hidden" name2="" value="1" id="machine1Result2"/>
+                <input type="hidden" name3="" value="1" id="machine1Result3"/>
                 <script>
+                   
                     $(document).ready(function () {
+                        var index1 = $("#machine1Result1").val();
+                        var index2 = $("#machine1Result2").val();
+                       var index3 = $("#machine1Result3").val();
                         var machine1 = $("#machine1").slotMachine({
                             active: 0,
                             delay: 500,
-
+                            stopIndex:parseInt(index1)
                         });
                         var machine2 = $("#machine2").slotMachine({
                             active: 1,
                             delay: 500,
-
+                            stopIndex:parseInt(index2)
                         });
 
                         var machine3 = $("#machine3").slotMachine({
                             active: 2,
                             delay: 500,
-
+                            stopIndex:parseInt(index3)
                         });
-
-                        function onComplete($el, active) {
+                        var machine1Result1;
+                        var machine1Result2;
+                        var machine1Result3;
+                        function onComplete($el, active) {                         
                             switch ($el[0].id) {
                                 case 'machine1':
-                                    $("#machine1Result").text("Index: " + active.index);
+                                    machine1Result1 = active.index;                                                                 
                                     break;
                                 case 'machine2':
-                                    $("#machine2Result").text("Index: " + active.index);
+                                    machine1Result2 = active.index;
+                                   
                                     break;
                                 case 'machine3':
-                                    $("#machine3Result").text("Index: " + active.index);
+                                    machine1Result3 = active.index;
+                                    if (machine1Result1 == machine1Result2 && machine1Result1 == machine1Result3 && machine1Result2 == machine1Result3) {
+                                        alert("恭喜");
+                                      //  location.href = "peiduicucess?val=" + active.index;
+                                    } else {
+                                        alert("再接再厉");
+                                    }
                                     break;
                             }
+                            
+                          
                         }
-
+                        
                         $("#slotMachineButton1").click(function () {
-
-                            machine1.shuffle(3, onComplete);
-
+                            
+                            
+                             machine1.shuffle(3, onComplete);
+                             
                             setTimeout(function () {
                                 machine2.shuffle(3, onComplete);
                             }, 500);
 
                             setTimeout(function () {
-                                machine3.shuffle(3, onComplete);
+                                machine3.shuffle(3,onComplete);
+                               
                             }, 1000);
-
+                          
                         })
                     });
                 </script>
@@ -99,7 +121,6 @@
            
         </div>
     </div>
-    </div>
-
+</div>
 </body>
 </html>
