@@ -68,6 +68,5 @@ namespace wechat.Controllers
             ViewBag.num = scores;
             return View();
         }
-        
     }
 }
