@@ -60,7 +60,7 @@
           <Property Name="D" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="E" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="WechatEntities4" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="WechatEntities6" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="yamahainfo" EntityType="Self.yamahainfo" />
           <EntitySet Name="yamahaTimu" EntityType="Self.yamahaTimu" />
         </EntityContainer>
@@ -69,7 +69,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="WechatModelStoreContainer" CdmEntityContainer="WechatEntities4">
+        <EntityContainerMapping StorageEntityContainer="WechatModelStoreContainer" CdmEntityContainer="WechatEntities6">
           <EntitySetMapping Name="yamahainfo">
             <EntityTypeMapping TypeName="WechatModel.yamahainfo">
               <MappingFragment StoreEntitySet="yamahainfo">

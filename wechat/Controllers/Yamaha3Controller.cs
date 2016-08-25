@@ -9,7 +9,7 @@ namespace wechat.Controllers
 {
     public class Yamaha3Controller : Controller
     {
-        WechatEntities3 db = new WechatEntities3();
+        WechatEntities6 db = new WechatEntities6();
         // GET: Yamaha3
         public ActionResult zong()
         {
@@ -32,13 +32,28 @@ namespace wechat.Controllers
             ViewBag.d = ss.D;
             ViewBag.e = ss.E;
             i.openid = "wangli";
-            i.wtime = Convert.ToDateTime(DateTime.Now.ToString("yyyyMMddHHmmssfff"));
-            i.wenti = Request.Form["t1"].ToString();
-            i.daan = Request.Form["t2"];
+            i.wenti = Request.Form["wenti"];
+            i.daan = Request.Form["t1"];
+            //i.wtime = Convert.ToDateTime(DateTime.Now.ToString("yyyyMMddHHmmssfff"));
+            i.wtime = DateTime.Now;          
+            if (Request.Form["t1"]==ss.E)
+            {
+                i.shif = 0;
+            }
+            else
+            {
+                i.shif = 1;
+            }
+            db.yamahainfo.Add(i);
+            db.SaveChanges();
             return View();
         }
-        public ActionResult complete() {
-
+        public ActionResult peiduigame()
+        {
+            return View();
+        }
+        public ActionResult complete()
+        {
             return View();
         }
     }
