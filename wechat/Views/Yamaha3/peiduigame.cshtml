@@ -60,38 +60,38 @@
                         var index3 = $("#machine1Result3").val();
                        if (index1 == 0) {
                            var machine1 = $("#machine1").slotMachine({
-                               active: 0,
+                               active: 2,
                                delay: 500,
 
                            });
                        } else {
                            var machine1 = $("#machine1").slotMachine({
-                               active: 0,
+                               active: 2,
                                delay: 500,
                                stopIndex: parseInt(index1)
                            });
                        }
                        if (index2 == 0) {
                            var machine2 = $("#machine2").slotMachine({
-                               active: 0,
+                               active: 4,
                                delay: 500,
                            });
                        } else {
                            var machine2 = $("#machine2").slotMachine({
-                               active: 0,
+                               active: 4,
                                delay: 500,
                                stopIndex: parseInt(index2)
                            });
                        }
                        if (index3 == 0) {
                            var machine3 = $("#machine3").slotMachine({
-                               active: 0,
+                               active: 1,
                                delay: 500,
 
                            });
                        } else {
                            var machine3 = $("#machine3").slotMachine({
-                               active: 0,
+                               active:1,
                                delay: 500,
                                stopIndex: parseInt(index3)
                            });
@@ -133,7 +133,6 @@
                                 machine3.shuffle(3,onComplete);
                                
                             }, 1000);
-                          
                         })
                     });
                 </script>
