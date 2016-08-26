@@ -53,7 +53,7 @@ namespace wechat.Controllers
                 db.SaveChanges();
             }
 
-           int ii= db.yamahainfo.Where(w => w.openid.Equals("xiaohei")).Count();
+            int ii = db.yamahainfo.Where(w => w.openid.Equals("xiaohei")).Count();
             if (ii >= 5)
             {
                 return RedirectToAction("complete");
@@ -66,6 +66,15 @@ namespace wechat.Controllers
             ViewBag.num = scores;
             return View();
         }
-        
+        public ActionResult peiduigame()
+
+        {
+            return View();
+        }
+        public ActionResult peiduicucess()
+
+        {
+            return View();
+        }
     }
 }
