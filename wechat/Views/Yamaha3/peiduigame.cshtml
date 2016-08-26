@@ -49,54 +49,77 @@
                     <div class="slot slot5"></div>
                     <div class="slot slot6"></div>
                 </div>
-                <input type="hidden" name1="" value="5" id="machine1Result1"/>
-                <input type="hidden" name2="" value="5" id="machine1Result2"/>
-                <input type="hidden" name3="" value="5" id="machine1Result3"/>
+                <input type="hidden" name1="" value="2" id="machine1Result1"/>
+                <input type="hidden" name2="" value="2" id="machine1Result2"/>
+                <input type="hidden" name3="" value="2" id="machine1Result3"/>
                 <script>
                    
                     $(document).ready(function () {
                         var index1 = $("#machine1Result1").val();
                         var index2 = $("#machine1Result2").val();
-                       var index3 = $("#machine1Result3").val();
-                        var machine1 = $("#machine1").slotMachine({
-                            active: 0,
-                            delay: 500,
-                            stopIndex:parseInt(index1)
-                        });
-                        var machine2 = $("#machine2").slotMachine({
-                            active: 1,
-                            delay: 500,
-                            stopIndex:parseInt(index2)
-                        });
+                        var index3 = $("#machine1Result3").val();
+                       if (index1 == 0) {
+                           var machine1 = $("#machine1").slotMachine({
+                               active: 2,
+                               delay: 500,
 
-                        var machine3 = $("#machine3").slotMachine({
-                            active: 2,
-                            delay: 500,
-                            stopIndex:parseInt(index3)
-                        });
+                           });
+                       } else {
+                           var machine1 = $("#machine1").slotMachine({
+                               active: 2,
+                               delay: 500,
+                               stopIndex: parseInt(index1)
+                           });
+                       }
+                       if (index2 == 0) {
+                           var machine2 = $("#machine2").slotMachine({
+                               active: 4,
+                               delay: 500,
+                           });
+                       } else {
+                           var machine2 = $("#machine2").slotMachine({
+                               active: 4,
+                               delay: 500,
+                               stopIndex: parseInt(index2)
+                           });
+                       }
+                       if (index3 == 0) {
+                           var machine3 = $("#machine3").slotMachine({
+                               active: 1,
+                               delay: 500,
+
+                           });
+                       } else {
+                           var machine3 = $("#machine3").slotMachine({
+                               active:1,
+                               delay: 500,
+                               stopIndex: parseInt(index3)
+                           });
+                       }
                         var machine1Result1;
                         var machine1Result2;
                         var machine1Result3;
-                        function onComplete($el, active) {
+                        function onComplete($el, active) {                         
                             switch ($el[0].id) {
                                 case 'machine1':
-                                    machine1Result1 = active.index;
+                                    machine1Result1 = active.index;                                                                 
                                     break;
                                 case 'machine2':
                                     machine1Result2 = active.index;
-
                                     break;
                                 case 'machine3':
                                     machine1Result3 = active.index;
                                     if (machine1Result1 == machine1Result2 && machine1Result1 == machine1Result3 && machine1Result2 == machine1Result3) {
                                         alert("恭喜");
+                                        console.log(active.index);
                                         location.href = "peiduicucess?val=" + active.index;
+                                       
                                     } else {
                                         alert("再接再厉");
                                     }
                                     break;
-                            }
-                        }
+                            }                 
+                        }                      
                         $("#slotMachineButton1").click(function () {
                             
                             
@@ -110,7 +133,6 @@
                                 machine3.shuffle(3,onComplete);
                                
                             }, 1000);
-                          
                         })
                     });
                 </script>
