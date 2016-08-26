@@ -35,7 +35,7 @@ namespace wechat.Controllers
         {   
             if (Request.Form["t1"] != null)
             {
-                i.openid = "xiao";
+                i.openid = "xiaa";
                 i.wtime = DateTime.Now;
                 i.wenti = Request.Form["wenti"];
                 i.daan = Request.Form["t1"];
@@ -46,14 +46,13 @@ namespace wechat.Controllers
                 }
                 else
                 {
-
                     i.shif = "false";
                 }
                 db.yamahainfo.Add(i);
                 db.SaveChanges();
             }
 
-           int ii= db.yamahainfo.Where(w => w.openid.Equals("xiao")).Count();
+           int ii= db.yamahainfo.Where(w => w.openid.Equals("xiaa")).Count();
             if (ii >= 5)
             {
                 return RedirectToAction("complete");
@@ -62,7 +61,7 @@ namespace wechat.Controllers
         }
         public ActionResult complete()
         {
-            var scores = (from s in db.yamahainfo where s.shif == "true" && s.openid == "xiao" select s).Count();
+            var scores = (from s in db.yamahainfo where s.shif == "true" && s.openid == "xiaa" select s).Count();
             ViewBag.num = scores;
             return View();
         }
