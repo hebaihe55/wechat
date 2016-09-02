@@ -120,6 +120,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Kamida\img\jiantou.gif" />
+    <Content Include="Content\Kamida\img\p1.gif" />
+    <Content Include="Content\Kamida\img\p2.gif" />
+    <Content Include="Content\Kamida\img\P3.gif" />
+    <Content Include="Content\Kamida\img\P4.gif" />
+    <Content Include="Content\Kamida\img\P5.gif" />
+    <Content Include="Content\Kamida\style\css.css" />
     <Content Include="Content\Mingzhi1\css\style.css" />
     <Content Include="Content\Mingzhi1\image\300.jpg" />
     <Content Include="Content\Mingzhi1\image\aiqingshowbg.png" />
@@ -459,6 +466,7 @@
     <Compile Include="Controllers\GGWController.cs" />
     <Compile Include="Controllers\GuiTianController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Kamida2Controller.cs" />
     <Compile Include="Controllers\KamidaController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\Meiji1Controller.cs" />
@@ -610,6 +618,11 @@
     <Content Include="Views\Yamaha3\peiduigame.cshtml" />
     <Content Include="Views\Yamaha3\complete.cshtml" />
     <Content Include="Views\Yamaha3\peiduicucess.cshtml" />
+    <Content Include="Views\Kamida2\kami1.cshtml" />
+    <Content Include="Views\Kamida2\kami2.cshtml" />
+    <Content Include="Views\Kamida2\kami3.cshtml" />
+    <Content Include="Views\Kamida2\kami4.cshtml" />
+    <Content Include="Views\Kamida2\kami5.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -49,9 +49,9 @@
                     <div class="slot slot5"></div>
                     <div class="slot slot6"></div>
                 </div>
-                <input type="hidden" name1="" value="2" id="machine1Result1"/>
-                <input type="hidden" name2="" value="2" id="machine1Result2"/>
-                <input type="hidden" name3="" value="2" id="machine1Result3"/>
+                <input type="hidden" name1="" value="3" id="machine1Result1"/>
+                <input type="hidden" name2="" value="3" id="machine1Result2"/>
+                <input type="hidden" name3="" value="3" id="machine1Result3"/>
                 <script>
                    
                     $(document).ready(function () {
@@ -111,7 +111,8 @@
                                     machine1Result3 = active.index;
                                     if (machine1Result1 == machine1Result2 && machine1Result1 == machine1Result3 && machine1Result2 == machine1Result3) {
                                         alert("恭喜");
-                                        console.log(active.index);
+                                        //
+                    console.log(active.index);
                                         location.href = "peiduicucess?val=" + active.index;
                                        
                                     } else {
@@ -131,7 +132,6 @@
 
                             setTimeout(function () {
                                 machine3.shuffle(3,onComplete);
-                               
                             }, 1000);
                         })
                     });
