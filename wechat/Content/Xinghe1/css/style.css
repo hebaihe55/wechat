@@ -17,8 +17,8 @@ margin-top: 20px;
 }
 .indexbox form input[type="radio"]+label{
     display: inline;
-    width: 35px;
-    height:35px;
+    width:40px;
+    height:40px;
     background: url("../images/default.png") no-repeat;
     float: left;
     margin-top:16px;
@@ -26,8 +26,8 @@ margin-top: 20px;
 }
 .indexbox form input[type="radio"]:checked+label{
     display: inline;
-    width: 35px;
-    height:35px;
+    width: 40px;
+    height:40px;
     background: url("../images/change.png") no-repeat;
     float: left;
     margin-top:16px;

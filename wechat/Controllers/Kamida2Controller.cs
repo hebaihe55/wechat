@@ -9,25 +9,22 @@ namespace wechat.Controllers
     public class Kamida2Controller : Controller
     {
         // GET: Kamida2
-        public ActionResult kami1()
+        public ActionResult index()
         {
             return View();
         }
-        public ActionResult kami2()
+        public ActionResult success()
         {
             return View();
         }
-        public ActionResult kami3()
+        public ActionResult complete()
         {
             return View();
         }
-        public ActionResult kami4()
+        public ActionResult taocan()
         {
             return View();
         }
-        public ActionResult kami5()
-        {
-            return View();
-        }
+
     }
 }

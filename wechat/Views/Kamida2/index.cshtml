@@ -1,0 +1,122 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=750, user-scalable=no, target-densitydpi=device-dpi" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>卡米达</title>
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" href="~/Content/Kamida/style/css.css">
+    <script>
+        $(function(){
+            //$("#dialog").hide();
+            //$(".zhezhao").hide();
+            //$(".lingqubtn").on("click",function(e){
+            //    $(".zhezhao").show();
+            //    $("#dialog").show();
+
+            //})
+            //$(".close").on("click",function(){
+            //    $(".zhezhao").hide();
+            //    $("#dialog").hide();
+            //})
+            $("#audio").bind("play", function () {
+                $("#musicbg").removeClass("off").addClass("on");
+            }).bind("pause", function () {
+                $("#musicbg").removeClass("on").addClass("off");
+            });
+            $("#musicbg").on("click",function(){
+                toggleplay();
+            })
+        })
+        function checkform(){
+            var user = $("form .username").val();
+            var tel = $("form .tel").val();
+            if (user == null || user == "") {
+                alert("用户名不得为空");
+                return false;
+            } else if (user.length > 10) {
+                alert("用户名必须少于10位")
+                return false;
+            }
+            var reg=/^1[3|4|5|7|8]\d{9}$/;
+            if (!(reg.test(tel))) {
+                alert("请输入正确手机号");
+                return false;
+            }
+            return true;
+        }
+        function toggleplay() {
+            var o = document.getElementById('audio');
+            if (o.paused) {
+                o.play();
+            }
+            else {
+                o.pause();
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div id="musicbg"></div>
+    <div class="swipe-wrap" id="slip" style="position: relative">
+        <audio autoplay="autoplay" loop="loop" id="audio">
+            <source src="~/Content/Kamida/img/music.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+
+        <article class="swipe">
+
+            <div class="swipe-box">
+                <img src="~/Content/Kamida/img/p1.gif" alt="">
+            </div>
+
+            <div class="swipe-box">
+                <img src="~/Content/Kamida/img/p2.gif" alt="">
+            </div>
+
+            <div class="swipe-box">
+                <img src="~/Content/Kamida/img/p3.gif" alt="">
+            </div>
+
+            <div class="swipe-box">
+                <img src="~/Content/Kamida/img/p4.gif" alt="">
+            </div>
+            <div class="swipe-box swipe5">
+                <img src="" alt="">
+                <a href="/Kamida2/success" class="lingqubtn"></a>
+            </div>
+        </article>
+    </div>
+    @*<form id='dialog' action='' method='post' onsubmit="return checkform()">
+        <h3><span class="close">关闭</span></h3>
+        <label>用户名：</label><input type='text' name='username' class='username'><br>
+        <label>手机号：</label><input type='number' name='tel' class='tel'><br>
+
+        <input type='submit' value='提交' class="btn subbtn"><input type='reset' value='重置' class="btn">
+    </form>*@
+
+    @*<div class="zhezhao"></div>*@
+    <img src='~/Content/Kamida/img/jiantou.gif' id='jiantoubtn'>
+    <script type="text/javascript" src="~/Content/Kamida/js/slip.min.js"></script>
+    <script>
+    var container = document.getElementById('slip');
+    var pages = document.querySelectorAll('.swipe-box');
+    var slip = Slip(container, 'y').webapp(pages).end(function(e){
+        if(this.page==4){
+           // console.log( $(pages[this.page]));
+           $(".swipe5").find("img").attr("src","/Content/Kamida/img/p5.gif");
+
+           // console.log(this);
+        }
+
+    });
+    </script>
+</body>
+</html>
