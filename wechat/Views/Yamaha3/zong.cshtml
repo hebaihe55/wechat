@@ -12,14 +12,31 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="~/Content/Yamaha3/style/main.css">
-</head>
+    <script type="text/javascript">
+        function resetdata() {
+            // window.open("https://mp.weixin.qq.com/s?biz=MzAxMTE5ODQ0NA==&mid=504060390&idx=1&sn=22cbc73b85385326b9f4ced788ea4d67&scene=1&srcid=0824Czx2ayDU8hRMb1MEWVYt&pass_ticket=5eoIju%2FwceG4t1aGCaJq%2F1G2eEeD8XvhF%2BYMBt3Xg4j%2BoBEKzr%2Bz00NnODa%2FvDeH#rd", "_self");
+            window.open('https://mp.weixin.qq.com/s?biz=MzAxMTE5ODQ0NA==&mid=504060390&idx=1&sn=22cbc73b85385326b9f4ced788ea4d67&scene=1&srcid=0824Czx2ayDU8hRMb1MEWVYt&pass_ticket=5eoIju%2FwceG4t1aGCaJq%2F1G2eEeD8XvhF%2BYMBt3Xg4j%2BoBEKzr%2Bz00NnODa%2FvDeH#rd', 'newwindow', 'height=1206,width=750,toolbar=no,menubar=no,scrollbars=no, resizable=no,location=no, status=no');
+        }
+    </script>
+</head> 
 <body>
     <div class="zongwrap">
-
         <div class="btnwrap">
-            <a href="~/Yamaha3/zhishiindex">知识王</a>
-            <a href="https://mp.weixin.qq.com/s?biz=MzAxMTE5ODQ0NA==&mid=504060390&idx=1&sn=22cbc73b85385326b9f4ced788ea4d67&scene=1&srcid=0824Czx2ayDU8hRMb1MEWVYt&pass_ticket=5eoIju%2FwceG4t1aGCaJq%2F1G2eEeD8XvhF%2BYMBt3Xg4j%2BoBEKzr%2Bz00NnODa%2FvDeH#rd">Q版漫画</a>
-            <a href="~/Yamaha3/peiduigame">配对游戏</a>
+            <br />
+            <form action="/Yamaha3/zong" method="post">
+                @*<a href="~/Yamaha3/zhishiindex">知识王
+                </a>*@     
+               
+                    <input type="submit" name="zhishiwang" value="知识王" class="input-group1" id="zhishi" />
+             
+                @*<a href="https://mp.weixin.qq.com/s?biz=MzAxMTE5ODQ0NA==&mid=504060390&idx=1&sn=22cbc73b85385326b9f4ced788ea4d67&scene=1&srcid=0824Czx2ayDU8hRMb1MEWVYt&pass_ticket=5eoIju%2FwceG4t1aGCaJq%2F1G2eEeD8XvhF%2BYMBt3Xg4j%2BoBEKzr%2Bz00NnODa%2FvDeH#rd"> Q版漫画 </a>*@
+                    <input type="submit" name="manhua" value="Q版漫画"  class="input-group1" id="manhua" hidden="hidden"/>       
+                @*<a href="~/Yamaha3/peiduigame">配对游戏
+               </a>*@
+                <input type="submit" name="game"  value="配对游戏" class="input-group1" id="game" hidden="hidden"/>
+                <input type="submit" name="rule" value="游戏规则" class="input-group1" id="rule" hidden="hidden" />
+             
+            </form>
         </div>
     </div>
 </body>

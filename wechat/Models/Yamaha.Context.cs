@@ -27,5 +27,6 @@ namespace wechat.Models
     
         public virtual DbSet<yamahainfo> yamahainfo { get; set; }
         public virtual DbSet<yamahaTimu> yamahaTimu { get; set; }
+        public virtual DbSet<record> record { get; set; }
     }
 }

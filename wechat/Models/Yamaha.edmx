@@ -4,7 +4,16 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="WechatModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="WechatModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="record">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="aName" Type="nvarchar" MaxLength="50" />
+          <Property Name="rName" Type="nvarchar" MaxLength="50" />
+          <Property Name="time" Type="date" />
+        </EntityType>
         <EntityType Name="yamahainfo">
           <Key>
             <PropertyRef Name="id" />
@@ -30,11 +39,11 @@
           <Property Name="E" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="WechatModel1StoreContainer">
+          <EntitySet Name="record" EntityType="Self.record" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="yamahainfo" EntityType="Self.yamahainfo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="yamahaTimu" EntityType="Self.yamahaTimu" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="WechatModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -65,7 +74,17 @@
         <EntityContainer Name="WechatEntities7" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="yamahainfo" EntityType="Self.yamahainfo" />
           <EntitySet Name="yamahaTimu" EntityType="Self.yamahaTimu" />
+          <EntitySet Name="record" EntityType="WechatModel1.record" />
         </EntityContainer>
+        <EntityType Name="record">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="aName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="rName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="time" Type="DateTime" Precision="0" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -95,6 +114,16 @@
                 <ScalarProperty Name="C" ColumnName="C" />
                 <ScalarProperty Name="D" ColumnName="D" />
                 <ScalarProperty Name="E" ColumnName="E" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="record">
+            <EntityTypeMapping TypeName="WechatModel1.record">
+              <MappingFragment StoreEntitySet="record">
+                <ScalarProperty Name="time" ColumnName="time" />
+                <ScalarProperty Name="rName" ColumnName="rName" />
+                <ScalarProperty Name="aName" ColumnName="aName" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

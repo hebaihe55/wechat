@@ -74,9 +74,10 @@ a{
     float: right;
     margin:20px 15px 0 0;
 }
-.zongwrap{
+.zongwrap {
     height: 1206px;
-    background: url("../img/indexbg.png") no-repeat;
+    /*background-image: url('../img/indexbg.jpg');*/
+    background: url("../img/indexbg.jpg") no-repeat;
     border: 1px solid white;
 }
 .zongwrap .btnwrap{
@@ -84,7 +85,33 @@ a{
     height: auto;
     margin:320px auto 0 auto;
 }
-.zongwrap .btnwrap a{
+#zhishi {
+
+    background: url("../img/pic1.png") no-repeat;
+}
+#manhua {
+background: url("../img/pic2.png") no-repeat;
+}
+#game {
+    background: url("../img/pic3.png") no-repeat;
+}
+#rule {
+    background: url("../img/pic4.png") no-repeat;
+}
+.input-group1 {
+    display: block;
+    margin: 10px 100px 10px 60px;
+    /*background: url("../img/choosebg.png") no-repeat;*/
+    background-color: transparent;
+    text-align: center;
+    line-height: 100px;
+    font-size: 50px;
+    color: white;
+    border: none;
+    width: 427px;
+    height: 100px;
+}
+/*.zongwrap .btnwrap a{
     display: block;
     margin:95px auto 0 auto;
     width:564px;
@@ -95,7 +122,7 @@ a{
     font-size: 40px;
     color:white;
 
-}
+}*/
 .completewrap{
     height:1206px;
     background:url(../img/complete.png) no-repeat;
@@ -121,4 +148,28 @@ a{
 }
 .sucesswrap{
     height:1206px;
+}
+/*Âþ»­2*/
+.manhua2wrap {
+    height: 1206px;
+    background: url("../img/manhua2_bj.png") no-repeat;
+    border: 1px solid white;
+}
+.person {
+margin:320px 120px;
+}
+.music {
+margin:0px 120px;
+}
+.fanhui {
+float:right; margin:15px 8px;
+        
+}
+.M_P {
+    height: 1206px;
+    background: url("../img/music_bj.png") no-repeat;
+    border: 1px solid white;
+}
+.img {
+width:750px;
 }

@@ -259,6 +259,7 @@
     <Content Include="Content\Yamaha3\img\back.png" />
     <Content Include="Content\Yamaha3\img\checkded.png" />
     <Content Include="Content\Yamaha3\img\choosebg.png" />
+    <Content Include="Content\Yamaha3\img\indexbg.jpg" />
     <Content Include="Content\Yamaha3\img\indexbg.png" />
     <Content Include="Content\Yamaha3\img\jieshao1.png" />
     <Content Include="Content\Yamaha3\img\jieshao2.png" />
@@ -267,7 +268,17 @@
     <Content Include="Content\Yamaha3\img\jieshao5.png" />
     <Content Include="Content\Yamaha3\img\jieshao6.png" />
     <Content Include="Content\Yamaha3\img\lhjbg.png" />
+    <Content Include="Content\Yamaha3\img\manhua2_bj.png" />
+    <Content Include="Content\Yamaha3\img\Mfanhui.png" />
+    <Content Include="Content\Yamaha3\img\music.png" />
+    <Content Include="Content\Yamaha3\img\music_bj.png" />
     <Content Include="Content\Yamaha3\img\next.png" />
+    <Content Include="Content\Yamaha3\img\person.png" />
+    <Content Include="Content\Yamaha3\img\pic1.png" />
+    <Content Include="Content\Yamaha3\img\pic2.png" />
+    <Content Include="Content\Yamaha3\img\pic3.png" />
+    <Content Include="Content\Yamaha3\img\pic4.png" />
+    <Content Include="Content\Yamaha3\img\rule.jpg" />
     <Content Include="Content\Yamaha3\img\slot1.png" />
     <Content Include="Content\Yamaha3\img\slot2.png" />
     <Content Include="Content\Yamaha3\img\slot3.png" />
@@ -280,6 +291,21 @@
     <Content Include="Content\Yamaha3\img\success.png" />
     <Content Include="Content\Yamaha3\img\lhjbtn.png" />
     <Content Include="Content\Yamaha3\js\jquery.slotmachine.js" />
+    <Content Include="Content\Yamaha3\Mimg\1.jpg" />
+    <Content Include="Content\Yamaha3\Mimg\10.jpg" />
+    <Content Include="Content\Yamaha3\Mimg\2.jpg" />
+    <Content Include="Content\Yamaha3\Mimg\3.jpg" />
+    <Content Include="Content\Yamaha3\Mimg\4.jpg" />
+    <Content Include="Content\Yamaha3\Mimg\5.jpg" />
+    <Content Include="Content\Yamaha3\Mimg\6.jpg" />
+    <Content Include="Content\Yamaha3\Mimg\7.jpg" />
+    <Content Include="Content\Yamaha3\Mimg\8.jpg" />
+    <Content Include="Content\Yamaha3\Mimg\9.jpg" />
+    <Content Include="Content\Yamaha3\Mimg\C5.jpg" />
+    <Content Include="Content\Yamaha3\Mimg\LFour1.jpg" />
+    <Content Include="Content\Yamaha3\Mimg\LG2.jpg" />
+    <Content Include="Content\Yamaha3\Mimg\S4.jpg" />
+    <Content Include="Content\Yamaha3\Mimg\Sfour3.jpg" />
     <Content Include="Content\Yamaha3\style\main.css" />
     <Content Include="Content\Yamaha3\style\reset.css" />
     <Content Include="Content\Yamaha3\style\style.css" />
@@ -477,6 +503,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\GGK.cs" />
+    <Compile Include="Models\record.cs">
+      <DependentUpon>Yamaha.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Updata.cs" />
     <Compile Include="Models\Wechat.cs" />
     <Compile Include="Models\WechatShare.cs" />
@@ -610,6 +639,10 @@
     <Content Include="Views\Yamaha3\peiduigame.cshtml" />
     <Content Include="Views\Yamaha3\complete.cshtml" />
     <Content Include="Views\Yamaha3\peiduicucess.cshtml" />
+    <Content Include="Views\Yamaha3\manhua2.cshtml" />
+    <Content Include="Views\Yamaha3\person.cshtml" />
+    <Content Include="Views\Yamaha3\music.cshtml" />
+    <Content Include="Views\Yamaha3\rule.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
