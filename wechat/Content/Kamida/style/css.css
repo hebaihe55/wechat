@@ -1,0 +1,194 @@
+*{padding:0;margin: 0}
+.swipe-wrap{width:750px;height:1206px;position: relative;overflow: hidden;}
+.swipe{width:750px;height:1206px;position:absolute;width:100%;}
+.swipe-box{width:750px;height:1206px;overflow: hidden;}
+#jiantoubtn{
+    position: absolute;
+    bottom:10px;
+    left:45%;
+}
+.swipe5{
+    position: relative;
+}
+.lingqubtn{
+    display: block;
+    width:315px;
+    height:107px;
+    border-radius: 30px;
+    position: absolute;
+    top:497px;
+    left:30%;
+    z-index:3;
+    outline: none;
+
+}
+form label{
+    font-size: 35px;
+}
+.username,.tel{
+    font-size: 35px;
+    width:70%;
+    height: 50px;
+    line-height: 50px;
+    outline: none;
+    margin:20px 0 10px 5px;
+    text-indent: 10px;
+    border-radius: 10px;
+    color: black;
+}
+.zhezhao{
+    width: 750px;
+    height: 100%;
+    opacity: 0.5;
+    z-index: 2;
+    position: absolute;
+    top:0;
+    left: 0;
+    background:black;
+    filter:alpha(opacity=50);
+}
+#dialog{
+    position: absolute;
+    width: 90%;
+    height:350px ;
+    z-index: 4;
+    top:calc(50% - 170px);
+    left: 30px;
+    background: white;
+    padding-left: 10px;
+    border-radius: 15px;
+    background:#FFF0F5;
+}
+.close{
+    font-size:38px;
+    color:black;
+    display: block;
+    float: right;
+    margin-right: 10px;
+    width: 80px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+#dialog h3{
+    height: 55px;
+    line-height: 55px;
+    color: black;
+    font-size: 35px;
+    padding: 15px 10px 0 0;
+
+}
+.btn{
+    display: inline-block;
+    width:120px;
+    height:45px;
+    line-height:45px;
+    text-align:center;
+    margin:0 0 0 40px;
+    font-size: 30px;
+    margin: 20px auto 0 auto;
+}
+.subbtn{
+    margin: 0 15px 0 250px;
+
+}
+@-webkit-keyframes musicbg{
+    from {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+#musicbg {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    z-index: 1;
+    right: 20px;
+    top:30px;
+    overflow: hidden;
+    opacity: 0.6;
+    background: url('../img/music.png') no-repeat center center;
+    background-size: 100% 100%;
+    border-radius: 50%;
+}
+.on {
+    animation:musicbg 1s infinite linear;
+    -webkit-animation:musicbg 1s infinite linear;
+
+}
+
+.off {
+    animation: none;
+    -webkit-animation: none;
+}
+.successwrap{
+    width: 750px;
+    height: 1206px;
+    background: url("../img/success.jpg") no-repeat;
+    border:1px solid white;
+}
+.completewrap{
+    width: 750px;
+    height: 1206px;
+    background: url("../img/complete.jpg") no-repeat;
+}
+.taocanwrap{
+    width: 750px;
+    height: 1206px;
+    background: url("../img/taocan.jpg") no-repeat;
+    border:1px solid white;
+}
+.successwrap form{
+    width:90%;
+    height:auto;
+    margin:716px auto 0 auto;
+    text-align:center;
+}
+.successwrap form input[type="text"]{
+    width:450px;
+    display:block;
+    height:75px;
+    margin:0 auto;
+    text-indent:10px;
+    border-radius:50px;
+    border:none;
+    outline:none;
+    font-size:30px;
+}
+    .successwrap form input[type="submit"] {
+        width:368px;
+        height:86px;
+        background:url(../img/successbtn.png) no-repeat;
+        outline:none;
+        border:none;
+        margin-top:40px;
+    }
+    .taocanwrap form{
+         width:90%;
+        height:auto;
+        margin:716px auto 0 auto;
+        text-align:center;
+    }
+    .taocanwrap form .txt{
+        width:590px;
+        height:60px;
+        text-indent:15px;
+        border:3px solid yellow;
+        font-size:30px;
+        margin-bottom:20px;
+        
+    }
+    .taocanwrap form input[type=submit]{
+        width:187px;
+        height:56px;
+        background:url(../img/taocanbtn.png) no-repeat;
+        border:none;
+        outline:none;
+        display:block;
+        margin:30px auto 0 auto;
+    }
